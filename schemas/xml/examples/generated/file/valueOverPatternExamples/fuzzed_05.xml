@@ -51,6 +51,15 @@
 					</qualifiers>
 					<embeddedDataSpecifications>
 						<embeddedDataSpecification>
+							<dataSpecification>
+								<type>ModelReference</type>
+								<keys>
+									<key>
+										<type>Submodel</type>
+										<value>urn:another-company15:2bd0986b</value>
+									</key>
+								</keys>
+							</dataSpecification>
 							<dataSpecificationContent>
 								<dataSpecificationIec61360>
 									<preferredName>
@@ -66,15 +75,6 @@
 									<value>something_4e9c19b7</value>
 								</dataSpecificationIec61360>
 							</dataSpecificationContent>
-							<dataSpecification>
-								<type>ModelReference</type>
-								<keys>
-									<key>
-										<type>Submodel</type>
-										<value>urn:another-company15:2bd0986b</value>
-									</key>
-								</keys>
-							</dataSpecification>
 						</embeddedDataSpecification>
 					</embeddedDataSpecifications>
 					<value>/;=:&amp;%30%1a;77@%321%A4%21;%FC:=/;=,=%13y:%2D;+J%c6%bcU%D3;j1G:sg=%EcA%f3/@z%29%B7&amp;B;=#@H%8D=U%FE%5e%22%Db?,+</value>

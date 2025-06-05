@@ -49,6 +49,15 @@
         ] ;
         <https://admin-shell.io/aas/3/1/HasDataSpecification/embeddedDataSpecifications> [
             rdf:type aas:EmbeddedDataSpecification ;
+            <https://admin-shell.io/aas/3/1/EmbeddedDataSpecification/dataSpecification> [
+                rdf:type aas:Reference ;
+                <https://admin-shell.io/aas/3/1/Reference/type> <https://admin-shell.io/aas/3/1/ReferenceTypes/ModelReference> ;
+                <https://admin-shell.io/aas/3/1/Reference/keys> [
+                    rdf:type aas:Key ;
+                    <https://admin-shell.io/aas/3/1/Key/type> <https://admin-shell.io/aas/3/1/KeyTypes/Submodel> ;
+                    <https://admin-shell.io/aas/3/1/Key/value> "urn:another-company15:2bd0986b"^^xs:string ;
+                ] ;
+            ] ;
             <https://admin-shell.io/aas/3/1/EmbeddedDataSpecification/dataSpecificationContent> [
                 rdf:type aas:DataSpecificationIec61360 ;
                 <https://admin-shell.io/aas/3/1/DataSpecificationIec61360/preferredName> [
@@ -62,15 +71,6 @@
                     <https://admin-shell.io/aas/3/1/AbstractLangString/text> "Something random in English c8512bdf"^^xs:string ;
                 ] ;
                 <https://admin-shell.io/aas/3/1/DataSpecificationIec61360/value> "something_4e9c19b7"^^xs:string ;
-            ] ;
-            <https://admin-shell.io/aas/3/1/EmbeddedDataSpecification/dataSpecification> [
-                rdf:type aas:Reference ;
-                <https://admin-shell.io/aas/3/1/Reference/type> <https://admin-shell.io/aas/3/1/ReferenceTypes/ModelReference> ;
-                <https://admin-shell.io/aas/3/1/Reference/keys> [
-                    rdf:type aas:Key ;
-                    <https://admin-shell.io/aas/3/1/Key/type> <https://admin-shell.io/aas/3/1/KeyTypes/Submodel> ;
-                    <https://admin-shell.io/aas/3/1/Key/value> "urn:another-company15:2bd0986b"^^xs:string ;
-                ] ;
             ] ;
         ] ;
         <https://admin-shell.io/aas/3/1/File/value> "q2t2uv://777646689268.160810318.01435447069935.47:/%Be/%04@%Cd@P%dc:C$&~x=;%3f9+;;sr-i=p,///;%D5@@x&;V@I%16/+;%e4,@%AA@Ih:%8Dg=%F8P,v%dE%3E%03%62%FB=$R,&%ac%71;u%11l8*;,;$%Faj:;;;%ee$%8b%EC@%4Alo;t,%0b%eB%D5%EA:%De;$$1:@/%8e%0D&9%C8M;@5%28%4E%BC@%34;;@%EC=tL)x(/M%D3%aF&%Ec;=%aa$$j;;%B3@hk=e:%DB%24Z;%F6%9E+%8e;=;%ba;;%b3;;p%f11=%34%c0;#lR:+k%BE4%EB"^^xs:string ;
