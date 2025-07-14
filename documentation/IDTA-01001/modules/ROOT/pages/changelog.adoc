@@ -42,6 +42,13 @@ Major Changes:
 * IN DISCUSSION: ADDED: New attributes for data ranges in AdministrationInformation  (https://github.com/admin-shell-io/aas-specs-metamodel/issues/484[#484])
 
 
+== Changes V3.1.1 vs. V3.1
+
+Bugfixes:
+
+* CHANGED: fix xml schema w.r.t. ordering of attributes (https://github.com/admin-shell-io/aas-specs-metamodel/issues/585[#585])
+
+
 === Metamodel Changes V3.2 vs. V3.1
 
 .Changes in Metamodel
