@@ -18,7 +18,7 @@ This specification is part of the https://industrialdigitaltwin.org/en/content-h
 
 This is version 3.2 of the specification IDTA-01001.
 
-Previous version: 3.1
+Previous version: 3.1.1
 
 [#metamodel-versions]
 == Dependencies
