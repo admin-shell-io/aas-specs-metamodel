@@ -3,14 +3,14 @@
 skinparam packageStyle rectangle
 
 package "Data Specification Templates - Part 1"  {
-    !include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-1_working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/data-specification-template.puml
-    !include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-1_working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/data-specification-content.puml
+    !include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-1_final/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/data-specification-template.puml
+    !include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-1_final/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/data-specification-content.puml
 }
 
-!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-1_working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/data-specification-iec61360.puml
+!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-1_final/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/data-specification-iec61360.puml
 
 package "Concept Descriptions - Part 1"  {
-    !include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-1_working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/concept-description.puml
+    !include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-1_final/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/concept-description.puml
 }
 
 DataSpecificationContent <|- DataSpecificationIec61360
