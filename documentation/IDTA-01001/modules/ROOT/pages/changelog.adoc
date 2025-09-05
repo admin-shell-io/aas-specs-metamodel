@@ -35,6 +35,14 @@ Note: before V3.0, the security metamodel (now IDTA-01004) and the predefined da
 They had separate sections and tables documenting the changes.
 ====
 
+
+== Changes V3.2 vs. V3.1
+
+Major Changes:
+
+* IN DISCUSSION: ADDED: New attributes for data ranges in AdministrationInformation  (https://github.com/admin-shell-io/aas-specs-metamodel/issues/484[#484])
+
+
 == Changes V3.1.1 vs. V3.1
 
 Bugfixes:
@@ -42,6 +50,30 @@ Bugfixes:
 * CHANGED: fix xml schema w.r.t. ordering of attributes (https://github.com/admin-shell-io/aas-specs-metamodel/issues/585[#585])
 
 
+=== Metamodel Changes V3.2 vs. V3.1
+
+.Changes in Metamodel
+[cols="5%,42%,48%",options="header",]
+|===
+h|Nc h|V3.2 Change w.r.t. V3.1 h|Comment
+
+| {empty} |  a| 
+
+|===
+
+.New Elements in Metamodel
+[cols="5%,41%,51%",options="header",]
+|===
+h|{empty} h|New Elements V3.2 vs V3.1 h|Comment
+{empty} | AdministrativeInformation/createdAt | a| TO BE CLARIFIED
+{empty} | AdministrativeInformation/updatedAt | a| TO BE CLARIFIED
+|===
+
+[cols="5%,10%,15%,69%",options="header",]
+|===
+h|Nc h|V3.2 vs. V3.1 h|New, Update, Removed, Reformulated h|Comment
+| | | a|
+|===
 
 
 == Changes V3.1 vs. V3.0.2
