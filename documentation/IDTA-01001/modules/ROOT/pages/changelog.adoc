@@ -42,6 +42,10 @@ Major Changes:
 
 * IN DISCUSSION: ADDED: New attributes for data ranges in AdministrationInformation  (https://github.com/admin-shell-io/aas-specs-metamodel/issues/484[#484])
 
+Minor Changes:
+
+* description of data type ContentType changed, some explantion with respect to mime types removed (https://github.com/admin-shell-io/aas-specs-metamodel/issues/604[#604])
+
 
 == Changes V3.1.1 vs. V3.1
 

@@ -95,15 +95,10 @@ a|
 _string_ with max 128 and min 1 characters
 
 
-====
-Note: string conformant to RFC2046.
-====
+Any content type as specified in [RFC2046](https://datatracker.ietf.org/doc/html/rfc2046). 
 
-====
-A media type (also MIME type and content type) […] is a two-part identifier for file formats and format contents transmitted on the Internet.
-The link:https://www.iana.org/assignments/media-types/media-types.xhtml[Internet Assigned Numbers Authority (IANA)] is the official authority for the standardization and publication of these classifications.
-Media types were originally defined in Request for Comments 2045 in November 1996 as a part of MIME specification, for denoting type of email message content and attachments.footnote:[Wikipedia.org, date: 2018-04-09]
-====
+The content type should be registered by the Internet Assigned Numbers Authority (IANA([link](https://www.iana.org/assignments/media-types/media-types.xhtml)))
+ as specified in [RFC2048](https://datatracker.ietf.org/doc/html/rfc2048). 
 
 a|
 application/pdf
