@@ -45,7 +45,7 @@ Major Changes:
 
 Minor Changes:
 
-* description of data type ContentType changed, some explantion with respect to mime types removed (https://github.com/admin-shell-io/aas-specs-metamodel/issues/604[#604])
+* description of data type ContentType changed, some explanation with respect to mime types removed (https://github.com/admin-shell-io/aas-specs-metamodel/issues/604[#604])
 * corrected and added links for definitions of qualifiers in IEC CDD (https://github.com/admin-shell-io/aas-specs-metamodel/issues/611[#611])
 
 
