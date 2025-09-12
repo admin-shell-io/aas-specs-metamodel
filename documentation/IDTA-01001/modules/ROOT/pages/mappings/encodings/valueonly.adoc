@@ -342,12 +342,15 @@ The protected elements shall not be serialized.
 
 In the following examples for Value-Only serializations for all submodel element types are given.
 
+===== Property
+
 For a single _Property_ named "MaxRotationSpeed", the value-Only payload is minimized to the following (assuming its value is 5000):
 
 [source,json,linenums]
 ----
   5000
 ----
+===== SubmodelElementCollection
 
 For a _SubmodelElementCollection_ named "ProductClassification" or being part of a list "ProductionClassifications", the Value-Only payload is minimized to the following, i.e. the name of the SubmodelElementCollection or its index in the list is not part of the Value-Only serialization:
 
@@ -360,7 +363,9 @@ For a _SubmodelElementCollection_ named "ProductClassification" or being part of
 }
 ----
 
-For a _SubmodelElementList_ named "Authors" with string Properties as its value, the Value-Only payload is minimized to the following (values within a SubmodelElementList do not have idShort values)footnote:[The Value-Only serialization of the product classification example can be seen above]:
+===== SubmodelElementList
+
+For a _SubmodelElementList_ named "Authors" with string Properties as its value, the Value-Only payload is minimized to the following (idShort of values within a SubmodelElementList are ignored):footnote:[The Value-Only serialization of the product classification example can be seen above]:
 
 [source,json,linenums]
 ----
@@ -370,6 +375,8 @@ For a _SubmodelElementList_ named "Authors" with string Properties as its value,
     "Clark"
 ]
 ----
+
+===== MultiLanguageProperty
 
 For a _MultiLanguageProperty_ the Value-Only payload is minimized to the following:
 
@@ -381,6 +388,7 @@ For a _MultiLanguageProperty_ the Value-Only payload is minimized to the followi
 ]
 
 ----
+===== Range
 
 For a _Range_ named "TorqueRange", the Value-Only payload is minimized to the following:
 
@@ -391,6 +399,8 @@ For a _Range_ named "TorqueRange", the Value-Only payload is minimized to the fo
     "max": 15
 }
 ----
+
+===== ReferenceElement
 
 For a _ReferenceElement_ named "MaxRotationSpeedReference", the Value-Only payload is minimized to the following:
 
@@ -407,6 +417,8 @@ For a _ReferenceElement_ named "MaxRotationSpeedReference", the Value-Only paylo
 }
 ----
 
+===== File
+
 For a _File_ named "Document", the Value-Only payload is minimized to the following:
 
 [source,json,linenums]
@@ -415,7 +427,9 @@ For a _File_ named "Document", the Value-Only payload is minimized to the follow
     "contentType": "application/pdf",
     "value": "SafetyInstructions.pdf"
 }
+
 ----
+===== Blob
 
 For a _Blob_ named "Library", there are two possibilities for the Value-Only payload.
 In case the Blob value - that can be very large - shall not be part of the payload, the payload is minimized to the followingfootnote:[
@@ -437,6 +451,8 @@ In the second case the Blob value is part of the payload.footnote:[in this case 
     "value": "VGhpcyBpcyBteSBibG9i"
 }
 ----
+
+===== RelationshipElement
 
 For a _RelationshipElement_ named "CurrentFlowsFrom", the Value-Only payload is minimized to the following:
 
@@ -471,6 +487,8 @@ For a _RelationshipElement_ named "CurrentFlowsFrom", the Value-Only payload is 
     }
 }
 ----
+
+===== AnnotatedRelationshipElement
 
 For an _AnnotatedRelationshipElement_ named "CurrentFlowFrom", with an annotated _Property_-DataElement "AppliedRule", the Value-Only-payload is minimized to the following:
 
@@ -511,6 +529,8 @@ For an _AnnotatedRelationshipElement_ named "CurrentFlowFrom", with an annotated
 }
 ----
 
+===== Entity
+
 For an _Entity_ named "MySubAssetEntity", the Value-Only-payload is minimized to the following:
 
 [source,json,linenums]
@@ -531,6 +551,8 @@ For an _Entity_ named "MySubAssetEntity", the Value-Only-payload is minimized to
     }
 }
 ----
+
+===== BasicEventElement
 
 For a BasicEventElement named "MyBasicEvent", the Value-Only-payload is minimized to the following:
 

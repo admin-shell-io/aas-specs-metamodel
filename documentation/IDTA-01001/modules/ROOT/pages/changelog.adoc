@@ -35,6 +35,7 @@ Note: before V3.0, the security metamodel (now IDTA-01004) and the predefined da
 They had separate sections and tables documenting the changes.
 ====
 
+
 == Changes V3.2 vs. V3.1
 
 Major Changes:
@@ -47,6 +48,7 @@ Major Changes:
 Bugfixes:
 
 * CHANGED: fix xml schema w.r.t. ordering of attributes (https://github.com/admin-shell-io/aas-specs-metamodel/issues/585[#585])
+* Added xref:spec-metamodel/core.adoc#AssetInformation[AssetInformation]/AssetType to annex table "Elements with Allowed Identifying Values"
 
 
 === Metamodel Changes V3.2 vs. V3.1
@@ -71,8 +73,9 @@ h|{empty} h|New Elements V3.2 vs V3.1 h|Comment
 [cols="5%,10%,15%,69%",options="header",]
 |===
 h|Nc h|V3.2 vs. V3.1 h|New, Update, Removed, Reformulated h|Comment
-| | | a|
+| | | a| 
 |===
+
 
 == Changes V3.1 vs. V3.0.2
 

@@ -64,13 +64,13 @@ The following release contains the latest version of the AAS schemas
  (see also the [releases](https://github.com/admin-shell-io/aas-specs-metamodel/releases) 
 section of this repository):
 
-* [3.1.0](https://github.com/admin-shell-io/aas-specs-metamodel/releases/tag/v3.1.0)
-is the latest release for the `V3.1.0` version of the AAS metamodel, 
-containing the normative schemas for the published document
- "Specification of the Asset Administration Shell: Part 1 - **Version 3.1.0**". 
+* [3.1.1](https://github.com/admin-shell-io/aas-specs-metamodel/releases/tag/v3.1.1)
+is the latest release for the `V3.1.1` version of the AAS metamodel, 
+containing the normative specification as well as the schemas in xml, JSON and rdf
 *Use this release if you want to work with the latest specified AAS version.*
 
 Previous releases:
+* [3.1.0](https://github.com/admin-shell-io/aas-specs-metamodel/releases/tag/v3.1.0) is the release for the  `V3.1` version of the AAS metamodel as published in May 2025
 * [3.0.8](https://github.com/admin-shell-io/aas-specs-metamodel/releases/tag/V3.0.8) minor schema bugfixes for `V3.0` version of the AAS metamodel
 * [3.0.7](https://github.com/admin-shell-io/aas-specs-metamodel/releases/tag/V3.0.7) minor schema bugfixes for `V3.0` version of the AAS metamodel
 * [3.0.6](https://github.com/admin-shell-io/aas-specs-metamodel/releases/tag/v3.0.6) is the release for the `V3.0` version of the AAS metamodel as published in April 2023, containing the normative schemas for the published document "Part 1: Details of the Asset Administration Shell - The exchange of information between partners in the value chain of Industrie 4.0 - **Version 3.0**". *Note that [3.0.7](https://github.com/admin-shell-io/aas-specs-metamodel/releases/tag/V3.0.7) fixes a number of known bugs in this version.*

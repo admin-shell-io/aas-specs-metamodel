@@ -9,6 +9,15 @@
         rdf:type aas:AdministrativeInformation ;
         <https://admin-shell.io/aas/3/1/HasDataSpecification/embeddedDataSpecifications> [
             rdf:type aas:EmbeddedDataSpecification ;
+            <https://admin-shell.io/aas/3/1/EmbeddedDataSpecification/dataSpecification> [
+                rdf:type aas:Reference ;
+                <https://admin-shell.io/aas/3/1/Reference/type> <https://admin-shell.io/aas/3/1/ReferenceTypes/ExternalReference> ;
+                <https://admin-shell.io/aas/3/1/Reference/keys> [
+                    rdf:type aas:Key ;
+                    <https://admin-shell.io/aas/3/1/Key/type> <https://admin-shell.io/aas/3/1/KeyTypes/GlobalReference> ;
+                    <https://admin-shell.io/aas/3/1/Key/value> "urn:something14:18179b7a"^^xs:string ;
+                ] ;
+            ] ;
             <https://admin-shell.io/aas/3/1/EmbeddedDataSpecification/dataSpecificationContent> [
                 rdf:type aas:DataSpecificationIec61360 ;
                 <https://admin-shell.io/aas/3/1/DataSpecificationIec61360/preferredName> [
@@ -22,15 +31,6 @@
                     <https://admin-shell.io/aas/3/1/AbstractLangString/text> "Something random in English 0843a1d1"^^xs:string ;
                 ] ;
                 <https://admin-shell.io/aas/3/1/DataSpecificationIec61360/value> "something_bebf64f0"^^xs:string ;
-            ] ;
-            <https://admin-shell.io/aas/3/1/EmbeddedDataSpecification/dataSpecification> [
-                rdf:type aas:Reference ;
-                <https://admin-shell.io/aas/3/1/Reference/type> <https://admin-shell.io/aas/3/1/ReferenceTypes/ExternalReference> ;
-                <https://admin-shell.io/aas/3/1/Reference/keys> [
-                    rdf:type aas:Key ;
-                    <https://admin-shell.io/aas/3/1/Key/type> <https://admin-shell.io/aas/3/1/KeyTypes/GlobalReference> ;
-                    <https://admin-shell.io/aas/3/1/Key/value> "urn:something14:18179b7a"^^xs:string ;
-                ] ;
             ] ;
         ] ;
         <https://admin-shell.io/aas/3/1/AdministrativeInformation/version> "10"^^xs:string ;

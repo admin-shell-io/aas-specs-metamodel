@@ -49,6 +49,15 @@
         ] ;
         <https://admin-shell.io/aas/3/1/HasDataSpecification/embeddedDataSpecifications> [
             rdf:type aas:EmbeddedDataSpecification ;
+            <https://admin-shell.io/aas/3/1/EmbeddedDataSpecification/dataSpecification> [
+                rdf:type aas:Reference ;
+                <https://admin-shell.io/aas/3/1/Reference/type> <https://admin-shell.io/aas/3/1/ReferenceTypes/ModelReference> ;
+                <https://admin-shell.io/aas/3/1/Reference/keys> [
+                    rdf:type aas:Key ;
+                    <https://admin-shell.io/aas/3/1/Key/type> <https://admin-shell.io/aas/3/1/KeyTypes/Submodel> ;
+                    <https://admin-shell.io/aas/3/1/Key/value> "urn:another-company15:2bd0986b"^^xs:string ;
+                ] ;
+            ] ;
             <https://admin-shell.io/aas/3/1/EmbeddedDataSpecification/dataSpecificationContent> [
                 rdf:type aas:DataSpecificationIec61360 ;
                 <https://admin-shell.io/aas/3/1/DataSpecificationIec61360/preferredName> [
@@ -62,15 +71,6 @@
                     <https://admin-shell.io/aas/3/1/AbstractLangString/text> "Something random in English c8512bdf"^^xs:string ;
                 ] ;
                 <https://admin-shell.io/aas/3/1/DataSpecificationIec61360/value> "something_4e9c19b7"^^xs:string ;
-            ] ;
-            <https://admin-shell.io/aas/3/1/EmbeddedDataSpecification/dataSpecification> [
-                rdf:type aas:Reference ;
-                <https://admin-shell.io/aas/3/1/Reference/type> <https://admin-shell.io/aas/3/1/ReferenceTypes/ModelReference> ;
-                <https://admin-shell.io/aas/3/1/Reference/keys> [
-                    rdf:type aas:Key ;
-                    <https://admin-shell.io/aas/3/1/Key/type> <https://admin-shell.io/aas/3/1/KeyTypes/Submodel> ;
-                    <https://admin-shell.io/aas/3/1/Key/value> "urn:another-company15:2bd0986b"^^xs:string ;
-                ] ;
             ] ;
         ] ;
         <https://admin-shell.io/aas/3/1/Property/valueType> <https://admin-shell.io/aas/3/1/DataTypeDefXsd/Decimal> ;
