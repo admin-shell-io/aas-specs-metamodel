@@ -41,6 +41,7 @@ They had separate sections and tables documenting the changes.
 Major Changes:
 
 * IN DISCUSSION: ADDED: New attributes for data ranges in AdministrationInformation  (https://github.com/admin-shell-io/aas-specs-metamodel/issues/484[#484])
+* added new value to enumeration AssetKind: Batch to support Digital Product Passports (https://github.com/admin-shell-io/aas-specs-metamodel/issues/483[#483])
 
 Minor Changes:
 
