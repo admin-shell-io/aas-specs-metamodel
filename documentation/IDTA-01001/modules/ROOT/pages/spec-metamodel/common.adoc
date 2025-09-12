@@ -449,7 +449,8 @@ include::partial$diagrams/21-qualifier.puml[]
 
 Qualifiers may be defined for qualifiable elements.
 
-There are standardized qualifiers defined in IEC CDD, IEC61360-4 – IEC/SC 3D.
+There are standardized qualifiers defined in (https://cdd.iec.ch/cdd/iec61360-7/iec61360-7.nsf/TreeFrameset?OpenFrameSet&ongletactif=1)[IEC CDD, IEC61360-7, CAA002].
+and (https://cdd.iec.ch/cdd/iec61987/iec61987.nsf/TreeFrameset?OpenFrameSet&ongletactif=1)[IEC CDD, IEC 61987, ABJ604].
 A level qualifier defining the level type minimal, maximal, typical, and nominal value is specified in IEC 62569-1.
 In DIN SPEC 92000, qualifier types like e.g. expression semantics and expression logic are defined.
 
