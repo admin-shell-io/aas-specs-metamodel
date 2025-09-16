@@ -63,6 +63,15 @@ Bugfixes:
 .Changes in Metamodel
 [cols="5%,42%,48%",options="header",]
 |===
+|*Nc* |*V3.2 Change w.r.t. V3.1.1* |*Comment*
+
+| {empty} | xref:spec-metamodel/core.adoc#AssetKind[AssetKind] a| Add new value "Batch" to enumeration AssetKind
+
+|===
+
+.Changes in Metamodel
+[cols="5%,42%,48%",options="header",]
+|===
 h|Nc h|V3.2 Change w.r.t. V3.1 h|Comment
 
 | {empty} |  a| 
@@ -82,7 +91,6 @@ h|{empty} h|New Elements V3.2 vs V3.1 h|Comment
 h|Nc h|V3.2 vs. V3.1 h|New, Update, Removed, Reformulated h|Comment
 | | | a| 
 |===
-
 
 == Changes V3.1 vs. V3.0.2
 
