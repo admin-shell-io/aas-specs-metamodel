@@ -50,15 +50,7 @@ Minor Changes:
 * Annex UML: add information how to graphically depict attributes of type "Reference" (https://github.com/admin-shell-io/aas-specs-metamodel/issues/601[#601])
 * minor changes (including (https://github.com/admin-shell-io/aas-specs-metamodel/issues/600[#600])
 
-== Changes V3.1.1 vs. V3.1
-
-Bugfixes:
-
-* CHANGED: fix xml schema w.r.t. ordering of attributes (https://github.com/admin-shell-io/aas-specs-metamodel/issues/585[#585])
-* Added xref:spec-metamodel/core.adoc#AssetInformation[AssetInformation]/AssetType to annex table "Elements with Allowed Identifying Values"
-
-
-=== Metamodel Changes V3.2 vs. V3.1
+=== Metamodel Changes V3.2 vs. V3.1.1
 
 .Changes in Metamodel
 [cols="5%,42%,48%",options="header",]
@@ -72,7 +64,7 @@ Bugfixes:
 .Changes in Metamodel
 [cols="5%,42%,48%",options="header",]
 |===
-h|Nc h|V3.2 Change w.r.t. V3.1 h|Comment
+h|Nc h|V3.2 Change w.r.t. V3.1.1 h|Comment
 
 | {empty} |  a| 
 
@@ -91,6 +83,16 @@ h|{empty} h|New Elements V3.2 vs V3.1 h|Comment
 h|Nc h|V3.2 vs. V3.1 h|New, Update, Removed, Reformulated h|Comment
 | | | a| 
 |===
+
+== Changes V3.1.1 vs. V3.1
+
+Bugfixes:
+
+* CHANGED: fix xml schema w.r.t. ordering of attributes (https://github.com/admin-shell-io/aas-specs-metamodel/issues/585[#585])
+* Added xref:spec-metamodel/core.adoc#AssetInformation[AssetInformation/AssetType] to Annex "General Topics", table "Elements with Allowed Identifying Values"
+
+
+
 
 == Changes V3.1 vs. V3.0.2
 
