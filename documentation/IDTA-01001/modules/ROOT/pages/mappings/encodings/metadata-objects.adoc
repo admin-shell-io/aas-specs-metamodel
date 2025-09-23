@@ -64,7 +64,7 @@ a|
     "description": [...],
     "id": "idTestAAS",
      ...
-    "derivedFrom": {...}
+    "derivedFrom": {...},
     "assetInformation": {...},
     "submodels": [...]
 }
