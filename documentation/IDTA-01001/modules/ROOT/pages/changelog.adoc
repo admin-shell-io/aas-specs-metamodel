@@ -56,6 +56,7 @@ editorial changes
 Minor Bugfixes:
 
 * correct ID for AasNonContainerSubmodelElements/Blob
+* correct ID for Extension/name
 
 === Metamodel Changes V3.2 vs. V3.1.1
 
