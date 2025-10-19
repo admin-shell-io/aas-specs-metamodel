@@ -125,14 +125,14 @@ Available: https://msdn.microsoft.com/en-us/library/system.io.packaging(v=vs.110
 
 
 [#bib24]
-[24] ISO 13584-42 "Standard data element types with associated classification scheme – Part 1: Definitions – Principles and methods" Edition 4.0, 2017-07
+[24] ISO 13584-42 "Standard data element types with associated classification scheme – Part 1: Definitions – Principles and methods" Edition 4.0, 2017-07.
 
 [#bib25]
 [25] IEC 61360-1 "Standard data element types with associated classification scheme – Part 1: Definitions – Principles and methods", Edition 4.0, 2017-07. DIN EN 61360-1:2018-07.
 
 
 [#bib26]
-[26] ISO/TS 29002-10:2009(E) "Industrial automation systems and integration — Exchange of characteristic data — Part 10: Characteristic data exchange format", First edition 2009-12-01
+[26] ISO/TS 29002-10:2009(E) "Industrial automation systems and integration — Exchange of characteristic data — Part 10: Characteristic data exchange format", First edition 2009-12-01.
 
 [#bib27]
 [27] A. Bayha, J. Bock, B. Boss, C. Diedrich, S. Malakuti "Describing Capabilities of Industrie 4.0 Components".
@@ -142,25 +142,20 @@ Available: https://www.plattform-i40.de/PI40/Redaktion/EN/Downloads/Publikation/
 
 ////
 [#bib28]
-[28] AutomationML Association: "Application Recommendations: Asset Administration Shell Representation (AR 004E)", Version 1.0.0, 20.11.2019, 
-Available: https://www.automationml.org/o.red.c/dateien.html
+[28] AutomationML consortium: "Application Recommendation: AAS Representation (AR 004E)", Document Identifier: AR AAS, V1.0.0. November 2019. 
+Accessed: 2025-10-19. [Online].
+Available: https://www.automationml.org/wp-content/uploads/2022/04/Asset-Administration-Shell-Representation-V1_0_0.zip
 ////
 
 [#bib29]
-[29] H. Knublauch, D. Knotokostas "Shapes Constraint Language (SHACL)" W3C Recommendation, 2017, 
+[29] H. Knublauch, D. Knotokostas "Shapes Constraint Language (SHACL)" W3C Recommendation, 2017. 
 Accessed: 2025-03-24. [Online]. 
-Available:
 Available: https://www.w3.org/TR/shacl/
 
 ////
 [#bib30]
-[30] "I4AAS – Industrie 4.09 Asset Administration Shell". June 2021. [Online] Available: https://opcfoundation.org/markets-collaboration/I4AAS/
-////
+[30] "I4AAS – Industrie 4.09 Asset Administration Shell". June 2021. 
 
-[#bib31]
-[31] DIN EN IEC 61406-1: "Identification Link - Part 1: General requirements (IEC 61406-1:2022)".
-December 2023. Online.
-Available: https://www.dinmedia.de/en/standard/din-en-iec-61406-1/372053652
 
 [#bib32]
 [32] F. Manola, E. Miller "RDF 1.1 Primer" W3C Recommendation, 2014, 
@@ -177,19 +172,19 @@ Available: https://tomgruber.org/writing/ontolingua-kaj-1993.htm
 Technical Report.
 Version 2.3. October 10, 2020. Industrial Internet Consortium.
 IIC:IIVOC:V2.3:20201025 
-Accessed: 2025-03-24. [Online]. 
+Accessed: 2025-10-19. [Online].
 Available: https://www.iiconsortium.org/vocab/
 
 [#bib35]
 [35] "OMG Unified Modelling Language (OMG UML)".
 Formal/2017-12-05. Version 2.5.1. December 2018. 
-Accessed: 2025-03-24. [Online]. 
+Accessed: 2025-10-19. [Online]
 Available: https://www.omg.org/spec/UML/
 
 [#bib36]
 [36] T. Preston-Werner "Semantic Versioning".
 Version 2.0.0. 
-Accessed: 2025-03-24. [Online]. 
+Accessed: 2025-10-19. [Online]
 Available: https://semver.org/spec/v2.0.0.html
 
 [#bib37]
@@ -205,11 +200,15 @@ Accessed: 2025-03-24. [Online].
 Available: https://industrialdigitaltwin.org/en/wp-content/uploads/sites/2/2022/12/2022-12-07_IDTA_AAS-Reading-Guide.pdf
 
 [#bib39]
-[39] IDTA-02003 "Submodel Template of the Asset Administration Shell - Generic Frame for Technical Data for Industrial Equipment in Manufacturing", Version 1.2, Aug. 2022, Industrial Digital Twin Association 
+[39] IDTA-02003 "Submodel Template of the Asset Administration Shell - Generic Frame for Technical Data for Industrial Equipment in Manufacturing", 
+Version 1.2, Aug. 2022, 
+Industrial Digital Twin Association 
 See xref:bibliography.adoc#bib45[[45\]].
 
 [#bib40]
-[40] IDTA-02006 "Submodel Template of the Asset Administration Shell - Digital Nameplate for Industrial Equipment", Version 2.0, Oct. 2022, Industrial Digital Twin Association 
+[40] IDTA-02006 "Submodel Template of the Asset Administration Shell - Digital Nameplate for Industrial Equipment", 
+Version 2.0, Oct. 2022, 
+Industrial Digital Twin Association 
 See xref:bibliography.adoc#bib45[[45\]].
 
 ////
@@ -256,7 +255,11 @@ Available: https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/hm
 
 [#bib48]
 [48] "How to create a submodel template specification".
+V1.1. Junde 2025. Industrial Digital Twin Association.
 Guideline.
+Accessed: 2025-10-19. [Online]. 
+Available: https://industrialdigitaltwin.org/wp-content/uploads/2025/06/IDTA_How-to-write-a-SMT-v1.1.pdf
+
 December 2022. Industrial Digital Twin Association.
 Accessed: 2025-03-24. [Online]. 
 Available: https://industrialdigitaltwin.org/wp-content/uploads/2022/12/I40-IDTA-WS-Process-How-to-write-a-SMT-FINAL-.pdf
