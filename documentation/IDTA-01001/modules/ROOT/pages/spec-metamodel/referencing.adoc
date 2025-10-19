@@ -68,15 +68,13 @@ Expected semantic ID of the referenced model element (_Reference/type=ModelRefer
 
 
 ====
-Note 1: if Reference/referredSemanticId is defined, the semanticId of the model element referenced should have a matching semantic ID.
+Note: if Reference/referredSemanticId is defined, the semanticId of the model element referenced should have a matching semantic ID.
 If this is not the case, a validator should raise a warning.
 ====
 
 
 
-====
-Note 2: it is recommended to use an external reference for the semantic ID expected from the referenced model element.
-====
+
 
 
 |xref:Reference[Reference] |0..1
@@ -530,7 +528,7 @@ h|Explanation
 .2+e|BasicEventElement | `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/BasicEventElement`
 a|Basic event element
 
-.2+e|Blob | `\https://admin-shell.io/aas/3/1/AasSubmodelElements/Blob`
+.2+e|Blob | `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/Blob`
 a|Blob
 
 .2+e|Capability | `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/Capability`
