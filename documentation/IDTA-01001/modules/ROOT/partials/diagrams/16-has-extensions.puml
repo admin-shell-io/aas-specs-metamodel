@@ -1,8 +1,8 @@
 @startuml
 
-!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/master/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/has-extension.puml
-!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/master/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/referable.puml
-!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/master/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/extension.puml
+!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-1-1_final/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/has-extension.puml
+!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-1-1_final/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/referable.puml
+!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-1-1_final/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/extension.puml
 
 Extension -> "+refersTo" Referable:Reference
 HasExtensions ..> Extension

@@ -1,4 +1,4 @@
-:git-repo: https://github.com/admin-shell-io/aas-specs-metamodel/tree/master
+:git-repo: https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-1-1_final
 
 // JSON schema links
 :json-folder: {git-repo}/schemas/json

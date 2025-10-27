@@ -22,7 +22,7 @@ It is however recommended to have a look at the xref:annex/uml.adoc#omg-uml-spec
 
 ////
 ====
-Note: an xmi representation of the UML model can be found in the repository "aas-specs" in the GitHub project admin-shell-io *xref:bibliography.adoc#bib51[[51\]]*: https://github.com/admin-shell-io/aas-specs-metamodel/tree/master/schemas/xmi
+Note: an xmi representation of the UML model can be found in the repository "aas-specs" in the GitHub project admin-shell-io *xref:bibliography.adoc#bib51[[51\]]*: https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-1-1_final/schemas/xmi
 ====
 ////
 
