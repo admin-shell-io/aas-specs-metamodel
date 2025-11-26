@@ -341,17 +341,27 @@ _Class2_ instance only exists if the parent object of type _Class1_ exists.
 [[image-81-composite-aggregation-composition]]
 [plantuml, 81-composite-aggregation-composition, svg]
 ....
-include::partial$diagrams/uml-basics/81-composite-aggregation-composition.puml[]
+include::partial$diagrams/uml-specific/81-composite-aggregation-composition.puml[]
 ....
 
-
+////
 <<image-82-shared-aggregation>> shows a representation of a shared aggregation: a _Class2_ instance can exist independently of a _Class1_ instance. It is assumed that only the end member of the aggregation association is navigable per default, i.e. it is possible to navigate from an instance of _Class1_ to the owned instance of _Class2_ but not vice versa.
 
 .Graphical Representation of Shared Aggregation
 [[image-82-shared-aggregation]]
 [plantuml, 82-shared-aggregation, svg]
 ....
-include::partial$diagrams/uml-basics/82-shared-aggregation.puml[]
+include::partial$diagrams/uml-specific/82-shared-aggregation.puml[]
+....
+////
+
+<<image-attribute_with_type_feference>> shows a representation of an attribute of type "Reference": _Class1_ has an attribute _attr_ of type _Reference_. Reference handling is specific to the Asset Administration Shell. An attribute of this type references another class within the model via its identifier. Therefore additionally an association between _Class1_ and _Class2_ is added to denote that the referenced object shall be an instance of _Class2_.
+
+.Graphical Representation of Shared Aggregation
+[[image-attribute_with_type_feference]]
+[plantuml, attribute_with_type_feference, svg]
+....
+include::partial$diagrams/uml-specific/attribute_with_type_Reference.puml[]
 ....
 
 <<image-83-generalization-inheritance>> show different graphical representations of generalization.
@@ -367,7 +377,7 @@ Typically, the inherited elements are not shown.
 [[image-83-generalization-inheritance]]
 [plantuml, 83-generalization-inheritance, svg]
 ....
-include::partial$diagrams/uml-basics/83-generalization-inheritance.puml[]
+include::partial$diagrams/uml-specific/83-generalization-inheritance.puml[]
 ....
 
 
@@ -383,7 +393,7 @@ This can be seen on the right side of <<image-84-enumeration-with-inheritance>> 
 [[image-84-enumeration-with-inheritance]]
 [plantuml, 84-enumeration-with-inheritance, svg]
 ....
-include::partial$diagrams/uml-basics/84-enumeration-with-inheritance.puml[]
+include::partial$diagrams/uml-specific/84-enumeration-with-inheritance.puml[]
 ....
 
 
@@ -397,7 +407,7 @@ Note 2: in this specification all elements of an enumeration are ordered alphabe
 [[image-85-experimental-classes]]
 [plantuml, 85-experimental-classes, svg]
 ....
-include::partial$diagrams/uml-basics/85-experimental-classes.puml[]
+include::partial$diagrams/uml-specific/85-experimental-classes.puml[]
 ....
 
 
@@ -407,14 +417,14 @@ include::partial$diagrams/uml-basics/85-experimental-classes.puml[]
 [[image-deprecated-class]]
 [plantuml, deprecated-class, svg]
 ....
-include::partial$diagrams/uml-basics/deprecated-class.puml[]
+include::partial$diagrams/uml-specific/deprecated-class.puml[]
 ....
 
 .Graphical Representation for Deprecated Attribute
 [[image-deprecated-attribute]]
 [plantuml, deprecated-attribute, svg]
 ....
-include::partial$diagrams/uml-basics/deprecated-attribute.puml[]
+include::partial$diagrams/uml-specific/deprecated-attribute.puml[]
 ....
 
 <<image-87-template-class>> shows a class representing a template.
@@ -424,5 +434,5 @@ It is marked by the stereotype "Template".
 [[image-87-template-class]]
 [plantuml, 87-template-class, svg]
 ....
-include::partial$diagrams/uml-basics/87-template-class.puml[]
+include::partial$diagrams/uml-specific/87-template-class.puml[]
 ....
