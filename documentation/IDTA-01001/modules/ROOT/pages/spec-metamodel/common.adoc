@@ -98,6 +98,12 @@ h|Explanation h|Type h|Card.
 .2+e|[[creator]]creator 3+| `\https://admin-shell.io/aas/3/1/AdministrativeInformation/creator`
 a|The subject ID of the subject responsible for making the element |xref:spec-metamodel/referencing.adoc#Reference[Reference] |0..1
 
+.2+e|[[createdAt]]createdAt 3+| `\https://admin-shell.io/aas/3/1/AdministrativeInformation/createdAt `
+a| date of creation | dateTime |0..1
+
+.2+e|[[updatedAt]]updatedAt 3+| `\https://admin-shell.io/aas/3/1/AdministrativeInformation/updatedAt`
+a| date of update | dateTime |0..1
+
 .2+e|[[templateId]]templateId 3+| `\https://admin-shell.io/aas/3/1/AdministrativeInformation/templateId`
 a|
 Identifier of the template that guided the creation of the element
@@ -450,10 +456,8 @@ include::partial$diagrams/21-qualifier.puml[]
 
 Qualifiers may be defined for qualifiable elements.
 
-
-There are standardized qualifiers defined in (https://cdd.iec.ch/cdd/iec61360-7/iec61360-7.nsf/TreeFrameset?OpenFrameSet&ongletactif=1)[IEC CDD, IEC61360-7, CAA002].
-and (https://cdd.iec.ch/cdd/iec61987/iec61987.nsf/TreeFrameset?OpenFrameSet&ongletactif=1)[IEC CDD, IEC 61987, ABJ604].
-
+There are standardized qualifiers defined in link:https://cdd.iec.ch/cdd/iec61360-7/iec61360-7.nsf/TreeFrameset?OpenFrameSet&ongletactif=1[IEC CDD, IEC61360-7, CAA002]
+and link:https://cdd.iec.ch/cdd/iec61987/iec61987.nsf/TreeFrameset?OpenFrameSet&ongletactif=1[IEC CDD, IEC 619897, ABJ604].
 A level qualifier defining the level type minimal, maximal, typical, and nominal value is specified in IEC 62569-1.
 In DIN SPEC 92000, qualifier types like e.g. expression semantics and expression logic are defined.
 
