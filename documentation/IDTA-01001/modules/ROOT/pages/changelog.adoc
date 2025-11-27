@@ -36,16 +36,12 @@ They had separate sections and tables documenting the changes.
 ====
 
 
-
 == Changes V3.2 vs. V3.1.2
-
-
 
 Major Changes:
 
 * IN DISCUSSION: ADDED: New attributes for data ranges in AdministrationInformation  (https://github.com/admin-shell-io/aas-specs-metamodel/issues/484[#484])
 * added: new value to enumeration AssetKind: Batch to support Digital Product Passports (https://github.com/admin-shell-io/aas-specs-metamodel/issues/483[#483])
-
 
 Minor Changes:
 
@@ -54,6 +50,39 @@ Minor Changes:
 * update bibliography
 * editorial changes
 
+=== Metamodel Changes V3.2 vs. V3.1.1
+
+.Changes in Metamodel
+[cols="5%,42%,48%",options="header",]
+|===
+|*Nc* |*V3.2 Change w.r.t. V3.1.1* |*Comment*
+
+| {empty} | xref:spec-metamodel/core.adoc#AssetKind[AssetKind] a| Add new value "Batch" to enumeration AssetKind
+
+|===
+
+.Changes in Metamodel
+[cols="5%,42%,48%",options="header",]
+|===
+h|Nc h|V3.2 Change w.r.t. V3.1.1 h|Comment
+
+| {empty} |  a| 
+
+|===
+
+.New Elements in Metamodel
+[cols="5%,41%,51%",options="header",]
+|===
+h|{empty} h|New Elements V3.2 vs V3.1 h|Comment
+{empty} | AdministrativeInformation/createdAt | a| TO BE CLARIFIED
+{empty} | AdministrativeInformation/updatedAt | a| TO BE CLARIFIED
+|===
+
+[cols="5%,10%,15%,69%",options="header",]
+|===
+h|Nc h|V3.2 vs. V3.1 h|New, Update, Removed, Reformulated h|Comment
+| | | a| 
+|===
 
 == Changes V3.1.2 vs. V3.1.1
 
@@ -75,7 +104,6 @@ Bugfixes:
 * CHANGED: updated references to Submodel Templates Technical Data and Digital Nameplate
 * CHANGED: preamble, review process as defined in IDTA
 * editorial fixes
-
 
 .Changes in Metamodel
 [cols="5%,42%,48%",options="header",]
@@ -115,7 +143,6 @@ Constraint AASd-021: Every qualifiable shall only have one qualifier with the sa
 Bugfixes:
 
 * CHANGED: fix xml schema w.r.t. ordering of attributes (https://github.com/admin-shell-io/aas-specs-metamodel/issues/585[#585])
-* Added xref:spec-metamodel/core.adoc#AssetInformation[AssetInformation/AssetType] to Annex "General Topics", table "Elements with Allowed Identifying Values"
 
 
 
