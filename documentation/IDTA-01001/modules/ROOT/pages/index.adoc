@@ -26,8 +26,9 @@ Previous version: 3.1.1
 For the schemas derived from this document there is a dependency to the following parts of the “Specification of the Asset Administration Shell” series:
 
 * IDTA-01003-a Part 3a: Data Specification – IEC 61360 in version 3.1 xref:bibliography.adoc#bib46[[46\]]
+* IDTA-01003-b Part 3b: Data Specification – Measurement Units in version 3.0 xref:bibliography.adoc#bib46[[46\]]
 
-If there is a bugfix of this parts, this shall be used.
+If there is a bugfix of these parts, they shall be used.
 
 == Notice
 
