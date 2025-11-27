@@ -331,7 +331,8 @@ An asset typically may be represented by several different identification proper
 They are used for lookup of Asset Administration Shells in cases the globalAssetId is not available.
 However, they do not need to be globally unique.
 
-| |assetType |IRI a|recommended
+| |assetType |IRI a|
+recommended
 
 In case of AssetInformation/assetKind = Instance, specify the AssetInformation/globalAssetId of the type asset
 
