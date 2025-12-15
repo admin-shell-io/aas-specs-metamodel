@@ -255,7 +255,7 @@ Available: https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/hm
 
 [#bib48]
 [48] "How to create a submodel template specification".
-V1.1. Junde 2025. Industrial Digital Twin Association.
+V1.1. June 2025. Industrial Digital Twin Association.
 Guideline.
 Accessed: 2025-10-19. [Online]. 
 Available: https://industrialdigitaltwin.org/wp-content/uploads/2025/06/IDTA_How-to-write-a-SMT-v1.1.pdf
