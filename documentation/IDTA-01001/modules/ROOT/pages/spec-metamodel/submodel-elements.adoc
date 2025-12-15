@@ -835,7 +835,7 @@ Submodel element lists are used for sets (i.e. unordered collections without dup
 
 
 Submodel element lists are also used to create multidimensional arrays.
-A two-dimensional array listxref:bibliography.adoc#bib3[[3\]]xref:bibliography.adoc#bib5[[5\]] with _Property_ values would be realized like follows: the first submodel element list would contain three xref:spec-metamodel/submodel-elements.adoc#submodel-element-list-attributes[SubmodelElementList] elements.
+A two-dimensional array list[3\]][5\] with _Property_ values would be realized like follows: the first submodel element list would contain three xref:spec-metamodel/submodel-elements.adoc#submodel-element-list-attributes[SubmodelElementList] elements.
 Each of these three xref:spec-metamodel/submodel-elements.adoc#submodel-element-list-attributes[SubmodelElementList] would contain 5 single xref:spec-metamodel/submodel-elements.adoc#property-attributes[Property] elements.
 The xref:spec-metamodel/common.adoc#HasSemantics[semanticId] of the contained properties would be the same for all lists in the first list, i.e. xref:spec-metamodel/submodel-elements.adoc#submodel-element-list-attributes[semanticIdListElement] would be identical for all three lists contained in the first list.
 The _semanticId_ of the three contained lists would differ depending on the dimension it represents.
