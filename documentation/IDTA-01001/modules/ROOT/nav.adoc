@@ -31,7 +31,7 @@ SPDX-License-Identifier: CC-BY-4.0
 
 * xref:pages/spec-metamodel/index.adoc[Specification (normative)]
 
-** pages/xref:spec-metamodel/overview.adoc[Overview]
+** xref:pages/spec-metamodel/overview.adoc[Overview]
 
 ** xref:pages/spec-metamodel/designators.adoc[Designators]
 
