@@ -29,67 +29,67 @@ SPDX-License-Identifier: CC-BY-4.0
 
 // BEGIN Metamodel
 
-* xref:spec-metamodel/index.adoc[Specification (normative)]
+* xref:pages/spec-metamodel/index.adoc[Specification (normative)]
 
-** xref:spec-metamodel/overview.adoc[Overview]
+** pages/xref:spec-metamodel/overview.adoc[Overview]
 
-** xref:spec-metamodel/designators.adoc[Designators]
+** xref:pages/spec-metamodel/designators.adoc[Designators]
 
-*** xref:spec-metamodel/common.adoc[Common Attributes]
+*** xref:pages/spec-metamodel/common.adoc[Common Attributes]
 
-*** xref:spec-metamodel/core.adoc[Core Classes]
+*** xref:pages/spec-metamodel/core.adoc[Core Classes]
 
-*** xref:spec-metamodel/submodel-elements.adoc[Submodel Element Types]
+*** xref:pages/spec-metamodel/submodel-elements.adoc[Submodel Element Types]
 
-*** xref:spec-metamodel/concept-description.adoc[Concept Descriptions]
+*** xref:pages/spec-metamodel/concept-description.adoc[Concept Descriptions]
 
-*** xref:spec-metamodel/environment.adoc[Environment]
+*** xref:pages/spec-metamodel/environment.adoc[Environment]
 
-** xref:spec-metamodel/referencing.adoc[Referencing]
+** xref:pages/spec-metamodel/referencing.adoc[Referencing]
 
-** xref:spec-metamodel/datatypes.adoc[Data Types]
+** xref:pages/spec-metamodel/datatypes.adoc[Data Types]
 
-** xref:spec-metamodel/constraints.adoc[Constraints]
+** xref:pages/spec-metamodel/constraints.adoc[Constraints]
 
 // END  Metamodel
 
-* xref:data-specifications.adoc[Data Specifications]
+* xref:pages/data-specifications.adoc[Data Specifications]
 
 
 
-* xref:mappings/mappings.adoc[Mappings (normative)]
+* xref:pages/mappings/mappings.adoc[Mappings (normative)]
 
-* xref:summary-and-outlook.adoc[Summary and Outlook]
+* xref:pages/summary-and-outlook.adoc[Summary and Outlook]
 
 // BEGIN Annex
 
-* xref:./annex/nav_annex.adoc[Annex]
+* xref:./pages/annex/nav_annex.adoc[Annex]
 
-** xref:./annex/concepts-aas.adoc[Concepts AAS]
+** xref:./pages/annex/concepts-aas.adoc[Concepts AAS]
 
-** xref:./annex/general.adoc[General Topics]
+** xref:./pages/annex/general.adoc[General Topics]
 
-** xref:./annex/valueonly-serialization-example.adoc[Value Only Serialization Example]
+** xref:./pages/annex/valueonly-serialization-example.adoc[Value Only Serialization Example]
 
-** xref:./annex/backus-naur-form.adoc[Backus Naur Form]
+** xref:./pages/annex/backus-naur-form.adoc[Backus Naur Form]
 
-** xref:./annex/uml-templates.adoc[UML Templates]
+** xref:./pages/annex/uml-templates.adoc[UML Templates]
 
-** xref:./annex/uml.adoc[UML]
+** xref:./pages/annex/uml.adoc[UML]
 
-** xref:./annex/grammar-semantic-ids-metamodel.adoc[Grammar Semantic IDs for Metamodel]
+** xref:./pages/annex/grammar-semantic-ids-metamodel.adoc[Grammar Semantic IDs for Metamodel]
 
-** xref:./annex/handling-constraints.adoc[Handling Constraints]
+** xref:./pages/annex/handling-constraints.adoc[Handling Constraints]
 
-** xref:./annex/overview-constraints.adoc[Overview Constraints]
+** xref:./pages/annex/overview-constraints.adoc[Overview Constraints]
 
-** xref:./annex/usage-metamodel.adoc[Usage Metamodel]
+** xref:./pages/annex/usage-metamodel.adoc[Usage Metamodel]
 
-** xref:./annex/metamodel-with-inheritance.adoc[Metamodel With Inheritance]
-
-
-* xref:changelog.adoc[Change Notes]
+** xref:./pages/annex/metamodel-with-inheritance.adoc[Metamodel With Inheritance]
 
 
-* xref:bibliography.adoc[Bibliography]
+* xref:pages/changelog.adoc[Change Notes]
+
+
+* xref:pages/bibliography.adoc[Bibliography]
 
