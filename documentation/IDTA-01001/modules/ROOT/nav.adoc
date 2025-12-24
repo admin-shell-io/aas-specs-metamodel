@@ -20,7 +20,7 @@ SPDX-License-Identifier: CC-BY-4.0
 ////
 
 
-* xref:terms-definitions-and-abbreviations.adoc[Terms and Definitions]
+* xref:pages/terms-definitions-and-abbreviations.adoc[Terms and Definitions]
 
 * xref:preamble.adoc[Preamble]
 
