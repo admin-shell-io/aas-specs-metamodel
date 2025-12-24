@@ -22,9 +22,9 @@ SPDX-License-Identifier: CC-BY-4.0
 
 * xref:pages/terms-definitions-and-abbreviations.adoc[Terms and Definitions]
 
-* xref:preamble.adoc[Preamble]
+* xref:pages/preamble.adoc[Preamble]
 
-* xref:introduction.adoc[Introduction]
+* xref:pages/introduction.adoc[Introduction]
 
 
 // BEGIN Metamodel
