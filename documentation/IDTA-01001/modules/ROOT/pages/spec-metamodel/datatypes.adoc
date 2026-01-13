@@ -76,7 +76,7 @@ Note: see  xref:spec-metamodel/constraints.adoc#constraints-for-types[Constraint
 .2+h|Primitive 2+h| ID
 h|Definition h|Value Examples
 
-.2+e|[[BlobType]]BlobType 2+| `\https://admin-shell.io/aas/3/0/BlobType`
+.2+e|[[BlobType]]BlobType 2+| `\https://admin-shell.io/aas/3/1/BlobType`
 a|
 _base64binary_
 
@@ -94,11 +94,11 @@ for "Hello, World!"
 a|
 _string_ with max 128 and min 1 characters
 
+Any content type as specified in link:https://datatracker.ietf.org/doc/html/rfc2046[RFC2046].
 
-Any content type as specified in [RFC2046](https://datatracker.ietf.org/doc/html/rfc2046). 
+The content type should be registered by the Internet Assigned Numbers Authority (link:https://www.iana.org/assignments/media-types/media-types.xhtml[IANA]) as specified in link:https://datatracker.ietf.org/doc/html/rfc2048[RFC2048].
 
-The content type should be registered by the Internet Assigned Numbers Authority (IANA([link](https://www.iana.org/assignments/media-types/media-types.xhtml)))
- as specified in [RFC2048](https://datatracker.ietf.org/doc/html/rfc2048). 
+
 
 a|
 application/pdf

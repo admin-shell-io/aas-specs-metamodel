@@ -155,6 +155,8 @@ Available: https://www.w3.org/TR/shacl/
 ////
 [#bib30]
 [30] "I4AAS – Industrie 4.09 Asset Administration Shell". June 2021. 
+////
+
 
 
 [#bib32]
@@ -217,8 +219,7 @@ See xref:bibliography.adoc#bib45[[45\]].
 ////
 ////
 [#bib41]
-[41] Joint Working Group of the https://opcfoundation.org/[OPC Foundation] and https://industrialdigitaltwin.org/[IDTA]  
-https://profiles.opcfoundation.org/workinggroup/40[Industry 4.0 Asset Administration Shell - AAS (I4AAS)] 
+[41] Joint Working Group of the link:https://opcfoundation.org/[OPC Foundation] and https://industrialdigitaltwin.org/[IDTA] link:https://profiles.opcfoundation.org/workinggroup/40[Industry 4.0 Asset Administration Shell - AAS (I4AAS)] 
 ////
 ////
 [#bib42]

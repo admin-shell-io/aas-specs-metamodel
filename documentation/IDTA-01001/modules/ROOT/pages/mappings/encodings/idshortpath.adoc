@@ -61,6 +61,9 @@ Submodel: MySubmodel
 *** SML: MySubSubmodelElementList3
 **** SMC: MySubmodelElementCollectionInSML3
 ***** Property: "MySubTestValue3"
+*** SML: MySubSubmodelElementList3
+**** SMC: MySubmodelElementCollection2InSML3
+***** Property: "MySubTestValue3"
 ====
 
 idShortPaths for SMC MySubmodelElementCollection within the Submodel above:

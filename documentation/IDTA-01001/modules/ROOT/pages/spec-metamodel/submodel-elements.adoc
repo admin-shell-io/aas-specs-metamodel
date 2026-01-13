@@ -490,9 +490,11 @@ include::partial$diagrams/37-file.puml[]
 ....
 
 
+A media type (also MIME type and content type) is a two-part identifier for file formats and format contents transmitted via the Internet.
+The Internet Assigned Numbers Authority (IANA) is the official authority for the standardization and publication of these classifications.
 
 ====
-Note: for information on handling supplementary external files in exchanging Asset Administration Shells in AASX Package File Format see also Part 5 of the series link:https://industrialdigitaltwin.org/en/content-hub/aasspecifications["Specification of the Asset Administration Shell"].
+Note: for information on handling supplementary external files in exchanging Asset Administration Shells in AASX package format see also Part 5 of the series link:https://industrialdigitaltwin.org/en/content-hub/aasspecifications["Specification of the Asset Administration Shell"].
 An absolute path is used in case the file exists independently of the Asset Administration Shell.
 A relative path, relative to the package root, should be used if the file is part of a serialized package of the Asset Administration Shell.
 ====

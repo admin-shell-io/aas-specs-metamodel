@@ -425,7 +425,7 @@ For a _File_ named "Document", the Value-Only payload is minimized to the follow
 ----
 {
     "contentType": "application/pdf",
-    "value": "SafetyInstructions.pdf"
+    "value": "https://myDomain/SafetyInstructions.pdf"
 }
 
 ----

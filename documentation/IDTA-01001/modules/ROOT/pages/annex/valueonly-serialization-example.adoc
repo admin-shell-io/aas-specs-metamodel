@@ -156,11 +156,11 @@ due to the reasons mentioned above.
   "MySubmodelElementFileList": [
     {
       "contentType": "application/pdf",
-      "value": "MyFirstFile.pdf"
+      "value": "https://myDomain/MyFirstFile.pdf"
     },
     {
       "contentType": "application/pdf",
-      "value": "MySecondFile.pdf"
+      "value": "https://myDomain/MySecondFile.pdf"
     }
   ],
   "MySubmodelElementCollection":

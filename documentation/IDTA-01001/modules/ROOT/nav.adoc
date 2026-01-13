@@ -88,7 +88,7 @@ SPDX-License-Identifier: CC-BY-4.0
 ** xref:./annex/metamodel-with-inheritance.adoc[Metamodel With Inheritance]
 
 
-* xref:changelog.adoc[Change Log]
+* xref:changelog.adoc[Change Notes]
 
 
 * xref:bibliography.adoc[Bibliography]

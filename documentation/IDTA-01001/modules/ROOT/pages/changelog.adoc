@@ -36,18 +36,18 @@ They had separate sections and tables documenting the changes.
 ====
 
 
-== Changes V3.2 vs. V3.1
+== Changes V3.2 vs. V3.1.2
 
 Major Changes:
 
 * IN DISCUSSION: ADDED: New attributes for data ranges in AdministrationInformation  (https://github.com/admin-shell-io/aas-specs-metamodel/issues/484[#484])
-* added new value to enumeration AssetKind: Batch to support Digital Product Passports (https://github.com/admin-shell-io/aas-specs-metamodel/issues/483[#483])
+* added: new value to enumeration AssetKind: Batch to support Digital Product Passports (https://github.com/admin-shell-io/aas-specs-metamodel/issues/483[#483])
 
 Minor Changes:
 
 * description of data type ContentType changed, some explanations with respect to mime types were removed (https://github.com/admin-shell-io/aas-specs-metamodel/issues/604[#604])
-* corrected and added links for definitions of qualifiers in IEC CDD (https://github.com/admin-shell-io/aas-specs-metamodel/issues/611[#611])
 * Annex UML: add information how to graphically depict attributes of type "Reference" (https://github.com/admin-shell-io/aas-specs-metamodel/issues/601[#601])
+
 * minor changes (including (https://github.com/admin-shell-io/aas-specs-metamodel/issues/600[#600])
 * remove Note 2 from Reference/referredSemanticId
 * update bibliography
@@ -58,6 +58,7 @@ Minor Bugfixes:
 * correct ID for AasNonContainerSubmodelElements/Blob
 * correct ID for Extension/name
 * correct ID for HasSemantics/supplementalSemanticId
+
 
 === Metamodel Changes V3.2 vs. V3.1.1
 
@@ -93,12 +94,65 @@ h|Nc h|V3.2 vs. V3.1 h|New, Update, Removed, Reformulated h|Comment
 | | | a| 
 |===
 
+== Changes V3.1.2 vs. V3.1.1
+
+Bugfixes:
+
+* CHANGED: fix AASd-021 (there was no change compared to V3.0, schemas not affected)  (https://github.com/admin-shell-io/aas-specs-metamodel/issues/624[#624])
+* CHANGED: make example for idShortPath consistent to (https://github.com/admin-shell-io/aas-specs-metamodel/issues/618[#618])
+* CHANGED: fix diagram for DataSpecificationContent: add stereotype "Template"
+* CHANGED: fix semantic metamodel ID `\https://admin-shell.io/aas/3/1/AasSubmodelElements/Operation` for `Operation` within `AasReferableNonIdentifiables` to `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/Operation`
+* CHANGED: fix syntax error in semantic metamodel ID `\https://admin-shell.io/aas/3/1/AAasReferableNonIdentifiables/SubmodelElement` to `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/SubmodelElement`
+* CHANGED: fix semantic metamodel ID `\https://admin-shell.io/aas/3/1/AasSubmodelElements/Blob` for `Blob` within  `AasNonContainerSubmodelElements` to `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/Blob`
+* CHANGED: fix semantic metamodel ID `\https://admin-shell.io/aas/3/1/Extension` to `\https://admin-shell.io/aas/3/1/Extension/name` for attribute name in class Extension
+* CHANGED: fix semantic metamodel ID `\https://admin-shell.io/aas/3/1/HasSemantics/supplementalId` for `HasSemantics` to `\https://admin-shell.io/aas/3/1/HasSemantics/supplementalSemanticId`
+* CHANGED: fix version number in semantic metamodel ID `\https://admin-shell.io/aas/3/0/BlobType` to `\https://admin-shell.io/aas/3/1/BlobType` for data type `BlobType`
+* CHANGED: Reference: remove recommendation to use an external reference for the referredSemanticId
+* CHANGED: correct references to standards defining qualifiers (https://github.com/admin-shell-io/aas-specs-metamodel/issues/611[#611])
+* CHANGED: DIN SPEC 92000 is a DIN DKE SPEC, reference corrected
+* CHANGED: bibliography, fix or remove non-working links
+* CHANGED: updated references to Submodel Templates Technical Data and Digital Nameplate
+* CHANGED: preamble, review process as defined in IDTA
+* editorial fixes
+
+.Changes in Metamodel
+[cols="5%,42%,48%",options="header",]
+|===
+|*Nc* |*V3.1 Change w.r.t. V3.0.2* |*Comment*
+
+| {empty} | AasNonContainerSubmodelElements/Blob a| fix semantic metamodel ID `\https://admin-shell.io/aas/3/1/AasSubmodelElements/Blob` for `Blob` within  `AasNonContainerSubmodelElements` to `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/Blob`
+
+| {empty} | AasReferableNonIdentifiables/Operation a| fix semantic metamodel ID `\https://admin-shell.io/aas/3/1/AasSubmodelElements/Operation` for `Operation` within `AasReferableNonIdentifiables` to `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/Operation`
+
+| {empty} | AasReferableNonIdentifiables/SubmodelElement a| fix syntax error in semantic metamodel ID `\https://admin-shell.io/aas/3/1/AAasReferableNonIdentifiables/SubmodelElement` to `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/SubmodelElement`
+
+| {empty} | BlobType a| fix version number in semantic metamodel ID `\https://admin-shell.io/aas/3/0/BlobType` to `\https://admin-shell.io/aas/3/1/BlobType` for data type `BlobType`
+
+| {empty} | Extension/name a| fix semantic metamodel ID `\https://admin-shell.io/aas/3/1/Extension` to `\https://admin-shell.io/aas/3/1/Extension/name` for attribute name in class `Extension`
+
+|===
+
+.New, Changed or Removed Constraints
+[cols="5%,10%,15%,69%",options="header",]
+|===
+|*Nc* |*V3.1 vs. V3.0* |*New, Update, Removed, Reformulated* |*Comment*
+
+
+|{empty}  | AASd-021| Correct a|
+
+Constraint AASd-021: Every qualifiable can only have one qualifier with the same Qualifier/valueType.
+
+corrected to
+
+Constraint AASd-021: Every qualifiable shall only have one qualifier with the same Qualifier/type.
+
+|===
+
 == Changes V3.1.1 vs. V3.1
 
 Bugfixes:
 
 * CHANGED: fix xml schema w.r.t. ordering of attributes (https://github.com/admin-shell-io/aas-specs-metamodel/issues/585[#585])
-* Added xref:spec-metamodel/core.adoc#AssetInformation[AssetInformation/AssetType] to Annex "General Topics", table "Elements with Allowed Identifying Values"
 
 
 
@@ -265,6 +319,7 @@ use "shall" instead of "can"
 Constraint AASd-021: Every qualifiable can only have one qualifier with the same Qualifier/valueType.
 
 changed to
+
 Constraint AASd-021: Every qualifiable shall only have one qualifier with the same Qualifier/valueType.
 
 |{empty}  |AASd-077 |Update a|

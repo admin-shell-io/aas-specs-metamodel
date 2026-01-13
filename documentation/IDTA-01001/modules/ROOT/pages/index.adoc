@@ -16,38 +16,37 @@ This specification is part of the https://industrialdigitaltwin.org/en/content-h
 
 == Version
 
-
+IN PROGRESS
 This is version 3.2 of the specification IDTA-01001.
 
-Previous version: 3.1.1
-
+Previous version: 3.1.2
 
 [#metamodel-versions]
 == Dependencies
 
 For the schemas derived from this document there is a dependency to the following parts of the “Specification of the Asset Administration Shell” series:
 
-* IDTA-01003-a Part 3a: Data Specification – IEC 61360 in version **3.X** xref:bibliography.adoc#bib46[[46\]]
+* IDTA-01003-a Part 3a: Data Specification – IEC 61360 in version 3.1 xref:bibliography.adoc#bib46[[46\]]
+* IDTA-01003-b Part 3b: Data Specification – Measurement Units in version 3.0 xref:bibliography.adoc#bib46[[46\]]
 
-If there is a bugfix of this parts, this shall be used.
+If there is a bugfix of these parts, they shall be used.
 
 == Notice
 
 Copyright: Industrial Digital Twin Association e.V. (IDTA)
 
+IDTA Number: IDTA-01001
 
-IDTA Document Number: IDTA-01001-3-2
+Version: 3.2
 
-DOI: to be added
+DOI: https://doi.org/10.62628/IDTA.01001-3-2
 
 This work is licensed under a
 https://creativecommons.org/licenses/by/4.0/[Creative Commons Attribution 4.0 International License].
 
 SPDX-License-Identifier: CC-BY-4.0
 
-
-**DATE to be added**
-
+DATE TO BE ADDED
 
 == How to Get in Contact
 
@@ -65,9 +64,9 @@ Feedback:
 
 === History
 
-This document (version 3.2) is produced by the Work Stream "Specification of the Asset Administration Shell" of the Working Group "Open Technology" of the https://industrialdigitaltwin.org/[Industrial Digital Twin Association (IDTA)].
+This document (version 3.2) was produced by the Work Stream "Specification of the Asset Administration Shell" of the Working Group "Open Technology" of the https://industrialdigitaltwin.org/[Industrial Digital Twin Association (IDTA)].
 
-This document (version 3.1) was finalized in May 2025 by the Work Stream "Specification of the Asset Administration Shell" of the Working Group "Open Technology" of the https://industrialdigitaltwin.org/[Industrial Digital Twin Association (IDTA)].
+This document (version 3.1) was produced by the Work Stream "Specification of the Asset Administration Shell" of the Working Group "Open Technology" of the https://industrialdigitaltwin.org/[Industrial Digital Twin Association (IDTA)], published in May 2025.
 It is the first version published as html document and maintained completely open source.
 
 Version 3.0, a major release, was finalized from June 2022 to January 2023 by the joint sub working group "Asset Administration Shell" of the working group "Reference Architectures, Standards and Norms" of the Plattform Industrie 4.0 and the working group "Open Technology" of the Industrial Digital Twin Association (IDTA).
