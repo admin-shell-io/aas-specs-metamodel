@@ -180,7 +180,7 @@ _[SOURCE: Glossary Industrie 4.0]_
 [[term-instance]]
 *instance*::
 
-concrete, clearly identifiable component of a certain xref:terms-definitions-and-abbreviations.adoc#term-type[type]
+concrete, clearly identifiable xref:terms-definitions-and-abbreviations.adoc#term-component[component]  of a certain xref:terms-definitions-and-abbreviations.adoc#term-type[type]
 
 ====
 Note 1 to entry: an individual entity of a type, for example a device, is obtained by defining specific property values.
@@ -230,7 +230,7 @@ _[SOURCE: ??]_
 [[term-property]]
 *property*::
 
-defined characteristic suitable for the description and differentiation of products or components
+defined characteristic suitable for the description and differentiation of products or xref:terms-definitions-and-abbreviations.adoc#term-component[components] 
 
 ====
 Note 1 to entry: the concept of type and instance applies to properties.
