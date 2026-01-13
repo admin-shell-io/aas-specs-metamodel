@@ -65,7 +65,7 @@ Minor Bugfixes:
 .Changes in Metamodel
 [cols="5%,42%,48%",options="header",]
 |===
-|*Nc* |*V3.2 Change w.r.t. V3.1.1* |*Comment*
+h|Nc h|V3.2 Change w.r.t. V3.1.1 h|Comment
 
 | {empty} | xref:spec-metamodel/core.adoc#AssetKind[AssetKind] a| Add new value "Batch" to enumeration AssetKind
 
@@ -83,7 +83,7 @@ h|Nc h|V3.2 Change w.r.t. V3.1.1 h|Comment
 .New Elements in Metamodel
 [cols="5%,41%,51%",options="header",]
 |===
-h|{empty} h|New Elements V3.2 vs V3.1 h|Comment
+h|Nc h|New Elements V3.2 vs V3.1 h|Comment
 |{empty} | AdministrativeInformation/createdAt  a| 
 |{empty} | AdministrativeInformation/updatedAt  a| 
 |===
@@ -118,7 +118,7 @@ Bugfixes:
 .Changes in Metamodel
 [cols="5%,42%,48%",options="header",]
 |===
-|*Nc* |*V3.1 Change w.r.t. V3.0.2* |*Comment*
+h| Nc h| V3.1 Change w.r.t. V3.0.2 h| Comment
 
 | {empty} | AasNonContainerSubmodelElements/Blob a| fix semantic metamodel ID `\https://admin-shell.io/aas/3/1/AasSubmodelElements/Blob` for `Blob` within  `AasNonContainerSubmodelElements` to `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/Blob`
 
@@ -252,7 +252,7 @@ https://github.com/admin-shell-io/aas-specs-metamodel/issues/385[#385])
 .Changes in Metamodel
 [cols="5%,42%,48%",options="header",]
 |===
-|*Nc* |*V3.1 Change w.r.t. V3.0.2* |*Comment*
+h| Nc h| V3.1 Change w.r.t. V3.0.2 h| Comment
 
 | {empty} | xref:spec-metamodel/core.adoc#AssetKind[AssetKind] a| Add new value "Role" to enumeration AssetKind
 | {empty} | xref:spec-metamodel/submodel-elements.adoc#BasicEventElement[BasicEventElement/lastUpdate] a| change data type from _dateTime_ to _DateTimeUtc_
@@ -272,7 +272,7 @@ https://github.com/admin-shell-io/aas-specs-metamodel/issues/385[#385])
 .New Elements in Metamodel
 [cols="5%,41%,51%",options="header",]
 |===
-|{empty} |*New Elements V3.1 vs V3.0.2* |*Comment*
+h|Nc h|New Elements V3.1 vs V3.0.2 h|Comment
 
 |{empty} | xref:spec-metamodel/referencing.adoc#AasContainerSubmodelElements[AasContainerSubmodelElements] | New enumeration for container submodel elements
 |{empty} | xref:spec-metamodel/referencing.adoc#AasNonContainerSubmodelElements[AasNonContainerSubmodelElements] | New enumeration for non-container submodel elements
@@ -283,7 +283,7 @@ https://github.com/admin-shell-io/aas-specs-metamodel/issues/385[#385])
 .New, Changed or Removed Constraints
 [cols="5%,10%,15%,69%",options="header",]
 |===
-|*Nc* |*V3.1 vs. V3.0* |*New, Update, Removed, Reformulated* |*Comment*
+h|Nc h|V3.1 vs. V3.0 h|New, Update, Removed, Reformulated h|Comment
 |{empty}  |AASd-002 |Update a|
 now also allows hyphens to be included in name
 
@@ -667,7 +667,7 @@ Now part of AasSubmodelElements
 .New Elements in Metamodel
 [cols="5%,41%,51%",options="header",]
 |===
-| |*New Elements V3.0 vs V2.0.1* |*Comment*
+h|Nc  h|New Elements V3.0 vs V2.0.1 h|Comment
 |{empty} |xref:spec-metamodel/referencing.adoc#AasIdentifiables[AasIdentifiables] |New enumeration used for References, includes abstract Identifiable +
 +
 Before: Identifiables
@@ -984,7 +984,7 @@ Text how to select a suitable display name removed; now explained in Table 2
 .New Elements in Metamodel
 [cols="5%,43%,49%",options="header",]
 |===
-|*nc* |*V3.0 vs. V3.0RC02 New Elements* |*Comment*
+h|Nc h|V3.0 vs. V3.0RC02 New Elements h|Comment
 | |AdministrativeInformation/creator |New optional attribute
 | |AdministrativeInformation/templateId |New optional attribute
 | |AssetInformation/assetType |New optional attribute
@@ -1235,7 +1235,7 @@ Now part of AasSubmodelElements
 .New Elements in Metamodel w/o Security
 [cols="5%,59%,36%",options="header",]
 |===
-|*nc* |*V3.0RC02 vs. V2.0.1 New Elements* |*Comment*
+h|Nc h|V3.0RC02 vs. V2.0.1 New Elements h|Comment
 | |AasSubmodelElements a|
 New enumeration used for References
 
@@ -1673,7 +1673,7 @@ Now part of AasSubmodelElements
 .New Elements in Metamodel w/o Security
 [cols="5%,45%,51%",options="header",]
 |===
-|*nc* |*V3.0RC02 vs. V2.0RC01 New Elements* |*Comment*
+h|Nc h|V3.0RC02 vs. V2.0RC01 New Elements h|Comment
 | |AasSubmodelElements a|
 New enumeration used for References
 
@@ -2016,7 +2016,7 @@ Changes:
 .Changes w.r.t. Security
 [cols="5%,46%,43%",options="header",]
 |===
-|*nc* |*V3.0RC02 Change w.r.t. V3.0RC01* |*Comment*
+h|Nc h|V3.0RC02 Change w.r.t. V3.0RC01 h|Comment
 |x |AccessControlPolicyPoints/policyAdministrationPoint |Type changed from PolicyAdministrationPoint to AccessControl
 |x |AccessControlPolicyPoints/policyDecisionPoint |Removed
 |x |AccessControlPolicyPoints/policyEnforcementPoint |Removed
