@@ -92,7 +92,7 @@ _[SOURCE: IEC TR 62390:2005-01, 3.1.4]_
 [[term-capability]]
 *capability*::
 
-implementation-independent potential of an Industrie 4.0 xref:terms-definitions-and-abbreviations.adoc#term-component[component]  to achieve an effect within a domain
+implementation-independent potential of a xref:terms-definitions-and-abbreviations.adoc#term-component[component]  to achieve an effect within a domain
 
 ====
 Note 1 to entry: capabilities can be orchestrated and structured hierarchically.
@@ -106,7 +106,7 @@ Note 2 to entry: capabilities can be made executable via services.
 Note 3 to entry: the impact manifests itself in a measurable effect within the physical world.
 ====
 
-_[SOURCE: Glossary Industrie 4.0, minor changes]_
+_[SOURCE: Glossary Industrie 4.0, removed "Industrie 4.0" from "Industrie 4.0 component" and minor changes]_
 
 [[term-coded-value]]
 *coded value*::
