@@ -1,4 +1,4 @@
 @startuml
-abstract class DataSpecificationContent <<abstract>> {
+abstract class DataSpecificationContent <<abstract, Template>> {
 }
 @enduml
