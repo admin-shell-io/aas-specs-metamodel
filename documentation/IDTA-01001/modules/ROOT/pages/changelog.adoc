@@ -84,8 +84,8 @@ h|Nc h|V3.2 Change w.r.t. V3.1.1 h|Comment
 [cols="5%,41%,51%",options="header",]
 |===
 h|{empty} h|New Elements V3.2 vs V3.1 h|Comment
-{empty} | AdministrativeInformation/createdAt | a| 
-{empty} | AdministrativeInformation/updatedAt | a| 
+|{empty} | AdministrativeInformation/createdAt  a| 
+|{empty} | AdministrativeInformation/updatedAt  a| 
 |===
 
 [cols="5%,10%,15%,69%",options="header",]
