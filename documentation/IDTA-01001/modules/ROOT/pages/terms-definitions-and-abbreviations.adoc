@@ -74,7 +74,7 @@ _[SOURCE: IEC 63278-1:2023; ISO/IEC Guide 77-2; ISO/IEC 27460; IEC 61360]_
 [[term-asset-administration-shell]]
 *Asset Administration Shell (AAS)*::
 
-standardized digital representation of an asset
+standardized xref:terms-definitions-and-abbreviations.adoc#term-digital-representation[digital representation] of an asset
 
 ====
 Note 1 to entry: Asset Administration Shell and Administration Shell are used synonymously.
