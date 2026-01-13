@@ -92,7 +92,7 @@ _[SOURCE: IEC TR 62390:2005-01, 3.1.4]_
 [[term-capability]]
 *capability*::
 
-implementation-independent potential of an Industrie 4.0 component to achieve an effect within a domain
+implementation-independent potential of an Industrie 4.0 xref:terms-definitions-and-abbreviations.adoc#term-component[component]  to achieve an effect within a domain
 
 ====
 Note 1 to entry: capabilities can be orchestrated and structured hierarchically.
