@@ -35,7 +35,6 @@ Note: before V3.0, the security metamodel (now IDTA-01004) and the predefined da
 They had separate sections and tables documenting the changes.
 ====
 
-
 == Changes V3.1.2 vs. V3.1.1
 
 Bugfixes:
@@ -56,10 +55,6 @@ Bugfixes:
 * CHANGED: updated references to Submodel Templates Technical Data and Digital Nameplate
 * CHANGED: preamble, review process as defined in IDTA
 * editorial fixes
-
-Minor:
-
-* NEW: add new note for XML Schema data types compared to IEEE 754 definitions (https://github.com/admin-shell-io/aas-specs-metamodel/issues/620[#620])
 
 .Changes in Metamodel
 [cols="5%,42%,48%",options="header",]
@@ -93,7 +88,6 @@ corrected to
 Constraint AASd-021: Every qualifiable shall only have one qualifier with the same Qualifier/type.
 
 |===
-
 
 == Changes V3.1.1 vs. V3.1
 
