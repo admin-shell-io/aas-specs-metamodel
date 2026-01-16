@@ -74,7 +74,7 @@ _[SOURCE: IEC 63278-1:2023; ISO/IEC Guide 77-2; ISO/IEC 27460; IEC 61360]_
 [[term-asset-administration-shell]]
 *Asset Administration Shell (AAS)*::
 
-standardized digital representation of an asset
+standardized xref:terms-definitions-and-abbreviations.adoc#term-digital-representation[digital representation] of an xref:terms-definitions-and-abbreviations.adoc#term-asset[asset]
 
 ====
 Note 1 to entry: Asset Administration Shell and Administration Shell are used synonymously.
@@ -92,7 +92,7 @@ _[SOURCE: IEC TR 62390:2005-01, 3.1.4]_
 [[term-capability]]
 *capability*::
 
-implementation-independent potential of an Industrie 4.0 component to achieve an effect within a domain
+implementation-independent potential of a xref:terms-definitions-and-abbreviations.adoc#term-component[component]  to achieve an effect within a domain
 
 ====
 Note 1 to entry: capabilities can be orchestrated and structured hierarchically.
@@ -106,7 +106,7 @@ Note 2 to entry: capabilities can be made executable via services.
 Note 3 to entry: the impact manifests itself in a measurable effect within the physical world.
 ====
 
-_[SOURCE: Glossary Industrie 4.0, minor changes]_
+_[SOURCE: Glossary Industrie 4.0, removed "Industrie 4.0" from "Industrie 4.0 component" and minor changes]_
 
 [[term-coded-value]]
 *coded value*::
@@ -180,7 +180,7 @@ _[SOURCE: Glossary Industrie 4.0]_
 [[term-instance]]
 *instance*::
 
-concrete, clearly identifiable component of a certain xref:terms-definitions-and-abbreviations.adoc#term-type[type]
+concrete, clearly identifiable xref:terms-definitions-and-abbreviations.adoc#term-component[component]  of a certain xref:terms-definitions-and-abbreviations.adoc#term-type[type]
 
 ====
 Note 1 to entry: an individual entity of a type, for example a device, is obtained by defining specific property values.
@@ -230,7 +230,7 @@ _[SOURCE: ??]_
 [[term-property]]
 *property*::
 
-defined characteristic suitable for the description and differentiation of products or components
+defined characteristic suitable for the description and differentiation of products or xref:terms-definitions-and-abbreviations.adoc#term-component[components] 
 
 ====
 Note 1 to entry: the concept of type and instance applies to properties.

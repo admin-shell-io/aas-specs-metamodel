@@ -1,0 +1,9 @@
+@startuml
+
+class Class1 {
+  +attr: Reference[0..1]
+}
+
+Class1 -->"+attr 0..1" Class2 :Reference
+
+@enduml

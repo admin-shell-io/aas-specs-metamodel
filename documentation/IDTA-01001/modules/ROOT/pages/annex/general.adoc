@@ -331,6 +331,11 @@ An asset typically may be represented by several different identification proper
 They are used for lookup of Asset Administration Shells in cases the globalAssetId is not available.
 However, they do not need to be globally unique.
 
+| |assetType |IRI a|
+recommended
+
+In case of AssetInformation/assetKind = Instance, specify the AssetInformation/globalAssetId of the type asset
+
 |xref:spec-metamodel/core.adoc#Submodel[Submodel] with kind = Template |id |IRDI, IRI (URI) a|
 mandatory
 
@@ -448,7 +453,7 @@ Sometimes a concept description is derived from another concept description or i
 *Exact Matching (identical semanticIds) – DEFAULT*
 
 * With exact matching, two semantic IDs need to represent two exact matching references (see xref:annex/general.adoc#matching-algorithm-for-references[Matching Algorithm for References]).
-** Example: xref:ROOT:spec-metamodel/submodel-elements.adoc#Property[Property]  ith xref:ROOT:spec-metamodel/common.adoc#Referable[idShort]  "ManufacturerName" + xref:ROOT:spec-metamodel/common.adoc#HasSemantics[semanticId]  value 0173-1#02-AAO677#002 and Property with idShort "Herstellername" + semanticId value 0173-1#02-AAO677#002 have exactly equal semantics if the xref:ROOT:spec-metamodel/referencing.adoc#Key[Key/type]s in both semanticIds are identical plus the other attributes of a xref:ROOT:spec-metamodel/referencing.adoc#Reference[Reference] like xref:ROOT:spec-metamodel/referencing.adoc#Reference[type] and xref:ROOT:spec-metamodel/referencing.adoc#Reference[referredSemanticId] as well. So if the first key type of property "ManufacturerName" is xref:ROOT:spec-metamodel/referencing.adoc#ReferenceTypes[ExternalReference] and the first key type of the semanticId of property  "Herstellername" is xref:ROOT:spec-metamodel/referencing.adoc#ReferenceTypes[ModelReference] then the two semanticIds are no exact match. Or if the first reference contains a referredSemanticId value and the second does not the two semantic IDs are not exact matches.
+** Example: xref:ROOT:spec-metamodel/submodel-elements.adoc#Property[Property]  with xref:ROOT:spec-metamodel/common.adoc#Referable[idShort]  "ManufacturerName" + xref:ROOT:spec-metamodel/common.adoc#HasSemantics[semanticId]  value 0173-1#02-AAO677#002 and Property with idShort "Herstellername" + semanticId value 0173-1#02-AAO677#002 have exactly equal semantics if the xref:ROOT:spec-metamodel/referencing.adoc#Key[Key/type]s in both semanticIds are identical plus the other attributes of a xref:ROOT:spec-metamodel/referencing.adoc#Reference[Reference] like xref:ROOT:spec-metamodel/referencing.adoc#Reference[type] and xref:ROOT:spec-metamodel/referencing.adoc#Reference[referredSemanticId] as well. So if the Reference types differ or if the first key type of property "ManufacturerName" is xref:ROOT:spec-metamodel/referencing.adoc#ReferenceTypes[GlobalReference] and the first key type of the semanticId of property  "Herstellername" is xref:ROOT:spec-metamodel/referencing.adoc#ReferenceTypes[ConceptDescription] then the two semanticIds are no exact match. Or if the first reference contains a referredSemanticId value and the second does not the two semantic IDs are not exact matches.
 
 ====
 Note 1: Typically, a xref:ROOT:spec-metamodel/referencing.adoc#Reference[Reference]  for a xref:ROOT:spec-metamodel/common.adoc#HasSemantics[semanticId] does not have a xref:ROOT:spec-metamodel/referencing.adoc#Reference[referredSemanticId]
@@ -462,7 +467,7 @@ Note 1: Typically, a xref:ROOT:spec-metamodel/referencing.adoc#Reference[Referen
 
 *Intelligent Matching (compatible semanticIds)*
 
-Diffent kinds of intelligent matching may be considered to be implemented. Some are explained in the following.
+Different kinds of intelligent matching may be considered to be implemented. Some are explained in the following.
 
 * Ignore Versioning
 ** With intelligent matching, different versions of a concept definition may be matched.
@@ -487,7 +492,7 @@ matches 0173-1#02-AAC895#008
 
 * Consider supplemental semantic IDs (any)
 
-** With intelligent matching two sets of semantic IDs may be compared: Input is a set of semantic IDs, not distinguishing between semanticId and ref:ROOT:spec-metamodel/core.adoc#HasSemantics[HasSemantics/supplementalSemanticId]. SupplementalSemanticIds are not ordered, so index information is not relevant. The input matches to an element for which either its semanticId is in the Input set of semantic IDs or one of its supplemental IDs matches to ones of the semantic IDs in the Input set.
+** With intelligent matching two sets of semantic IDs may be compared: Input is a set of semantic IDs, not distinguishing between semanticId and ref:ROOT:spec-metamodel/common.adoc#HasSemantics[HasSemantics/supplementalSemanticId]. SupplementalSemanticIds are not ordered, so index information is not relevant. The input matches to an element for which either its semanticId is in the Input set of semantic IDs or one of its supplemental IDs matches to ones of the semantic IDs in the Input set.
 ** In addition exact or value matching of semantic IDs can be distinguished (see before)
 ** Example: Input Set = { 0173/1///02#AAC895#008} matches for a property with semanticId = \https://api.eclass-cdp.com/0173-1-02-AAC895-008 and supplementalSemanticId = 0173/1///02#AAC895#008.
 ** Example: Input Set = { 0173-1#02-AAC895#00, \https://api.eclass-cdp.com/0173-1-02-AAC895-008, 0173/1///02#AAC895#008 } would match for a property with semanticId = \https://api.eclass-cdp.com/0173-1-02-AAC895-008 and no supplemental semantic IDs.
@@ -535,7 +540,7 @@ For example, the string serialization of references as defined in  xref:mappings
 Note 4: Matching in this context means supporting a discovery query against an existing model.
 
 A typical query would be to find some element with a specific semantic ID.
-In this case the data consumer only knows the external ID whereas the provider may have created a duplicate of the concept definition as ConceptDescription and a model reference could be used
+In this case the data consumer only knows the external ID whereas the provider may have created a duplicate of the concept definition as ConceptDescription and a model reference could be used.
 
 Matching does not mean to define equivalence classes that allow to overwrite constraints as defined in the specification for valid instances of the metamodel.
 ====
