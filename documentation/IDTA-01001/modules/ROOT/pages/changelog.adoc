@@ -48,6 +48,8 @@ Minor Changes:
 
 * CHANGED: description of data type ContentType changed, some explanations with respect to mime types were removed (https://github.com/admin-shell-io/aas-specs-metamodel/issues/604[#604])
 * ADDED: Annex UML - add information how to graphically depict attributes of type "Reference" (https://github.com/admin-shell-io/aas-specs-metamodel/issues/601[#601])
+* CHANGED: definition of term "capability" (https://github.com/admin-shell-io/aas-specs-metamodel/issues/649[#649])
+* NEW: add new note for XML Schema data types compared to IEEE 754 definitions (https://github.com/admin-shell-io/aas-specs-metamodel/issues/620[#620])
 * CHANGED: update bibliography
 * CHANGED: editorial changes
 
