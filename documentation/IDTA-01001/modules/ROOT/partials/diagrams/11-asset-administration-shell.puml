@@ -1,13 +1,13 @@
 @startuml
 
-!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/master/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/asset-administration-shell.puml
-!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/master/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/asset-information.puml
-!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/master/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/enum-asset-kind.puml
-!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/master/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/specific-asset-id.puml
-!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/master/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/submodel.puml
-!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/master/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/qualifier.puml
-!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/master/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/submodel-element.puml
-!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/master/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/property.puml
+!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/asset-administration-shell.puml
+!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/asset-information.puml
+!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/enum-asset-kind.puml
+!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/specific-asset-id.puml
+!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/submodel.puml
+!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/qualifier.puml
+!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/submodel-element.puml
+!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/property.puml
 
 note left of Property
   Exemplary Submodel Element
