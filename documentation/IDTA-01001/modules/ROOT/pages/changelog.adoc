@@ -19,6 +19,8 @@ Non-backward compatible changes (nc) are marked as such.
 
 * nc="x" means not backward compatible, if no value is added in the table, the change is backward compatible.
 
+
+
 * nc="(x)" means that the change made was implicitly contained or stated in the document before and is now being formalized.
 Therefore, the change is considered to be backward compatible.
 
@@ -73,23 +75,16 @@ h|Nc h|V3.2 Change w.r.t. V3.1.1 h|Comment
 
 |===
 
-.Changes in Metamodel
-[cols="5%,42%,48%",options="header",]
-|===
-h|Nc h|V3.2 Change w.r.t. V3.1.1 h|Comment
-
-| {empty} |  a| 
-
-|===
-
 .New Elements in Metamodel
-[cols="5%,41%,51%",options="header",]
+[cols="5%,42%,48%",options="header",]
 |===
 h|Nc h|New Elements V3.2 vs V3.1 h|Comment
 |{empty} | AdministrativeInformation/createdAt  a| 
 |{empty} | AdministrativeInformation/updatedAt  a| 
+|{empty} | xref:spec-metamodel/core.adoc#AssetKind[AssetKind/Batch] a| Add new value "Batch" to enumeration AssetKind
 |===
 
+.New, Changed or Removed Constraints
 [cols="5%,10%,15%,69%",options="header",]
 |===
 h|Nc h|V3.2 vs. V3.1 h|New, Update, Removed, Reformulated h|Comment
