@@ -1,4 +1,4 @@
 @startuml
 
-!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/file.puml
+!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/file.puml
 @enduml

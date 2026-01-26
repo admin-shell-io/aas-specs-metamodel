@@ -1,11 +1,11 @@
 @startuml
 
-!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/key.puml
-!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/enum-generic-fragment-keys.puml
-!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/enum-generic-globally-identifiables.puml
-!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/enum-aas-identifiables.puml
-!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/enum-aas-container-submodel-elements.puml
-!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/enum-aas-non-container-submodel-elements.puml
+!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/key.puml
+!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/enum-generic-fragment-keys.puml
+!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/enum-generic-globally-identifiables.puml
+!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/enum-aas-identifiables.puml
+!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/enum-aas-container-submodel-elements.puml
+!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/enum-aas-non-container-submodel-elements.puml
 
 enum KeyTypes <<enumeration>>
 

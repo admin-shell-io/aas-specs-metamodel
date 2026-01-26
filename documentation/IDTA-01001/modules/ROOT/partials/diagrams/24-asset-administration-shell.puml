@@ -1,8 +1,8 @@
 @startuml
 
-!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/asset-administration-shell.puml
-!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/asset-information.puml
-!include https://github.com/admin-shell-io/aas-specs-metamodel/tree/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/submodel.puml
+!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/asset-administration-shell.puml
+!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/asset-information.puml
+!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/submodel.puml
 
 AssetAdministrationShell ..> AssetInformation
 AssetAdministrationShell -->"+submodel 0..*" Submodel :Reference
