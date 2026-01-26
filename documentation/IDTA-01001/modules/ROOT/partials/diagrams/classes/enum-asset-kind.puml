@@ -2,6 +2,7 @@
 enum AssetKind <<enumeration>> {
   Type
   Instance
+  Batch
   Role
   NotApplicable
 }

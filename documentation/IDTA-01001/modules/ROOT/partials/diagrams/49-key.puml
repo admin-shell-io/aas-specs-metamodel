@@ -1,7 +1,7 @@
 @startuml
 
-!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/master/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/key.puml
-!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/master/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/enum-key-types.puml
+!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/key.puml
+!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/enum-key-types.puml
 
 Key .> KeyTypes
 @enduml

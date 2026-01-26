@@ -91,7 +91,7 @@ h|ID: 3+| `\https://admin-shell.io/aas/3/1/AssetInformation`
 h|Explanation h|Type h|Card.
 
 .2+e|[[assetKind]]assetKind  3+| `\https://admin-shell.io/aas/3/1/AssetInformation/assetKind`
-a|Denotes whether the asset is of kind "Type", Instance", "Role" or none of these types is applicable |xref:AssetKind[AssetKind]|1
+a|Denotes whether the asset is of kind "Type", Instance", "Batch", "Role" or none of these types is applicable |xref:AssetKind[AssetKind]|1
 
 .2+e|[[globalAssetId]]globalAssetId 3+| `\https://admin-shell.io/aas/3/1/AssetInformation/globalAssetId`
 a|
@@ -171,7 +171,7 @@ The content type states which file extensions the file can have.
 |===
 |Enumeration: e|[[AssetKind]]AssetKind
 h|Explanation: a|Enumeration for denoting whether an asset is a type asset or
-an instance asset or is a role or whether this kind of classification is not applicable
+an instance asset or a batch asset or is a role or whether this kind of classification is not applicable
 h|Set of: |--
 h|ID: | `\https://admin-shell.io/aas/3/1/AssetKind`
 
@@ -183,6 +183,9 @@ a|Type asset
 
 .2+e|Instance | `\https://admin-shell.io/aas/3/1/AssetKind/Instance`
 a|Instance asset
+
+.2+e|Batch | `\https://admin-shell.io/aas/3/1/AssetKind/Batch`
+a|batch asset
 
 .2+e|Role | `\https://admin-shell.io/aas/3/1/AssetKind/Role`
 a|Role asset

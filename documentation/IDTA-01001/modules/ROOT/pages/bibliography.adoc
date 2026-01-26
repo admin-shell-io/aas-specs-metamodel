@@ -157,10 +157,7 @@ Available: https://www.w3.org/TR/shacl/
 [30] "I4AAS – Industrie 4.09 Asset Administration Shell". June 2021. 
 ////
 
-[#bib31]
-[31] DIN EN IEC 61406-1: "Identification Link - Part 1: General requirements (IEC 61406-1:2022)".
-December 2023. Online.
-Available: https://www.dinmedia.de/en/standard/din-en-iec-61406-1/372053652
+
 
 [#bib32]
 [32] F. Manola, E. Miller "RDF 1.1 Primer" W3C Recommendation, 2014, 
