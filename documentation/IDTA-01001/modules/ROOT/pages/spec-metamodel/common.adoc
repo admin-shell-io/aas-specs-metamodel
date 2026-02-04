@@ -27,31 +27,32 @@ include::partial$diagrams/14-administrative-information.puml[]
 
 
 Every identifiable may contain administrative information.
-Administrative information includes, for example,
 
-* information about the version of the element,
-* information about who created or who made the last change to the element,
-* information about the languages available in case the element contains text; the master or default language may also be defined for translating purposes,
-* information about the submodel template that guides the creation of the submodel
 
-In principle, the version corresponds to the _version_identifier_ according to IEC 62832.
+In principle, a version corresponds to the _version_identifier_ according to IEC 62832.
 However, it is not used for concept identifiers only (IEC TS 62832-1), but for all identifiable elements.
-Together, version and revision correspond to the version number according to IEC 62832.
+Together, <<version>> and <<revision>> correspond to the version number according to IEC 62832.
 
-Other attributes of the administrative information like creator refer to ISO 15836-1:2017, the Dublin Core metadata element set.
+Other attributes of the administrative information like <<creator>> refer to ISO 15836-1:2017, the Dublin Core metadata element set.
 
-For more information on the concept of subject, see Attribute Based Access Control (ABAC) xref:bibliography.adoc#bib49[[49\]].
+For more information on the concept of subject as used to describe the <<creator>>, see Attribute Based Access Control (ABAC) xref:bibliography.adoc#bib49[[49\]].
 The assumption is that every subject has a unique identifier.
 
 xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation] allows the usage of templates (xref:spec-metamodel/common.adoc#HasDataSpecification[HasDataSpecification]).
 Data specifications are defined in separate documents.
 
 If an AAS contains two different Submodels with the same semanticId 
-(xref:spec-metamodel/common.adoc#semanticId[Submodel/semanticId])  these two submodels shall have different IDs (xref:spec-metamodel/common.adoc#Identifiable[Submodel/id]) and differ in either their a) version (xref:spec-metamodel/common.adoc#version[Submodel/administration/version]) (xref:spec-metamodel/common.adoc#revision[revision] is ignored) or b) their creator (xref:spec-metamodel/common.adoc#creator[Submodel/administration/creator]). With a) both submodels shall have version information. With b) both submodels shall have a creator.
+(xref:spec-metamodel/common.adoc#semanticId[Submodel/semanticId])  these two submodels shall have different IDs (xref:spec-metamodel/common.adoc#Identifiable[Submodel/id]) 
+and differ in either their 
+a) <<version>> (xref:spec-metamodel/common.adoc#version[Submodel/administration/version]) (xref:spec-metamodel/common.adoc#revision[revision] is ignored) 
+or b) their <<creator>> (xref:spec-metamodel/common.adoc#creator[Submodel/administration/creator]). 
+With a) both submodels shall have version information. 
+With b) both submodels shall have a <<creator>>.
 
 ====
 Note 1: typically, some of the administrative information like the version number might be part of the identification (xref:spec-metamodel/common.adoc#Identifiable[Submodel/id]). 
-This is similar to the handling of identifiers for concept descriptions using IRDIs. In ECLASS, the IRDI 0173-1#02-AO677#002 contains the version information 002.
+This is similar to the handling of identifiers for concept descriptions using IRDIs. 
+In ECLASS, the IRDI 0173-1#02-AO677#002 contains the version information 002.
 ====
 
 ====
@@ -70,7 +71,7 @@ In this case there is no way for the data consumer to formally see whether two S
 ====
 
 ====
-Note 4: if a template ID of one of the standardized Submodel Templates of the IDTA is used to guide the creation of a Submodel then there is also a semantic ID defined for the Submodel.
+Note 4: if a template ID (xref:spec-metamodel/common.adoc#templateId[Submodel/administration/templateId]) of one of the standardized Submodel Templates of the IDTA is used to guide the creation of a Submodel then there is also a semantic ID defined for the Submodel.
 ====
 
 
@@ -79,7 +80,7 @@ Note 4: if a template ID of one of the standardized Submodel Templates of the ID
 |===
 h|Class: 3+e|[[AdministrativeInformation]]AdministrativeInformation
 h|Explanation: 3+a|
-Administrative metainformation for an element like version information
+Administrative metainformation for an element
 
 {aasd005}
 
