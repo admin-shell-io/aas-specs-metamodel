@@ -232,7 +232,7 @@ Identifiable
 
 
 ====
-Note: identifiable is abstract, i.e. if a key uses "Identifiable" the reference may be an Asset Administration Shell, a submodel or a concept description.
+Note: identifiable is abstract, i.e. if a key uses "Identifiable" the reference may be an Asset Administration Shell, a Submodel or a concept description.
 ====
 
 
@@ -269,15 +269,15 @@ Submodel element
 
 
 ====
-Note: submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a submodel element list, an operation, etc.
+Note: Submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
 ====
 
 
 .2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/1/KeyTypes/SubmodelElementCollection`
-a|Struct of submodel elements
+a|Struct of Submodel elements
 
 .2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/1/KeyTypes/SubmodelElementList`
-a|List of submodel elements
+a|List of Submodel elements
 |===
 
 
@@ -375,15 +375,15 @@ Submodel element
 
 
 ====
-Note: submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a submodel element list, an operation, etc.
+Note: Submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
 ====
 
 
 .2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/1/FragmentKeys/SubmodelElementCollection`
-a|Struct of submodel elements
+a|Struct of Submodel elements
 
 .2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/1/FragmentKeys/SubmodelElementList`
-a|List of submodel elements
+a|List of Submodel elements
 |===
 
 {empty} +
@@ -489,15 +489,15 @@ Submodel element
 
 
 ====
-Note: submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a submodel element list, an operation, etc.
+Note: Submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
 ====
 
 
 .2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/SubmodelElementCollection`
-a|Struct of submodel elements
+a|Struct of Submodel elements
 
 .2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/SubmodelElementList`
-a|List of submodel elements
+a|List of Submodel elements
 |===
 
 
@@ -511,7 +511,7 @@ a|List of submodel elements
 [cols="30%h,70%"]
 |===
 h|Enumeration: e|[[AasNonContainerSubmodelElements]]AasNonContainerSubmodelElements
-h|Explanation: a|Enumeration of non-container submodel element types including abstract submodel element types
+h|Explanation: a|Enumeration of non-container SubmodelElement types including abstract SubmodelElement types
 
 ====
 Note: not used as type but may be used in constraints.
@@ -591,7 +591,7 @@ a|Relationship
 [cols="30%h,70%"]
 |===
 h|Enumeration: e|[[AasContainerSubmodelElements]]AasContainerSubmodelElements
-h|Explanation: a|Enumeration of conainer submodel element types including abstract container submodel element types
+h|Explanation: a|Enumeration of conainer SubmodelElement types including abstract container SubmodelElement types
 
 ====
 Note: not used as type but may be used in constraints.
@@ -613,10 +613,10 @@ a|Entity
 
 
 .2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/1/AasContainerSubmodelElements/SubmodelElementCollection`
-a|Struct of submodel elements
+a|Struct of Submodel elements
 
 .2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/1/AasContainerSubmodelElements/SubmodelElementList`
-a|List of submodel elements
+a|List of Submodel elements
 |===
 
 ===  Logical Enumeration AasReferables
@@ -730,15 +730,15 @@ Submodel element
 
 
 ====
-Note: submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a submodel element list, an operation, etc.
+Note: Submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
 ====
 
 
 .2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/1/AasReferables/SubmodelElementCollection`
-a|Struct of submodel elements
+a|Struct of Submodel elements
 
 .2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/1/AasReferables/SubmodelElementList`
-a|List of submodel elements
+a|List of Submodel elements
 |===
 
 ===  Logical Enumeration GenericFragmentKeys
@@ -1034,8 +1034,8 @@ from
 (Submodel)https://example.com/aas/1/1/1234859590, (SubmodelElementCollection)Manual, (MultiLanguageProperty)Title
 ....
 semantically and content-wise.
-The difference is that more than one document is allowed in the first submodel and thus a submodel element list is defined:
-elements in a list are numbered. In the second submodel several documents may be added as collections but the number is typically fixed.
+The difference is that more than one document is allowed in the first Submodel and thus a SubmodelElement list is defined:
+elements in a list are numbered. In the second Submodel several documents may be added as collections but the number is typically fixed.
 
 ====
 
@@ -1085,7 +1085,7 @@ This is an external reference but no model reference.
 ....
 
 This reference does not start with the ID of an Identifiable, i.e. key type "Property" is no AAS identifiable (see xref:spec-metamodel/referencing.adoc#constraint-AASd-123[Constraint AASd-123]).
-Additionally, the value is not a valid xref:spec-metamodel/common.adoc#Referable[idShort] for a Property submodel element since it contains special characters like "#" (see xref:annex/overview-constraints.adoc#constraint-AASd-002[Constraint AASd-002]).
+Additionally, the value is not a valid xref:spec-metamodel/common.adoc#Referable[idShort] for a Property SubmodelElement since it contains special characters like "#" (see xref:annex/overview-constraints.adoc#constraint-AASd-002[Constraint AASd-002]).
 
 
 [example]
@@ -1102,7 +1102,7 @@ Key "Property" is no generic fragment key and therefore fragment key "FragmentRe
 (Submodel)https://example.com/aas/1/1/1234859590, (EventElement)Event, (FragmentReference)Comment
 ....
 
-This model reference is invalid because fragment references so far are only defined for "File" and "Blob" submodel elements (see xref:spec-metamodel/referencing.adoc#constraint-AASd-127[Constraint AASd-127]).
+This model reference is invalid because fragment references so far are only defined for "File" and "Blob" Submodel elements (see xref:spec-metamodel/referencing.adoc#constraint-AASd-127[Constraint AASd-127]).
 
 
 [example]

@@ -214,7 +214,7 @@ We need a delimiter!
 Following the approach described in  <<Instances-Serialized-with-Discriminator>>, we delimit the instances simply by nesting them beneath the discriminator elements.
 If the type of the list items is a concrete class, we nest beneath the discriminator element regardless.
 
-For example, here is an XML snippet of an example submodel elements, where the first element is a
+For example, here is an XML snippet of an example Submodel elements, where the first element is a
 xref:spec-metamodel/submodel-elements.adoc#property-attributes[Property], the second one is a
 xref:spec-metamodel/submodel-elements.adoc#range-attributes[Range]
 and the third is a

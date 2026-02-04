@@ -286,7 +286,7 @@ a|
 
 Enumerations are primitive data types.
 Most of the enumerations are defined in the context of their class.
-This clause defines enumerations for submodel element value typesfootnote:[E.g. Property/valueType].
+This clause defines enumerations for SubmodelElement value typesfootnote:[E.g. Property/valueType].
 
 The predefined types used to define the type of values of properties and other values use the names and the semantics of XML Schema Definition (XSD)footnote:[see https://www.w3.org/XML/Schema, https://www.w3.org/TR/xmlschema-2/#built-in-primitive-datatypes].
 Additionally, the type "langString" with the semantics as defined in the Resource Description Framework (RDF)footnote:[see: https://www.w3.org/TR/rdf11-concepts/] is used. "langString" is a string value tagged with a language code.
@@ -326,7 +326,7 @@ include::partial$diagrams/54-data-type-def-xsd.puml[]
 
 <<table-data-types-with-examples>> depicts example values and the value range of the different data types.
 
-The left column "Data Type" shows the data types which can be used for submodel element values.
+The left column "Data Type" shows the data types which can be used for SubmodelElement values.
 The data types are defined according to the W3C XML Schema (https://www.w3.org/TR/xmlschema-2/#built-in-datatypes and https://www.w3.org/TR/xmlschema-2/#built-in-derived).
 "Value Range" further explains the possible range of data values for this data type.
 The right column shows related examples for values of the corresponding data type.

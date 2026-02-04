@@ -103,10 +103,10 @@ The Administration Shell is made up of a series of submodels xref:bibliography.a
 These represent different aspects of the asset concerned.
 For example, they may contain a description relating to safety or security xref:bibliography.adoc#bib15[[15\]] but they could also outline various process capabilities such as drilling or installation xref:bibliography.adoc#bib6[[6\]].
 
-From an interoperability perspective, the goal is to standardize only a single submodel for each aspect/ technical domain.
-For example, it will be possible to find a drilling machine by searching for an Administration Shell containing a submodel "Drilling" with appropriate properties.
+From an interoperability perspective, the goal is to standardize only a single Submodel for each aspect/ technical domain.
+For example, it will be possible to find a drilling machine by searching for an Administration Shell containing a Submodel "Drilling" with appropriate properties.
 Certain properties can then be assumed to exist for communication between different I4.0 components.
-In our example, a second submodel "energy efficiency" could make sure the drilling machine is able to cut its electricity consumption when out of operation.
+In our example, a second Submodel "energy efficiency" could make sure the drilling machine is able to cut its electricity consumption when out of operation.
 
 ====
 Note: a side benefit of the Administration Shell will be to simplify the update of properties from product design (and in particular system design) tools, update properties from real data collected in the instances of assets, improve traceability of assets along the life cycle, and help certify assets from data.
@@ -127,7 +127,7 @@ Therefore, the structure of the Administration Shell shall be able to handle asp
 Information security needs to be respected and has to be aligned with an overall security concept.
 Security implementation must go together with the implementation of other components of an overall system.
 
-Each submodel contains a structured quantity of properties that can refer to data and functions.
+Each Submodel contains a structured quantity of properties that can refer to data and functions.
 A standardized format based on IEC 61360-1/ ISO 13584-42 is envisaged for the properties.
 Property value definition shall follow the same principles as ISO 29002-10 and IEC 62832-2.
 Data and functions may be available in various complementary formats.

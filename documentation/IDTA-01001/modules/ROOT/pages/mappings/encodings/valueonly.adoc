@@ -38,18 +38,18 @@ Values are only available for
 Capabilities are excluded from the serialization scope since only data containing elements are in the focus.
 They are consequently omitted in the serialization.
 
-The following rules shall be adhered to when serializing a submodel, a submodel element collection or a submodel element list with the format "Value"footnote:[see SerializationModifier in Part 2 - IDTA-01002 - of the Specification of the Asset Administration Shell]:
+The following rules shall be adhered to when serializing a submodel, a SubmodelElement collection or a SubmodelElement list with the format "Value"footnote:[see SerializationModifier in Part 2 - IDTA-01002 - of the Specification of the Asset Administration Shell]:
 
-* A submodel or a submodel element collection is serialized as an unnamed JSON object.
-* A submodel element list is serialized as an JSON array.
-* A submodel element is considered a leaf submodel element if it does not contain other submodel elements.
-A leaf submodel element follows the rules for the different submodel elements considered in the serialization, as described below.
-If it is not a leaf element, the serialization rules must be transitively followed until the value is a leaf submodel element.
+* A Submodel or a SubmodelElement collection is serialized as an unnamed JSON object.
+* A SubmodelElement list is serialized as an JSON array.
+* A SubmodelElement is considered a leaf SubmodelElement if it does not contain other Submodel elements.
+A leaf SubmodelElement follows the rules for the different Submodel elements considered in the serialization, as described below.
+If it is not a leaf element, the serialization rules must be transitively followed until the value is a leaf Submodel element.
 * xref:spec-metamodel/referencing.adoc#Reference[Reference] is serialized in format "Normal".
 * xref:spec-metamodel/core.adoc#SpecificAssetId[SpecificAssetId] is serialized in format "Normal".
 * xref:spec-metamodel/core.adoc#SubmodelElement[SubmodelElement]s without a value are not serialized.
 
-* For each submodel element within the submodel, the submodel element collection or submodel element list:
+* For each SubmodelElement within the submodel, the SubmodelElement collection or SubmodelElement list:
 
 
 ** xref:spec-metamodel/submodel-elements.adoc#Property[Property]  is serialized as ${Property/idShort}: ${Property/value} where ${Property/value} is the JSON serialization of the respective property’s value in accordance with the data type to value mapping (see <<table-data-types-value-only>>).
@@ -99,7 +99,7 @@ Annotations are optional.
 
 ** xref:spec-metamodel/submodel-elements.adoc#Entity[Entity] is serialized as named JSON object with ${Entity/idShort} as the name of the containing JSON property.
 The JSON object contains four JSON properties.
-The first is named "statements" ${Entity/statements} and contains an array of the serialized submodel elements according to their respective serialization mentioned in this clause.
+The first is named "statements" ${Entity/statements} and contains an array of the serialized Submodel elements according to their respective serialization mentioned in this clause.
 The second is named "globalAssetId" and the third "specificAssetIds".
 Either a "globalAssetId" value or a "specificAssetIds" value shall exist.
 The other attributes are optional.
@@ -113,7 +113,7 @@ The JSON object contains one JSON property named "observed" with the correspondi
 
 
 
-The following rules shall be adhered to when serializing a single submodel element with the format "Value":
+The following rules shall be adhered to when serializing a single SubmodelElement with the format "Value":
 
 ** _Property_ is serialized as ${Property/value} where ${Property/value} is serialized as described above.
 ** _MultiLanguageProperty_ is serialized as JSON object. The JSON object is serialized as described above.
@@ -126,17 +126,17 @@ The following rules shall be adhered to when serializing a single submodel eleme
 ** _BasicEventElement_ is serialized as JSON object. The JSON object is serialized as described above.
 
 
-Submodel elements defined in the submodel other than the ones mentioned above are not subject to the Value-Only serialization.
+Submodel elements defined in the Submodel other than the ones mentioned above are not subject to the Value-Only serialization.
 
-Optional elements (like for example globalAssetId for an Entity submodel element) with no value shall be omitted in the serialization.
+Optional elements (like for example globalAssetId for an Entity Submodel element) with no value shall be omitted in the serialization.
 
 ==== Data type to value mapping
 
-The serialization of submodel element values is described in the following table.
-The left column "Data Type" shows the data types which can be used for submodel element values.
+The serialization of SubmodelElement values is described in the following table.
+The left column "Data Type" shows the data types which can be used for SubmodelElement values.
 The data types are defined according to the W3C XML Schema (https://www.w3.org/TR/xmlschema-2/#built-in-datatypes and https://www.w3.org/TR/xmlschema-2/#built-in-derived).
 "Value Range" further explains the possible range of data values for this data type.
-The right column comprises related examples of the serialization of submodel element values.
+The right column comprises related examples of the serialization of SubmodelElement values.
 
 [[table-data-types-value-only]]
 .Mapping of Data Types in ValueOnly-Serializationfootnote:[cf. https://eclipse-esmf.github.io/samm-specification/2.0.0/datatypes.html with minor changes]
@@ -246,7 +246,7 @@ All of these elements have data type "xs:string".
 }
 ----
 
-The JSON Value-Only serialization for the element "ProductClassifications", a SubmodelElementList, within the submodel above looks like this:
+The JSON Value-Only serialization for the element "ProductClassifications", a SubmodelElementList, within the Submodel above looks like this:
 
 [source,json,linenums]
 ----
@@ -274,7 +274,7 @@ The JSON Value-Only serialization for the first element, a SubmodelElementCollec
 }
 ----
 
-The JSON Value-Only serialization for the Property "MaxRotationSpeed" of the submodel above looks like this:
+The JSON Value-Only serialization for the Property "MaxRotationSpeed" of the Submodel above looks like this:
 
 [source,json,linenums]
 ----
@@ -334,13 +334,13 @@ Since Capability and Operation are not part of Value-Only serialization they are
 Also a List containing elements that are omitted is omitted. This is even the case if the SubmodelElementList is mandatory.
 
 ====
-Note: Similar handling is required in case there are access rules disallowing access to specific submodel elements:
+Note: Similar handling is required in case there are access rules disallowing access to specific Submodel elements:
 The protected elements shall not be serialized.
 ====
 
-==== Examples Value-Only serialization for all submodel element types 
+==== Examples Value-Only serialization for all SubmodelElement types 
 
-In the following examples for Value-Only serializations for all submodel element types are given.
+In the following examples for Value-Only serializations for all SubmodelElement types are given.
 
 ===== Property
 

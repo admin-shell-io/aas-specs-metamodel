@@ -6,7 +6,7 @@ RDF documents are structured in the form of triples, consisting of subjects, rel
 The resulting model is often interpreted as a graph, with the subject and object elements as the nodes and the relations as the graph edges.
 
 RDF is closely related to web standards, illustrated by the fact that all elements are encoded using (HTTP-)IRIs.
-As a common practice, the provision of additional information at the referenced location of an RDF entity directly allows the interlinking of entitiesfootnote:[Note: entity as a generic term and entity as a specific submodel element subtype need to be distinguished.] based on the web.
+As a common practice, the provision of additional information at the referenced location of an RDF entity directly allows the interlinking of entitiesfootnote:[Note: entity as a generic term and entity as a specific SubmodelElement subtype need to be distinguished.] based on the web.
 This process – following links in order to discover related information – is called dereferencing a resource and is supported by any browser or web client.
 Connecting distributed data sources through the web in the described manner is referred to by the term "Linked Data".
 Connecting the available resources and capabilities of linked data with the expressiveness of the Asset Administration Shell is one motivation for the RDF serialization.
