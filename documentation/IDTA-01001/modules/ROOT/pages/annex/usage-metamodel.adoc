@@ -28,7 +28,7 @@ The following modelling elements in the Asset Administration Shell metamodel can
 * _Submodel,_ where a complex asset is composed out of other entities and assets, which are specified in a bill of material together with their relationship to each other.
 
 ====
-Note: the submodel template defining the structure of such a bill of material is not predefined by the Asset Administration Shell metamodel.
+Note: the Submodel template defining the structure of such a bill of material is not predefined by the Asset Administration Shell metamodel.
 However, _Entity_ elements were designed for the purpose of building bills of material.
 ====
 
