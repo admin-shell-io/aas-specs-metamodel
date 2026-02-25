@@ -107,7 +107,7 @@ use "SubmodelElement" instead of "submodel element"
 |{empty}  |AASd-129 |Update a|
 use "SubmodelElement" instead of "submodel element" and "Submodel" instead of "submodel"
 
-|{empty}  |AASd-135 |New a|
+|(x)  |AASd-135 |New a|
 
 Constraint AASd-135: 
 For external references, i.e. xref:ROOT:spec-metamodel/referencing.adoc#Reference[Reference] the value of any xref:ROOT:spec-metamodel/referencing.adoc#Key[Key/type] contained in the Reference shall not be one of xref:ROOT:spec-metamodel/referencing.adoc#AasReferables[AasReferables].
