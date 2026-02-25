@@ -909,6 +909,9 @@ Note: which kind of fragments are supported depends on the content type and the 
 [[constraint-AASd-128]]
 {aasd128}
 
+[[constraint-AASd-135]]
+{aasd135}
+
 [#examples-for-references]
 === Examples
 
@@ -950,6 +953,9 @@ Key type "Submodel" is not a globally identifiable (see xref:spec-metamodel/refe
 Key type "Submodel" is no generic globally identifiable (see xref:spec-metamodel/referencing.adoc#constraint-AASd-122[Constraint AASd-122]).
 
 
+
+
+
 [example]
 ....
 [ModelRef](GlobalReference)https://example.com/aas/1/1/1234859590
@@ -959,7 +965,12 @@ Key type "GlobalReference" is no AAS identifiable (see xref:spec-metamodel/refer
 The last key type "GlobalReference" is neither a generic globally identifiable nor a generic fragment key (see xref:spec-metamodel/referencing.adoc#constraint-AASd-124[Constraint AASd-124]).
 
 
+[example]
+....
+[ExternalRef](GlobalReference)https://example.com/aas/1/1/1234859590 (SubmodelElementCollection)Document (File)file (FragmentReference)tag
+....
 
+This example violates xref:spec-metamodel/referencing.adoc#constraint-AASd-135[Constraint AASd-135].
 
 
 [.underline]#Examples for valid external references:#
