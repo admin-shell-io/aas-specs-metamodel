@@ -22,7 +22,7 @@ Submodel elements include data properties as well as operations, events and othe
 
 == General
 
-All submodel elements including abstract classes like data elements are specified in alphabetical order.
+All Submodel elements including abstract classes like data elements are specified in alphabetical order.
 
 ====
 Note: value-related attributes typically are optional to enable definition of Submodel Templates as well, i.e. xref:spec-metamodel/core.adoc#Submodel[Submodels]  with value of xref:spec-metamodel/common.adoc#HasKind[Submodel/kind] equal to xref:spec-metamodel/common.adoc#ModellingKind[Template].
@@ -79,7 +79,7 @@ h|ID: 3+| `\https://admin-shell.io/aas/3/1/BasicEventElement`
 h|Explanation h|Type h|Card.
 
 .2+e|[[BasicEventElement-observed]]observed 3+| `\https://admin-shell.io/aas/3/1/BasicEventElement`
-a|Reference to a referable, e.g. a data element or a submodel that is being observed |ModelReference<xref:spec-metamodel/common.adoc#Referable[Referable]> |1
+a|Reference to a referable, e.g. a data element or a Submodel that is being observed |ModelReference<xref:spec-metamodel/common.adoc#Referable[Referable]> |1
 
 .2+e|[[BasicEventElement-direction]]direction 3+| `\https://admin-shell.io/aas/3/1/BasicEventElement/direction`
 a|
@@ -355,9 +355,9 @@ include::partial$diagrams/34-data-element.puml[]
 ....
 
 
-A data element is a submodel element that is not further composed of other submodel elements.
+A data element is a SubmodelElement that is not further composed of other Submodel elements.
 
-A data element is a submodel element that has a value or a predefined number of values like range data elements.
+A data element is a SubmodelElement that has a value or a predefined number of values like range data elements.
 
 The type of value differs for different subtypes of data elements.
 Data elements include properties, file handling, and reference elements, see <<image-34-data-element>>.
@@ -367,9 +367,9 @@ Data elements include properties, file handling, and reference elements, see <<i
 |===
 h|Class: 3+e|[[DataElement]]DataElement \<<abstract>>
 h|Explanation: 3+a|
-A data element is a submodel element that is not further composed of other submodel elements.
+A data element is a SubmodelElement that is not further composed of other Submodel elements.
 
-A data element is a submodel element that has a value.
+A data element is a SubmodelElement that has a value.
 The type of value differs for different subtypes of data elements.
 
 {aasd090}
@@ -398,7 +398,7 @@ include::partial$diagrams/35-entity.puml[]
 ....
 
 
-The entity submodel element is designed to be used in submodels defining the relationship between the parts of the composite asset it is composed of (e.g. bill of material).
+The entity SubmodelElement is designed to be used in submodels defining the relationship between the parts of the composite asset it is composed of (e.g. bill of material).
 These parts are called entities.
 Not all entities have a global asset ID.
 
@@ -407,7 +407,7 @@ Not all entities have a global asset ID.
 |===
 h|Class: 3+e|[[Entity]]Entity
 h|Explanation: 3+a|
-An entity is a submodel element that is used to model entities.
+An entity is a SubmodelElement that is used to model entities.
 
 {aasd014}
 
@@ -419,7 +419,7 @@ h|ID: 3+| `\https://admin-shell.io/aas/3/1/Entity`
 h|Explanation h|Type h|Card.
 
 .2+e|[[Entity-statements]]statement 3+| `\https://admin-shell.io/aas/3/1/Entity/statement`
-a| Statement applicable to the entity, each statement described by submodel element - typically with a qualified value |xref:spec-metamodel/core.adoc#SubmodelElement[SubmodelElement] |0..*
+a| Statement applicable to the entity, each statement described by SubmodelElement - typically with a qualified value |xref:spec-metamodel/core.adoc#SubmodelElement[SubmodelElement] |0..*
 
 .2+e|[[Entity-entityType]]entityType 3+| `\https://admin-shell.io/aas/3/1/Entity/entityType`
 a|Describes whether the entity is a co-managed entity or a self-managed entity |xref:EntityType[EntityType]|0..1
@@ -575,7 +575,7 @@ include::partial$diagrams/39-operation.puml[]
 |===
 h|Class: 3+e|[[Operation]]Operation
 h|Explanation: 3+a|
-An operation is a submodel element with input and output variables.
+An operation is a SubmodelElement with input and output variables.
 
 {aasd134}
 
@@ -610,7 +610,7 @@ Typically, this is implemented via a pointer (i.e. 'by reference' instead of 'by
 [cols="25%,40%,25%,10%"]
 |===
 h|Class: 3+e|[[OperationVariable]]OperationVariable
-h|Explanation: 3+a|The value of an operation variable is a submodel element that is used as input and/or output variable of an operation.
+h|Explanation: 3+a|The value of an operation variable is a SubmodelElement that is used as input and/or output variable of an operation.
 h|Inherits from: 3+|--
 h|ID: 3+| `\https://admin-shell.io/aas/3/1/OperationVariable`
 
@@ -618,7 +618,7 @@ h|ID: 3+| `\https://admin-shell.io/aas/3/1/OperationVariable`
 h|Explanation h|Type h|Card.
 
 .2+e|value 3+| `\https://admin-shell.io/aas/3/1/OperationVariable/value`
-a|Describes an argument or result of an operation via a submodel element |xref:spec-metamodel/core.adoc#SubmodelElement[SubmodelElement] |1
+a|Describes an argument or result of an operation via a SubmodelElement |xref:spec-metamodel/core.adoc#SubmodelElement[SubmodelElement] |1
 |===
 
 ====
@@ -630,7 +630,7 @@ Note 2: OperationVariable is introduced as separate class to enable future exten
 ====
 
 ====
-Note 3: even if the submodel element as the value of an input and an output variable have the same idShort, this does not mean that they are identical or mapped to the same variable since OperationVariables are no referables.
+Note 3: even if the SubmodelElement as the value of an input and an output variable have the same idShort, this does not mean that they are identical or mapped to the same variable since OperationVariables are no referables.
 The same applies to two input variables or an input variable and an inoutputVariable a.s.o.
 ====
 
@@ -749,7 +749,7 @@ For more information on references, see  xref:spec-metamodel/referencing.adoc[].
 == Relationship Element Attributes
 
 The semantics of the relationship is defined via the _semanticId_ of the _RelationshipElement_.
-If this semantic definition requires additional information not contained in the _first_ or _second_ object referenced via the relationship, the submodel element type xref:spec-metamodel/submodel-elements.adoc#annotated-relationship-element-attributes[AnnotatedRelationshipElement] shall be used instead.
+If this semantic definition requires additional information not contained in the _first_ or _second_ object referenced via the relationship, the SubmodelElement type xref:spec-metamodel/submodel-elements.adoc#annotated-relationship-element-attributes[AnnotatedRelationshipElement] shall be used instead.
 
 .Metamodel of Relationship Elements
 [plantuml, 43-relationship-element, svg]
@@ -787,11 +787,11 @@ include::partial$diagrams/44-submodel-element-collection.puml[]
 
 
 Submodel Element Collections are used for complex elements with a typically fixed set of properties with unique names.
-This set of properties is typically predefined by the semantic definition (referenced via xref:spec-metamodel/common.adoc#HasSemantics[semanticId]) of the submodel element collection.
+This set of properties is typically predefined by the semantic definition (referenced via xref:spec-metamodel/common.adoc#HasSemantics[semanticId]) of the SubmodelElement collection.
 Each property within the collection itself should have clearly defined semantics.
 
 ====
-Note: the different elements of a submodel element collection do not have to have different xref:spec-metamodel/common.adoc#HasSemantics[semanticIds].
+Note: the different elements of a SubmodelElement collection do not have to have different xref:spec-metamodel/common.adoc#HasSemantics[semanticIds].
 However, in these cases the usage of a xref:spec-metamodel/submodel-elements.adoc#SubmodelElementList[SubmodelElementList] should be considered.
 ====
 
@@ -803,16 +803,16 @@ The set of all documents is represented by a xref:spec-metamodel/submodel-elemen
 In this case, we have a xref:spec-metamodel/submodel-elements.adoc#submodel-element-list-attributes[SubmodelElementList] of xref:spec-metamodel/submodel-elements.adoc#submodel-element-collection-attributes[SubmodelElementCollection]s.
 
 ====
-Note: the elements within a submodel element collection are not ordered.
+Note: the elements within a SubmodelElement collection are not ordered.
 Every element has a unique ID (its "idShort").
-However, it is recommended to adhere to the order defined in the submodel template.
+However, it is recommended to adhere to the order defined in the Submodel template.
 ====
 
 [.table-with-appendix-table]
 [cols="25%,40%,25%,10%"]
 |===
 h|Class: 3+e|[[SubmodelElementCollection]]SubmodelElementCollection
-h|Explanation: 3+a|A submodel element collection is a kind of struct, i.e. a logical encapsulation of multiple named values.
+h|Explanation: 3+a|A SubmodelElement collection is a kind of struct, i.e. a logical encapsulation of multiple named values.
 h|Inherits from: 3+|
 h|ID: 3+| `\https://admin-shell.io/aas/3/1/SubmodelElementCollection`
 
@@ -837,7 +837,7 @@ Submodel element lists are used for sets (i.e. unordered collections without dup
 
 
 Submodel element lists are also used to create multidimensional arrays.
-A two-dimensional array list[3\]][5\] with _Property_ values would be realized like follows: the first submodel element list would contain three xref:spec-metamodel/submodel-elements.adoc#submodel-element-list-attributes[SubmodelElementList] elements.
+A two-dimensional array list[3\]][5\] with _Property_ values would be realized like follows: the first SubmodelElement list would contain three xref:spec-metamodel/submodel-elements.adoc#submodel-element-list-attributes[SubmodelElementList] elements.
 Each of these three xref:spec-metamodel/submodel-elements.adoc#submodel-element-list-attributes[SubmodelElementList] would contain 5 single xref:spec-metamodel/submodel-elements.adoc#property-attributes[Property] elements.
 The xref:spec-metamodel/common.adoc#HasSemantics[semanticId] of the contained properties would be the same for all lists in the first list, i.e. xref:spec-metamodel/submodel-elements.adoc#submodel-element-list-attributes[semanticIdListElement] would be identical for all three lists contained in the first list.
 The _semanticId_ of the three contained lists would differ depending on the dimension it represents.
@@ -853,7 +853,7 @@ Matching strategies for semantic IDs are explained in  xref:annex/general.adoc#m
 |===
 h|Class: 3+e|[[SubmodelElementList]]SubmodelElementList
 h|Explanation: 3+a|
-A submodel element list is an ordered list of submodel elements.
+A SubmodelElement list is an ordered list of Submodel elements.
 
 
 ====
@@ -894,7 +894,7 @@ a|Submodel element contained in the list |xref:spec-metamodel/core.adoc#Submodel
 
 .2+e|semanticIdListElement 3+| `\https://admin-shell.io/aas/3/1/SubmodelElementList/semanticIdListElement`
 a|
-Semantic ID which the submodel elements contained in the list match
+Semantic ID which the Submodel elements contained in the list match
 
 
 
@@ -903,10 +903,10 @@ Semantic ID which the submodel elements contained in the list match
 |xref:spec-metamodel/referencing.adoc#Reference[Reference] |0..1
 
 .2+e|typeValueListElement  3+| `\https://admin-shell.io/aas/3/1/SubmodelElementList/typeValueListElement/typeValueListElement`
-a|The submodel element type of the submodel elements contained in the list |xref:spec-metamodel/referencing.adoc#AasSubmodelElements[AasSubmodelElements]|1
+a|The SubmodelElement type of the Submodel elements contained in the list |xref:spec-metamodel/referencing.adoc#AasSubmodelElements[AasSubmodelElements]|1
 
 .2+e|valueTypeListElement 3+| `\https://admin-shell.io/aas/3/1/SubmodelElementList/valueTypeListElement`
-a|The value type of the submodel element contained in the list |xref:spec-metamodel/datatypes.adoc#DataTypeDefXsd[DataTypeDefXsd]|0..1
+a|The value type of the SubmodelElement contained in the list |xref:spec-metamodel/datatypes.adoc#DataTypeDefXsd[DataTypeDefXsd]|0..1
 |===
 
 ===  AasSubmodelElements Enumeration
@@ -921,7 +921,7 @@ include::partial$diagrams/52-aas-submodel-elements.puml[]
 [cols="30%h,70%"]
 |===
 h|Enumeration: e|[[AasSubmodelElements]]AasSubmodelElements
-h|Explanation: a|Enumeration of submodel element types including abstract submodel element types
+h|Explanation: a|Enumeration of SubmodelElement types including abstract SubmodelElement types
 h|Set of: | xref:AasContainerSubmodelElements[AasContainerSubmodelElements],  xref:AasNonContainerSubmodelElements[AasNonContainerSubmodelElements]
 h|ID: | `\https://admin-shell.io/aas/3/1/AasSubmodelElements`
 
@@ -996,13 +996,13 @@ Submodel element
 
 
 ====
-Note: submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a submodel element list, an operation, etc.
+Note: Submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
 ====
 
 
 .2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/1/AasSubmodelElements/SubmodelElementCollection`
-a|Struct of submodel elements
+a|Struct of Submodel elements
 
 .2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/1/AasSubmodelElements/SubmodelElementList`
-a|List of submodel elements
+a|List of Submodel elements
 |===
