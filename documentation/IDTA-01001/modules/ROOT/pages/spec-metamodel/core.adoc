@@ -42,13 +42,13 @@ a|Meta information about the asset, the Asset Administration Shell is representi
 
 .2+e|submodel 3+| `\https://admin-shell.io/aas/3/1/AssetAdministrationShell/submodel`
 a|
-Reference to a submodel of the Asset Administration Shell
+Reference to a Submodel of the Asset Administration Shell
 
-A submodel is a description of an aspect of the asset, the Asset Administration Shell is representing.
+A Submodel is a description of an aspect of the asset, the Asset Administration Shell is representing.
 
 The asset of an Asset Administration Shell is typically described by one or more submodels.
 
-Temporarily, no submodel might be assigned to the Asset Administration Shell.
+Temporarily, no Submodel might be assigned to the Asset Administration Shell.
 
 |ModelReference<xref:Submodel[Submodel]> |0..*
 |===
@@ -124,7 +124,7 @@ a|Thumbnail of the asset represented by the Asset Administration Shell; used as 
 |===
 
 ====
-Note: besides this asset information, there still might be an identification submodel with further information.
+Note: besides this asset information, there still might be an identification Submodel with further information.
 Specific asset IDs mainly serve the purpose of supporting discovery of Asset Administration Shells for an asset.
 ====
 
@@ -258,14 +258,14 @@ include::partial$diagrams/26-submodel.puml[]
 ....
 
 
-Adding a _semanticId_ for a submodel is recommended (see xref:annex/general.adoc#table-elements-with-allowed-identifying-values[Table "Elements with Allowed Identifying Values"]).
+Adding a _semanticId_ for a Submodel is recommended (see xref:annex/general.adoc#table-elements-with-allowed-identifying-values[Table "Elements with Allowed Identifying Values"]).
 
-If the submodel is of _kind=Template_ (modelling kind as inherited by _HasKind_), the submodel elements within the submodel are presenting submodel element templates.
-If the submodel is of _kind=Instance_, its submodel elements represent submodel element instances.
+If the Submodel is of _kind=Template_ (modelling kind as inherited by _HasKind_), the Submodel elements within the Submodel are presenting SubmodelElement templates.
+If the Submodel is of _kind=Instance_, its Submodel elements represent SubmodelElement instances.
 
 ====
-Note: validators shall handle a submodel like _SubmodelElementCollection/submodelElements_ and not like a _SubmodelElementList/value_.
-The difference is that a submodel is identifiable and a predefined unit of information within the Asset Administration Shell.
+Note: validators shall handle a Submodel like _SubmodelElementCollection/submodelElements_ and not like a _SubmodelElementList/value_.
+The difference is that a Submodel is identifiable and a predefined unit of information within the Asset Administration Shell.
 ====
 
 [.table-with-appendix-table]
@@ -273,11 +273,11 @@ The difference is that a submodel is identifiable and a predefined unit of infor
 |===
 h|Class: 3+e|[[Submodel]]Submodel
 h|Explanation: 3+a|
-A submodel defines a specific aspect of the asset represented by the Asset Administration Shell.
+A Submodel defines a specific aspect of the asset represented by the Asset Administration Shell.
 
-A submodel is used to structure the digital representation and technical functionality of an Administration Shell into distinguishable parts.
-Each submodel refers to a well-defined domain or subject.
-Submodels can become standardized and, in turn, submodel templates.
+A Submodel is used to structure the digital representation and technical functionality of an Administration Shell into distinguishable parts.
+Each Submodel refers to a well-defined domain or subject.
+Submodels can become standardized and, in turn, Submodel templates.
 
 
 h|Inherits from: 3+|xref:spec-metamodel/common.adoc#Identifiable[Identifiable]; xref:spec-metamodel/common.adoc#HasKind[HasKind]; xref:spec-metamodel/common.adoc#HasSemantics[HasSemantics]; xref:spec-metamodel/common.adoc#Qualifiable[Qualifiable]; xref:spec-metamodel/common.adoc#HasDataSpecification[HasDataSpecification]
@@ -287,7 +287,7 @@ h|ID: 3+| `\https://admin-shell.io/aas/3/1/Submodel`
 h|Explanation h|Type h|Card.
 
 .2+e|submodelElement 3+| `\https://admin-shell.io/aas/3/1/Submodel/submodelElement`
-a|A submodel consists of zero or more submodel elements. |xref:SubmodelElement[SubmodelElement] |0..*
+a|A Submodel consists of zero or more Submodel elements. |xref:SubmodelElement[SubmodelElement] |0..*
 |===
 
 [#submodel-element-attributes]
@@ -312,7 +312,7 @@ Otherwise, there is only the property definition referenced by xref:spec-metamod
 [cols="25%,40%,25%,10%"]
 |===
 h|Class: 3+e|[[SubmodelElement]]SubmodelElement \<<abstract>>
-h|Explanation: 3+a|A submodel element is an element suitable for the description and differentiation of assets.
+h|Explanation: 3+a|A SubmodelElement is an element suitable for the description and differentiation of assets.
 h|Inherits from: 3+|xref:spec-metamodel/common.adoc#Referable[Referable]; xref:spec-metamodel/common.adoc#HasSemantics[HasSemantics]; xref:spec-metamodel/common.adoc#Qualifiable[Qualifiable]; xref:spec-metamodel/common.adoc#HasDataSpecification[HasDataSpecification]
 h|ID: 3+| `\https://admin-shell.io/aas/3/1/SubmodelElement`
 

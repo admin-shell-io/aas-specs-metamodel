@@ -255,7 +255,7 @@ Accessed: 2025-03-24. [Online].
 Available: https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/hm-2018-sprache.html
 
 [#bib48]
-[48] "How to create a submodel template specification".
+[48] "How to create a Submodel template specification".
 V1.1. June 2025. Industrial Digital Twin Association.
 Guideline.
 Accessed: 2025-10-19. [Online]. 
