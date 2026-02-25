@@ -35,8 +35,10 @@ Values are only available for
 * xref:spec-metamodel/submodel-elements.adoc#BasicEventElement[BasicEventElement],
 * xref:spec-metamodel/core.adoc#Submodel[Submodel].
 
-Capabilities are excluded from the serialization scope since only data containing elements are in the focus.
+xref:spec-metamodel/submodel-elements.adoc#Capability[Capabilities] and xref:spec-metamodel/submodel-elements.adoc#Operation[Operations] are excluded from the serialization scope since only data containing elements are in the focus.
 They are consequently omitted in the serialization.
+
+Abstract SubmodelElements are not contained in payload.
 
 The following rules shall be adhered to when serializing a submodel, a submodel element collection or a submodel element list with the format "Value"footnote:[see SerializationModifier in Part 2 - IDTA-01002 - of the Specification of the Asset Administration Shell]:
 
@@ -574,3 +576,95 @@ For a BasicEventElement named "MyBasicEvent", the Value-Only-payload is minimize
     }
 }
 ----
+
+=== Value-Only for Invoking of Operations
+
+Although Operations are ommited in Value-Only there is one exception: invoking of operations.
+
+This is an example for the request body when invoking an operation in "Normal" format:
+
+====
+Note: 
+xref:spec-metamodel/submodel-elements.adoc#Operation[Operation/inputVariables]  is renamed to "inputArguments" in the JSON Value-Only Schema.
+====
+
+This would be the specification as defined in the Metamodel for an operation with an input argument "arg1" of type "xs:int" and a return argument with name "arg2" of type "xsd:int":
+
+[source,json,linenums]
+----
+        {
+          "idShort": "nRdRe",
+          "inputVariables": [
+            {
+              "value": {
+                "idShort": "arg1",
+                "modelType": "Property",
+			    "valueType": "xs:int"
+               }
+            }
+          ],
+          "modelType": "Operation",
+          "outputVariables": [
+            {
+              "value": {
+                "idShort": "arg2",
+                "modelType": "Property"
+			    "valueType": "xs:int"
+              }
+            }
+          ]
+		 }
+----
+
+The payload of the request body in format "Normal" for invoking an operation via API-Operation "InvokeOperation" would look like this for this operation:
+
+[source,json,linenums]
+----
+          "inputVariables": [
+            {
+              "value": {
+                "idShort": "arg1",
+                "modelType": "Property",
+			    "valueType": "xs:int",
+                "value": "5000"
+              }
+            }
+          ]
+----
+
+The operation result in format "Normal" would look like this (here opeation assumed to just add 1 to "arg1")
+
+[source,json,linenums]
+----
+          "outputArguments": [
+            {
+              "value": {
+                "idShort": "arg2",
+                "modelType": "Property",
+			    "valueType": "xs:int",
+                "value": "5001"
+              }
+            }
+          ]
+----
+
+When invoking the same operation in Value-Only format the request body would look like this:
+
+[source,json,linenums]
+----
+{
+	"inputArguments": [ 5000 ]
+}
+----
+
+with return object
+
+[source,json,linenums]
+----
+{
+	"outputArguments": [ 5001 ]
+}
+----
+
+
+
