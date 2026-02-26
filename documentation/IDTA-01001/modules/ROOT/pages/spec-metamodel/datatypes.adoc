@@ -118,7 +118,7 @@ a|_string_ with max 2048 and min 1 characters
 ====
 Note: For Identifier it is recommended to use existing standards, 
 for example ID-Link (IEC 61406) may be used for the 
-xref:spec-metamodel/core.adocl#AssetInformation[globalAssetId].  
+xref:spec-metamodel/core.adoc#AssetInformation[globalAssetId].  
 
 Typically, identifier strings do not contain blanks, emoticons or carriage returns 
 because they are not representable in existing systems.
