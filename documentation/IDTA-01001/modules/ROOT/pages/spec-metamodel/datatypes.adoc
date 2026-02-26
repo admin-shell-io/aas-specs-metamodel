@@ -113,7 +113,19 @@ image/jpeg
 	2025-02-24T12:31:14Z
 
 .2+e|[[Identifier]]Identifier 2+| `\https://admin-shell.io/aas/3/1/Identifier`
-|_string_ with max 2048 and min 1 characters a|
+a|_string_ with max 2048 and min 1 characters 
+
+====
+Note: For Identifier it is recommended to use existing standards, 
+for example ID-Link (IEC 61406) may be used for the 
+xref:spec-metamodel/core.adoc#global-asset-id[globalAssetId].  
+
+Typically, identifier strings do not contain blanks, emoticons or carriage returns 
+because they are not representable in existing systems.
+====
+
+
+a|
 \https://cust/123456
 
 0173-1#02-BAA120#008
