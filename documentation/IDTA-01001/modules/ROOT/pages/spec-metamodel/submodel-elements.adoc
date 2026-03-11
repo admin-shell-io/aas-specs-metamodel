@@ -706,15 +706,11 @@ a|Data type of the min und max attributes |xref:spec-metamodel/datatypes.adoc#Da
 a|
 The minimum value of the range
 
-If the min value is missing, the value is assumed to be negative infinite.
-
 |xref:spec-metamodel/datatypes.adoc#ValueDataType[ValueDataType] |0..1
 
 .2+e|max 3+| `\https://admin-shell.io/aas/3/1/Range/max`
 a|
 The maximum value of the range
-
-If the max value is missing, the value is assumed to be positive infinite.
 
 |xref:spec-metamodel/datatypes.adoc#ValueDataType[ValueDataType] |0..1
 |===
