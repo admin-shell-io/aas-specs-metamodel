@@ -24,7 +24,11 @@ The _SubmodelElementCollection_ is added to the following schema for completenes
 It is, however, not referenced from the _SubmodelElementValue_-oneOf-Enumeration due to the reasons mentioned above. 
 
 See xref:annex/valueonly-serialization-example.adoc#value-only-serialization-example[Annex ValueOnly-Serialization Example] 
-for an example that validates against this schema
+for an example that validates against this schema.
+
+====
+Note: OpenAPI 3.0 does not support patternProperties and propertyNames, OpenAPI 3.1 probably will. This is why this schema is not yet used in the openAPI specifications of the API. 
+====
 
 [source,json,linenums]
 ----
