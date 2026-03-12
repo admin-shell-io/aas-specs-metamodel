@@ -229,6 +229,9 @@ for an example that validates against this schema
     "ReferenceValue": {
       "type": "object",
       "properties": {
+	  	"referredSemanticId": {
+          "$ref": "#/definitions/ReferenceValue"
+        },
         "type": {
           "type": "string",
           "enum": ["ModelReference", "ExternalReference"]          

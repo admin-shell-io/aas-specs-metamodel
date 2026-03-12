@@ -44,6 +44,7 @@ Major Changes:
 
 * CHANGED: new attributes for creation and update date in AdministrationInformation  (https://github.com/admin-shell-io/aas-specs-metamodel/issues/484[#484])
 * CHANGED: new value to enumeration AssetKind: Batch to support Digital Product Passports (https://github.com/admin-shell-io/aas-specs-metamodel/issues/483[#483])
+* CHANGED: Value-Only JSON Schema - add referredSemanticId to data type Reference (https://github.com/admin-shell-io/aas-specs-metamodel/issues/651[#651]) 
 
 Minor Changes:
 
