@@ -44,15 +44,14 @@ Major Changes:
 
 * CHANGED: new attributes for creation and update date in AdministrationInformation  (https://github.com/admin-shell-io/aas-specs-metamodel/issues/484[#484])
 * CHANGED: new value to enumeration AssetKind: Batch to support Digital Product Passports (https://github.com/admin-shell-io/aas-specs-metamodel/issues/483[#483])
-
 * CHANGED: Value-Only JSON Schema - add referredSemanticId to data type Reference (https://github.com/admin-shell-io/aas-specs-metamodel/issues/651[#651]) 
 * CHANGED: SubmodelElement "Range" - remove conditions "If the min value is missing, the value is assumed to be negative infinite." and "If the max value is missing, the value is assumed to be positive infinite." 
   (https://github.com/admin-shell-io/aas-specs-metamodel/issues/639[#639])
 * NEW: new Constraint AASd-135 for References (https://github.com/admin-shell-io/aas-specs-metamodel/issues/592[#592])
+* ADDED: A minimum recursion depth of 32 for Container-Elements should be supported. Note: This means for certification a maximum of 32 recursion test cases should be tested.
 
 
 Minor Changes:
-
 
 * CHANGED: description of data type ContentType changed, some explanations with respect to mime types were removed (https://github.com/admin-shell-io/aas-specs-metamodel/issues/604[#604])
 * CHANGED: rename submodel to Submodel and submodel element to SubmodelElement to be conformant to IEC 63278-1 and terms and definitions, this also leads to reformulation of some constraints
