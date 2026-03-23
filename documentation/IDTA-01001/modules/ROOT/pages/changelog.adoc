@@ -46,6 +46,8 @@ Major Changes:
 * CHANGED: new value to enumeration AssetKind: Batch to support Digital Product Passports (https://github.com/admin-shell-io/aas-specs-metamodel/issues/483[#483])
 * CHANGED: SubmodelElement "Range" - remove conditions "If the min value is missing, the value is assumed to be negative infinite." and "If the max value is missing, the value is assumed to be positive infinite." 
   (https://github.com/admin-shell-io/aas-specs-metamodel/issues/639[#639])
+* NEW: new Constraint AASd-135 for References (https://github.com/admin-shell-io/aas-specs-metamodel/issues/592[#592])
+
 
 Minor Changes:
 
@@ -125,6 +127,10 @@ use "SubmodelElement" instead of "submodel element"
 |{empty}  |AASd-129 |Update a|
 use "SubmodelElement" instead of "submodel element" and "Submodel" instead of "submodel"
 
+|(x)  |AASd-135 |New a|
+
+Constraint AASd-135: 
+For external references, i.e. xref:ROOT:spec-metamodel/referencing.adoc#Reference[Reference] the value of any xref:ROOT:spec-metamodel/referencing.adoc#Key[Key/type] contained in the Reference shall not be one of xref:ROOT:spec-metamodel/referencing.adoc#AasReferables[AasReferables].
 |===
 
 
