@@ -867,6 +867,7 @@ The numbering starts with Zero (0).
 
 {aasd109}
 
+{aasd138}
 
 h|Inherits from: 3+|
 h|ID: 3+| `\https://admin-shell.io/aas/3/1/SubmodelElementList`

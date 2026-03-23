@@ -48,7 +48,8 @@ Major Changes:
 * CHANGED: Value-Only JSON Schema - add referredSemanticId to data type Reference (https://github.com/admin-shell-io/aas-specs-metamodel/issues/651[#651]) 
 * CHANGED: SubmodelElement "Range" - remove conditions "If the min value is missing, the value is assumed to be negative infinite." and "If the max value is missing, the value is assumed to be positive infinite." 
   (https://github.com/admin-shell-io/aas-specs-metamodel/issues/639[#639])
-* NEW: new Constraint AASd-135 for References (https://github.com/admin-shell-io/aas-specs-metamodel/issues/592[#592])
+* NEW: new Constraint AASd-137 for References (https://github.com/admin-shell-io/aas-specs-metamodel/issues/592[#592])
+* NEW: new Constraint AASd-138 for SubmodelElementList for OperationVariable (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
 * CHANGED: Constraint AASd-129, add exception if the SubmodelElement is part of an OperationVariable (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
 
 
@@ -138,10 +139,15 @@ the SubmodelElement shall be part of a Submodel template,
 i.e. a Submodel with Submodel/kind (attribute kind inherited via HasKind) value equal to Template. 
 Exception: the SubmodelElement is part of an OperationVariable.
 
-|(x)  |AASd-135 |New a|
+|(x)  |AASd-137 |New a|
 
-Constraint AASd-135: 
+Constraint AASd-137: 
 For external references, i.e. xref:ROOT:spec-metamodel/referencing.adoc#Reference[Reference] the value of any xref:ROOT:spec-metamodel/referencing.adoc#Key[Key/type] contained in the Reference shall not be one of xref:ROOT:spec-metamodel/referencing.adoc#AasReferables[AasReferables].
+
+|(x)  |AASd-138 |New a|
+
+Constraint AASd-138: 
+A SubmodelElementList within a Submodel of kind=Template or as part of an OperationVariable shall have exactly one element.
 |===
 
 
