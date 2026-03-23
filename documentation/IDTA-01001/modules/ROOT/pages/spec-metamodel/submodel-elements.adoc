@@ -597,11 +597,11 @@ a|Parameter that is input and output of the operation |xref:OperationVariable[Op
 |===
 
 
-===
+====
 Note: 
 In embedded systems _inoutputVariables_ are variables that can be read but that are also written by the system. 
-Typically, this is implemented via a pointer (i.e. 'by reference' instead of 'by value')"
-===
+Typically, this is implemented via a pointer (i.e. 'by reference' instead of 'by value')".
+====
 
 [[operation-variable-attributes]]
 === Operation Variable Attributes
@@ -622,17 +622,13 @@ a|Describes an argument or result of an operation via a SubmodelElement |xref:sp
 |===
 
 ====
-Note 1: an operation can  be invoked via an API call. For further explanation see Part 2 (IDTA-01002).
+Note 1: an operation can  be invoked via an API call (_InvokeOperationSync_ and _InvokeOperationAsync_). For further explanation see Part 2 (IDTA-01002).
 ====
 
 ====
-Note 2: OperationVariable is introduced as separate class to enable future extensions, e.g. for adding a default value or cardinality (option/mandatory).
+Note 2: _OperationVariable_ is introduced as separate class to enable future extensions, e.g. for adding a default value or cardinality (optional/mandatory).
 ====
 
-====
-Note 3: even if the SubmodelElement as the value of an input and an output variable have the same idShort, this does not mean that they are identical or mapped to the same variable since OperationVariables are no referables.
-The same applies to two input variables or an input variable and an inoutputVariable a.s.o.
-====
 
 [#property-attributes]
 == Property Attributes
