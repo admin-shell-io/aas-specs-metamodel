@@ -44,7 +44,12 @@ Major Changes:
 
 * CHANGED: new attributes for creation and update date in AdministrationInformation  (https://github.com/admin-shell-io/aas-specs-metamodel/issues/484[#484])
 * CHANGED: new value to enumeration AssetKind: Batch to support Digital Product Passports (https://github.com/admin-shell-io/aas-specs-metamodel/issues/483[#483])
+
 * CHANGED: Value-Only JSON Schema - add referredSemanticId to data type Reference (https://github.com/admin-shell-io/aas-specs-metamodel/issues/651[#651]) 
+* CHANGED: SubmodelElement "Range" - remove conditions "If the min value is missing, the value is assumed to be negative infinite." and "If the max value is missing, the value is assumed to be positive infinite." 
+  (https://github.com/admin-shell-io/aas-specs-metamodel/issues/639[#639])
+* NEW: new Constraint AASd-135 for References (https://github.com/admin-shell-io/aas-specs-metamodel/issues/592[#592])
+
 
 Minor Changes:
 
@@ -87,6 +92,22 @@ h|Nc h|New Elements V3.2 vs V3.1 h|Comment
 |{empty} | xref:spec-metamodel/core.adoc#AssetKind[AssetKind/Batch] a| Add new value "Batch" to enumeration AssetKind
 |===
 
+
+.Changes in Metamodel
+[cols="5%,42%,48%",options="header",]
+|===
+h| Nc h| V3.1 Change w.r.t. V3.0.2 h| Comment
+
+| x |Range a| remove conditions "If the min value is missing, the value is assumed to be negative infinite." and "If the max value is missing, the value is assumed to be positive infinite." 
+   
+   Note 1: some data types like float do have infinite in its value range per definition and should be used if infinite is needed. 
+   
+   Note 2: Range is an SubmodelElement in state "experimental", therefore non-backward-compatible changes are possible
+
+
+
+|===
+
 .New, Changed or Removed Constraints
 [cols="5%,10%,15%,69%",options="header",]
 |===
@@ -108,6 +129,10 @@ use "SubmodelElement" instead of "submodel element"
 |{empty}  |AASd-129 |Update a|
 use "SubmodelElement" instead of "submodel element" and "Submodel" instead of "submodel"
 
+|(x)  |AASd-135 |New a|
+
+Constraint AASd-135: 
+For external references, i.e. xref:ROOT:spec-metamodel/referencing.adoc#Reference[Reference] the value of any xref:ROOT:spec-metamodel/referencing.adoc#Key[Key/type] contained in the Reference shall not be one of xref:ROOT:spec-metamodel/referencing.adoc#AasReferables[AasReferables].
 |===
 
 
