@@ -60,7 +60,8 @@ Minor Changes:
 * CHANGED: definition of term "capability" (https://github.com/admin-shell-io/aas-specs-metamodel/issues/649[#649])
 * ADDED: Note to data type "Identifier" to use existing standards (https://github.com/admin-shell-io/aas-specs-metamodel/issues/658[#658])
 * NEW: add new note for XML Schema data types compared to IEEE 754 definitions (https://github.com/admin-shell-io/aas-specs-metamodel/issues/620[#620])
-* REMOVED: Note 3 to _Operation_ since not possible due to Constraint AASd-0134: even if the SubmodelElement as the value of an input and an output variable have the same idShort, this does not mean that they are identical or mapped to the same variable since OperationVariables are no referables. The same applies to two input variables or an input variable and an inoutputVariable a.s.o.
+* REMOVED: Note 3 to _Operation_ since not possible due to Constraint AASd-0134: even if the SubmodelElement as the value of an input and an output variable have the same idShort, this does not mean that they are identical or mapped to the same variable since OperationVariables are no referables. The same applies to two input variables or an input variable and an inoutputVariable a.s.o. (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
+* ADDED: Handling of operations in Submodel with kind=Instance are handled identical to operation in Submodel Templates (Submodel with kind=Template) (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
 * CHANGED: update bibliography
 * CHANGED: editorial changes
 

@@ -621,6 +621,8 @@ h|Explanation h|Type h|Card.
 a|Describes an argument or result of an operation via a SubmodelElement |xref:spec-metamodel/core.adoc#SubmodelElement[SubmodelElement] |1
 |===
 
+Handling of operations in Submodel with xref:spec-metamodel/common.adoc#HasKind[kind]=xref:spec-metamodel/common.adoc#ModellingKind[Instance] are handled identical to operation in Submodel Templates (Submodel with xref:spec-metamodel/common.adoc#HasKind[kind]=xref:spec-metamodel/common.adoc#ModellingKind[Template])
+
 ====
 Note 1: an operation can  be invoked via an API call (_InvokeOperationSync_ and _InvokeOperationAsync_). For further explanation see Part 2 (IDTA-01002).
 ====
