@@ -1,3 +1,3 @@
 # XML
 
-Refer to the [xml.adoc](../documentation/IDTA-01001/modules/ROOT/pages/mappings/formats/xml.adoc) for detailed information.
+Refer to the [xml.adoc](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.2/mappings/mappings.html#format-normal-xml) for detailed information.
