@@ -632,7 +632,7 @@ The payload of the request body in format "Normal" for invoking an operation via
           ]
 ----
 
-The operation result in format "Normal" would look like this (here opeation assumed to just add 1 to "arg1")
+The operation result in format "Normal" would look like this (here operation assumed to just add 1 to "arg1")
 
 [source,json,linenums]
 ----
