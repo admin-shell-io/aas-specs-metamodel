@@ -48,6 +48,7 @@ Major Changes:
 * CHANGED: SubmodelElement "Range" - remove conditions "If the min value is missing, the value is assumed to be negative infinite." and "If the max value is missing, the value is assumed to be positive infinite." 
   (https://github.com/admin-shell-io/aas-specs-metamodel/issues/639[#639])
 * NEW: new Constraint AASd-135 for References (https://github.com/admin-shell-io/aas-specs-metamodel/issues/592[#592])
+* CHANGED: changed description of Constraint AASd-116, made more generic to avoid frequent updates
 * ADDED: A minimum recursion depth of 32 for Container-Elements should be supported. Note: This means for certification a maximum of 32 recursion test cases should be tested.
 
 
@@ -124,6 +125,12 @@ Constraint AASd-002: _idShort_ of __Referable__s shall shall consist of at least
 
 |{empty}  |AASd-108 |Update a|
 use "SubmodelElement" instead of "submodel element"
+
+|{empty}  |AASd-116 |Update a|
+use \https://admin-shell.io/aas/3/x/AssetInformation/globalAssetId instead of \https://admin-shell.io/aas/3/1/AssetInformation/globalAssetId
+
+Constraint AASd-116:
+"globalAssetId" (case-insensitive) is a reserved key for SpecificAssetId/name with the semantics as defined in \https://admin-shell.io/aas/3/x/AssetInformation/globalAssetId, x being the minor version of the used specification.
 
 |{empty}  |AASd-128 |Update a|
 use "SubmodelElement" instead of "submodel element" 
