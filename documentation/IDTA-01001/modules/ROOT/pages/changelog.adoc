@@ -48,8 +48,8 @@ Major Changes:
 * CHANGED: SubmodelElement "Range" - remove conditions "If the min value is missing, the value is assumed to be negative infinite." and "If the max value is missing, the value is assumed to be positive infinite." 
   (https://github.com/admin-shell-io/aas-specs-metamodel/issues/639[#639])
 * NEW: new Constraint AASd-135 for References (https://github.com/admin-shell-io/aas-specs-metamodel/issues/592[#592])
-* CHANGED: changed description of Constraint AASd-116, made more generic to avoid frequent updates
-* ADDED: A minimum recursion depth of 32 for Container-Elements should be supported. Note: This means for certification a maximum of 32 recursion test cases should be tested.
+* CHANGED: changed description of Constraint AASd-116, made more generic to avoid frequent updates (https://github.com/admin-shell-io/aas-specs-metamodel/issues/674[#674])
+* ADDED: A minimum recursion depth of 32 for Container-Elements should be supported. Note: This means for certification a maximum of 32 recursion test cases should be tested. (https://github.com/admin-shell-io/aas-specs-metamodel/issues/333[#333])
 
 
 Minor Changes:
@@ -121,7 +121,7 @@ h|Nc h|V3.1 vs. V3.0 h|New, Update, Removed, Reformulated h|Comment
 |{empty}  |AASd-002 |Update a|
 add "[idShort] shall consist of at least two characters"
 
-Constraint AASd-002: _idShort_ of __Referable__s shall shall consist of at least two characters and shall only feature letters, digits, hyphen ("-") and  underscore ("_"); starting mandatory with a letter, and not ending with a hyphen, i.e. ^[a-zA-Z][a-zA-Z0-9_-]*[a-zA-Z0-9_]+$.].
+Constraint AASd-002: _idShort_ of __Referable__s shall consist of at least two characters and shall only feature letters, digits, hyphen ("-") and  underscore ("_"); starting mandatory with a letter, and not ending with a hyphen, i.e. ^[a-zA-Z][a-zA-Z0-9_-]*[a-zA-Z0-9_]+$.].
 
 |{empty}  |AASd-108 |Update a|
 use "SubmodelElement" instead of "submodel element"
