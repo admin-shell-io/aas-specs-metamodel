@@ -619,6 +619,13 @@ a|Struct of Submodel elements
 a|List of Submodel elements
 |===
 
+
+A minimum recursion depth of 32 for Container-Elements should be supported.
+
+====
+Note: This means for certification a maximum of 32 recursion test cases should be tested.
+====
+
 ===  Logical Enumeration AasReferables
 
 

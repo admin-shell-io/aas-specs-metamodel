@@ -130,6 +130,13 @@ Submodel elements defined in the Submodel other than the ones mentioned above ar
 
 Optional elements (like for example globalAssetId for an Entity Submodel element) with no value shall be omitted in the serialization.
 
+====
+Note: Elements within a SubmodelElementList are neither optional or mandatory per se. 
+So in Value-Only all elements within a SubmodelElementList shall be displayed even if they are empty (handled as if they are mandatory). 
+
+Rationale: index of elements within a SubmodelElementList shall be identical in Normal and Value-Only format.
+====
+
 ==== Data type to value mapping
 
 The serialization of SubmodelElement values is described in the following table.
@@ -375,6 +382,19 @@ For a _SubmodelElementList_ named "Authors" with string Properties as its value,
     "Clark"
 ]
 ----
+
+For a _SubmodelElementList_ named "ListOfLists" with string SubmodelElementList as its value, the Value-Only payload is minimized to the following (empty lists are included):
+
+
+[source,json,linenums]
+----
+[
+  [ "A" ], 
+  [], 
+  [ "B", "C" ] 
+]
+----
+
 
 ===== MultiLanguageProperty
 
