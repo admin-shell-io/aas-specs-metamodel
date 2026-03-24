@@ -579,7 +579,7 @@ For a BasicEventElement named "MyBasicEvent", the Value-Only-payload is minimize
 
 === Value-Only for Invoking of Operations
 
-Although Operations are ommited in Value-Only there is one exception: invoking of operations.
+Although Operations are omitted in Value-Only there is one exception: invoking of operations.
 
 This is an example for the request body when invoking an operation in "Normal" format:
 
