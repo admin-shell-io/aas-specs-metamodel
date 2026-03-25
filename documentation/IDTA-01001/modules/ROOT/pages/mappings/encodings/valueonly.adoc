@@ -643,25 +643,13 @@ This would be the payload conformant to the metamodel specification as would be 
 		 }
 ----
 
-This would be the payload as defined in the API specification for the invocation of an operation (link:https://industrialdigitaltwin.io/aas-specifications/IDTA-01002/v3.2/specification/interfaces.html#InvokeOperationSync[InvokeOperationSync]) 
+This would be the payload as defined in the API OpenAPI specification for the invocation of an operation (link:https://industrialdigitaltwin.io/aas-specifications/IDTA-01002/v3.2/specification/interfaces.html#InvokeOperationSync[InvokeOperationSync] 
+with data type link:https://industrialdigitaltwin.io/aas-specifications/IDTA-01002/v3.1/specification/interfaces-payload.html#_operationrequest[OperationRequest] ) 
 with idShort "add" in Format "Normal" with input arguments "arg1" and "arg2" of type "xs:int" and a return argument with name "out1" of type "xsd:int":
 
 [source,json,linenums]
 ----
           {
-          "path": {
-			"type": "ModelReference",
-			"keys": [
-				{
-				"type": "Submodel",
-				"value": "urn:my-submodel.123"
-				}
-				{
-				"type": "Operation",
-				"value": "add"
-				}
-			]
-		  },
           "inputArguments": [
             {
               "value": {
@@ -710,19 +698,6 @@ When invoking the same operation in Value-Only format the request body would the
 [source,json,linenums]
 ----
 {
-	  "path": {
-		"type": "ModelReference",
-		"keys": [
-			{
-			"type": "Submodel",
-			"value": "urn:my-submodel.123"
-			}
-			{
-			"type": "Operation",
-			"value": "add"
-			}
-		]
-	 },
 	 "inputArguments": [ 
 	   "arg1": 5000,
 	   "arg2": 2
