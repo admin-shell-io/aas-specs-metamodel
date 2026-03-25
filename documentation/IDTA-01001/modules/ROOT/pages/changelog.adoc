@@ -134,8 +134,7 @@ use "SubmodelElement" instead of "submodel element"
 * add "Exception: the SubmodelElement is part of an OperationVariable." 
 * use "SubmodelElement" instead of "submodel element" and "Submodel" instead of "submodel"
 
-Constraint AASd-129: If any Qualifier/kind value of a SubmodelElement/qualifier (attribute qualifier inherited via Qualifiable) is equal to TemplateQualifier, 
-the SubmodelElement shall be part of a Submodel template, 
+Constraint AASd-129: If any Qualifier/kind value of a SubmodelElement/qualifier (attribute qualifier inherited via Qualifiable) is equal to TemplateQualifier, the SubmodelElement shall be part of a Submodel template, 
 i.e. a Submodel with Submodel/kind (attribute kind inherited via HasKind) value equal to Template. 
 Exception: the SubmodelElement is part of an OperationVariable.
 
