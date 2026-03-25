@@ -605,10 +605,10 @@ This is an example for the request body when invoking an operation in "Normal" f
 
 ====
 Note: 
-xref:spec-metamodel/submodel-elements.adoc#Operation[Operation/inputVariables]  is renamed to "inputArguments" in the JSON Value-Only Schema.
+xref:spec-metamodel/submodel-elements.adoc#Operation[Operation/inputVariables] is renamed to "inputArguments" in the JSON Value-Only Schema etc.
 ====
 
-This would be the specification as defined in the Metamodel for an operation with an input argument "arg1" of type "xs:int" and a return argument with name "arg2" of type "xsd:int":
+This would be the specification as defined in the Metamodel for an operation with an input arguments "arg1" and "arg2" of type "xs:int" and a return argument with name "out1" of type "xsd:int":
 
 [source,json,linenums]
 ----
@@ -622,12 +622,19 @@ This would be the specification as defined in the Metamodel for an operation wit
 			    "valueType": "xs:int"
                }
             }
+			{
+              "value": {
+                "idShort": "arg2",
+                "modelType": "Property",
+			    "valueType": "xs:int"
+               }
+            }
           ],
           "modelType": "Operation",
           "outputVariables": [
             {
               "value": {
-                "idShort": "arg2",
+                "idShort": "out1",
                 "modelType": "Property"
 			    "valueType": "xs:int"
               }
@@ -649,31 +656,45 @@ The payload of the request body in format "Normal" for invoking an operation via
                 "value": "5000"
               }
             }
-          ]
-----
-
-The operation result in format "Normal" would look like this (here operation assumed to just add 1 to "arg1")
-
-[source,json,linenums]
-----
-          "outputArguments": [
             {
               "value": {
                 "idShort": "arg2",
                 "modelType": "Property",
 			    "valueType": "xs:int",
-                "value": "5001"
+                "value": "2"
               }
             }
           ]
 ----
+
+The operation result in format "Normal" would look like this (here operation assumed to just add value of "arg2" to "arg1")
+
+[source,json,linenums]
+----
+          "outputVariables": [
+            {
+              "value": {
+                "idShort": "out1",
+                "modelType": "Property",
+			    "valueType": "xs:int",
+                "value": "5002"
+              }
+            }
+          ]
+----
+
+Arguments in an operation are handled like a SubmodelElementCollection, not like a SubmodelElementList because they may differ in type and semantics. 
+The arguments in an operation are not ordered.
 
 When invoking the same operation in Value-Only format the request body would look like this:
 
 [source,json,linenums]
 ----
 {
-	"inputArguments": [ 5000 ]
+	"inputArguments": [ 
+	   "arg1": 5000,
+	   "arg2": 2
+	]
 }
 ----
 
@@ -682,7 +703,8 @@ with return object
 [source,json,linenums]
 ----
 {
-	"outputArguments": [ 5001 ]
+	"outputArguments": [ 
+	  "out1": 5002 ]
 }
 ----
 
