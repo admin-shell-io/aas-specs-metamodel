@@ -698,10 +698,10 @@ When invoking the same operation in Value-Only format the request body would the
 [source,json,linenums]
 ----
 {
-	 "inputArguments": [ 
+	 "inputArguments": {
 	   "arg1": 5000,
 	   "arg2": 2
-	  ]
+	  }
 }
 ----
 
