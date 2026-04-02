@@ -35,10 +35,12 @@ Values are only available for
 * xref:spec-metamodel/submodel-elements.adoc#BasicEventElement[BasicEventElement],
 * xref:spec-metamodel/core.adoc#Submodel[Submodel].
 
-Capabilities are excluded from the serialization scope since only data containing elements are in the focus.
+xref:spec-metamodel/submodel-elements.adoc#Capability[Capabilities] and xref:spec-metamodel/submodel-elements.adoc#Operation[Operations] are excluded from the serialization scope since only data containing elements are in the focus.
 They are consequently omitted in the serialization.
 
-The following rules shall be adhered to when serializing a submodel, a SubmodelElement collection or a SubmodelElement list with the format "Value"footnote:[see SerializationModifier in Part 2 - IDTA-01002 - of the Specification of the Asset Administration Shell]:
+Abstract SubmodelElements are not contained in payload.
+
+The following rules shall be adhered to when serializing a submodel, a submodel element collection or a submodel element list with the format "Value"footnote:[see SerializationModifier in Part 2 - IDTA-01002 - of the Specification of the Asset Administration Shell]:
 
 * A Submodel or a SubmodelElement collection is serialized as an unnamed JSON object.
 * A SubmodelElement list is serialized as an JSON array.
@@ -594,3 +596,125 @@ For a BasicEventElement named "MyBasicEvent", the Value-Only-payload is minimize
     }
 }
 ----
+
+=== Value-Only for Invoking of Operations
+
+Although Operations are omitted in Value-Only there is one exception: invoking of operations.
+
+
+====
+Note: 
+xref:spec-metamodel/submodel-elements.adoc#Operation[Operation/inputVariables] is renamed to "inputArguments" etc. in the JSON Value-Only Schema.
+
+Same holds for the specification of the invoke operations in IDTA-01002 (InvokeOperationSync and InvokeOperationAsync). 
+====
+
+This would be the payload conformant to the metamodel specification as would be used in a Submodel Template Specification:
+
+----
+        {
+          "idShort": "add",
+          "inputVariables": [
+            {
+              "value": {
+                "idShort": "arg1",
+                "modelType": "Property",
+			    "valueType": "xs:int"
+               }
+            },
+			{
+              "value": {
+                "idShort": "arg2",
+                "modelType": "Property",
+			    "valueType": "xs:int"
+               }
+            }
+          ],
+          "outputVariables": [
+            {
+              "value": {
+                "idShort": "out1",
+                "modelType": "Property"
+			    "valueType": "xs:int"
+              }
+            }
+          ],
+		  "modelType": "Operation"
+		 }
+----
+
+This would be the payload as defined in the API OpenAPI specification for the invocation of an operation (link:https://industrialdigitaltwin.io/aas-specifications/IDTA-01002/v3.2/specification/interfaces.html#InvokeOperationSync[InvokeOperationSync] 
+with data type link:https://industrialdigitaltwin.io/aas-specifications/IDTA-01002/v3.1/specification/interfaces-payload.html#_operationrequest[OperationRequest] ) 
+with idShort "add" in Format "Normal" with input arguments "arg1" and "arg2" of type "xs:int" and a return argument with name "out1" of type "xsd:int":
+
+[source,json,linenums]
+----
+          {
+          "inputArguments": [
+            {
+              "value": {
+                "idShort": "arg1",
+                "modelType": "Property",
+			    "valueType": "xs:int",
+				"value": "5000"
+               }
+            },
+			{
+              "value": {
+                "idShort": "arg2",
+                "modelType": "Property",
+			    "valueType": "xs:int",
+		        "value": "2"
+               }
+            }
+          ]
+		 }
+----
+
+The operation result would look like this:
+
+[source,json,linenums]
+----
+          {
+          "outputArguments": [
+            {
+              "value": {
+                "idShort": "out1",
+                "modelType": "Property",
+			    "valueType": "xs:int",
+			    "value": "5002"
+              }
+            }
+          ]
+		 }
+----
+
+
+Arguments in an operation are handled like a SubmodelElementCollection, not like a SubmodelElementList because they may differ in type and semantics. 
+The arguments in an operation are not ordered.
+
+When invoking the same operation in Value-Only format the request body would therefore look like this:
+
+[source,json,linenums]
+----
+{
+	 "inputArguments": {
+	   "arg1": 5000,
+	   "arg2": 2
+	  }
+}
+----
+
+with return object
+
+[source,json,linenums]
+----
+{
+	"outputArguments": {
+	  "out1": 5002 
+	  }
+}
+----
+
+
+
