@@ -621,8 +621,8 @@ This would be the payload conformant to the metamodel specification as would be 
                 "modelType": "Property",
 			    "valueType": "xs:int"
                }
-            }
-			{,
+            },
+			{
               "value": {
                 "idShort": "arg2",
                 "modelType": "Property",
@@ -638,7 +638,7 @@ This would be the payload conformant to the metamodel specification as would be 
 			    "valueType": "xs:int"
               }
             }
-          ]
+          ],
 		  "modelType": "Operation"
 		 }
 ----
@@ -710,9 +710,9 @@ with return object
 [source,json,linenums]
 ----
 {
-	"outputArguments": [ 
+	"outputArguments": {
 	  "out1": 5002 
-	  ]
+	  }
 }
 ----
 
