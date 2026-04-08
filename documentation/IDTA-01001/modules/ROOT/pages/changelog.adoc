@@ -48,11 +48,9 @@ Major Changes:
 * CHANGED: Value-Only JSON Schema - add referredSemanticId to data type Reference (https://github.com/admin-shell-io/aas-specs-metamodel/issues/651[#651]) 
 * CHANGED: SubmodelElement "Range" - remove conditions "If the min value is missing, the value is assumed to be negative infinite." and "If the max value is missing, the value is assumed to be positive infinite." 
   (https://github.com/admin-shell-io/aas-specs-metamodel/issues/639[#639])
-
 * NEW: new Constraint AASd-137 for References (https://github.com/admin-shell-io/aas-specs-metamodel/issues/592[#592])
 * NEW: new Constraint AASd-138 for SubmodelElementList for OperationVariable (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
 * CHANGED: Constraint AASd-129, add exception if the SubmodelElement is part of an OperationVariable (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
-* NEW: new Constraint AASd-135 for References (https://github.com/admin-shell-io/aas-specs-metamodel/issues/592[#592])
 * CHANGED: changed description of Constraint AASd-116, made more generic to avoid frequent updates (https://github.com/admin-shell-io/aas-specs-metamodel/issues/674[#674])
 * ADDED: A minimum recursion depth of 32 for Container-Elements should be supported. Note: This means for certification a maximum of 32 recursion test cases should be tested. (https://github.com/admin-shell-io/aas-specs-metamodel/issues/333[#333])
 
@@ -72,7 +70,7 @@ Minor Changes:
 * REMOVED: Note 3 to _Operation_ since not possible due to Constraint AASd-134: even if the SubmodelElement as the value of an input and an output variable have the same idShort, this does not mean that they are identical or mapped to the same variable since OperationVariables are no referables. The same applies to two input variables or an input variable and an inoutputVariable a.s.o. (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
 * ADDED: Handling of operations in Submodel with kind=Instance are handled identical to operation in Submodel Templates (Submodel with kind=Template) (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
 * CHANGED: update bibliography
-* CHANGED: editorial changes
+* CHANGED: editorial changes (including https://github.com/admin-shell-io/aas-specs-metamodel/issues/600[#600], https://github.com/admin-shell-io/aas-specs-metamodel/issues/636[#636], https://github.com/admin-shell-io/aas-specs-metamodel/issues/637[#637], https://github.com/admin-shell-io/aas-specs-metamodel/issues/638[#638] )
 
 
 Minor Bugfixes:
