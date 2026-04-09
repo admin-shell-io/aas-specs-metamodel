@@ -100,10 +100,10 @@ h|Explanation h|Type h|Card.
 a|The subject ID of the subject responsible for making the element |xref:spec-metamodel/referencing.adoc#Reference[Reference] |0..1
 
 .2+e|[[createdAt]]createdAt 3+| `\https://admin-shell.io/aas/3/1/AdministrativeInformation/createdAt `
-a| date of creation | dateTime |0..1
+a| date of creation | xref:spec-metamodel/datatypes.adoc#DateTimeUtc[DateTimeUtc] |0..1
 
 .2+e|[[updatedAt]]updatedAt 3+| `\https://admin-shell.io/aas/3/1/AdministrativeInformation/updatedAt`
-a| date of update | dateTime |0..1
+a| date of update | xref:spec-metamodel/datatypes.adoc#DateTimeUtc[DateTimeUtc] |0..1
 
 .2+e|[[templateId]]templateId 3+| `\https://admin-shell.io/aas/3/1/AdministrativeInformation/templateId`
 a|
