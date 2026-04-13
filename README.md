@@ -1,5 +1,5 @@
 # IDTA-01001 - Metamodel of the Asset Administration Shell
-
+# Initial Commit - (aditya-utpat-work, 2026-04-13)
 [![Check](
 https://github.com/admin-shell-io/aas-specs-metamodel/workflows/Check/badge.svg
 )](
