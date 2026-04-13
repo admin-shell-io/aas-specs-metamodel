@@ -1,19 +1,19 @@
-@prefix aas: <https://admin-shell.io/aas/3/1/> .
+@prefix aas: <https://admin-shell.io/aas/3/2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
 <something_142922d6> rdf:type aas:AssetAdministrationShell ;
-    <https://admin-shell.io/aas/3/1/Identifiable/id> "something_142922d6"^^xs:string ;
-    <https://admin-shell.io/aas/3/1/AssetAdministrationShell/assetInformation> [
+    <https://admin-shell.io/aas/3/2/Identifiable/id> "something_142922d6"^^xs:string ;
+    <https://admin-shell.io/aas/3/2/AssetAdministrationShell/assetInformation> [
         rdf:type aas:AssetInformation ;
-        <https://admin-shell.io/aas/3/1/AssetInformation/assetKind> <https://admin-shell.io/aas/3/1/AssetKind/Role> ;
-        <https://admin-shell.io/aas/3/1/AssetInformation/globalAssetId> "something_eea66fa1"^^xs:string ;
-        <https://admin-shell.io/aas/3/1/AssetInformation/defaultThumbnail> [
+        <https://admin-shell.io/aas/3/2/AssetInformation/assetKind> <https://admin-shell.io/aas/3/2/AssetKind/Role> ;
+        <https://admin-shell.io/aas/3/2/AssetInformation/globalAssetId> "something_eea66fa1"^^xs:string ;
+        <https://admin-shell.io/aas/3/2/AssetInformation/defaultThumbnail> [
             rdf:type aas:Resource ;
-            <https://admin-shell.io/aas/3/1/Resource/path> "//bVfwa.f./%DC%60O@=;;%63;6%9b;l%E8Ib@$e::9%c0;w%0F;P%bD!v,$;@$;,=$%454-:R%2C%5E%4b2B=%eB%Da%0E%C4p%5c&;%de@%82%fB;v%bbw5q=%57%EE%1c;%e0%2A%af%1c0%eDm%5c%D2&;k*%12%5B;%A0&,:&$;:&%33;+,;%6c5;l%1D%35+%4a&%Fe+lk,+;C,~W=+=%3bn;;-p%3f%66R+%53;o%Bd$BIW%0d%Be%0E+l=I(k%Ac:,R%e6%9E%21%7f%54;;N%F3X@%8f%03%AE(=%9b:/;%F20;0L%27%4F;;%b0:9;%D5%31%1C;21u@%CE%fAE@$=#T%7D"^^xs:string ;
-            <https://admin-shell.io/aas/3/1/Resource/contentType> "application/x-abiword"^^xs:string ;
+            <https://admin-shell.io/aas/3/2/Resource/path> "//bVfwa.f./%DC%60O@=;;%63;6%9b;l%E8Ib@$e::9%c0;w%0F;P%bD!v,$;@$;,=$%454-:R%2C%5E%4b2B=%eB%Da%0E%C4p%5c&;%de@%82%fB;v%bbw5q=%57%EE%1c;%e0%2A%af%1c0%eDm%5c%D2&;k*%12%5B;%A0&,:&$;:&%33;+,;%6c5;l%1D%35+%4a&%Fe+lk,+;C,~W=+=%3bn;;-p%3f%66R+%53;o%Bd$BIW%0d%Be%0E+l=I(k%Ac:,R%e6%9E%21%7f%54;;N%F3X@%8f%03%AE(=%9b:/;%F20;0L%27%4F;;%b0:9;%D5%31%1C;21u@%CE%fAE@$=#T%7D"^^xs:string ;
+            <https://admin-shell.io/aas/3/2/Resource/contentType> "application/x-abiword"^^xs:string ;
         ] ;
     ] ;
 .

@@ -27,18 +27,14 @@
             "type": "ModelReference"
           },
           "dataSpecificationContent": {
-            "modelType": "DataSpecificationIec61360",
+            "modelType": "DataSpecificationUom",
             "preferredName": [
               {
                 "language": "hy-Latn-IT-arevela",
                 "text": "something_34113ec1"
-              },
-              {
-                "language": "en-GB",
-                "text": "Something random in English 19945c14"
               }
             ],
-            "value": "something_a864dcb4"
+            "symbol": "something_70838c8c"
           }
         }
       ],

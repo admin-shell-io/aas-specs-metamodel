@@ -1,0 +1,51 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "Role",
+        "globalAssetId": "something_eea66fa1"
+      },
+      "embeddedDataSpecifications": [
+        {
+          "dataSpecification": {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "urn:some-company06:e9f47be2"
+              }
+            ],
+            "type": "ExternalReference"
+          },
+          "dataSpecificationContent": {
+            "classificationSystem": "something_e48c0c0a",
+            "classificationSystemVersion": "something_43105903",
+            "definition": [
+              {
+                "language": "de-Qaaa",
+                "text": "something_2ae95f9f"
+              }
+            ],
+            "modelType": "DataSpecificationUom",
+            "preferredName": [
+              {
+                "language": "i-enochian",
+                "text": "something_84b0b440"
+              }
+            ],
+            "preferredNameQuantity": [
+              {
+                "language": "en-US",
+                "text": "something_a024f9db"
+              }
+            ],
+            "quantityId": "something_3197bd3f",
+            "specificUnitId": "something_28964ecd",
+            "symbol": "something_c13116d7"
+          }
+        }
+      ],
+      "id": "something_142922d6",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

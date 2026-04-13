@@ -1,79 +1,74 @@
-@prefix aas: <https://admin-shell.io/aas/3/1/> .
+@prefix aas: <https://admin-shell.io/aas/3/2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
 <something_48c66017> rdf:type aas:Submodel ;
-    <https://admin-shell.io/aas/3/1/Identifiable/id> "something_48c66017"^^xs:string ;
-    <https://admin-shell.io/aas/3/1/Submodel/submodelElements> [
+    <https://admin-shell.io/aas/3/2/Identifiable/id> "something_48c66017"^^xs:string ;
+    <https://admin-shell.io/aas/3/2/Submodel/submodelElements> [
         rdf:type aas:File ;
-        <https://admin-shell.io/aas/3/1/HasExtensions/extensions> [
+        <https://admin-shell.io/aas/3/2/HasExtensions/extensions> [
             rdf:type aas:Extension ;
-            <https://admin-shell.io/aas/3/1/Extension/name> "something_aa1af8b3"^^xs:string ;
+            <https://admin-shell.io/aas/3/2/Extension/name> "something_aa1af8b3"^^xs:string ;
         ] ;
-        <https://admin-shell.io/aas/3/1/Referable/category> "something_d7cf2dff"^^xs:string ;
-        <https://admin-shell.io/aas/3/1/Referable/idShort> "nRdRe"^^xs:string ;
-        <https://admin-shell.io/aas/3/1/Referable/displayName> [
+        <https://admin-shell.io/aas/3/2/Referable/category> "something_d7cf2dff"^^xs:string ;
+        <https://admin-shell.io/aas/3/2/Referable/idShort> "nRdRe"^^xs:string ;
+        <https://admin-shell.io/aas/3/2/Referable/displayName> [
             rdf:type aas:LangStringNameType ;
-            <https://admin-shell.io/aas/3/1/AbstractLangString/language> "zh-CN-a-myext-x-private"^^xs:string ;
-            <https://admin-shell.io/aas/3/1/AbstractLangString/text> "something_535aeb51"^^xs:string ;
+            <https://admin-shell.io/aas/3/2/AbstractLangString/language> "zh-CN-a-myext-x-private"^^xs:string ;
+            <https://admin-shell.io/aas/3/2/AbstractLangString/text> "something_535aeb51"^^xs:string ;
         ] ;
-        <https://admin-shell.io/aas/3/1/Referable/description> [
+        <https://admin-shell.io/aas/3/2/Referable/description> [
             rdf:type aas:LangStringTextType ;
-            <https://admin-shell.io/aas/3/1/AbstractLangString/language> "es-419"^^xs:string ;
-            <https://admin-shell.io/aas/3/1/AbstractLangString/text> "something_be9deae0"^^xs:string ;
+            <https://admin-shell.io/aas/3/2/AbstractLangString/language> "es-419"^^xs:string ;
+            <https://admin-shell.io/aas/3/2/AbstractLangString/text> "something_be9deae0"^^xs:string ;
         ] ;
-        <https://admin-shell.io/aas/3/1/HasSemantics/semanticId> [
+        <https://admin-shell.io/aas/3/2/HasSemantics/semanticId> [
             rdf:type aas:Reference ;
-            <https://admin-shell.io/aas/3/1/Reference/type> <https://admin-shell.io/aas/3/1/ReferenceTypes/ExternalReference> ;
-            <https://admin-shell.io/aas/3/1/Reference/keys> [
+            <https://admin-shell.io/aas/3/2/Reference/type> <https://admin-shell.io/aas/3/2/ReferenceTypes/ExternalReference> ;
+            <https://admin-shell.io/aas/3/2/Reference/keys> [
                 rdf:type aas:Key ;
-                <https://admin-shell.io/aas/3/1/Key/type> <https://admin-shell.io/aas/3/1/KeyTypes/GlobalReference> ;
-                <https://admin-shell.io/aas/3/1/Key/value> "urn:something00:f4547d0c"^^xs:string ;
+                <https://admin-shell.io/aas/3/2/Key/type> <https://admin-shell.io/aas/3/2/KeyTypes/GlobalReference> ;
+                <https://admin-shell.io/aas/3/2/Key/value> "urn:something00:f4547d0c"^^xs:string ;
             ] ;
         ] ;
-        <https://admin-shell.io/aas/3/1/HasSemantics/supplementalSemanticIds> [
+        <https://admin-shell.io/aas/3/2/HasSemantics/supplementalSemanticIds> [
             rdf:type aas:Reference ;
-            <https://admin-shell.io/aas/3/1/Reference/type> <https://admin-shell.io/aas/3/1/ReferenceTypes/ModelReference> ;
-            <https://admin-shell.io/aas/3/1/Reference/keys> [
+            <https://admin-shell.io/aas/3/2/Reference/type> <https://admin-shell.io/aas/3/2/ReferenceTypes/ModelReference> ;
+            <https://admin-shell.io/aas/3/2/Reference/keys> [
                 rdf:type aas:Key ;
-                <https://admin-shell.io/aas/3/1/Key/type> <https://admin-shell.io/aas/3/1/KeyTypes/Submodel> ;
-                <https://admin-shell.io/aas/3/1/Key/value> "urn:another-example10:42487f5a"^^xs:string ;
+                <https://admin-shell.io/aas/3/2/Key/type> <https://admin-shell.io/aas/3/2/KeyTypes/Submodel> ;
+                <https://admin-shell.io/aas/3/2/Key/value> "urn:another-example10:42487f5a"^^xs:string ;
             ] ;
         ] ;
-        <https://admin-shell.io/aas/3/1/Qualifiable/qualifiers> [
+        <https://admin-shell.io/aas/3/2/Qualifiable/qualifiers> [
             rdf:type aas:Qualifier ;
-            <https://admin-shell.io/aas/3/1/Qualifier/type> "something_500f973e"^^xs:string ;
-            <https://admin-shell.io/aas/3/1/Qualifier/valueType> <https://admin-shell.io/aas/3/1/DataTypeDefXsd/Long> ;
+            <https://admin-shell.io/aas/3/2/Qualifier/type> "something_500f973e"^^xs:string ;
+            <https://admin-shell.io/aas/3/2/Qualifier/valueType> <https://admin-shell.io/aas/3/2/DataTypeDefXsd/Long> ;
         ] ;
-        <https://admin-shell.io/aas/3/1/HasDataSpecification/embeddedDataSpecifications> [
+        <https://admin-shell.io/aas/3/2/HasDataSpecification/embeddedDataSpecifications> [
             rdf:type aas:EmbeddedDataSpecification ;
-            <https://admin-shell.io/aas/3/1/EmbeddedDataSpecification/dataSpecification> [
+            <https://admin-shell.io/aas/3/2/EmbeddedDataSpecification/dataSpecification> [
                 rdf:type aas:Reference ;
-                <https://admin-shell.io/aas/3/1/Reference/type> <https://admin-shell.io/aas/3/1/ReferenceTypes/ModelReference> ;
-                <https://admin-shell.io/aas/3/1/Reference/keys> [
+                <https://admin-shell.io/aas/3/2/Reference/type> <https://admin-shell.io/aas/3/2/ReferenceTypes/ModelReference> ;
+                <https://admin-shell.io/aas/3/2/Reference/keys> [
                     rdf:type aas:Key ;
-                    <https://admin-shell.io/aas/3/1/Key/type> <https://admin-shell.io/aas/3/1/KeyTypes/Submodel> ;
-                    <https://admin-shell.io/aas/3/1/Key/value> "urn:another-company15:2bd0986b"^^xs:string ;
+                    <https://admin-shell.io/aas/3/2/Key/type> <https://admin-shell.io/aas/3/2/KeyTypes/Submodel> ;
+                    <https://admin-shell.io/aas/3/2/Key/value> "urn:another-company15:2bd0986b"^^xs:string ;
                 ] ;
             ] ;
-            <https://admin-shell.io/aas/3/1/EmbeddedDataSpecification/dataSpecificationContent> [
-                rdf:type aas:DataSpecificationIec61360 ;
-                <https://admin-shell.io/aas/3/1/DataSpecificationIec61360/preferredName> [
-                    rdf:type aas:LangStringPreferredNameTypeIec61360 ;
-                    <https://admin-shell.io/aas/3/1/AbstractLangString/language> "sl-rozaj-biske"^^xs:string ;
-                    <https://admin-shell.io/aas/3/1/AbstractLangString/text> "something_7e795ee2"^^xs:string ;
+            <https://admin-shell.io/aas/3/2/EmbeddedDataSpecification/dataSpecificationContent> [
+                rdf:type aas:DataSpecificationUom ;
+                <https://admin-shell.io/aas/3/2/DataSpecificationUom/preferredName> [
+                    rdf:type aas:LangStringUom ;
+                    <https://admin-shell.io/aas/3/2/AbstractLangString/language> "sl-rozaj-biske"^^xs:string ;
+                    <https://admin-shell.io/aas/3/2/AbstractLangString/text> "something_7e795ee2"^^xs:string ;
                 ] ;
-                <https://admin-shell.io/aas/3/1/DataSpecificationIec61360/preferredName> [
-                    rdf:type aas:LangStringPreferredNameTypeIec61360 ;
-                    <https://admin-shell.io/aas/3/1/AbstractLangString/language> "en-GB"^^xs:string ;
-                    <https://admin-shell.io/aas/3/1/AbstractLangString/text> "Something random in English c8512bdf"^^xs:string ;
-                ] ;
-                <https://admin-shell.io/aas/3/1/DataSpecificationIec61360/value> "something_4e9c19b7"^^xs:string ;
+                <https://admin-shell.io/aas/3/2/DataSpecificationUom/symbol> "something_fdb7ccfc"^^xs:string ;
             ] ;
         ] ;
-        <https://admin-shell.io/aas/3/1/File/value> "ftp://ftp.is.co.za/rfc/rfc1808.txt"^^xs:string ;
-        <https://admin-shell.io/aas/3/1/File/contentType> "'VbrwFrYTU/fO7NnLxq   	; 	MX.`10dB732`X5yRy=I56Ov9Us	 ;		 pRb~~hdw_C%2Zf=\"\"			    			 	 		 	  ; h=1t"^^xs:string ;
+        <https://admin-shell.io/aas/3/2/File/value> "ftp://ftp.is.co.za/rfc/rfc1808.txt"^^xs:string ;
+        <https://admin-shell.io/aas/3/2/File/contentType> "'VbrwFrYTU/fO7NnLxq   	; 	MX.`10dB732`X5yRy=I56Ov9Us	 ;		 pRb~~hdw_C%2Zf=\"\"			    			 	 		 	  ; h=1t"^^xs:string ;
     ] ;
 .

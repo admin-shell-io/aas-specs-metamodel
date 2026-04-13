@@ -1,4 +1,4 @@
-<environment xmlns="https://admin-shell.io/aas/3/1">
+<environment xmlns="https://admin-shell.io/aas/3/2">
 	<submodels>
 		<submodel>
 			<id>something_48c66017</id>
@@ -61,24 +61,20 @@
 								</keys>
 							</dataSpecification>
 							<dataSpecificationContent>
-								<dataSpecificationIec61360>
+								<dataSpecificationUom>
 									<preferredName>
-										<langStringPreferredNameTypeIec61360>
+										<langStringUom>
 											<language>sl-rozaj-biske</language>
 											<text>something_7e795ee2</text>
-										</langStringPreferredNameTypeIec61360>
-										<langStringPreferredNameTypeIec61360>
-											<language>en-GB</language>
-											<text>Something random in English c8512bdf</text>
-										</langStringPreferredNameTypeIec61360>
+										</langStringUom>
 									</preferredName>
-									<value>something_4e9c19b7</value>
-								</dataSpecificationIec61360>
+									<symbol>something_fdb7ccfc</symbol>
+								</dataSpecificationUom>
 							</dataSpecificationContent>
 						</embeddedDataSpecification>
 					</embeddedDataSpecifications>
 					<value>ftp://ftp.is.co.za/rfc/rfc1808.txt</value>
-					<contentType>'VbrwFrYTU/fO7NnLxq   	; 	MX.`10dB732`X5yRy=I56Ov9Us	 ;		 pRb~~hdw_C%2Zf=&quot;&quot;			    			 	 		 	  ; h=1t</contentType>
+					<contentType>'VbrwFrYTU/fO7NnLxq   	; 	MX.`10dB732`X5yRy=I56Ov9Us	 ;		 pRb~~hdw_C%2Zf=""			    			 	 		 	  ; h=1t</contentType>
 				</file>
 			</submodelElements>
 		</submodel>

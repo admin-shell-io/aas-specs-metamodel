@@ -1,4 +1,4 @@
-<environment xmlns="https://admin-shell.io/aas/3/1">
+<environment xmlns="https://admin-shell.io/aas/3/2">
 	<conceptDescriptions>
 		<conceptDescription>
 			<extensions>
@@ -34,19 +34,15 @@
 						</keys>
 					</dataSpecification>
 					<dataSpecificationContent>
-						<dataSpecificationIec61360>
+						<dataSpecificationUom>
 							<preferredName>
-								<langStringPreferredNameTypeIec61360>
+								<langStringUom>
 									<language>hy-Latn-IT-arevela</language>
 									<text>something_34113ec1</text>
-								</langStringPreferredNameTypeIec61360>
-								<langStringPreferredNameTypeIec61360>
-									<language>en-GB</language>
-									<text>Something random in English 19945c14</text>
-								</langStringPreferredNameTypeIec61360>
+								</langStringUom>
 							</preferredName>
-							<value>something_a864dcb4</value>
-						</dataSpecificationIec61360>
+							<symbol>something_70838c8c</symbol>
+						</dataSpecificationUom>
 					</dataSpecificationContent>
 				</embeddedDataSpecification>
 			</embeddedDataSpecifications>
