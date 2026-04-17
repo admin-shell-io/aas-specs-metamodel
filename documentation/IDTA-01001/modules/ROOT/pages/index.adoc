@@ -31,6 +31,26 @@ For the schemas derived from this document there is a dependency to the followin
 
 If there is a bugfix of these parts, they shall be used.
 
+[#cross-spec-alignment]
+=== Alignment with other AAS Specifications
+
+This version of IDTA-01001 (Metamodel, v3.2) is designed to be used together with the following companion specifications:
+
+[cols="2,2,3",options="header"]
+|===
+| Specification | Aligned Version | Notes
+
+| IDTA-01002 Part 2: Application Programming Interfaces
+| v3.2
+| HTTP/REST API, AAS Query Language. References the Metamodel classes and attributes defined here.
+
+| IDTA-01004 Part 4: Security
+| v3.1
+| Access Rule Model. Shares the Query Language grammar and schema with IDTA-01002 and references Metamodel classes through FieldIdentifiers.
+|===
+
+Any bugfix release (patch version) of an aligned specification MAY be substituted for the version listed above. Implementations claiming conformance to this version of IDTA-01001 SHOULD state which versions of IDTA-01002 and IDTA-01004 they implement.
+
 == Notice
 
 Copyright: Industrial Digital Twin Association e.V. (IDTA)
