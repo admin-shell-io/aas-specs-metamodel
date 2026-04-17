@@ -471,3 +471,45 @@ The following abbreviations are not used in the document but may be used as abbr
 |SME |SubmodelElement
 |SML |SubmodelElementList
 |===
+
+[#cross-spec-terminology]
+== Terminology Across IDTA-01001, IDTA-01002 and IDTA-01004
+
+The following table relates the core AAS concepts across the three specifications. It is intended as a quick cross-reference for readers of the API (IDTA-01002) and Security (IDTA-01004) specifications. All three specifications use the same underlying entities; only their textual representations differ (metamodel class name, HTTP path segment, query / access-rule FieldIdentifier prefix).
+
+[cols="2,2,1,3",options="header"]
+|===
+| Metamodel Class | API Resource / Path Segment | Query / Access-Rule Prefix | Example
+
+| AssetAdministrationShell
+| `/shells/{aasIdentifier}`
+| `$aas`
+| `$aas("https://example.com/aas/1")`
+
+| Submodel
+| `/submodels/{submodelIdentifier}`
+| `$sm`
+| `$sm("https://example.com/sm/1")`
+
+| SubmodelElement
+| `.../submodel-elements/{idShortPath}`
+| `$sme`
+| `$sme("https://example.com/sm/1").path.to.element`
+
+| ConceptDescription
+| `/concept-descriptions/{cdIdentifier}`
+| `$cd`
+| `$cd("https://example.com/cd/1")`
+
+| AssetAdministrationShellDescriptor
+| `/shell-descriptors/{aasIdentifier}`
+| `$aasdesc`
+| `$aasdesc("https://example.com/aas/1")`
+
+| SubmodelDescriptor
+| `/submodel-descriptors/{submodelIdentifier}`
+| `$smdesc`
+| `$smdesc("https://example.com/sm/1")`
+|===
+
+The FieldIdentifier prefix is always lower-case (`$aas`, `$sm`, `$sme`, `$cd`, `$aasdesc`, `$smdesc`); variants such as `$aasDesc` or `$SmDesc` are not valid and MUST be rejected by parsers of both the AAS Query Language (IDTA-01002) and the Access Rule Model (IDTA-01004).
