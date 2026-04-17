@@ -2,7 +2,7 @@
   "assetAdministrationShells": [
     {
       "assetInformation": {
-        "assetKind": "Role",
+        "assetKind": "Batch",
         "globalAssetId": "something_eea66fa1"
       },
       "id": "something_142922d6",

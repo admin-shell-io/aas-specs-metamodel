@@ -2,7 +2,7 @@
   "assetAdministrationShells": [
     {
       "assetInformation": {
-        "assetKind": "Role",
+        "assetKind": "Batch",
         "assetType": "something_9f4c5692",
         "defaultThumbnail": {
           "path": "mailto:John.Doe@example.org"
