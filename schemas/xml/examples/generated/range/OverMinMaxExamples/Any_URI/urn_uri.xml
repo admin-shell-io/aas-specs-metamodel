@@ -1,0 +1,15 @@
+<environment xmlns="https://admin-shell.io/aas/3/2">
+	<submodels>
+		<submodel>
+			<id>something_48c66017</id>
+			<submodelElements>
+				<range>
+					<idShort>something3fdd3eb4</idShort>
+					<valueType>xs:anyURI</valueType>
+					<min>urn:example:demo</min>
+					<max>urn:example:demo</max>
+				</range>
+			</submodelElements>
+		</submodel>
+	</submodels>
+</environment>

@@ -1,16 +1,16 @@
-@prefix aas: <https://admin-shell.io/aas/3/1/> .
+@prefix aas: <https://admin-shell.io/aas/3/2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
 <something_48c66017> rdf:type aas:Submodel ;
-    <https://admin-shell.io/aas/3/1/Identifiable/id> "something_48c66017"^^xs:string ;
-    <https://admin-shell.io/aas/3/1/Submodel/submodelElements> [
+    <https://admin-shell.io/aas/3/2/Identifiable/id> "something_48c66017"^^xs:string ;
+    <https://admin-shell.io/aas/3/2/Submodel/submodelElements> [
         rdf:type aas:Range ;
-        <https://admin-shell.io/aas/3/1/Referable/idShort> "something3fdd3eb4"^^xs:string ;
-        <https://admin-shell.io/aas/3/1/Range/valueType> <https://admin-shell.io/aas/3/1/DataTypeDefXsd/Duration> ;
-        <https://admin-shell.io/aas/3/1/Range/min> "PT88M48936316289.34291243605107045S"^^xs:string ;
-        <https://admin-shell.io/aas/3/1/Range/max> "PT88M48936316289.34291243605107045S"^^xs:string ;
+        <https://admin-shell.io/aas/3/2/Referable/idShort> "something3fdd3eb4"^^xs:string ;
+        <https://admin-shell.io/aas/3/2/Range/valueType> <https://admin-shell.io/aas/3/2/DataTypeDefXsd/Duration> ;
+        <https://admin-shell.io/aas/3/2/Range/min> "PT88M48936316289.34291243605107045S"^^xs:string ;
+        <https://admin-shell.io/aas/3/2/Range/max> "PT88M48936316289.34291243605107045S"^^xs:string ;
     ] ;
 .
