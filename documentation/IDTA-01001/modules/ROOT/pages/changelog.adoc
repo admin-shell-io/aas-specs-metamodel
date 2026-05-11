@@ -81,7 +81,6 @@ Minor Bugfixes:
 
 
 
-=== Metamodel Changes V3.2 vs. V3.1.1
 
 .Changes in Metamodel
 [cols="5%,42%,48%",options="header",]
@@ -89,6 +88,14 @@ Minor Bugfixes:
 h|Nc h|V3.2 Change w.r.t. V3.1.1 h|Comment
 
 | {empty} | xref:spec-metamodel/core.adoc#AssetKind[AssetKind] a| Add new value "Batch" to enumeration AssetKind
+
+| x |Range a| remove conditions "If the min value is missing, the value is assumed to be negative infinite." and "If the max value is missing, the value is assumed to be positive infinite." 
+   
+   Note 1: some data types like float do have infinite in its value range per definition and should be used if infinite is needed. 
+   
+   Note 2: Range is an SubmodelElement in state "experimental", therefore non-backward-compatible changes are possible
+
+
 
 |===
 
@@ -99,22 +106,6 @@ h|Nc h|New Elements V3.2 vs V3.1 h|Comment
 |{empty} | AdministrativeInformation/createdAt  a| 
 |{empty} | AdministrativeInformation/updatedAt  a| 
 |{empty} | xref:spec-metamodel/core.adoc#AssetKind[AssetKind/Batch] a| Add new value "Batch" to enumeration AssetKind
-|===
-
-
-.Changes in Metamodel
-[cols="5%,42%,48%",options="header",]
-|===
-h| Nc h| V3.1 Change w.r.t. V3.0.2 h| Comment
-
-| x |Range a| remove conditions "If the min value is missing, the value is assumed to be negative infinite." and "If the max value is missing, the value is assumed to be positive infinite." 
-   
-   Note 1: some data types like float do have infinite in its value range per definition and should be used if infinite is needed. 
-   
-   Note 2: Range is an SubmodelElement in state "experimental", therefore non-backward-compatible changes are possible
-
-
-
 |===
 
 
