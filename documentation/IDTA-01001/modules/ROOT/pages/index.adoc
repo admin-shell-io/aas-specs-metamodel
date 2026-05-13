@@ -26,11 +26,11 @@ Previous version: 3.1.2
 [#cross-spec-alignment]
 === Alignment with other AAS Specifications
 
-This version of IDTA-01002 (v3.2) is designed to be used together with the following companion specifications:
+This version of IDTA-01002 (v3.2) is designed to be used together with the following aligned companion specifications:
 
 [cols="1,2,1,3",options="header"]
 |===
-h| Dependency h| Specification h| Aligned Version h| Notes
+h| Dependency h| Specification h| Aligned Version h| Notes, IDTA-01001 ...
 
 |  | IDTA-01002 Part 2: Application Programming Interfaces
 | v3.2
@@ -69,6 +69,8 @@ a|
 |===
 
 Bugfix (patch) releases of aligned specifications shall be substituted. 
+Minor versions of aligned specifications IDTA-01001 does not have a strong dependency to
+ may be used as long as the corresponding release version of the aligned specification does not have a strong dependency to a newer release of IDTA-01001.
 
 
 == Notice
