@@ -1,0 +1,31 @@
+@startuml
+hide empty members
+
+class DigitalProductPassport {
+   + digitalProductPassportId: String    
+   + uniqueProductIdentifier: String
+   + granularity: GranularityEnum
+   + dppSchemaVersion: String
+   + dppStatus: String
+   + lastUpdate: String
+   + economicOperatorId: String
+   + facilityId: String[0..1]
+   + contentSpecificationsIds: String[0..*] 
+}
+
+class DataElement <<abstract>> {
+  +elementId: String
+  +dictionaryReference: String[0..1]
+}
+
+enum GranularityEnum <<enumeration>> {
+  Model
+  Batch
+  Item
+}
+
+
+DigitalProductPassport  *--  "0..*"  DataElement
+DigitalProductPassport  ..>  GranularityEnum
+
+@enduml
