@@ -42,14 +42,14 @@ It is possible to also access elements within but in general it is a monolithic 
 * The AAS in contrast supports a modular concept, an AAS being some kind of folder for several Submodels, each Submodel being identified by a unique identifier. 
 This allows reuse, easier access management, easier data onboarding etc.
 
-Example Battery Passport: The Regulation requires that there is a passport for every intance of a battery. 
+Example Battery Passport: The Regulation requires that there is a passport for every instance of a battery. 
 However, many required data points are identical for all batteries of the same type 
 or for all batteries of the same type produced at the same facility. 
 With the AAS different AAS would be created:
 
 - one AAS for each battery type
 - one AAS for each battery type produced at a specific facility reusing the Submodels of the AAS mentioned before
-- one AAS per battery intance reusing the Submodels of the AAS mentioned before
+- one AAS per battery instance reusing the Submodels of the AAS mentioned before
 
 The modular approach of the AAS also allows to standardized Submodels that can be reused for different domains like for example handover documentation or contact information.
 
@@ -130,7 +130,7 @@ However, status of the AAS does not need to be identical to the status of the DP
 
 
 | "lastUpdate" | AdministrativeInformation/updatedAt | --  a| EN 18223 does not support explicit versioning (like the AAS does), versioning is supported via the "lastUpdate" attribute in DPPs
-| "economicOperatorId" | -- | EconomiyOperatorIdentifier (?) a| Identifier types allowed are specified in EN 18219
+| "economicOperatorId" | -- | EconomicOperatorIdentifier (?) a| Identifier types allowed are specified in EN 18219
 | "facilityId" | -- | UniqueFacilityIdentifier a| Identifier types allowed are specified in EN 18219
 | "contentSpecificationIds" | -- | a| This attribute reminds of AssetAdministrationShell/submodels because it lists the data sets relevant for the different DPP(s). 
 
@@ -151,7 +151,7 @@ h| EN 18223 granularity h| AAS AssetKind  h| comment
 
 ====
 AAS supports the reuse of Submodels specified on Type Level also on Batch or Instance Level.
-EN 18223 does not support resue via its metamodel: resue is to be taken care of by the Economic Operator or Service Provider.
+EN 18223 does not support reuse via its metamodel: resue is to be taken care of by the Economic Operator or Service Provider.
 ====
 |Batch 	| Batch 		a|
 
@@ -231,7 +231,7 @@ link:https://github.com/admin-shell-io/smt-semantic-models/blob/main/io.admin-sh
 generated from the Aspect Model conformant to IDTA-01023, is the schema that can be combined with the one of the EN 18223 generic schema. 
 The only attribute missing is the name of the object itself, in the example in <<code-dpp-pcf-etc-json>> is "carbonFootprint".
 
-.Example AAS Value-Only JSON Paylaod for Battery Passport, PCF data 
+.Example AAS Value-Only JSON paylaod for Battery Passport, PCF data 
 [[code-batterypass-valueonly-json]]
 [source,json,linenums]
 ----
@@ -257,7 +257,7 @@ The second value to be standardized is the one for the contentSpecificationIds. 
 ----
 
 
-.Example AAS Value-Only JSON Paylaod for Battery Passport, PCF data 
+.Example AAS Value-Only JSON paylaod for Battery Passport, PCF data 
 [[code-batterypass-valueonly-json]]
 [source,json,linenums]
 ----
@@ -301,7 +301,7 @@ In EN 18223 it is the other way around: what the AAS would call "Value-Only" and
 === MultiLanguageDataElement vs. MultiLanguageProperty
 
 There is one difference in the serialization of multi language data points. 
-In <<code-multi-language-property-value-only>> it is shown how a MultiLangaugeProperty with idShort "title" would be serialized in AAS Value-Only. 
+In <<code-multi-language-property-value-only>> it is shown how a MultiLanguageProperty with idShort "title" would be serialized in AAS Value-Only. 
 In <<code-multi-language-property-jtc24>> it is shown how the same example is serialized in EN 18223.
 
 I.e. in AAS it is:
@@ -347,9 +347,9 @@ In EN 18223 the entries within the list are realized like a predefined SubmodelE
 The RelatedResource requires or at least enables to provide more information than is required by the SME File: contentType and url hat identical but the optional language and resourceTitle is not supported by AAS SME File.
 
 The EN 18223 in a way models a Document in a very simplified way.
-This is realized in more depth with all needed meta information of a document in Submodel Template Specificaiton IDTA-02004 Handover Documentation.
+This is realized in more depth with all needed meta information of a document in Submodel Template Specification IDTA-02004 Handover Documentation.
 
-.Example ReleatedResource for EN 18223, localization language en-GB
+.Example RelatedResource for EN 18223, localization language en-GB
 [[code-related-resource-jtc24]]
 [source,json,linenums]
 ----
@@ -421,7 +421,7 @@ but adapted for the example in this document)
 [.table-with-appendix-table]
 [cols="20%,20%,30%,30%"]
 |===
-h| EN 18223 ReleatedResource h| AAS SME File h| IDTA-02004 Handover Documentation h| comment
+h| EN 18223 RelatedResource h| AAS SME File h| IDTA-02004 Handover Documentation h| comment
 
 |contentType 		| contentType			|	*DigitalFile* realized with SMT File	a| 
 |url				| value					|	*DigitalFile* realized with SMT File	a|
@@ -449,7 +449,7 @@ h| EN 18223 h| AAS   h| comment
 |===
 
 
-The "objectType" in JSON serialization of AAS is mapped to "objectType" in EN 18223 expaneded serialization.
+The "objectType" in JSON serialization of AAS is mapped to "objectType" in EN 18223 expanded serialization.
 
 
 .Example expanded EN 18223 for SingleValuedDataElement
