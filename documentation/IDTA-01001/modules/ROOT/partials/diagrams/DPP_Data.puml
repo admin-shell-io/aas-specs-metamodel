@@ -1,0 +1,86 @@
+@startuml
+hide empty members
+
+
+class DataElement <<abstract>> {
+  +elementId: String
+  +dictionaryReference: String[0..1]
+}
+
+class MultiLanguageDataElement{
+}
+
+class MultiLanguageValue {
+	+language
+	+value
+}
+
+class DataElementCollection  {
+}
+
+class SingleValuedDataElement {
+   +valueDataType: DataTypeEnum[0..1]
+   +value:  <any JSON datatype>
+}
+
+class MultiValuedDataElement {
+   +valueDataType: DataTypeEnum[0..1]
+}
+
+
+
+class RelatedResource {
+   + contentType: String
+   +url: String
+   +language: String[0..1]
+   +resourceTitle: String[0..1]
+
+}
+
+enum DataTypeEnum <<enumeration>> {
+  xs:anyURI
+  xs:base64Binary
+  xs:boolean
+  xs:byte
+  xs:date
+  xs:dateTime
+  xs:decimal
+  xs:double
+  xs:duration
+  xs:float
+  xs:gDay
+  xs:gMonth
+  xs:gMonthDay
+  xs:gYear
+  xs:gYearMonth
+  xs:hexBinary
+  xs:int
+  xs:integer
+  xs:long
+  xs:negativeInteger
+  xs:nonNegativeInteger
+  xs:nonPositiveInteger
+  xs:positiveInteger
+  xs:short
+  xs:string
+  xs:time
+  xs:unsignedByte
+  xs:unsignedInt
+  xs:unsignedLong
+  xs:unsignedShort
+}
+
+DataElementCollection *-- "0..*" DataElement
+MultiValuedDataElement *-- "0..*" DataElement
+DataElement <|-- SingleValuedDataElement
+DataElement <|-- MultiValuedDataElement
+DataElement <|-- DataElementCollection 
+DataElement <|-- MultiLanguageDataElement
+MultiLanguageDataElement *-- "1..*" MultiLanguageValue
+DataElement <|-- RelatedResource
+
+
+SingleValuedDataElement  ..>  DataTypeEnum
+MultiValuedDataElement  ..> DataTypeEnum
+
+@enduml

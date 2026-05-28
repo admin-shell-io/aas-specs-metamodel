@@ -44,6 +44,7 @@ Major Changes:
 
 * CHANGED: new attributes for creation and update date in AdministrationInformation  (https://github.com/admin-shell-io/aas-specs-metamodel/issues/484[#484])
 * CHANGED: new value to enumeration AssetKind: Batch to support Digital Product Passports (https://github.com/admin-shell-io/aas-specs-metamodel/issues/483[#483])
+* NEW: new section in the annex on metamodel and payload mapping for implementing the digital product passport (DPP) based on EN 18223
 * NEW: explanatory section added for Value-Only for Operations (https://github.com/admin-shell-io/aas-specs-metamodel/issues/652[#652])
 * CHANGED: Value-Only JSON Schema - add referredSemanticId to data type Reference (https://github.com/admin-shell-io/aas-specs-metamodel/issues/651[#651]) 
 * CHANGED: SubmodelElement "Range" - remove conditions "If the min value is missing, the value is assumed to be negative infinite." and "If the max value is missing, the value is assumed to be positive infinite." 
