@@ -198,7 +198,7 @@ EN 18223 does not support reuse via its metamodel: reuse is to be taken care of 
 
 == Metamodel Mapping
 
-In <<image-dpp-data>> an overview of the metamodel as defined in EN 18223 is shown.
+In <<image-dpp-data>> an overview of the metamodel as defined in EN 18223 is shownl
 
 .Overview metamodel for data points (EN 18223) 
 [[image-dpp-data]]
@@ -215,15 +215,16 @@ https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1.2/mappings/m
 |===
 h| EN 18223  h| AAS   h| comment
 
-|DataElement 	(abstract)			| SubmodelElement	(abstract)	a|
+|DataElement 	(abstract)			| SubmodelElement (SME)	(abstract)	a|
 |MultiLanguageDataElement 	| MultiLanguageProperty 			a| see <<section-mlp>> for topics on serialization
-|SingleValuedDataElement 	| Property 		a|
+|SingleValuedDataElement 	a| Property 
+
+Blob		a| A Blob can be realized with a EN 18223 SingleValuedDataElement with valueDataType "xsd:base64Binary" 
 |MultiValuedDataElement		| SubmodelElementList 			a|  SubmodelElementLists only with Elements of type MultiLanguageProperty, SubmodelElementCollection, File or Property: they can be directly mapped
 |DataElementCollection 		| SubmodelElementCollection a|
 |RelatedResource 			| File	a|see <<section-file>> for topics on serialization
 |--| AnnotatedRelationshipElement a| can be realized with a EN 18223 DataElementCollection
 |--| BasicEventElement a| Events are not supported in EN 18223 but could be realized with a EN 18223 DataElementCollection
-|--| Blob a| can be realized with a EN 18223 SingleValuedDataElement with valueDataType "xsd:base64Binary"
 |--| Capability a| not supported in EN 18223
 |--| DataElement (abstract) a| EN 18223 MultiLanguageDataElement and SingleValuedDataElement and RelatedResource correspond to AAS DataElements
 |--| Entity a| can be realized with a EN 18223 DataElementCollection
@@ -389,7 +390,7 @@ There is one difference in the serialization of multi language data points.
 In <<code-multi-language-property-value-only>> it is shown how a MultiLanguageProperty with idShort "title" would be serialized in AAS Value-Only. 
 In <<code-multi-language-property-jtc24>> it is shown how the same example is serialized in EN 18223.
 
-I.e. in AAS it is:
+I.e. in AAS it serialized as described in the following extract:
 
 ----
 MultiLanguageProperty is serialized as named JSON object with ${MultiLanguageProperty/idShort} as the name of the containing JSON property. 
@@ -405,8 +406,8 @@ In EN 18223 the entries within the list are realized like a predefined SubmodelE
 ----
 {
  “title": [
-   { "en": “user manual" },
-   { "de": „Kundendokumentation" }
+   { "en": "user manual" },
+   { "de": "Kundendokumentation" }
  ]
 }
 ----
@@ -417,7 +418,7 @@ In EN 18223 the entries within the list are realized like a predefined SubmodelE
 ----
 “title": [
   {
-    "value": " user manual ",
+    "value": "user manual",
     "language": "en-IE"
   },
   {
@@ -508,8 +509,8 @@ but adapted for the example in this document)
 |===
 h| EN 18223 RelatedResource h| AAS SME File h| IDTA-02004 Handover Documentation h| comment
 
-|contentType 		| contentType			|	*DigitalFile* realized with SMT File	a| 
-|url				| value					|	*DigitalFile* realized with SMT File	a|
+|contentType 		| contentType			|	*DigitalFile* realized with SME File	a| 
+|url				| value					|	*DigitalFile* realized with SME File	a|
 |resourceTitle		| -- 					|    title	a|
 |language			| --					| 		    a| localized, i.e. add language. If not existing add a substitute language (if allowed)
 |===
@@ -517,7 +518,8 @@ h| EN 18223 RelatedResource h| AAS SME File h| IDTA-02004 Handover Documentation
 
 [[section-json-serialization-normal]]
 == JSON Serialization Normal
-The AAS "Normal" serialization and the "expanded" EN 18223 serialization are similar when it comes to the rules of derivation the serialization from the UML model. However, since the UML model differ also the serialization differs.
+The AAS "Normal" serialization and the "expanded" EN 18223 serialization are similar when it comes to the rules of derivation the serialization from the UML model. 
+However, since the UML model differ also the serialization differs.
 
 .Mapping EN 18223 attributes to AAS 
 [.table-with-appendix-table]
@@ -526,11 +528,11 @@ The AAS "Normal" serialization and the "expanded" EN 18223 serialization are sim
 h| EN 18223 h| AAS   h| comment
 
 |	DataElement/elementId			| 		Referable/idShort	a|		In AAS there are more restrictions on how to choose the idShort, in EN 18223 the elementId is just a String.
-|	DataElement/dictionaryReference	| 	HasSemantics/semanticId		a|	In EN 18223 the dictionaryReference is just a String, in AAS it is a Reference	
+|	DataElement/dictionaryReference	| 	HasSemantics/semanticId		a|	In EN 18223 the dictionaryReference is just a String, in AAS it is a Reference.	
 |	SingleValuedDataElement/valueDataType		|  Property/valueType						a| 	The allowed values are identical in both, the AAS and EN 18223 specification with only one difference: in AAS the prefix "xs:" is used, in EN 18223 the prefix is "xsd".
 |	MultiValuedDataElement/valueDataType		| 		SubmodelElementList/valueTypeListElement			a| 
 |	MultiLanguageDataElement		| 		MultiLanguageProperty			a|  see <<section-mlp>>, compressed and expanded in EN 18223 are identical in this case
-|	RelatedResource		| 		File			a| 		see <<<section-file>>, compressed and expanded in EN 18223 are identical in this case
+|	RelatedResource		| 		File			a| 		see <<section-file>>, compressed and expanded in EN 18223 are identical in this case
 |===
 
 
@@ -599,7 +601,7 @@ The "objectType" in JSON serialization of AAS is mapped to "objectType" in EN 18
             "type": "ExternalReference"
           },
           "valueType": "xs:float",
-		  "value": "2.5"
+		  "value": "25.5"
         }
   }
 ]
