@@ -19,7 +19,7 @@ To support the implementation of DPPs, 8 standards have been developed:
 * EN 18219:2026 – Digital product passport – Unique identifiers
 * EN 18220:2026 – Digital product passport – Data carriers
 * EN 18216:2026 – Digital product passport – Data exchange protocols
-* EN 18222: 2026 – Digital Product Passport – Application Programming Interfaces (APIs) for the product passport lifecycle management and searchability
+* EN 18222:2026 – Digital Product Passport – Application Programming Interfaces (APIs) for the product passport lifecycle management and searchability
 * EN 18223:2026 – Digital Product Passport – System interoperability
 * EN 18221:2026 – Digital product passport – data storage, archiving, and data persistence
 * EN 18239:2026 – Digital Product Passport – access rights management, information system security, and business confidentiality 
@@ -41,6 +41,7 @@ Example characteristics include environmental sustainability, environmental impa
 7 standardized Submodel Template Specifications were created (based on DIN DKE SPEC 91100) to represent the Battery Passport in total (series IDTA-02035).
 At the point of publication of the requirements for Battery Passport EN 18223 were not yet published.
 
+[[image_aas_batteryPassport]]
 .Example: AAS for Digital Battery Passport
 image::aas-battery-passport.png[Example: AAS for Digital Battery Passport]
 
@@ -53,9 +54,10 @@ It is important to understand that an Asset Administration Shell (AAS) is not, b
 However, a DPP can be easily derived from an existing AAS. 
 The prerequisite is that the AAS contains the submodels supporting the regulation's required data points for the product, as well as the DPP metadata submodel specified in this document.
 
-The Digital Battery Passport provides a clear example of this relationship. It is represented by seven standardized submodel specifications (see <<image_dpp_aas_batteryPassport_2>>). 
+The Digital Battery Passport provides a clear example of this relationship. It is represented by seven standardized submodel specifications (see <<image_dpp_aas_batteryPassport>>). 
 To create the complete passport, these submodels are merged with the DPP metadata submodel defined herein, resulting in a comprehensive Digital Product Passport conformant to regulation.
 
+[[image_dpp_aas_batteryPassport]]
 .Example: AAS for Digital Battery Passport
 image::dpp-aas-battery-passport.png
 
@@ -186,7 +188,7 @@ h| EN 18223 granularity h| AAS AssetKind  h| comment
 
 ====
 AAS supports the reuse of Submodels specified on Type Level also on Batch or Instance Level.
-EN 18223 does not support reuse via its metamodel: resue is to be taken care of by the Economic Operator or Service Provider.
+EN 18223 does not support reuse via its metamodel: reuse is to be taken care of by the Economic Operator or Service Provider.
 ====
 |Batch 	| Batch 		a|
 
@@ -196,7 +198,9 @@ EN 18223 does not support reuse via its metamodel: resue is to be taken care of 
 
 == Metamodel Mapping
 
-.Overview metamodel for data points (FprEn 18223) 
+In <<image-dpp-data>> an overview of the metamodel as defined in EN 18223 is shown.
+
+.Overview metamodel for data points (EN 18223) 
 [[image-dpp-data]]
 [plantuml, dpp-data, svg]
 ....
