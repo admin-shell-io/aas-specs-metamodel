@@ -12,7 +12,7 @@ box Discovery Service
 end box
 
 box Registry Service
-   participant AASRegistry as "AAS Registy Interface"
+   participant AASRegistry as "AAS Registry Interface"
 end box
 
 box AAS or Submodel (Repository) Service

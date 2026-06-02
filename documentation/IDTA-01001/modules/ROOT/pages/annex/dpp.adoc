@@ -146,7 +146,7 @@ For the corresponding semantic identifiers, please refer to their respective spe
 
 The payload required by EN 18223 for the DPP metadata maps to the Value-Only format of this Submodel. 
 
-Note: for the other Submodels used to build a DPP EN 18223 allows two different formats "compressed" and "explanded" with compressed being mandatory to be supported. 
+Note: for the other Submodels used to build a DPP EN 18223 allows two different formats "compressed" and "expanded" with compressed being mandatory to be supported. 
 For DPP Metadata there is exactly one correct serialization since it is part of the overall schema and not of a specific content.
 
 
@@ -198,7 +198,7 @@ EN 18223 does not support reuse via its metamodel: reuse is to be taken care of 
 
 == Metamodel Mapping
 
-In <<image-dpp-data>> an overview of the metamodel as defined in EN 18223 is shownl
+In <<image-dpp-data>> an overview of the metamodel as defined in EN 18223 is shown.
 
 .Overview metamodel for data points (EN 18223) 
 [[image-dpp-data]]
@@ -302,7 +302,7 @@ generated from the Aspect Model conformant to IDTA-01023, is the schema that can
 So in combination it would be the "semanticId" of SMT IDTA-02035-3 that is "https://admin-shell.io/idta/CarbonFootprint/CarbonFootprint/1/0", 
 (see <<code-batterypass-pcf-valueonly-json>>).
 The second value to be standardized is the one for the contentSpecificationIds. 
-For details on "contentSpecificationIds" see <<UML_for_SML_contentSpecificationIds>>.
+For details on "contentSpecificationIds" see Submodel Template Specification IDTA-02099.
 
 
 .Example DPP compressed serialization for Battery Passport, PCF data 
@@ -390,7 +390,7 @@ There is one difference in the serialization of multi language data points.
 In <<code-multi-language-property-value-only>> it is shown how a MultiLanguageProperty with idShort "title" would be serialized in AAS Value-Only. 
 In <<code-multi-language-property-jtc24>> it is shown how the same example is serialized in EN 18223.
 
-I.e. in AAS it serialized as described in the following extract:
+I.e. in AAS it  is serialized as described in the following extract:
 
 ----
 MultiLanguageProperty is serialized as named JSON object with ${MultiLanguageProperty/idShort} as the name of the containing JSON property. 
