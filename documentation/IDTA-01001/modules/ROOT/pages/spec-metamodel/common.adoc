@@ -99,7 +99,7 @@ h|Explanation h|Type h|Card.
 .2+e|[[creator]]creator 3+| `\https://admin-shell.io/aas/3/1/AdministrativeInformation/creator`
 a|The subject ID of the subject responsible for making the element |xref:spec-metamodel/referencing.adoc#Reference[Reference] |0..1
 
-.2+e|[[createdAt]]createdAt 3+| `\https://admin-shell.io/aas/3/1/AdministrativeInformation/createdAt `
+.2+e|[[createdAt]]createdAt 3+| `\https://admin-shell.io/aas/3/1/AdministrativeInformation/createdAt`
 a| date of creation | xref:spec-metamodel/datatypes.adoc#DateTimeUtc[DateTimeUtc] |0..1
 
 .2+e|[[updatedAt]]updatedAt 3+| `\https://admin-shell.io/aas/3/1/AdministrativeInformation/updatedAt`
