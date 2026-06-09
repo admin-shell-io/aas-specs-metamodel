@@ -19,7 +19,7 @@ To support the implementation of DPPs, 8 standards have been developed:
 * EN 18219:2026 – Digital product passport – Unique identifiers
 * EN 18220:2026 – Digital product passport – Data carriers
 * EN 18216:2026 – Digital product passport – Data exchange protocols
-* EN 18222: 2026 – Digital Product Passport – Application Programming Interfaces (APIs) for the product passport lifecycle management and searchability
+* EN 18222:2026 – Digital Product Passport – Application Programming Interfaces (APIs) for the product passport lifecycle management and searchability
 * EN 18223:2026 – Digital Product Passport – System interoperability
 * EN 18221:2026 – Digital product passport – data storage, archiving, and data persistence
 * EN 18239:2026 – Digital Product Passport – access rights management, information system security, and business confidentiality 
@@ -31,111 +31,148 @@ This annex specifies how the requirements as specified in
  
 are mapped to the AAS Metamodel.
 
-== Architectural Context
+== General
 
-The overall assumed architecture is that there is a adapter layer mapping the standardized EN 18223 API methods using an AAS systems as basis for compiling the needed data.
+A Digital Product Passport (DPP) is a digital record of product characteristics throughout its life cycle [1]. 
+Example characteristics include environmental sustainability, environmental impact, and recyclability [1].
 
-The most important advantage of the AAS compared to EN 18223 is the following:
 
-* EN 18223 assumes that a DPP is a single JSON document. 
-It is possible to also access elements within but in general it is a monolithic product passport.
-* The AAS in contrast supports a modular concept, an AAS being some kind of folder for several Submodels, each Submodel being identified by a unique identifier. 
-This allows reuse, easier access management, easier data onboarding etc.
+<<image_aas_batteryPassport>> shows exemplary for the Battery Passport how a DPP is created based on the Asset Administration Shell (AAS): 
+7 standardized Submodel Template Specifications were created (based on DIN DKE SPEC 91100) to represent the Battery Passport in total (series IDTA-02035).
+At the point of publication of the requirements for Battery Passport EN 18223 were not yet published.
 
-Example Battery Passport: The Regulation requires that there is a passport for every instance of a battery. 
-However, many required data points are identical for all batteries of the same type 
-or for all batteries of the same type produced at the same facility. 
-With the AAS different AAS would be created:
+[[image_aas_batteryPassport]]
+.Example: AAS for Digital Battery Passport
+image::aas-battery-passport.png[Example: AAS for Digital Battery Passport]
 
-- one AAS for each battery type
-- one AAS for each battery type produced at a specific facility reusing the Submodels of the AAS mentioned before
-- one AAS per battery instance reusing the Submodels of the AAS mentioned before
 
-The modular approach of the AAS also allows to standardized Submodels that can be reused for different domains like for example handover documentation or contact information.
+To ensure harmonization across different implementations, this document describes a single, recommended approach for creating a Digital Product Passport (DPP) using an Asset Administration Shell (AAS) as specified in IDTA-01001 and IDTA-01002. 
+While other methods may exist, this document focuses exclusively on this proposed pathway to establish a consistent and interoperable standard between the DPP Metadata Submodel and the other Submodels needed to compose a DPP.
 
-EN 18223 is not modular per se. 
-However, its schema definitions assumes a process that
 
-- every regulation defines its own schema
-- and this schema is combined with the overall generic schema defined by EN 18223
-- each schema can be validated in its own, to be compliant to a specific regulation at least two schemas need to be checked: the generic schema and the schema specific for the regulation.
+It is important to understand that an Asset Administration Shell (AAS) is not, by itself, the Digital Product Passport as required by EN 18222 or EN 18223. 
+However, a DPP can be easily derived from an existing AAS. 
+The prerequisite is that the AAS contains the submodels supporting the regulation's required data points for the product, as well as the DPP metadata submodel specified in this document.
 
-For AAS this is realized by registering new Submodels to an AAS.
+The Digital Battery Passport provides a clear example of this relationship. It is represented by seven standardized submodel specifications (see <<image_dpp_aas_batteryPassport>>). 
+To create the complete passport, these submodels are merged with the DPP metadata submodel defined herein, resulting in a comprehensive Digital Product Passport conformant to regulation.
+
+[[image_dpp_aas_batteryPassport]]
+.Example: AAS for Digital Battery Passport
+image::dpp-aas-battery-passport.png
+
+The primary advantage of using an Asset Administration Shell (AAS) to implement a Digital Product Passport (DPP) is its modular design, which contrasts with the monolithic structure assumed by the JTC24 specification.
+
+An AAS acts as a container for multiple, independent Submodels. Each Submodel has a unique identifier and can be managed and reused separately. This modularity offers significant benefits:
+
+* Data Reuse: Information common to many products can be defined once and reused across countless instances.
+* Simplified Access Management: Permissions can be set for individual Submodels.
+* Efficient Data Onboarding: New information can be added as a new Submodel without altering the existing structure.
+
+The Battery Passport provides a perfect example. 
+While the regulation requires a passport for every battery, much of the data is identical across batteries of the same type or from the same production facility. 
+With an AAS, you can create a hierarchy of information, where the AAS for a single battery instance reuses Submodels from the AAS of its production facility and its battery type. 
+This same principle allows for standardized Submodels, like contact information, to be reused across entirely different domains.
+
+
+While the AAS approach is modular, it is designed to produce the single, monolithic JSON document that JTC24 expects. 
+The key is understanding that even this single document must adhere to a set of different schemas. 
+For a DPP to be compliant, it must be validated against at least two types:
+
+* The overall generic schema implicitly defined by JTC24 (derived from EN 18223).
+
+* The specific schema derived from for the relevant vertical regulation (e.g., the Battery Passport "delegated act").
+
+* Specific schemas derived from relevant horizontal regulations.
+
+The AAS framework directly supports this structure. 
+It realizes this by registering new Submodels to an AAS and then adding the payload of those Submodels to the payload of the overall DPP. 
+In essence, the AAS dynamically assembles the required monolithic document by aggregating the data from its various registered Submodels. 
+This allows you to benefit from a modular development and management process while still delivering a compliant, single-file DPP that satisfies all schema requirements.
+
+The process of generating the DPP from an AAS through a sequence of operation calls is detailed in the following subsections and illustrated in <<image_Seq_AAS_DPP>>.
+
+.Example: Sequence of Operation Calls and Steps
+[[image_Seq_AAS_DPP]]
+[plantuml, seq-aas-dpp, svg]
+....
+include::partial$diagrams/Seq_AAS_DPP.puml[]
+....
+
+
+The sequence diagram included herein is provided for informative purposes only, offering a contextual example to aid in understanding; it should not be considered an exhaustive or normative representation of all possible interactions. 
+For implementation details, readers are directed to the metamodel in Part 1 and the API in Part 2 of the Asset Administration Shell specifications [3].
+
+
 
 == Data Points of every single DPP
 
-<image-dpp-overview<>> gives an overview of the DPP metamodel.
-The data points that shall be available for every single DPP are specified in the Submodel Template Specification IDTA-02099 Digital Product Passport – Part 1: Metadata.
 
-====
-In case of conflicts in examples etc. IDTA-02099 is the master.
-====
+In <<code-dppmetadata-json>> an example JSON instance of this Submodel Template Specification is shown. 
+It describes a DPP using Submodel Template semanticIds as contentSpecificationIds, here (example) semanticIds for Nameplate, TechnicalData, HandoverDocumentation, ProductCondition, MaterialComposition and Circularity for a specific Product Passport.
 
-.Metamodel Overview for DPP (FprEn 18223) 
-[[image-dpp-overview]]
-[plantuml, dpp-overview, svg]
-....
-include::partial$diagrams/DPP_overview.puml[]
-....
+Note: While standard EN 18223 provides an illustrative example for the contentSpecificationId ("prEN1234_xyz"), it is important to recognize that this format is forward-looking. 
+To date, no formal standards for vertical-specific digital product passports have been specified. 
+Therefore, in the absence of a definitive specification, this document puts forth a recommendation to ensure a harmonized approach.
 
-In <<code-dpp-json>> an example DPP is modelled that shall contain two Submodels, one for carbon footprint and one for circularity.
-
-.Example DPP JSON Payload
-[[code-dpp-json]]
+.Example DPPMetadata JSON Payload
+[[code-dppmetadata-json]]
 [source,json,linenums]
 ----
 {
- "digitalProductPassportId": "https://www.example.org/dpp/1234545",
- "uniqueProductIdentifier": "https://www.example.org/1234545",
- "granularity": "Model",
- "dppSchemaVersion": "ENXXX:v1.0",
- "dppStatus": "Active",
- "lastUpdated": "2025-08-22T03:12:00Z", 
- "economicOperatorId": "gxx:ppp456789",
- "facilityId": "gxx:xxx987654", 
- "contentSpecificationIds": [
-    "carbonFootprint",
-    "circularity" 
-	]
+  "digitalProductPassportId" : "https://www.example.org/dpp/1234545",
+  "uniqueProductIdentifier": "https://www.example.org/1234545",
+  "granularity": "Item",
+  "dppSchemaVersion": "ENXXX:v1.0",
+  "dppStatus": "Active",
+  "lastUpdate": "2025-08-22T03:12:00Z",
+  "economicOperatorId": "gxx:ppp456789",
+  "facilityId": "gxx:xxx987654",
+  "contentSpecificationIds": [
+	  "https://admin-shell-io/idta/digitalpassport/Nameplate/1",
+	  "https://admin-shell-io/idta/digitalpassport/TechnicalData/1",
+	  "https://admin-shell-io/idta/digitalpassport/HandoverDocumentation/2",    
+	  "https://admin-shell-io/idta/digitalpassport/ProductCondition/1",
+	  "https://admin-shell-io/idta/digitalpassport/MaterialComposition/1", 
+	  "https://admin-shell-io/idta/digitalproductpassport/Circularity/1"
+	] 
 }
 ----
 
-Some of these attributes as documented in <<image-dpp-overview>> can be mapped to AAS attributes in the metamodel. 
-However, the recommendation is to use the predefined Submodel Template IDTA-02099 for these meta data. 
-It is derived from the SMT IDTA-02006 Nameplate. 
-For the corresponding semantic identifier please see the corresponding specifications.
+Although some attributes (see <<code-dpp-json>>) of this Submodel specification can be mapped to attributes in the Asset Administration Shell (AAS) metamodel, 
+the formal recommendation is to instead use this predefined Submodel Template IDTA-02099 for this metadata. 
+This template is derived from the SMT IDTA-02006-4-0 Nameplate. 
+For the corresponding semantic identifiers, please refer to their respective specifications.
 
-The payload required by EN 18223 is identical to the Value-Only format of this Submodel IDTA-02099. 
-This also holds if the expanded serialization is supported because this Template specifies the "header", not the data.
+The payload required by EN 18223 for the DPP metadata maps to the Value-Only format of this Submodel. 
 
-====
-The compressed format of the DPP is not always identical with the Value-Only format (see <<section-json-serialization-value-only>> but in the case of the metadata of every single DPP they are identical because no MultiLanguageProperty of File elements are contained.
-====
+Note: for the other Submodels used to build a DPP EN 18223 allows two different formats "compressed" and "expanded" with compressed being mandatory to be supported. 
+For DPP Metadata there is exactly one correct serialization since it is part of the overall schema and not of a specific content.
 
 
+.Mapping JTC24 Meta Data to AAS
 [[comparison-dpp-metadata]]
-// .Comparison EN 18223 Meta Data with AAS
 .Mapping JTC24 Meta Data to AAS
 [.table-with-appendix-table]
 [cols="22%,28%,23%,27%"]
 |===
-h| EN 18223 h| AAS h| IDTA-02006-3-0 h| comment
-| "digitalProductPassportId" | AssetAdministrationShell/id| -- a| Although the ID of the AAS is very similar to the DPP ID they are not necessarily the same because the DPP is a monolithic output whereas the ID of an AAS does not imply a specific set of data in a specific point in time because the Submodels are identifiable
-| "uniqueProductIdentifier" | AssetInformation/globalAssetId | URIOfTheProduct  a| Identifier types allowed are specified in EN 18219
-| "granularity"  | assetKind	| --  a| for mapping of enumeration values see <<mapping-granularity>>
-| "dppSchemaVersion" | -- 	| a| In EN 1822:2026 no Schema is defined and thus there is also not schema version.
-| "dppStatus" | -- 			| --  a| In EN 1822:2026 no enumeration is specified for the Status, only example values are given like "Active".
+h| EN 18223 h| IDTA-01001 V3.2 h| IDTA-02006 V3.0 h| comment
+| digitalProductPassportId | AssetAdministrationShell/id| -- a| Although the ID of the AAS is very similar to the DPP ID they are not necessarily the same because the DPP is a monolithic output whereas the ID of an AAS does not imply a specific set of data in a specific point in time because the Submodels are identifiable
+| uniqueProductIdentifier | AssetInformation/globalAssetId | URIOfTheProduct  a| Identifier types allowed are specified in EN 18219
+| granularity  | assetKind	| --  a| for mapping of enumeration values see <<mapping-granularity>>
+| dppSchemaVersion | -- 	| a| In EN 1822:2026 no Schema is defined and thus there is also no schema version.
+| dppStatus | -- 			| --  a| In EN 1822:2026 no enumeration is specified for the Status, only example values are given like "Active".
 The AAS does not support administrative information on its status.
 However, status of the AAS does not need to be identical to the status of the DPP.
 
 
-| "lastUpdate" | AdministrativeInformation/updatedAt | --  a| EN 18223 does not support explicit versioning (like the AAS does), versioning is supported via the "lastUpdate" attribute in DPPs
-| "economicOperatorId" | -- | EconomicOperatorIdentifier (?) a| Identifier types allowed are specified in EN 18219
-| "facilityId" | -- | UniqueFacilityIdentifier a| Identifier types allowed are specified in EN 18219
-| "contentSpecificationIds" | -- | a| This attribute reminds of AssetAdministrationShell/submodels because it lists the data sets relevant for the different DPP(s). 
+| lastUpdate | AdministrativeInformation/updatedAt | --  a| EN 18223 does not support explicit versioning (like the AAS does), versioning is supported via the "lastUpdate" attribute in DPPs
+| economicOperatorId | -- | -- a| Identifier types allowed are specified in EN 18219
+| facilityId | -- | UniqueFacilityIdentifier a| Identifier types allowed are specified in EN 18219
+| contentSpecificationIds | -- | a| This attribute reminds of AssetAdministrationShell/submodels because it lists the data sets relevant for the different DPP(s). 
 
 ====
-A DPP may contain data from several delegation acts, i.e. from different regulations.
+A DPP may contain data from several delegated acts, i.e. from different regulations.
 ====
 |===
 
@@ -151,7 +188,7 @@ h| EN 18223 granularity h| AAS AssetKind  h| comment
 
 ====
 AAS supports the reuse of Submodels specified on Type Level also on Batch or Instance Level.
-EN 18223 does not support reuse via its metamodel: resue is to be taken care of by the Economic Operator or Service Provider.
+EN 18223 does not support reuse via its metamodel: reuse is to be taken care of by the Economic Operator or Service Provider.
 ====
 |Batch 	| Batch 		a|
 
@@ -161,7 +198,9 @@ EN 18223 does not support reuse via its metamodel: resue is to be taken care of 
 
 == Metamodel Mapping
 
-.Overview metamodel for data points (FprEn 18223) 
+In <<image-dpp-data>> an overview of the metamodel as defined in EN 18223 is shown.
+
+.Overview metamodel for data points (EN 18223) 
 [[image-dpp-data]]
 [plantuml, dpp-data, svg]
 ....
@@ -176,15 +215,16 @@ https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1.2/mappings/m
 |===
 h| EN 18223  h| AAS   h| comment
 
-|DataElement 	(abstract)			| SubmodelElement	(abstract)	a|
+|DataElement 	(abstract)			| SubmodelElement (SME)	(abstract)	a|
 |MultiLanguageDataElement 	| MultiLanguageProperty 			a| see <<section-mlp>> for topics on serialization
-|SingleValuedDataElement 	| Property 		a|
+|SingleValuedDataElement 	a| Property 
+
+Blob		a| A Blob can be realized with a EN 18223 SingleValuedDataElement with valueDataType "xsd:base64Binary" 
 |MultiValuedDataElement		| SubmodelElementList 			a|  SubmodelElementLists only with Elements of type MultiLanguageProperty, SubmodelElementCollection, File or Property: they can be directly mapped
 |DataElementCollection 		| SubmodelElementCollection a|
 |RelatedResource 			| File	a|see <<section-file>> for topics on serialization
 |--| AnnotatedRelationshipElement a| can be realized with a EN 18223 DataElementCollection
 |--| BasicEventElement a| Events are not supported in EN 18223 but could be realized with a EN 18223 DataElementCollection
-|--| Blob a| can be realized with a EN 18223 SingleValuedDataElement with valueDataType "xsd:base64Binary"
 |--| Capability a| not supported in EN 18223
 |--| DataElement (abstract) a| EN 18223 MultiLanguageDataElement and SingleValuedDataElement and RelatedResource correspond to AAS DataElements
 |--| Entity a| can be realized with a EN 18223 DataElementCollection
@@ -196,42 +236,51 @@ h| EN 18223  h| AAS   h| comment
 
 == Creating of DPP with several Submodels
 
+Given the example data for the DPP in <<code-dppmetadata-json>> the example is now extended with the data of the corresponding Submodels itself (see <<code-dpp-json>>). 
+The JSON element name corresponds directly to the contentSpecificationId. 
+It is the starting point for the corresponding Submodel data.
 
-<<code-dpp-pcf-etc-json>> shows an example of a DPP with two data element collections named „carbonFootprint“ and „circularity“.
-For the description how to create a DPP please see Part 2 of AAS.
 
-.Example DPP with two Submodels "pcf" and "circularity"
-[[code-dpp-pcf-etc-json]]
+
+.Example DPP JSON Payload
+[[code-dpp-json]]
 [source,json,linenums]
 ----
 {
- "digitalProductPassportId": "https://www.example.org/dpp/1234545",
- "uniqueProductIdentifier": "https://www.example.org/1234545",15
- "granularity": „Item",
- "dppSchemaVersion": "ENXXX:v1.0",
- "dppStatus": "Active",
- "lastUpdate": "2025-08-22T03:12:00Z", 
- "economicOperatorId": "gxx:ppp456789",
- "facilityId": "gxx:xxx987654", // for batterypass not optional
- "contentSpecificationIds": [
-    "carbonFootprint",
-	"circularity"
-  ],
- "carbonFootprint" : { <SMT ValueDPP CarbonFootprint> },
- "circularity" :  { <SMT ValueDPP Circularity> },
-….
+  "digitalProductPassportId" : "https://www.example.org/dpp/1234545",
+  "uniqueProductIdentifier": "https://www.example.org/1234545",
+  "granularity": "Item",
+  "dppSchemaVersion": "ENXXX:v1.0",
+  "dppStatus": "Active",
+  "lastUpdate": "2025-08-22T03:12:00Z",
+  "economicOperatorId": "gxx:ppp456789",
+  "facilityId": "gxx:xxx987654",
+  "contentSpecificationIds": [
+	  "https://admin-shell-io/idta/digitalpassport/Nameplate/1",
+	  "https://admin-shell-io/idta/digitalpassport/TechnicalData/1",
+	  "https://admin-shell-io/idta/digitalpassport/HandoverDocumentation/2",    
+	  "https://admin-shell-io/idta/digitalpassport/ProductCondition/1",
+	  "https://admin-shell-io/idta/digitalpassport/MaterialComposition/1", 
+	  "https://admin-shell-io/idta/digitalproductpassport/Circularity/1"
+	] ,
+  "https://admin-shell-io/idta/alpassport/Nameplate/1": {<Data>},
+  "https://admin-shell-io/idta/digitalproductpassport/TechnicalData/1": {<Data>},
+  "https://admin-shell-io/idta/digitalproductpassport/HandoverDocumentation/2": {<Data>},
+  "https://admin-shell-io/idta/digitalproductpassport/ProductCondition/1": {<Data>},
+  "https://admin-shell-io/idta/digitalproductpassport/MaterialComposition/1": {<Data>}, 
+  "https://admin-shell-io/idta/digitalproductpassport/Circularity/1": {<Data>}
 }
 ----
 
 In <<code-batterypass-valueonly-json>> an example JSON payload conformant to IDTA-02023 Version 1.0 Carbon Footprint 
 (see link:https://github.com/admin-shell-io/smt-semantic-models/blob/main/io.admin-shell.idta.batterypass.carbon_footprint/1.0.0/gen/CarbonFootprintBattery.json[CarbonFootprintBattery.json]) 
 in Value-Only format is provided. 
-In this case no multi language properties  or File elements are contained and this is why this payload is also conformant to EN 18223. 
+In this case no multi language properties  or File elements are contained and this is why this payload is also conformant to the compressed format as specified in EN 18223. 
 link:https://github.com/admin-shell-io/smt-semantic-models/blob/main/io.admin-shell.idta.batterypass.carbon_footprint/1.0.0/gen/CarbonFootprintBattery-schema.json[CarbonFootprintBattery-schema.json], 
 generated from the Aspect Model conformant to IDTA-01023, is the schema that can be combined with the one of the EN 18223 generic schema. 
-The only attribute missing is the name of the object itself, in the example in <<code-dpp-pcf-etc-json>> is "carbonFootprint".
 
-.Example AAS Value-Only JSON paylaod for Battery Passport, PCF data 
+
+.Example AAS Value-Only JSON Payload for Battery Passport, PCF data
 [[code-batterypass-valueonly-json]]
 [source,json,linenums]
 ----
@@ -248,32 +297,31 @@ The only attribute missing is the name of the object itself, in the example in <
 }
 ----
 
-In the example the idShort of SMT IDTA-02023 is "CarbonFootprint". 
-To be compliant with the naming convention to use names starting with small letters for JSON attributes the name "carbonFootprint" is used as attribute name for this Submodel within the batterypass.
-The second value to be standardized is the one for the contentSpecificationIds. In this case we use (for final recommendation how to fill "contentSpecificationIds" see IDTA-02099): 
-
-----
-<idShort, starting with small letter> "-" IDTA-02<number of SMT including version>
-----
 
 
-.Example AAS Value-Only JSON paylaod for Battery Passport, PCF data 
-[[code-batterypass-valueonly-json]]
+So in combination it would be the "semanticId" of SMT IDTA-02035-3 that is "https://admin-shell.io/idta/CarbonFootprint/CarbonFootprint/1/0", 
+(see <<code-batterypass-pcf-valueonly-json>>).
+The second value to be standardized is the one for the contentSpecificationIds. 
+For details on "contentSpecificationIds" see Submodel Template Specification IDTA-02099.
+
+
+.Example DPP compressed serialization for Battery Passport, PCF data 
+[[code-batterypass-pcf-valueonly-json]]
 [source,json,linenums]
 ----
 {
  "digitalProductPassportId": "https://www.example.org/batterypassport/1234545",
  "uniqueProductIdentifier": "https://www.example.org/1234545",
- "granularity": „Item",
+ "granularity": "Item",
  "dppSchemaVersion": "ENXXX:v1.0",
  "dppStatus": "Active",
  "lastUpdate": "2025-08-22T03:12:00Z", 
  "economicOperatorId": "gxx:ppp456789",
  "facilityId": "gxx:xxx987654", 
  "contentSpecificationIds": [
-    „carbonFootprint - IDTA-02023-1-0"
+    "https://admin-shell.io/idta/CarbonFootprint/CarbonFootprint/1/0"
   ],
- „carbonFootprint“ : 
+ "https://admin-shell.io/idta/CarbonFootprint/CarbonFootprint/1/0" : 
 	{
 	  "ProductCarbonFootprints" : [ {
 		"QuantityOfMeasureForCalculation" : 5.0,
@@ -287,6 +335,45 @@ The second value to be standardized is the one for the contentSpecificationIds. 
 	}
 }
 ----
+
+In <<code-batterypass-normal-json>> an example is shown how a payload similar to the link:https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1.2/mappings/mappings.html#_format_normal_in_json[AAS "Normal"-Format] could look like. 
+
+.Example JTC24 expanded Full serialization JSON Paylaod for Battery Passport, PCF data 
+[[code-batterypass-normal-json]]
+[source,json,linenums]
+----
+{
+ "digitalProductPassportId": "https://www.example.org/batterypassport/1234545",
+ "uniqueProductIdentifier": "https://www.example.org/1234545",
+ "granularity": "Item",
+ "dppSchemaVersion": "ENXXX:v1.0",
+ "dppStatus": "Active",
+ "lastUpdate": "2025-08-22T03:12:00Z", 
+ "economicOperatorId": "gxx:ppp456789",
+ "facilityId": "gxx:xxx987654",
+ "contentSpecificationIds": [
+    "https://admin-shell.io/idta/CarbonFootprint/CarbonFootprint/1/0"
+  ],
+ "https://admin-shell.io/idta/CarbonFootprint/CarbonFootprint/1/0" : 
+  [
+   <...>,
+   {
+	"elementId": "QuantityOfMeasureForCalculation",
+	"objectType": "SingleValuedDataElement",
+	"dictionaryReference": "https:/dictionary1.eu/QuantityOfMeasureForCalculation",
+	"valueDataType": "xsd:float",
+	"value": 5.0
+	},
+    <...>
+  ]
+}
+----
+
+For details on DPP serialization (compressed and expanded full) compared to Value-Only and Normal serialization of the AAS 
+see IDTA-01001 Asset Administration Shell Specifications, Part 1.
+
+
+
 
 [[section-json-serialization-value-only]]
 == JSON Serialization Value-Only 
@@ -304,7 +391,7 @@ There is one difference in the serialization of multi language data points.
 In <<code-multi-language-property-value-only>> it is shown how a MultiLanguageProperty with idShort "title" would be serialized in AAS Value-Only. 
 In <<code-multi-language-property-jtc24>> it is shown how the same example is serialized in EN 18223.
 
-I.e. in AAS it is:
+I.e. in AAS it  is serialized as described in the following extract:
 
 ----
 MultiLanguageProperty is serialized as named JSON object with ${MultiLanguageProperty/idShort} as the name of the containing JSON property. 
@@ -319,9 +406,9 @@ In EN 18223 the entries within the list are realized like a predefined SubmodelE
 [source,json,linenums]
 ----
 {
- “title": [
-   { "en": “user manual" },
-   { "de": „Kundendokumentation" }
+ "title": [
+   { "en": "user manual" },
+   { "de": "Kundendokumentation" }
  ]
 }
 ----
@@ -330,9 +417,9 @@ In EN 18223 the entries within the list are realized like a predefined SubmodelE
 [[code-multi-language-property-jtc24]]
 [source,json,linenums]
 ----
-“title": [
+"title": [
   {
-    "value": " user manual ",
+    "value": "user manual",
     "language": "en-IE"
   },
   {
@@ -380,40 +467,44 @@ but adapted for the example in this document)
 [source,json,linenums]
 ----
 {
-  "Documents" : [ {
-    "DocumentIds" : [ {
-      "DocumentIdentifier" : "XF90-884",
-      "DocumentIsPrimary" : true,
-      "DocumentDomainId" : "1213455566"
-    } ],
-    "DocumentVersions" : [ {
-      "DigitalFiles" : [ {
-        "value" : "https://data.example.com/manuals/thermostat-pro_v2.1.pdf",
-        "contentType" : "application/pdf"
-      } ],
-      "Title" : [ {
-        "en" : "User Manual for the Smart Thermostat Pro"
-      } {
-        "de" : "Benutzer-Handbuch Smart Thermostat Pro"
-      }],
-      "Description" : [ {
-        "en-GB" : "This is the user manual for the Smart Thermostat Pro."
-      } {
-        "de" : "Das ist das Benutzer-Handbuch für den Smart Thermostat Pro."
-      }],
-      "Language" : [ "en-GB" "de" ],
-      "Version" : "V1.2"
-    } ],
-    "DocumentClassifications" : [ {
-      "ClassName" : [ {
-        "en" : "Operation"
-      } {
-        "de" : "Bedienung"
-      }],
-      "ClassId" : "03-02",
-      "ClassificationSystem" : "VDI2770 Blatt 1:2020"
-    } ]
-  } ]
+  "Documents": [
+    {
+      "DocumentIds": [
+        {
+          "DocumentIdentifier": "XF90-884",
+          "DocumentIsPrimary": true,
+          "DocumentDomainId": "1213455566"
+        }
+      ],
+      "DocumentVersions": [
+        {
+          "DigitalFiles": [
+            {
+              "value": "https://data.example.com/manuals/thermostat-pro_v2.1.pdf",
+              "contentType": "application/pdf"
+            }
+          ],
+          "Title": [
+            {"en": "User Manual for the Smart Thermostat Pro"},
+            {"de": "Benutzer-Handbuch Smart Thermostat Pro"}
+          ],
+          "Description": [
+            {"en-GB": "This is the user manual for the Smart Thermostat Pro."},
+            {"de": "Das ist das Benutzer-Handbuch für den Smart Thermostat Pro."}
+          ],
+          "Language": ["en-GB", "de"],
+          "Version": "V1.2"
+        }
+      ],
+      "DocumentClassifications": [
+        {
+          "ClassName": [{"en": "Operation"}, {"de": "Bedienung"}],
+          "ClassId": "03-02",
+          "ClassificationSystem": "VDI2770 Blatt 1:2020"
+        }
+      ]
+    }
+  ]
 }
 ----
 
@@ -423,8 +514,8 @@ but adapted for the example in this document)
 |===
 h| EN 18223 RelatedResource h| AAS SME File h| IDTA-02004 Handover Documentation h| comment
 
-|contentType 		| contentType			|	*DigitalFile* realized with SMT File	a| 
-|url				| value					|	*DigitalFile* realized with SMT File	a|
+|contentType 		| contentType			|	*DigitalFile* realized with SME File	a| 
+|url				| value					|	*DigitalFile* realized with SME File	a|
 |resourceTitle		| -- 					|    title	a|
 |language			| --					| 		    a| localized, i.e. add language. If not existing add a substitute language (if allowed)
 |===
@@ -432,7 +523,8 @@ h| EN 18223 RelatedResource h| AAS SME File h| IDTA-02004 Handover Documentation
 
 [[section-json-serialization-normal]]
 == JSON Serialization Normal
-The AAS "Normal" serialization and the "expanded" EN 18223 serialization are similar when it comes to the rules of derivation the serialization from the UML model. However, since the UML model differ also the serialization differs.
+The AAS "Normal" serialization and the "expanded" EN 18223 serialization are similar when it comes to the rules of derivation the serialization from the UML model. 
+However, since the UML model differ also the serialization differs.
 
 .Mapping EN 18223 attributes to AAS 
 [.table-with-appendix-table]
@@ -441,11 +533,11 @@ The AAS "Normal" serialization and the "expanded" EN 18223 serialization are sim
 h| EN 18223 h| AAS   h| comment
 
 |	DataElement/elementId			| 		Referable/idShort	a|		In AAS there are more restrictions on how to choose the idShort, in EN 18223 the elementId is just a String.
-|	DataElement/dictionaryReference	| 	HasSemantics/semanticId		a|	In EN 18223 the dictionaryReference is just a String, in AAS it is a Reference	
+|	DataElement/dictionaryReference	| 	HasSemantics/semanticId		a|	In EN 18223 the dictionaryReference is just a String, in AAS it is a Reference.	
 |	SingleValuedDataElement/valueDataType		|  Property/valueType						a| 	The allowed values are identical in both, the AAS and EN 18223 specification with only one difference: in AAS the prefix "xs:" is used, in EN 18223 the prefix is "xsd".
 |	MultiValuedDataElement/valueDataType		| 		SubmodelElementList/valueTypeListElement			a| 
 |	MultiLanguageDataElement		| 		MultiLanguageProperty			a|  see <<section-mlp>>, compressed and expanded in EN 18223 are identical in this case
-|	RelatedResource		| 		File			a| 		see <<<section-file>>, compressed and expanded in EN 18223 are identical in this case
+|	RelatedResource		| 		File			a| 		see <<section-file>>, compressed and expanded in EN 18223 are identical in this case
 |===
 
 
@@ -457,20 +549,20 @@ The "objectType" in JSON serialization of AAS is mapped to "objectType" in EN 18
 [source,json,linenums]
 ----
 {
-"elements": [
+  "elements": [
   {
-	"elementId": "maxPressure",
-	"objectType": "SingleValuedDataElement",
-	"dictionaryReference": "https:/dictionary1/maximumPressure",
-	"valueDataType": "xsd:float",
-	"value": 2.5
+    "elementId": "maxPressure",
+    "objectType": "SingleValuedDataElement",
+    "dictionaryReference": "https:/dictionary1/maximumPressure",
+    "valueDataType": "xsd:float",
+    "value": 2.5
   },
   {
-	"elementId": "recycledContentPercentage",
-	"objectType": "SingleValuedDataElement",
-	"dictionaryReference": "https:/dictionary1/recycledContentPercentage",
-	"valueDataType": "xsd:float",
-	"value": 25.5
+    "elementId": "recycledContentPercentage",
+    "objectType": "SingleValuedDataElement",
+    "dictionaryReference": "https:/dictionary1/recycledContentPercentage",
+    "valueDataType": "xsd:float",
+    "value": 25.5
   }
  ]
 }
@@ -482,42 +574,28 @@ The "objectType" in JSON serialization of AAS is mapped to "objectType" in EN 18
 [source,json,linenums]
 ----
 {
-"elements": [
-  {
-        {
-          "idShort": "maxPressure",
-          "modelType": "Property",
-          "semanticId": {
-            "keys": [
-              {
-                "type": "GlobalReference",
-                "value": "https:/dictionary1/maximumPressure"
-              }
-            ],
-            "type": "ExternalReference"
-          },		  
-          "valueType": "xs:float",
-		  "value": "2.5"
-        }
-  },
-  {
-        {
-          "idShort": "recycledContentPercentage",
-          "modelType": "Property",
-          "semanticId": {
-            "keys": [
-              {
-                "type": "GlobalReference",
-                "value": "https:/dictionary1/recycledContentPercentage"
-              }
-            ],
-            "type": "ExternalReference"
-          },
-          "valueType": "xs:float",
-		  "value": "2.5"
-        }
-  }
-]
+  "elements": [
+    {
+      "idShort": "maxPressure",
+      "modelType": "Property",
+      "semanticId": {
+        "keys": [{"type": "GlobalReference", "value": "https:/dictionary1/maximumPressure"}],
+        "type": "ExternalReference"
+      },
+      "valueType": "xs:float",
+      "value": "2.5"
+    },
+    {
+      "idShort": "recycledContentPercentage",
+      "modelType": "Property",
+      "semanticId": {
+        "keys": [{"type": "GlobalReference", "value": "https:/dictionary1/recycledContentPercentage"}],
+        "type": "ExternalReference"
+      },
+      "valueType": "xs:float",
+      "value": "25.5"
+    }
+  ]
 }
 ----
 
