@@ -130,7 +130,7 @@ Therefore, in the absence of a definitive specification, this document puts fort
   "facilityId": "gxx:xxx987654",
   "contentSpecificationIds": [
 	  "https://admin-shell-io/idta/digitalpassport/Nameplate/1",
-	  "https://admin-shell-io/idta/digitalpassport/TechnicalData/1"},
+	  "https://admin-shell-io/idta/digitalpassport/TechnicalData/1",
 	  "https://admin-shell-io/idta/digitalpassport/HandoverDocumentation/2",    
 	  "https://admin-shell-io/idta/digitalpassport/ProductCondition/1",
 	  "https://admin-shell-io/idta/digitalpassport/MaterialComposition/1", 
@@ -257,7 +257,7 @@ It is the starting point for the corresponding Submodel data.
   "facilityId": "gxx:xxx987654",
   "contentSpecificationIds": [
 	  "https://admin-shell-io/idta/digitalpassport/Nameplate/1",
-	  "https://admin-shell-io/idta/digitalpassport/TechnicalData/1"},
+	  "https://admin-shell-io/idta/digitalpassport/TechnicalData/1",
 	  "https://admin-shell-io/idta/digitalpassport/HandoverDocumentation/2",    
 	  "https://admin-shell-io/idta/digitalpassport/ProductCondition/1",
 	  "https://admin-shell-io/idta/digitalpassport/MaterialComposition/1", 
@@ -350,19 +350,20 @@ In <<code-batterypass-normal-json>> an example is shown how a payload similar to
  "dppStatus": "Active",
  "lastUpdate": "2025-08-22T03:12:00Z", 
  "economicOperatorId": "gxx:ppp456789",
- "facilityId": "gxx:xxx987654", 
+ "facilityId": "gxx:xxx987654",
+ "contentSpecificationIds": [
     "https://admin-shell.io/idta/CarbonFootprint/CarbonFootprint/1/0"
   ],
  "https://admin-shell.io/idta/CarbonFootprint/CarbonFootprint/1/0" : 
   [
-   <...>
+   <...>,
    {
 	"elementId": "QuantityOfMeasureForCalculation",
 	"objectType": "SingleValuedDataElement",
 	"dictionaryReference": "https:/dictionary1.eu/QuantityOfMeasureForCalculation",
 	"valueDataType": "xsd:float",
 	"value": 5.0
-	}
+	},
     <...>
   ]
 }
@@ -405,7 +406,7 @@ In EN 18223 the entries within the list are realized like a predefined SubmodelE
 [source,json,linenums]
 ----
 {
- “title": [
+ "title": [
    { "en": "user manual" },
    { "de": "Kundendokumentation" }
  ]
@@ -416,7 +417,7 @@ In EN 18223 the entries within the list are realized like a predefined SubmodelE
 [[code-multi-language-property-jtc24]]
 [source,json,linenums]
 ----
-“title": [
+"title": [
   {
     "value": "user manual",
     "language": "en-IE"
@@ -466,40 +467,44 @@ but adapted for the example in this document)
 [source,json,linenums]
 ----
 {
-  "Documents" : [ {
-    "DocumentIds" : [ {
-      "DocumentIdentifier" : "XF90-884",
-      "DocumentIsPrimary" : true,
-      "DocumentDomainId" : "1213455566"
-    } ],
-    "DocumentVersions" : [ {
-      "DigitalFiles" : [ {
-        "value" : "https://data.example.com/manuals/thermostat-pro_v2.1.pdf",
-        "contentType" : "application/pdf"
-      } ],
-      "Title" : [ {
-        "en" : "User Manual for the Smart Thermostat Pro"
-      } {
-        "de" : "Benutzer-Handbuch Smart Thermostat Pro"
-      }],
-      "Description" : [ {
-        "en-GB" : "This is the user manual for the Smart Thermostat Pro."
-      } {
-        "de" : "Das ist das Benutzer-Handbuch für den Smart Thermostat Pro."
-      }],
-      "Language" : [ "en-GB" "de" ],
-      "Version" : "V1.2"
-    } ],
-    "DocumentClassifications" : [ {
-      "ClassName" : [ {
-        "en" : "Operation"
-      } {
-        "de" : "Bedienung"
-      }],
-      "ClassId" : "03-02",
-      "ClassificationSystem" : "VDI2770 Blatt 1:2020"
-    } ]
-  } ]
+  "Documents": [
+    {
+      "DocumentIds": [
+        {
+          "DocumentIdentifier": "XF90-884",
+          "DocumentIsPrimary": true,
+          "DocumentDomainId": "1213455566"
+        }
+      ],
+      "DocumentVersions": [
+        {
+          "DigitalFiles": [
+            {
+              "value": "https://data.example.com/manuals/thermostat-pro_v2.1.pdf",
+              "contentType": "application/pdf"
+            }
+          ],
+          "Title": [
+            {"en": "User Manual for the Smart Thermostat Pro"},
+            {"de": "Benutzer-Handbuch Smart Thermostat Pro"}
+          ],
+          "Description": [
+            {"en-GB": "This is the user manual for the Smart Thermostat Pro."},
+            {"de": "Das ist das Benutzer-Handbuch für den Smart Thermostat Pro."}
+          ],
+          "Language": ["en-GB", "de"],
+          "Version": "V1.2"
+        }
+      ],
+      "DocumentClassifications": [
+        {
+          "ClassName": [{"en": "Operation"}, {"de": "Bedienung"}],
+          "ClassId": "03-02",
+          "ClassificationSystem": "VDI2770 Blatt 1:2020"
+        }
+      ]
+    }
+  ]
 }
 ----
 
@@ -544,20 +549,20 @@ The "objectType" in JSON serialization of AAS is mapped to "objectType" in EN 18
 [source,json,linenums]
 ----
 {
-"elements": [
+  "elements": [
   {
-	"elementId": "maxPressure",
-	"objectType": "SingleValuedDataElement",
-	"dictionaryReference": "https:/dictionary1/maximumPressure",
-	"valueDataType": "xsd:float",
-	"value": 2.5
+    "elementId": "maxPressure",
+    "objectType": "SingleValuedDataElement",
+    "dictionaryReference": "https:/dictionary1/maximumPressure",
+    "valueDataType": "xsd:float",
+    "value": 2.5
   },
   {
-	"elementId": "recycledContentPercentage",
-	"objectType": "SingleValuedDataElement",
-	"dictionaryReference": "https:/dictionary1/recycledContentPercentage",
-	"valueDataType": "xsd:float",
-	"value": 25.5
+    "elementId": "recycledContentPercentage",
+    "objectType": "SingleValuedDataElement",
+    "dictionaryReference": "https:/dictionary1/recycledContentPercentage",
+    "valueDataType": "xsd:float",
+    "value": 25.5
   }
  ]
 }
@@ -569,42 +574,28 @@ The "objectType" in JSON serialization of AAS is mapped to "objectType" in EN 18
 [source,json,linenums]
 ----
 {
-"elements": [
-  {
-        {
-          "idShort": "maxPressure",
-          "modelType": "Property",
-          "semanticId": {
-            "keys": [
-              {
-                "type": "GlobalReference",
-                "value": "https:/dictionary1/maximumPressure"
-              }
-            ],
-            "type": "ExternalReference"
-          },		  
-          "valueType": "xs:float",
-		  "value": "2.5"
-        }
-  },
-  {
-        {
-          "idShort": "recycledContentPercentage",
-          "modelType": "Property",
-          "semanticId": {
-            "keys": [
-              {
-                "type": "GlobalReference",
-                "value": "https:/dictionary1/recycledContentPercentage"
-              }
-            ],
-            "type": "ExternalReference"
-          },
-          "valueType": "xs:float",
-		  "value": "25.5"
-        }
-  }
-]
+  "elements": [
+    {
+      "idShort": "maxPressure",
+      "modelType": "Property",
+      "semanticId": {
+        "keys": [{"type": "GlobalReference", "value": "https:/dictionary1/maximumPressure"}],
+        "type": "ExternalReference"
+      },
+      "valueType": "xs:float",
+      "value": "2.5"
+    },
+    {
+      "idShort": "recycledContentPercentage",
+      "modelType": "Property",
+      "semanticId": {
+        "keys": [{"type": "GlobalReference", "value": "https:/dictionary1/recycledContentPercentage"}],
+        "type": "ExternalReference"
+      },
+      "valueType": "xs:float",
+      "value": "25.5"
+    }
+  ]
 }
 ----
 
