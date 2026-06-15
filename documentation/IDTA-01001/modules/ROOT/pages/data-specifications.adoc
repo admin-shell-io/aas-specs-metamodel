@@ -60,7 +60,7 @@ These are two separate classes in UML.
 h|Class: 3+e|[[DataSpecification]]DataSpecification \<<Template>>
 h|Explanation: 3+a|Data specification template
 h|Inherits from: 3+|--
-h|ID: 3+| `\https://admin-shell.io/aas/3/1/DataSpecification`
+h|ID: 3+| `\https://admin-shell.io/aas/3/2/DataSpecification`
 
 .2+h|Attribute 3+h| ID
 h|Explanation h|Type h|Card.
