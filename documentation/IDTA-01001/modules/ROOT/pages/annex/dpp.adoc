@@ -140,7 +140,7 @@ Therefore, in the absence of a definitive specification, this document puts fort
 ----
 
 Although some attributes (see <<code-dpp-json>>) of this Submodel specification can be mapped to attributes in the Asset Administration Shell (AAS) metamodel, 
-the formal recommendation is to instead use this predefined Submodel Template IDTA-02099 for this metadata. 
+the formal recommendation is to instead use this predefined Submodel Template IDTA-02099-1 for this metadata. 
 This template is derived from the SMT IDTA-02006-4-0 Nameplate. 
 For the corresponding semantic identifiers, please refer to their respective specifications.
 
@@ -302,7 +302,7 @@ generated from the Aspect Model conformant to IDTA-01023, is the schema that can
 So in combination it would be the "semanticId" of SMT IDTA-02035-3 that is "https://admin-shell.io/idta/CarbonFootprint/CarbonFootprint/1/0", 
 (see <<code-batterypass-pcf-valueonly-json>>).
 The second value to be standardized is the one for the contentSpecificationIds. 
-For details on "contentSpecificationIds" see Submodel Template Specification IDTA-02099.
+For details on "contentSpecificationIds" see Submodel Template Specification IDTA-02099-1.
 
 
 .Example DPP compressed serialization for Battery Passport, PCF data 
