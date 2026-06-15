@@ -65,10 +65,10 @@ h|ID: 3+| `\https://admin-shell.io/aas/3/1/DataSpecification`
 .2+h|Attribute 3+h| ID
 h|Explanation h|Type h|Card.
 
-.2+e|description 3+| `\https://admin-shell.io/aas/3/1/DataSpecification/description`
+.2+e|description 3+| `\https://admin-shell.io/aas/3/2/DataSpecification/description`
 a|Description of how and in which context the data specification template is applicable; can be provided in several languages. |xref:spec-metamodel/datatypes.adoc#MultiLanguageTextType[MultiLanguageTextType] |0..1
 
-.2+e|administration 3+| `\https://admin-shell.io/aas/3/1/DataSpecification/administration`
+.2+e|administration 3+| `\https://admin-shell.io/aas/3/2/DataSpecification/administration`
 a|
 Administrative information of the data specification template
 
@@ -79,7 +79,7 @@ Note: some of the administrative information like the version number might need 
 
 |xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation] |0..1
 
-.2+e|id 3+| `\https://admin-shell.io/aas/3/1/DataSpecification/id`
+.2+e|id 3+| `\https://admin-shell.io/aas/3/2/DataSpecification/id`
 a|
 The globally unique identification of the data specification
 
@@ -90,7 +90,7 @@ Note: This identifier is used as value for xref:spec-metamodel/common.adoc#HasDa
 
 |xref:spec-metamodel/datatypes.adoc#Identifier[Identifier] |1
 
-.2+e|dataSpecificationContent 3+| `\https://admin-shell.io/aas/3/1/DataSpecification/dataSpecificationContent`
+.2+e|dataSpecificationContent 3+| `\https://admin-shell.io/aas/3/2/DataSpecification/dataSpecificationContent`
 a|The content of the template without metadata
 |xref:data-specifications.adoc#DataSpecificationContent[DataSpecificationContent] |1
 
@@ -106,7 +106,7 @@ a|The content of the template without metadata
 h|Class: 3+e|[[DataSpecificationContent]]DataSpecificationContent \<<Template>>\<<abstract>>
 h|Explanation: 3+a|Data specification content is part of a data specification template and defines, which additional attributes shall be added to the element instance that references the data specification template and meta information about the template itself.
 h|Inherits from: 3+|--
-h|ID: 3+| `\https://admin-shell.io/aas/3/1/DataSpecificationContent`
+h|ID: 3+| `\https://admin-shell.io/aas/3/2/DataSpecificationContent`
 
 .2+h|Attribute 3+h| ID
 h|Explanation h|Type h|Card.
