@@ -54,7 +54,7 @@ Major Changes:
 * CHANGED: Constraint AASd-129, add exception if the SubmodelElement is part of an OperationVariable (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
 * CHANGED: changed description of Constraint AASd-116, made more generic to avoid frequent updates (https://github.com/admin-shell-io/aas-specs-metamodel/issues/674[#674])
 * ADDED: a minimum recursion depth of 32 for Container-Elements should be supported. Note: This means for certification a maximum of 32 recursion test cases should be tested. (https://github.com/admin-shell-io/aas-specs-metamodel/issues/333[#333])
-* ADDED: explanatory text for handling of versions and dates in n xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation]
+* ADDED: explanatory text for handling of versions and dates in xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation]
 
 
 Minor Changes:
@@ -262,8 +262,6 @@ https://github.com/admin-shell-io/aas-specs-metamodel/issues/471[#471],
 ** ADDED: add clause for Submodel Example (with properties from SMT Technical Data, not Families any longer)
 * CHANGED: update Schema for JSON-Value Serialization (https://github.com/admin-shell-io/aas-specs-metamodel/issues/389[#389])
 * REMOVED: remove recommendation to use external references for semanticId (https://github.com/admin-shell-io/aas-specs-metamodel/issues/376[#376]) and related attributes like valueId, semanticIdListElement and isCaseOf (https://github.com/admin-shell-io/aas-specs-metamodel/issues/396[#396], https://github.com/admin-shell-io/aas-specs-metamodel/issues/396[#396])
-* ADDED: add note: A maximum recursion depth of 32 for Container-Elements should be supported.
-This means for certification a maximum of 32 recursion test cases should be tested. (https://github.com/admin-shell-io/aas-specs-metamodel/issues/333[#333]) 
 * REMOVED: remove clauses on OPC UA and AutomationML mappings (https://github.com/admin-shell-io/aas-specs-metamodel/issues/373[#373], https://github.com/admin-shell-io/aas-specs-metamodel/issues/397[#397])
 * CHANGED: update explanatory text and notes in the context of AdministrativeInformation (https://github.com/admin-shell-io/aas-specs-metamodel/issues/331[#331])
 * CHANGED: move chapter "General" to Annex
@@ -287,7 +285,6 @@ Minor Changes:
 
 
 * CHANGED: add new data type "DateTimeUtc" and use it for attribute _lastUpdate_ of _BasicEventElement_ and attribute _timeStamp_ of _EventPayload_ (https://github.com/admin-shell-io/aas-specs-metamodel/issues/498[#498])
-* CHANGED: change recommendation for recursion: from "[..] maximum recursion depth of 32 [..]" to "A recursion depth of 32 should not be exceeded. The recommendation is to have not more than 8 recursions in a submodel. Test engines should test at least 16 recursions."
 * add Annex with overview of constraints (https://github.com/admin-shell-io/aas-specs-metamodel/issues/509[#509])
 * CHANGED: update Constraint AASd-116 (https://github.com/admin-shell-io/aas-specs-metamodel/issues/298[#298])
 * REMOVED: remove information on OPC UA mapping (https://github.com/admin-shell-io/aas-specs-metamodel/issues/373[#373])
