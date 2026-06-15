@@ -661,3 +661,9 @@ However, a corresponding serialization would be straightforward compared to AAS 
 == XML Serialization expanded vs. Normal
 
 EN 18223 does not define a XML serialization for the expanded representation.
+
+== JSON-LD Serialization 
+
+EN 18216 requires that a JSON-LD representation shall be processable by a regular JSON parser, allowing the possibility of including linked data context for advanced semantic processing.
+However, in EN 18223 no examples or normative text is provided for JSON-LD representation.
+The AAS does not support a standardized JSON-LD representation.
