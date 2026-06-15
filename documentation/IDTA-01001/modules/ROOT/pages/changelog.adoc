@@ -104,8 +104,8 @@ h|Nc h|V3.2 Change w.r.t. V3.1.1 h|Comment
 [cols="5%,42%,48%",options="header",]
 |===
 h|Nc h|New Elements V3.2 vs V3.1 h|Comment
-|{empty} | xref:spec-metamodel/common.adoc#AdministrativeInformatio[AdministrativeInformation/createdAt]  a| add createdAt date attribute to enable performant querying of new objects
-|{empty} | xref:spec-metamodel/common.adoc#AdministrativeInformatio[AdministrativeInformation/updatedAt]  a| add updatedAt date attribute to enable DPP methods
+|{empty} | xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation/createdAt]  a| add createdAt date attribute to enable performant querying of new objects
+|{empty} | xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation/updatedAt]  a| add updatedAt date attribute to enable DPP methods
 |{empty} | xref:spec-metamodel/core.adoc#AssetKind[AssetKind/Batch] a| add new value "Batch" to enumeration AssetKind
 |===
 
