@@ -75,7 +75,7 @@ ${Blob/value}.
 The resulting ValueOnly object is indistinguishable whether it contains File or Blob attributes.
 Therefore, the receiver needs to take the type of the target resource into account.
 Since the receiver knows in advance if a File or a Blob SubmodelElement shall be manipulated, it can parse the transferred Value-Only object accordingly as a File or Blob object.
-For Blobs the value attribute is optional (in this case a Blob can be distinguished from a File).
+
 
 ** xref:spec-metamodel/submodel-elements.adoc#SubmodelElementCollection[SubmodelElementCollection] is serialized as named JSON object with ${SubmodelElementCollection/idShort} as the name of the containing JSON property.
 The elements contained within the struct, i.e. the elements in SubmodelElementCollection/value, are serialized according to their respective type with ${SubmodelElement/idShort} as the name of the containing JSON property.
