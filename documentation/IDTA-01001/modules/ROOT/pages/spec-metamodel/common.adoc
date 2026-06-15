@@ -39,7 +39,7 @@ For more information on the concept of subject as used to describe the <<creator
 The assumption is that every subject has a unique identifier.
 
 xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation] allows the usage of templates (xref:spec-metamodel/common.adoc#HasDataSpecification[HasDataSpecification]).
-Data specifications are defined in separate documents.
+Data specifications are defined in IDTA-01003 sub-series.
 
 If an AAS contains two different Submodels with the same semanticId 
 (xref:spec-metamodel/common.adoc#semanticId[Submodel/semanticId])  these two submodels shall have different IDs (xref:spec-metamodel/common.adoc#Identifiable[Submodel/id]) 
