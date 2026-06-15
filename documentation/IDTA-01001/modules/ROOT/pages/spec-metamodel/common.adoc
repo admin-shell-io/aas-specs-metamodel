@@ -44,10 +44,20 @@ Data specifications are defined in IDTA-01003 sub-series.
 If an AAS contains two different Submodels with the same semanticId 
 (xref:spec-metamodel/common.adoc#semanticId[Submodel/semanticId])  these two submodels shall have different IDs (xref:spec-metamodel/common.adoc#Identifiable[Submodel/id]) 
 and differ in either their 
+
 a) <<version>> (xref:spec-metamodel/common.adoc#version[Submodel/administration/version]) (xref:spec-metamodel/common.adoc#revision[revision] is ignored) 
-or b) their <<creator>> (xref:spec-metamodel/common.adoc#creator[Submodel/administration/creator]). 
+
+or 
+
+b) their <<createdAt>> or <<updatedAt>> date
+
+or
+
+C) their <<creator>> (xref:spec-metamodel/common.adoc#creator[Submodel/administration/creator]). 
+
 With a) both submodels shall have version information. 
-With b) both submodels shall have a <<creator>>.
+With b) both submodels shall have date information.
+With c) both submodels shall have a <<creator>>.
 
 ====
 Note 1: typically, some of the administrative information like the version number might be part of the identification (xref:spec-metamodel/common.adoc#Identifiable[Submodel/id]). 
