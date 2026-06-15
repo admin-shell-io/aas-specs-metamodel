@@ -58,8 +58,8 @@ The Digital Battery Passport provides a clear example of this relationship. It i
 To create the complete passport, these submodels are merged with the DPP metadata submodel defined herein, resulting in a comprehensive Digital Product Passport conformant to regulation.
 
 [[image_dpp_aas_batteryPassport]]
-.Example: AAS for Digital Battery Passport
-image::dpp-aas-battery-passport.png
+.Example: DPP based on AAS for Digital Battery Passport
+image::dpp-aas-battery-passport.png[Example: DPP based on AAS for Digital Battery Passport]
 
 The primary advantage of using an Asset Administration Shell (AAS) to implement a Digital Product Passport (DPP) is its modular design, which contrasts with the monolithic structure assumed by the JTC24 specification.
 
