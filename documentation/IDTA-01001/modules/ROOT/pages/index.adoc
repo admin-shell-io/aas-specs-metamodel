@@ -69,8 +69,7 @@ a|
 |===
 
 Bugfix (patch) releases of aligned specifications shall be substituted. 
-Minor versions of aligned specifications IDTA-01001 does not have a strong dependency to
- may be used as long as the corresponding release version of the aligned specification does not have a strong dependency to a newer release of IDTA-01001.
+Minor versions of aligned specifications IDTA-01001 may be used as long as the corresponding release version of the aligned specification does not have a dependency to a newer release of IDTA-01001.
 
 
 == Notice
