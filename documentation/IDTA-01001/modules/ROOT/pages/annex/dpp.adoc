@@ -207,7 +207,7 @@ In <<image-dpp-data>> an overview of the metamodel as defined in EN 18223 is sho
 include::partial$diagrams/DPP_Data.puml[]
 ....
 
-https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1.2/mappings/mappings.html#value-only-serialization-in-json
+https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.2/mappings/mappings.html#value-only-serialization-in-json
 
 .Mapping EN 18223 data elements to AAS submodel elements
 [.table-with-appendix-table]
@@ -336,7 +336,7 @@ For details on "contentSpecificationIds" see Submodel Template Specification IDT
 }
 ----
 
-In <<code-batterypass-normal-json>> an example is shown how a payload similar to the link:https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1.2/mappings/mappings.html#_format_normal_in_json[AAS "Normal"-Format] could look like. 
+In <<code-batterypass-normal-json>> an example is shown how a payload similar to the link:https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.2/mappings/mappings.html#_format_normal_in_json[AAS "Normal"-Format] could look like. 
 
 .Example JTC24 expanded Full serialization JSON Paylaod for Battery Passport, PCF data 
 [[code-batterypass-normal-json]]
