@@ -31,6 +31,10 @@ This annex specifies how the requirements as specified in
  
 are mapped to the AAS Metamodel.
 
+In EN 18216 it is specified that JSON shall be used for syntactic interoperability. 
+In addition to JSON also XML and JSON-LD may be used based on http content negotiation.
+A JSON-LD representation shall be processable by a regular JSON parser, allowing the possibility of including linked data context for advanced semantic processing.
+
 == General
 
 A Digital Product Passport (DPP) is a digital record of product characteristics throughout its life cycle [1]. 
@@ -648,7 +652,12 @@ The "objectType" in JSON serialization of AAS is mapped to "objectType" in EN 18
 }
 ----
 
-== XML compressed or Value-Only Serialization
+== XML Serialization compressed vs. Value-Only
 
+EN 18223 also defines a XML serialization for the compressed representation (Annex B).
 The AAS does not support a Value-Only serialization for XML, only for JSON. 
 However, a corresponding serialization would be straightforward compared to AAS Value-Only as it is in EN 18223 compared to JSON compressed. 
+
+== XML Serialization expanded vs. Normal
+
+EN 18223 does not define a XML serialization for the expanded representation.
