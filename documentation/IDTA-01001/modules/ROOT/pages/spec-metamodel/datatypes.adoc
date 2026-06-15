@@ -90,7 +90,7 @@ SGVsbG8sIFdvcmxkIQ==
 
 for "Hello, World!"
 
-.2+e|[[ContentType]]ContentType 2+| `admin-shell.io/aas/3/1/ContentType`
+.2+e|[[ContentType]]ContentType 2+| `admin-shell.io/aas/3/2/ContentType`
 a|
 _string_ with max 128 and min 1 characters
 
@@ -205,7 +205,7 @@ Each langString within the array of strings has a max 128 of and a min of 1 char
 
 | See xref:LangStringSet[LangStringSet]
 
-.2+e|[[MultiLanguageTextType]]MultiLanguageTextType 2+| `\https://admin-shell.io/3/1/MultiLanguageTextType`
+.2+e|[[MultiLanguageTextType]]MultiLanguageTextType 2+| `\https://admin-shell.io/3/2/MultiLanguageTextType`
 a| xref:LangStringSet[LangStringSet]
 
 Each string within langString has a max of 1,023 and min of 1 characters.
