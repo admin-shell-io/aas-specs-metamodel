@@ -54,7 +54,7 @@ Major Changes:
 * CHANGED: Constraint AASd-129, add exception if the SubmodelElement is part of an OperationVariable (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
 * CHANGED: changed description of Constraint AASd-116, made more generic to avoid frequent updates (https://github.com/admin-shell-io/aas-specs-metamodel/issues/674[#674])
 * ADDED: a minimum recursion depth of 32 for Container-Elements should be supported. Note: This means for certification a maximum of 32 recursion test cases should be tested. (https://github.com/admin-shell-io/aas-specs-metamodel/issues/333[#333])
-* ADDED: explanatory text for handling of versions and dates in n xref:spec-metamodel/common.adoc#AdministrativeInformatio[AdministrativeInformation]
+* ADDED: explanatory text for handling of versions and dates in n xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation]
 
 
 Minor Changes:
