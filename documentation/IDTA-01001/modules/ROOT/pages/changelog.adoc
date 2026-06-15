@@ -72,7 +72,7 @@ Minor Changes:
 * ADDED: Handling of operations in Submodel with kind=Instance are handled identical to operation in Submodel Templates (Submodel with kind=Template) (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
 * CHANGED: update bibliography
 * CHANGED: editorial changes (including https://github.com/admin-shell-io/aas-specs-metamodel/issues/600[#600], https://github.com/admin-shell-io/aas-specs-metamodel/issues/636[#636], https://github.com/admin-shell-io/aas-specs-metamodel/issues/637[#637], https://github.com/admin-shell-io/aas-specs-metamodel/issues/638[#638] )
-* NEW: add to xref:./shared/versioning.adoc[Versioning] that bugfix releases are not no necessarily backward compatible
+* NEW: add to xref:index.adoc#spec-versioning[Versioning] that bugfix releases are not no necessarily backward compatible
 
 Minor Bugfixes:
 
