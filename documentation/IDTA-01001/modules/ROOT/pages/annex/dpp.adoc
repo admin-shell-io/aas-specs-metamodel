@@ -576,6 +576,7 @@ h| EN 18223 RelatedResource h| AAS SME File h| IDTA-02004 Handover Documentation
 
 [[section-json-serialization-normal]]
 == JSON Serialization Expanded vs. Normal
+The expanded serialization is optional (see EN 18223).
 The AAS "Normal" serialization and the "expanded" EN 18223 serialization are similar when it comes to the rules of derivation the serialization from the UML model. 
 However, since the UML model differ also the serialization differs.
 
@@ -655,6 +656,7 @@ The "objectType" in JSON serialization of AAS is mapped to "objectType" in EN 18
 == XML Serialization compressed vs. Value-Only
 
 EN 18223 also defines a XML serialization for the compressed representation (Annex B).
+The XML serialization is optional (see EN 18216).
 The AAS does not support a Value-Only serialization for XML, only for JSON. 
 However, a corresponding serialization would be straightforward compared to AAS Value-Only as it is in EN 18223 compared to JSON compressed. 
 
@@ -664,6 +666,7 @@ EN 18223 does not define a XML serialization for the expanded representation.
 
 == JSON-LD Serialization 
 
+The JSON-LD serialization is optional (see EN 18216).
 EN 18216 requires that a JSON-LD representation shall be processable by a regular JSON parser, allowing the possibility of including linked data context for advanced semantic processing.
 However, in EN 18223 no examples or normative text is provided for JSON-LD representation.
 The AAS does not support a standardized JSON-LD representation.
