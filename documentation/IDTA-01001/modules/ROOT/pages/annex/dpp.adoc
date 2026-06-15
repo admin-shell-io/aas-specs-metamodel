@@ -22,8 +22,8 @@ To support the implementation of DPPs, 8 standards have been developed:
 * EN 18222:2026 – Digital Product Passport – Application Programming Interfaces (APIs) for the product passport lifecycle management and searchability
 * EN 18223:2026 – Digital Product Passport – System interoperability
 * EN 18221:2026 – Digital product passport – data storage, archiving, and data persistence
-* EN 18239:2026 – Digital Product Passport – access rights management, information system security, and business confidentiality 
-* EN 18246:2026 – Digital Product Passport – Data authentication, reliability and integrity
+* EN 18239:2026 – Digital Product Passport – access rights management, information system security, and business confidentiality  (not yet released)
+* EN 18246:2026 – Digital Product Passport – Data authentication, reliability and integrity (not yet released)
  
 This annex specifies how the requirements as specified in
  
