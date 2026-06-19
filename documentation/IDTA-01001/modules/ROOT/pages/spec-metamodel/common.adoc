@@ -39,15 +39,25 @@ For more information on the concept of subject as used to describe the <<creator
 The assumption is that every subject has a unique identifier.
 
 xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation] allows the usage of templates (xref:spec-metamodel/common.adoc#HasDataSpecification[HasDataSpecification]).
-Data specifications are defined in separate documents.
+Data specifications are defined in IDTA-01003 sub-series.
 
 If an AAS contains two different Submodels with the same semanticId 
 (xref:spec-metamodel/common.adoc#semanticId[Submodel/semanticId])  these two submodels shall have different IDs (xref:spec-metamodel/common.adoc#Identifiable[Submodel/id]) 
-and differ in either their 
+and differ in their 
+
 a) <<version>> (xref:spec-metamodel/common.adoc#version[Submodel/administration/version]) (xref:spec-metamodel/common.adoc#revision[revision] is ignored) 
-or b) their <<creator>> (xref:spec-metamodel/common.adoc#creator[Submodel/administration/creator]). 
+
+or 
+
+b) their <<createdAt>> or <<updatedAt>> date
+
+or
+
+C) their <<creator>> (xref:spec-metamodel/common.adoc#creator[Submodel/administration/creator]). 
+
 With a) both submodels shall have version information. 
-With b) both submodels shall have a <<creator>>.
+With b) both submodels shall have date information.
+With c) both submodels shall have a <<creator>>.
 
 ====
 Note 1: typically, some of the administrative information like the version number might be part of the identification (xref:spec-metamodel/common.adoc#Identifiable[Submodel/id]). 
@@ -62,18 +72,45 @@ semanticId but different versions.
 ====
 
 
+
 If an AAS contains two different Submodels guided by the same Submodel Template (SMT), i.e. have the same templateId value (Submodel/administration/templateId), then the two submodels shall have different IDs (xref:spec-metamodel/common.adoc#Identifiable[Submodel/id]). 
 In this case both Submodels shall have a templateId assigned to them (xref:spec-metamodel/common.adoc#templateId[Submodel/administration/templateId]).
 
 ====
-Note 3: in some cases there is neither a semanticId (xref:spec-metamodel/common.adoc#semanticId[Submodel/semanticId]) nor a template ID (xref:spec-metamodel/common.adoc#templateId[Submodel/administration/templateId]) defined for the Submodel. 
+Note 2: in some cases there is neither a semanticId (xref:spec-metamodel/common.adoc#semanticId[Submodel/semanticId]) nor a template ID (xref:spec-metamodel/common.adoc#templateId[Submodel/administration/templateId]) defined for the Submodel. 
 In this case there is no way for the data consumer to formally see whether two Submodels are providing the same semantic information.
 ====
 
 ====
-Note 4: if a template ID (xref:spec-metamodel/common.adoc#templateId[Submodel/administration/templateId]) of one of the standardized Submodel Templates of the IDTA is used to guide the creation of a Submodel then there is also a semantic ID defined for the Submodel.
+Note 3: if a template ID (xref:spec-metamodel/common.adoc#templateId[Submodel/administration/templateId]) of one of the standardized Submodel Templates of the IDTA is used to guide the creation of a Submodel then there is also a semantic ID defined for the Submodel.
 ====
 
+To ensure reliable sorting and enable logical comparisons, the <<version>> and <<revision>> attributes are stored as numerical integer types rather than as text strings. 
+This design prevents common sorting errors (e.g., a text-based sort incorrectly placing "V1.10" before "V1.2") and allows the system to mathematically determine which release is newer.
+
+For display purposes, these numbers are typically concatenated into a human-readable string, such as V<version>.<revision>.
+
+This numerical system creates a clear and logical order of precedence, where a higher version or revision number always indicates a later release:
+
+V1.0 < V1.1 < V2.0
+
+The date attribute <<createdAt>> is bound to the identity of the object itself, not to its individual version states. 
+This means that while an object's <<version>> or <<revision>> will increment over time, its _createdAt_ timestamp remains fixed to the moment the object was first created.
+
+The date attribute <<updatedAt>>, however, tracks when relevant modifications occur. 
+Because the version and revision increment if there are relevant updates to the object over time, 
+a higher version number mathematically implies a later _updatedAt_ timestamp than that of its previous version states. 
+For example, the _updatedAt_ timestamp of V2.0 will be later than the _updatedAt_ timestamp of V1.1.
+
+Finally, for any given state of the object, a fundamental rule applies to these timestamps: the <<updatedAt>> timestamp is always greater than or equal to the <<createdAt>> timestamp, 
+meaning an update can never occur before the initial creation of the object.
+
+====
+Note 4: It is important to clarify that not every change to an object's data will necessarily trigger a new release (update of <<version>> or <<revision>> attributes) or an update to the <<updatedAt>> timestamp. 
+The <<version>>, <<revision>>, <<createdAt>>, and <<updatedAt>> attributes should be treated as business values, not technical system values. 
+Their purpose is to mark significant, business-relevant milestones in an object's lifecycle.
+For more dynamic or transient data—such as real-time calculations or temporary status flags—incrementing the version for every fluctuation would be impractical and would not make sense from a business logic perspective.
+====
 
 [.table-with-appendix-table]
 [cols="25%,40%,25%,10%"]
