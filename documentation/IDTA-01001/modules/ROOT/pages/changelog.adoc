@@ -74,6 +74,7 @@ Minor Changes:
 * CHANGED: editorial changes (including https://github.com/admin-shell-io/aas-specs-metamodel/issues/600[#600], https://github.com/admin-shell-io/aas-specs-metamodel/issues/636[#636], https://github.com/admin-shell-io/aas-specs-metamodel/issues/637[#637], https://github.com/admin-shell-io/aas-specs-metamodel/issues/638[#638] )
 * NEW: add to xref:index.adoc#spec-versioning[Versioning] that bugfix releases are not no necessarily backward compatible
 * REMOVED: AdministrativeInformation: remove former Note 2
+* ADDED: Note that AdministrativeInformation/templateId only applicable for Submodels so far
 
 
 Minor Bugfixes:
