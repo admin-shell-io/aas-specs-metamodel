@@ -72,16 +72,17 @@ semanticId but different versions.
 ====
 
 
+
 If an AAS contains two different Submodels guided by the same Submodel Template (SMT), i.e. have the same templateId value (Submodel/administration/templateId), then the two submodels shall have different IDs (xref:spec-metamodel/common.adoc#Identifiable[Submodel/id]). 
 In this case both Submodels shall have a templateId assigned to them (xref:spec-metamodel/common.adoc#templateId[Submodel/administration/templateId]).
 
 ====
-Note 3: in some cases there is neither a semanticId (xref:spec-metamodel/common.adoc#semanticId[Submodel/semanticId]) nor a template ID (xref:spec-metamodel/common.adoc#templateId[Submodel/administration/templateId]) defined for the Submodel. 
+Note 2: in some cases there is neither a semanticId (xref:spec-metamodel/common.adoc#semanticId[Submodel/semanticId]) nor a template ID (xref:spec-metamodel/common.adoc#templateId[Submodel/administration/templateId]) defined for the Submodel. 
 In this case there is no way for the data consumer to formally see whether two Submodels are providing the same semantic information.
 ====
 
 ====
-Note 4: if a template ID (xref:spec-metamodel/common.adoc#templateId[Submodel/administration/templateId]) of one of the standardized Submodel Templates of the IDTA is used to guide the creation of a Submodel then there is also a semantic ID defined for the Submodel.
+Note 3: if a template ID (xref:spec-metamodel/common.adoc#templateId[Submodel/administration/templateId]) of one of the standardized Submodel Templates of the IDTA is used to guide the creation of a Submodel then there is also a semantic ID defined for the Submodel.
 ====
 
 To ensure reliable sorting and enable logical comparisons, the <<version>> and <<revision>> attributes are stored as numerical integer types rather than as text strings. 
@@ -105,7 +106,7 @@ Finally, for any given state of the object, a fundamental rule applies to these 
 meaning an update can never occur before the initial creation of the object.
 
 ====
-Note 5: It is important to clarify that not every change to an object's data will necessarily trigger a new release (update of <<version>> or <<revision>> attributes) or an update to the <<updatedAt>> timestamp. 
+Note 4: It is important to clarify that not every change to an object's data will necessarily trigger a new release (update of <<version>> or <<revision>> attributes) or an update to the <<updatedAt>> timestamp. 
 The <<version>>, <<revision>>, <<createdAt>>, and <<updatedAt>> attributes should be treated as business values, not technical system values. 
 Their purpose is to mark significant, business-relevant milestones in an object's lifecycle.
 For more dynamic or transient data—such as real-time calculations or temporary status flags—incrementing the version for every fluctuation would be impractical and would not make sense from a business logic perspective.
