@@ -96,8 +96,8 @@ V1.0 < V1.1 < V2.0
 The date attribute <<createdAt>> is bound to the identity of the object itself, not to its individual version states. 
 This means that while an object's <<version>> or <<revision>> will increment over time, its _createdAt_ timestamp remains fixed to the moment the object was first created.
 
-The date attribute <<updatedAt>>, however, tracks when modifications occur. 
-Because the version and revision increment as the object is updated over time, 
+The date attribute <<updatedAt>>, however, tracks when relevant modifications occur. 
+Because the version and revision increment if there are relevant updates to the object over time, 
 a higher version number mathematically implies a later _updatedAt_ timestamp than that of its previous version states. 
 For example, the _updatedAt_ timestamp of V2.0 will be later than the _updatedAt_ timestamp of V1.1.
 
