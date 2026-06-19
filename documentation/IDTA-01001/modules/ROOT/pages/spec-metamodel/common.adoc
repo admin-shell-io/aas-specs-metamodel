@@ -43,7 +43,7 @@ Data specifications are defined in IDTA-01003 sub-series.
 
 If an AAS contains two different Submodels with the same semanticId 
 (xref:spec-metamodel/common.adoc#semanticId[Submodel/semanticId])  these two submodels shall have different IDs (xref:spec-metamodel/common.adoc#Identifiable[Submodel/id]) 
-and differ in either their 
+and differ in their 
 
 a) <<version>> (xref:spec-metamodel/common.adoc#version[Submodel/administration/version]) (xref:spec-metamodel/common.adoc#revision[revision] is ignored) 
 
