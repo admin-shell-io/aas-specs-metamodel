@@ -42,36 +42,42 @@ xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformat
 Data specifications are defined in IDTA-01003 sub-series.
 
 If an AAS contains two different Submodels with the same semanticId 
-(xref:spec-metamodel/common.adoc#semanticId[Submodel/semanticId])  these two submodels shall have different IDs (xref:spec-metamodel/common.adoc#Identifiable[Submodel/id]) 
-and differ in their 
+(xref:spec-metamodel/common.adoc#semanticId[Submodel/semanticId]) they shall differ in their ((xref:spec-metamodel/common.adoc#version[Submodel/administration]))
 
-a) <<version>> (xref:spec-metamodel/common.adoc#version[Submodel/administration/version]) (xref:spec-metamodel/common.adoc#revision[revision] is ignored) 
+a) xref:spec-metamodel/common.adoc#version[version]   (xref:spec-metamodel/common.adoc#revision[revision] is ignored) 
 
-or 
+or in their
 
-b) their <<createdAt>> or <<updatedAt>> date
+b) their xref:spec-metamodel/common.adoc#createdAt[createdAt] or xref:spec-metamodel/common.adoc#updatedAt[updatedAt] date
 
-or
+or in their
 
-C) their <<creator>> (xref:spec-metamodel/common.adoc#creator[Submodel/administration/creator]). 
+c) their xref:spec-metamodel/common.adoc#creator[creator]  
+
+or in their
+
+d) their xref:spec-metamodel/common.adoc#supplementalSemanticId[supplementalSemanticId]
+
+or in their
+
+e) xref:spec-metamodel/common.adoc#templateId[templateId] 
+
+
+====
+Note: per specification the xref:spec-metamodel/common.adoc#Identifiable[IDs] of these two Submodels are not identical.
+====
 
 With a) both submodels shall have version information. 
 With b) both submodels shall have date information.
-With c) both submodels shall have a <<creator>>.
+With c) both submodels shall have a xref:spec-metamodel/common.adoc#creator[creator].
+With d) at least one of the two submodels shall have a xref:spec-metamodel/common.adoc#supplementalSemanticId[supplementalSemanticId].
+With e) both submodels shall specify the templateId, i.e. which Submodel Template Specification guided their creation.
 
 ====
 Note 1: typically, some of the administrative information like the version number might be part of the identification (xref:spec-metamodel/common.adoc#Identifiable[Submodel/id]). 
 This is similar to the handling of identifiers for concept descriptions using IRDIs. 
 In ECLASS, the IRDI 0173-1#02-AO677#002 contains the version information 002.
 ====
-
-====
-Note 2: since submodels with different versions shall have different identifiers, 
-it is possible that an Asset Administration Shell has two submodels with the same 
-semanticId but different versions.
-====
-
-
 
 If an AAS contains two different Submodels guided by the same Submodel Template (SMT), i.e. have the same templateId value (Submodel/administration/templateId), then the two submodels shall have different IDs (xref:spec-metamodel/common.adoc#Identifiable[Submodel/id]). 
 In this case both Submodels shall have a templateId assigned to them (xref:spec-metamodel/common.adoc#templateId[Submodel/administration/templateId]).
