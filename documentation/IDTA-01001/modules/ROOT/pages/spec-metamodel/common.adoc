@@ -85,6 +85,10 @@ In this case there is no way for the data consumer to formally see whether two S
 Note 3: if a template ID (xref:spec-metamodel/common.adoc#templateId[Submodel/administration/templateId]) of one of the standardized Submodel Templates of the IDTA is used to guide the creation of a Submodel then there is also a semantic ID defined for the Submodel.
 ====
 
+====
+Note 4: Up to now xref:spec-metamodel/common.adoc#templateId[AdministrativeInformation/templateId]  is only applicable for Submodels since Template Specifications are standardized for Submodels only.
+====
+
 To ensure reliable sorting and enable logical comparisons, the <<version>> and <<revision>> attributes are stored as numerical integer types rather than as text strings. 
 This design prevents common sorting errors (e.g., a text-based sort incorrectly placing "V1.10" before "V1.2") and allows the system to mathematically determine which release is newer.
 
@@ -106,11 +110,13 @@ Finally, for any given state of the object, a fundamental rule applies to these 
 meaning an update can never occur before the initial creation of the object.
 
 ====
-Note 4: It is important to clarify that not every change to an object's data will necessarily trigger a new release (update of <<version>> or <<revision>> attributes) or an update to the <<updatedAt>> timestamp. 
+Note 5: It is important to clarify that not every change to an object's data will necessarily trigger a new release (update of <<version>> or <<revision>> attributes) or an update to the <<updatedAt>> timestamp. 
 The <<version>>, <<revision>>, <<createdAt>>, and <<updatedAt>> attributes should be treated as business values, not technical system values. 
 Their purpose is to mark significant, business-relevant milestones in an object's lifecycle.
 For more dynamic or transient data—such as real-time calculations or temporary status flags—incrementing the version for every fluctuation would be impractical and would not make sense from a business logic perspective.
 ====
+
+
 
 [.table-with-appendix-table]
 [cols="25%,40%,25%,10%"]
