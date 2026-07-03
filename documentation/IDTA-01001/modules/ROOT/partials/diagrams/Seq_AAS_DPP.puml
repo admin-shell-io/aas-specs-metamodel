@@ -29,7 +29,7 @@ Client <-- AASRegistry:  AAS Descriptor with Submodel Endpoints
 Client -> Client:  extract relevant Submodel Endpoints including DPP Metadata Submodel
 
 loop for all relevant submodels
-Client -> iSM:  GetSubmodel(ById) Value-Only
+Client -> iSM:  GetSubmodel(ById) 
 Client <-- iSM:  Submodel 
 end
 
