@@ -382,7 +382,7 @@ Identifier of the semantic definition of the element called semantic ID or also 
 
 |xref:spec-metamodel/referencing.adoc#Reference[Reference] |0..1
 
-.2+e|supplementalSemanticId 3+| `\https://admin-shell.io/aas/3/1/HasSemantics/supplementalSemanticId`
+.2+e|[[supplementalSemanticId]]supplementalSemanticId 3+| `\https://admin-shell.io/aas/3/1/HasSemantics/supplementalSemanticId`
 a|
 Identifier of a supplemental semantic definition of the element called supplemental semantic ID of the element
 
