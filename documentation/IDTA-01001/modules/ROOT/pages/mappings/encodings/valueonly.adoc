@@ -40,13 +40,13 @@ They are consequently omitted in the serialization.
 
 Abstract SubmodelElements are not contained in payload.
 
-The following rules shall be adhered to when serializing a submodel, a submodel element collection or a submodel element list with the format "Value"footnote:[see SerializationModifier in Part 2 - IDTA-01002 - of the Specification of the Asset Administration Shell]:
+The following rules shall be adhered to when serializing a submodel, a SubmodelElement collection or a SubmodelElement list with the format "Value"footnote:[see SerializationModifier in Part 2 - IDTA-01002 - of the Specification of the Asset Administration Shell]:
 
 * A Submodel or a SubmodelElement collection is serialized as an unnamed JSON object.
 * A SubmodelElement list is serialized as an JSON array.
-* A SubmodelElement is considered a leaf SubmodelElement if it does not contain other Submodel elements.
-A leaf SubmodelElement follows the rules for the different Submodel elements considered in the serialization, as described below.
-If it is not a leaf element, the serialization rules must be transitively followed until the value is a leaf Submodel element.
+* A SubmodelElement is considered a leaf SubmodelElement if it does not contain other SubmodelElements.
+A leaf SubmodelElement follows the rules for the different SubmodelElements considered in the serialization, as described below.
+If it is not a leaf element, the serialization rules must be transitively followed until the value is a leaf SubmodelElement.
 * xref:spec-metamodel/referencing.adoc#Reference[Reference] is serialized in format "Normal".
 * xref:spec-metamodel/core.adoc#SpecificAssetId[SpecificAssetId] is serialized in format "Normal".
 * xref:spec-metamodel/core.adoc#SubmodelElement[SubmodelElement]s without a value are not serialized.
@@ -101,7 +101,7 @@ Annotations are optional.
 
 ** xref:spec-metamodel/submodel-elements.adoc#Entity[Entity] is serialized as named JSON object with ${Entity/idShort} as the name of the containing JSON property.
 The JSON object contains four JSON properties.
-The first is named "statements" ${Entity/statements} and contains an array of the serialized Submodel elements according to their respective serialization mentioned in this clause.
+The first is named "statements" ${Entity/statements} and contains an array of the serialized SubmodelElements according to their respective serialization mentioned in this clause.
 The second is named "globalAssetId" and the third "specificAssetIds".
 Either a "globalAssetId" value or a "specificAssetIds" value shall exist.
 The other attributes are optional.
@@ -128,9 +128,9 @@ The following rules shall be adhered to when serializing a single SubmodelElemen
 ** _BasicEventElement_ is serialized as JSON object. The JSON object is serialized as described above.
 
 
-Submodel elements defined in the Submodel other than the ones mentioned above are not subject to the Value-Only serialization.
+SubmodelElements defined in the Submodel other than the ones mentioned above are not subject to the Value-Only serialization.
 
-Optional elements (like for example globalAssetId for an Entity Submodel element) with no value shall be omitted in the serialization.
+Optional elements (like for example globalAssetId for an Entity SubmodelElement) with no value shall be omitted in the serialization.
 
 ====
 Note: Elements within a SubmodelElementList are neither optional or mandatory per se. 
@@ -343,7 +343,7 @@ Since Capability and Operation are not part of Value-Only serialization they are
 Also a List containing elements that are omitted is omitted. This is even the case if the SubmodelElementList is mandatory.
 
 ====
-Note: Similar handling is required in case there are access rules disallowing access to specific Submodel elements:
+Note: Similar handling is required in case there are access rules disallowing access to specific SubmodelElements:
 The protected elements shall not be serialized.
 ====
 

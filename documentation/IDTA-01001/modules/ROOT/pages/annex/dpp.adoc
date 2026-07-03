@@ -145,7 +145,7 @@ Therefore, in the absence of a definitive specification, this document puts fort
 
 Although some attributes (see <<code-dpp-json>>) of this Submodel specification can be mapped to attributes in the Asset Administration Shell (AAS) metamodel, 
 the formal recommendation is to instead use this predefined Submodel Template IDTA-02099 for this metadata. 
-This template is derived from the SMT IDTA-02006-4-0 Nameplate. 
+This template is derived from the SMT IDTA-02006-4-0 Digital Nameplate. 
 For the corresponding semantic identifiers, please refer to their respective specifications.
 
 The payload required by EN 18223 for the DPP metadata maps to the Value-Only format of this Submodel. 
@@ -153,6 +153,8 @@ The payload required by EN 18223 for the DPP metadata maps to the Value-Only for
 Note: for the other Submodels used to build a DPP EN 18223 allows two different formats "compressed" and "expanded" with compressed being mandatory to be supported. 
 For DPP Metadata there is exactly one correct serialization since it is part of the overall schema and not of a specific content.
 
+
+In <<comparison-dpp-metadata>> the data points of IDTA-02099-1, the DPP Metadata, is mapped to the corresponding elements in IDTA-01001 and IDTA-02006.
 
 .Mapping JTC24 Meta Data to AAS
 [[comparison-dpp-metadata]]
@@ -223,9 +225,9 @@ In <<image-dpp-data>> an overview of the metamodel as defined in EN 18223 is sho
 include::partial$diagrams/DPP_Data.puml[]
 ....
 
-https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1.2/mappings/mappings.html#value-only-serialization-in-json
 
-.Mapping EN 18223 data elements to AAS submodel elements
+
+.Mapping EN 18223 data elements to AAS SubmodelElements
 [.table-with-appendix-table]
 [cols="25%,30%,45%"]
 |===

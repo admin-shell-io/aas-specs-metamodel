@@ -434,7 +434,7 @@ To allow such efficient addressing by the chaining of elements by an API of an A
 It inherits from the abstract class xref:spec-metamodel/common.adoc#referable-attributes[Referable], in order to refer to such dependent elements.
 
 Before accessing concrete data provided via a submodel, an application typically checks if the Submodel provides the required data, i.e. the semantics of the Submodel is checked for suitability.
-A so-called xref:ROOT:spec-metamodel/common.adoc#HasSemantics[semanticId] should be defined for this Submodel as well as the Submodel element.
+A so-called xref:ROOT:spec-metamodel/common.adoc#HasSemantics[semanticId] should be defined for this Submodel as well as the SubmodelElement.
 This semantic ID helps to easily find the semantic definition of the Submodel (see  xref:spec-metamodel/common.adoc#has-semantics-attributes[Has Semantics Attributes]).
 
 [#matching-strategies]
@@ -583,7 +583,7 @@ Note 5: it is unlikely that a fragment value is identical to a global reference 
 * A model reference A matches a model reference B if all values of all keys are identical.
 
 ====
-Note 6: the key type can be ignored since the fragment keys are always unique (e.g. all idShorts of Submodel elements in a Submodel or all Submodel elements in a SubmodelElement list or collection).
+Note 6: the key type can be ignored since the fragment keys are always unique (e.g. all idShorts of SubmodelElements in a Submodel or all SubmodelElements in a SubmodelElement list or collection).
 ====
 
 * An external reference A matches a model reference B and vice versa if all values of all keys are identical.
@@ -729,11 +729,11 @@ Please see xref:bibliography.adoc#bib45[[45\]] for an overview of registered Sub
 
 The identifiers of concept definitions to be used as semantic references are already predefined in each Submodel template.
 An instantiation of such a Submodel merely requires the creation of properties with a semantic reference to the property definition and an attached value.
-The same applies to other subtypes of Submodel elements.
+The same applies to other subtypes of SubmodelElements.
 
 The only thing that cannot be defined in the template itself is the unique ID of the Submodel instance itself (it is not identical to the ID of the Submodel template), as well as the property values, etc.
 Templates also define cardinalities, for example whether an element is optional or not.
-Submodel element lists typically contain more than one element: the template contains an exemplary element template; the other elements can be created by copy/paste from this template.
+SubmodelElement lists typically contain more than one element: the template contains an exemplary element template; the other elements can be created by copy/paste from this template.
 
 [#events]
 include::page$includes/events.adoc[]

@@ -38,7 +38,7 @@ Note: an xmi representation of the UML model can be found in the repository "aas
 
 * xref:Spec/Metamodel_Core.adoc[Core Classes]
 
-* xref:Spec/Metamodel_SubmodelElements.adoc[Submodel Element Types]
+* xref:Spec/Metamodel_SubmodelElements.adoc[SubmodelElement Types]
 
 * xref:Spec/Metamodel_ConceptDescriptions.adoc[Concept Descriptions]
 
