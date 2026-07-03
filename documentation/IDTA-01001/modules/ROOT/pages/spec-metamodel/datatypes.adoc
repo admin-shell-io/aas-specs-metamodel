@@ -76,7 +76,7 @@ Note: see  xref:spec-metamodel/constraints.adoc#constraints-for-types[Constraint
 .2+h|Primitive 2+h| ID
 h|Definition h|Value Examples
 
-.2+e|[[BlobType]]BlobType 2+| `\https://admin-shell.io/aas/3/1/BlobType`
+.2+e|[[BlobType]]BlobType 2+| `\https://admin-shell.io/aas/3/2/BlobType`
 a|
 _base64binary_
 
@@ -90,7 +90,7 @@ SGVsbG8sIFdvcmxkIQ==
 
 for "Hello, World!"
 
-.2+e|[[ContentType]]ContentType 2+| `admin-shell.io/aas/3/1/ContentType`
+.2+e|[[ContentType]]ContentType 2+| `admin-shell.io/aas/3/2/ContentType`
 a|
 _string_ with max 128 and min 1 characters
 
@@ -105,14 +105,14 @@ application/pdf
 
 image/jpeg
 
-.2+e|[[DateTimeUtc]]DateTimeUtc 2+| `\https://admin-shell.io/aas/3/1/DateTimeUtc`
+.2+e|[[DateTimeUtc]]DateTimeUtc 2+| `\https://admin-shell.io/aas/3/2/DateTimeUtc`
 | _dateTime_ for UTC a|
 
     1997-07-16T19:20+01:00
 
 	2025-02-24T12:31:14Z
 
-.2+e|[[Identifier]]Identifier 2+| `\https://admin-shell.io/aas/3/1/Identifier`
+.2+e|[[Identifier]]Identifier 2+| `\https://admin-shell.io/aas/3/2/Identifier`
 a|_string_ with max 2048 and min 1 characters 
 
 ====
@@ -130,11 +130,11 @@ a|
 
 0173-1#02-BAA120#008
 
-.2+e|[[LabelType]]LabelType 2+| `\https://admin-shell.io/aas/3/1/LabelType`
+.2+e|[[LabelType]]LabelType 2+| `\https://admin-shell.io/aas/3/2/LabelType`
 a|_string_ with max 64 and min 1 characters a|"ABC1234"
 
 
-.2+e|[[LangStringSet]]LangStringSet 2+| `\https://admin-shell.io/aas/3/1/LangStringSet`
+.2+e|[[LangStringSet]]LangStringSet 2+| `\https://admin-shell.io/aas/3/2/LangStringSet`
 a|
 _Array of elements of type langString_
 
@@ -172,10 +172,10 @@ In xml:
 In rdf:
 [source,rdf]
 ----
-[] <https://admin-shell.io/aas/3/1/Referable/description> [
+[] <https://admin-shell.io/aas/3/2/Referable/description> [
   rdf:type aas:LangStringTextType ;
-  <https://admin-shell.io/aas/3/1/AbstractLangString/language> "en"^^xs:string ;
-  <https://admin-shell.io/aas/3/1/AbstractLangString/text> "This is a multi-language value in English"^^xs:string ;
+  <https://admin-shell.io/aas/3/2/AbstractLangString/language> "en"^^xs:string ;
+  <https://admin-shell.io/aas/3/2/AbstractLangString/text> "This is a multi-language value in English"^^xs:string ;
 ] ;
 .
 ----
@@ -195,29 +195,29 @@ In JSON :
    }
 ]
 ----
-.2+e|[[MessageTopicType]]MessageTopicType 2+| `\https://admin-shell.io/aas/3/1/MessageTopicType`
+.2+e|[[MessageTopicType]]MessageTopicType 2+| `\https://admin-shell.io/aas/3/2/MessageTopicType`
 a|_string_ with max 255 and min 1 characters |
 
-.2+e|[[MultiLanguageNameType]]MultiLanguageNameType 2+| `\https://admin-shell.io/aas/3/1/MultiLanguageNameType`
+.2+e|[[MultiLanguageNameType]]MultiLanguageNameType 2+| `\https://admin-shell.io/aas/3/2/MultiLanguageNameType`
 a| xref:LangStringSet[LangStringSet]
 
 Each langString within the array of strings has a max 128 of and a min of 1 characters (as for NameType).
 
 | See xref:LangStringSet[LangStringSet]
 
-.2+e|[[MultiLanguageTextType]]MultiLanguageTextType 2+| `\https://admin-shell.io/3/1/MultiLanguageTextType`
+.2+e|[[MultiLanguageTextType]]MultiLanguageTextType 2+| `\https://admin-shell.io/3/2/MultiLanguageTextType`
 a| xref:LangStringSet[LangStringSet]
 
 Each string within langString has a max of 1,023 and min of 1 characters.
 
 |See xref:LangStringSet[LangStringSet]
 
-.2+e|[[NameType]]NameType 2+| `\https://admin-shell.io/aas/3/1/NameType`
+.2+e|[[NameType]]NameType 2+| `\https://admin-shell.io/aas/3/2/NameType`
 a|_string_ with max 128 and min 1 characters |"ManufacturerPartId"
 
 
 
-.2+e|[[PathType]]PathType 2+| `\https://admin-shell.io/aas/3/1/PathType`
+.2+e|[[PathType]]PathType 2+| `\https://admin-shell.io/aas/3/2/PathType`
 a|
 
 _string_
@@ -244,7 +244,7 @@ file:c:/local/Specification.pdf
 FTP://unicode.org
 
 
-.2+e|[[QualifierType]]QualifierType 2+| `\https://admin-shell.io/aas/3/1/QualifierType`
+.2+e|[[QualifierType]]QualifierType 2+| `\https://admin-shell.io/aas/3/2/QualifierType`
 a|_NameType_ a|
 "ExpressionSemantic" (as specified in DIN DKE SPEC 92000:2019-09, see xref:bibliography.adoc#bib16[[16\]])
 
@@ -252,7 +252,7 @@ a|_NameType_ a|
 
 
 
-.2+e|[[RevisionType]]RevisionType 2+| `\https://admin-shell.io/aas/3/1/RevisionType`
+.2+e|[[RevisionType]]RevisionType 2+| `\https://admin-shell.io/aas/3/2/RevisionType`
 a|
 _string_ with max 4 and min 1 characters
 following the following regular expression:
@@ -266,7 +266,7 @@ a|
 
 "567"
 
-.2+e|[[ValueDataType]]ValueDataType 2+| `\https://admin-shell.io/aas/3/1/ValueDataType`
+.2+e|[[ValueDataType]]ValueDataType 2+| `\https://admin-shell.io/aas/3/2/ValueDataType`
 a|_any xsd atomic type as specified via xref:DataTypeDefXsd[DataTypeDefXsd]_ a|
 "This is a string value"
 
@@ -279,7 +279,7 @@ a|_any xsd atomic type as specified via xref:DataTypeDefXsd[DataTypeDefXsd]_ a|
 True
 
 
-.2+e|[[VersionType]]VersionType 2+| `\https://admin-shell.io/aas/3/1/VersionType`
+.2+e|[[VersionType]]VersionType 2+| `\https://admin-shell.io/aas/3/2/VersionType`
 a|
 _string_ with max 4 and min 1 characters
 
@@ -556,7 +556,7 @@ Enumeration listing selected xsd anySimpleTypes of XML Schema 1.0
 For more details see https://www.w3.org/TR/xmlschema-2/#built-in-primitive-datatypes
 
 |Set of: |--
-h|ID: | `\https://admin-shell.io/aas/3/1/DataTypeDefXsd`
+h|ID: | `\https://admin-shell.io/aas/3/2/DataTypeDefXsd`
 
 h|Literal h|Explanation
 e|xs:anyURI |see: https://www.w3.org/TR/xmlschema-2/#anyURI
@@ -597,7 +597,7 @@ e|xs:unsignedShort |see: https://www.w3.org/TR/xmlschema-2/#unsignedShort
 h|Enumeration: |[[DataTypeDefRdf]]DataTypeDefRdf
 h|Explanation: |Enumeration listing all RDF types
 |Set of: |--
-h|ID: | `\https://admin-shell.io/aas/3/1/DataTypeDefRdf`
+h|ID: | `\https://admin-shell.io/aas/3/2/DataTypeDefRdf`
 
 h|Literal h|Explanation
 e|rdf:langString |String with a language tag

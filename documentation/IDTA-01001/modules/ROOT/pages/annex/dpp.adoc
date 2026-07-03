@@ -357,7 +357,7 @@ generated from the Aspect Model conformant to IDTA-01023, is the schema that can
 So in combination it would be the "semanticId" of SMT IDTA-02035-3 that is "https://admin-shell.io/idta/CarbonFootprint/CarbonFootprint/1/0", 
 (see <<code-batterypass-pcf-valueonly-json>>).
 The second value to be standardized is the one for the contentSpecificationIds. 
-For details on "contentSpecificationIds" see Submodel Template Specification IDTA-02099.
+For details on "contentSpecificationIds" see Submodel Template Specification IDTA-02099-1.
 
 
 .Example DPP compressed serialization for Battery Passport, PCF data 
@@ -391,7 +391,7 @@ For details on "contentSpecificationIds" see Submodel Template Specification IDT
 }
 ----
 
-In <<code-batterypass-normal-json>> an example is shown how a payload similar to the link:https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1.2/mappings/mappings.html#_format_normal_in_json[AAS "Normal"-Format] could look like. 
+In <<code-batterypass-normal-json>> an example is shown how a payload similar to the link:https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.2/mappings/mappings.html#_format_normal_in_json[AAS "Normal"-Format] could look like. 
 
 .Example JTC24 expanded Full serialization JSON Paylaod for Battery Passport, PCF data 
 [[code-batterypass-normal-json]]

@@ -29,18 +29,18 @@ For more detailed information on the _derivedFrom_ concept, see  xref:annex/gene
 h|Class: 3+e|[[AssetAdministrationShell]]AssetAdministrationShell
 h|Explanation: 3+a|An Asset Administration Shell
 h|Inherits from: 3+|xref:spec-metamodel/common.adoc#Identifiable[Identifiable]; xref:spec-metamodel/common.adoc#HasDataSpecification[HasDataSpecification]
-h|ID: 3+| `\https://admin-shell.io/aas/3/1/AssetAdministrationShell`
+h|ID: 3+| `\https://admin-shell.io/aas/3/2/AssetAdministrationShell`
 
 .2+h|Attribute 3+h| ID
 h|Explanation h|Type h|Card.
 
-.2+e|derivedFrom 3+| `\https://admin-shell.io/aas/3/1/AssetAdministrationShell/derivedFrom`
+.2+e|derivedFrom 3+| `\https://admin-shell.io/aas/3/2/AssetAdministrationShell/derivedFrom`
 a|The reference to the Asset Administration Shell, which the Asset Administration Shell was derived from |ModelReference<xref:spec-metamodel/core.adoc#aas_attributes[AssetAdministrationShell]> |0..1
 
-.2+e|assetInformation 3+| `\https://admin-shell.io/aas/3/1/AssetAdministrationShell/assetInformation`
+.2+e|assetInformation 3+| `\https://admin-shell.io/aas/3/2/AssetAdministrationShell/assetInformation`
 a|Meta information about the asset, the Asset Administration Shell is representing |xref:spec-metamodel/core.adoc#AssetInformation[AssetInformation] |1
 
-.2+e|submodel 3+| `\https://admin-shell.io/aas/3/1/AssetAdministrationShell/submodel`
+.2+e|submodel 3+| `\https://admin-shell.io/aas/3/2/AssetAdministrationShell/submodel`
 a|
 Reference to a Submodel of the Asset Administration Shell
 
@@ -85,15 +85,15 @@ Note: see  xref:spec-metamodel/constraints.adoc#constraints-for-asset-related-in
 
 
 h|Inherits from: 3+|--
-h|ID: 3+| `\https://admin-shell.io/aas/3/1/AssetInformation`
+h|ID: 3+| `\https://admin-shell.io/aas/3/2/AssetInformation`
 
 .2+h|Attribute 3+h| ID
 h|Explanation h|Type h|Card.
 
-.2+e|[[assetKind]]assetKind  3+| `\https://admin-shell.io/aas/3/1/AssetInformation/assetKind`
+.2+e|[[assetKind]]assetKind  3+| `\https://admin-shell.io/aas/3/2/AssetInformation/assetKind`
 a|Denotes whether the asset is of kind "Type", Instance", "Batch", "Role" or none of these types is applicable |xref:AssetKind[AssetKind]|1
 
-.2+e|[[globalAssetId]]globalAssetId 3+| `\https://admin-shell.io/aas/3/1/AssetInformation/globalAssetId`
+.2+e|[[globalAssetId]]globalAssetId 3+| `\https://admin-shell.io/aas/3/2/AssetInformation/globalAssetId`
 a|
 Identifier of the asset, the Asset Administration Shell is representing
 
@@ -103,10 +103,10 @@ The internal identifier would be modelled via "specificAssetId".
 
 |xref:spec-metamodel/datatypes.adoc#Identifier[Identifier] |0..1
 
-.2+e|[[specificAssetId]]specificAssetId 3+| `\https://admin-shell.io/aas/3/1/AssetInformation/specificAssetId`
+.2+e|[[specificAssetId]]specificAssetId 3+| `\https://admin-shell.io/aas/3/2/AssetInformation/specificAssetId`
 a|Additional domain-specific, typically proprietary identifier for the asset like serial number, manufacturer part ID, customer part IDs, etc |xref:SpecificAssetId[SpecificAssetId] |0..*
 
-.2+e|[[assetType]]assetType 3+| `\https://admin-shell.io/aas/3/1/AssetInformation/assetType`
+.2+e|[[assetType]]assetType 3+| `\https://admin-shell.io/aas/3/2/AssetInformation/assetType`
 a|
 In case _AssetInformation/assetKind_ is not xref:AssetKind[NotApplicable] the _AssetInformation/assetType_ is the asset ID of the type asset of the asset under consideration as identified by _AssetInformation/globalAssetId_.
 
@@ -119,7 +119,7 @@ But it is also possible to have an _AssetInformation/assetType_ of an asset of x
 
 |xref:spec-metamodel/datatypes.adoc#Identifier[Identifier] |0..1
 
-.2+e|[[defaultThumbnail]]defaultThumbnail 3+| `\https://admin-shell.io/aas/3/1/AssetInformation/defaultThumbnail`
+.2+e|[[defaultThumbnail]]defaultThumbnail 3+| `\https://admin-shell.io/aas/3/2/AssetInformation/defaultThumbnail`
 a|Thumbnail of the asset represented by the Asset Administration Shell; used as default. |xref:Resource[Resource] |0..1
 |===
 
@@ -140,12 +140,12 @@ h|Explanation:
 3+a|Resource represents an address to a file (a locator).
 The value is a URI that can represent an absolute or relative path.
 h|Inherits from: 3+|--
-h|ID: 3+| `\https://admin-shell.io/aas/3/1/Resource`
+h|ID: 3+| `\https://admin-shell.io/aas/3/2/Resource`
 
 .2+h|Attribute 3+h| ID
 h|Explanation h|Type h|Card.
 
-.2+e|path 3+| `\https://admin-shell.io/aas/3/1/Resource/path`
+.2+e|path 3+| `\https://admin-shell.io/aas/3/2/Resource/path`
 a|
 Path and name of the resource (with file extension)
 
@@ -153,7 +153,7 @@ The path can be absolute or relative.
 
 |xref:spec-metamodel/datatypes.adoc#PathType[PathType] |1
 
-.2+e|contentType 3+| `\https://admin-shell.io/aas/3/1/Resource/contentType`
+.2+e|contentType 3+| `\https://admin-shell.io/aas/3/2/Resource/contentType`
 a|
 Content type of the content of the file
 
@@ -173,24 +173,24 @@ The content type states which file extensions the file can have.
 h|Explanation: a|Enumeration for denoting whether an asset is a type asset or
 an instance asset or a batch asset or is a role or whether this kind of classification is not applicable
 h|Set of: |--
-h|ID: | `\https://admin-shell.io/aas/3/1/AssetKind`
+h|ID: | `\https://admin-shell.io/aas/3/2/AssetKind`
 
 .2+h|Literal h| ID
 h|Explanation
 
-.2+e|Type | `\https://admin-shell.io/aas/3/1/AssetKind/Type`
+.2+e|Type | `\https://admin-shell.io/aas/3/2/AssetKind/Type`
 a|Type asset
 
-.2+e|Instance | `\https://admin-shell.io/aas/3/1/AssetKind/Instance`
+.2+e|Instance | `\https://admin-shell.io/aas/3/2/AssetKind/Instance`
 a|Instance asset
 
-.2+e|Batch | `\https://admin-shell.io/aas/3/1/AssetKind/Batch`
+.2+e|Batch | `\https://admin-shell.io/aas/3/2/AssetKind/Batch`
 a|batch asset
 
-.2+e|Role | `\https://admin-shell.io/aas/3/1/AssetKind/Role`
+.2+e|Role | `\https://admin-shell.io/aas/3/2/AssetKind/Role`
 a|Role asset
 
-.2+e|NotApplicable | `\https://admin-shell.io/aas/3/1/AssetKind/NotApplicable`
+.2+e|NotApplicable | `\https://admin-shell.io/aas/3/2/AssetKind/NotApplicable`
 a|Neither a type asset nor an instance asset nor a role asset
 
 |===
@@ -212,18 +212,18 @@ The specific asset ID is not necessarily globally unique.
 
 
 h|Inherits from: 3+|xref:spec-metamodel/common.adoc#HasSemantics[HasSemantics]
-h|ID: 3+| `\https://admin-shell.io/aas/3/1/SpecificAssetId`
+h|ID: 3+| `\https://admin-shell.io/aas/3/2/SpecificAssetId`
 
 .2+h|Attribute 3+h| ID
 h|Explanation h|Type h|Card.
 
-.2+e|name 3+| `\https://admin-shell.io/aas/3/1/SpecificAssetId/name`
+.2+e|name 3+| `\https://admin-shell.io/aas/3/2/SpecificAssetId/name`
 a|Name of the asset identifier |xref:spec-metamodel/datatypes.adoc#LabelType[LabelType] |1
 
-.2+e|value 3+| `\https://admin-shell.io/aas/3/1/SpecificAssetId/value`
+.2+e|value 3+| `\https://admin-shell.io/aas/3/2/SpecificAssetId/value`
 a|The value of the specific asset identifier with the corresponding name |xref:spec-metamodel/datatypes.adoc#Identifier[Identifier] |1
 
-.2+e|externalSubjectId 3+| `\https://admin-shell.io/aas/3/1/SpecificAssetId/externalSubjectId`
+.2+e|externalSubjectId 3+| `\https://admin-shell.io/aas/3/2/SpecificAssetId/externalSubjectId`
 a|
 The unique ID of the (external) subject the specific asset ID _value_ belongs to or has meaning to
 
@@ -281,12 +281,12 @@ Submodels can become standardized and, in turn, Submodel templates.
 
 
 h|Inherits from: 3+|xref:spec-metamodel/common.adoc#Identifiable[Identifiable]; xref:spec-metamodel/common.adoc#HasKind[HasKind]; xref:spec-metamodel/common.adoc#HasSemantics[HasSemantics]; xref:spec-metamodel/common.adoc#Qualifiable[Qualifiable]; xref:spec-metamodel/common.adoc#HasDataSpecification[HasDataSpecification]
-h|ID: 3+| `\https://admin-shell.io/aas/3/1/Submodel`
+h|ID: 3+| `\https://admin-shell.io/aas/3/2/Submodel`
 
 .2+h|Attribute 3+h| ID
 h|Explanation h|Type h|Card.
 
-.2+e|submodelElement 3+| `\https://admin-shell.io/aas/3/1/Submodel/submodelElement`
+.2+e|submodelElement 3+| `\https://admin-shell.io/aas/3/2/Submodel/submodelElement`
 a|SubmodelElement contained in the Submodel |xref:SubmodelElement[SubmodelElement] |0..*
 |===
 
@@ -314,7 +314,7 @@ Otherwise, there is only the property definition referenced by xref:spec-metamod
 h|Class: 3+e|[[SubmodelElement]]SubmodelElement \<<abstract>>
 h|Explanation: 3+a|A SubmodelElement is an element suitable for the description and differentiation of assets.
 h|Inherits from: 3+|xref:spec-metamodel/common.adoc#Referable[Referable]; xref:spec-metamodel/common.adoc#HasSemantics[HasSemantics]; xref:spec-metamodel/common.adoc#Qualifiable[Qualifiable]; xref:spec-metamodel/common.adoc#HasDataSpecification[HasDataSpecification]
-h|ID: 3+| `\https://admin-shell.io/aas/3/1/SubmodelElement`
+h|ID: 3+| `\https://admin-shell.io/aas/3/2/SubmodelElement`
 
 .2+h|Attribute 3+h| ID
 h|Explanation h|Type h|Card.

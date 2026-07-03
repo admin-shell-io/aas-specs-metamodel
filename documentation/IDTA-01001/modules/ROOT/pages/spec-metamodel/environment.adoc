@@ -28,17 +28,17 @@ It is introduced to enable file transfer as well as serialization.
 h|Class: 3+e|[[Environment]]Environment
 h|Explanation: 3+a|Container for the sets of different identifiables
 h|Inherits from: 3+| --
-h|ID: 3+| `\https://admin-shell.io/aas/3/1/Environment`
+h|ID: 3+| `\https://admin-shell.io/aas/3/2/Environment`
 
 .2+h|Attribute 3+h| ID
 h|Explanation h|Type h|Card.
 
-.2+e|assetAdministrationShell 3+| `\https://admin-shell.io/aas/3/1/Environment/assetAdministrationShell`
+.2+e|assetAdministrationShell 3+| `\https://admin-shell.io/aas/3/2/Environment/assetAdministrationShell`
 a|Asset Administration Shell |xref:spec-metamodel/core.adoc#AssetAdministrationShell[AssetAdministrationShell] |0..*
 
-.2+e|submodel 3+| `\https://admin-shell.io/aas/3/1/Environment/submodel`
+.2+e|submodel 3+| `\https://admin-shell.io/aas/3/2/Environment/submodel`
 a|Submodel |xref:spec-metamodel/core.adoc#Submodel[Submodel] |0..*
 
-.2+e|conceptDescription 3+| `\https://admin-shell.io/aas/3/1/Environment/conceptDescription`
+.2+e|conceptDescription 3+| `\https://admin-shell.io/aas/3/2/Environment/conceptDescription`
 a|Concept description |xref:spec-metamodel/concept-description.adoc#ConceptDescription[ConceptDescription] |0..*
 |===
