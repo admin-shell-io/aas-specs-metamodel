@@ -233,7 +233,7 @@ h| EN 18223  h| AAS   h| comment
 
 |DataElement 	(abstract)			| `\https://admin-shell.io/aas/3/2/SubmodelElement` 
 
-SubmodelElement (SME)	(abstract)	a|
+SubmodelElement (SME)	(abstract)	a| AAS supports some more SubmodelElement subtypes than EN 18223 but those can be modelled with the means of EN 18223
  
 |MultiLanguageDataElement 	| `\https://admin-shell.io/aas/3/2/MultiLanguageProperty` 
 
@@ -249,11 +249,11 @@ Blob		a| A Blob can be realized with a EN 18223 SingleValuedDataElement with val
 
 |MultiValuedDataElement		| `\https://admin-shell.io/aas/3/2/SubmodelElementList` 
 
-SubmodelElementList 			a|  SubmodelElementLists only with Elements of type MultiLanguageProperty, SubmodelElementCollection, File or Property: they can be directly mapped
+SubmodelElementList 			a| SubmodelElementLists only with Elements of type MultiLanguageProperty, SubmodelElementCollection, SubmodelElementList, File or Property: they can be directly mapped
  
 |DataElementCollection 		| `\https://admin-shell.io/aas/3/2/SubmodelElementCollection` 
 
-SubmodelElementCollection a|
+SubmodelElementCollection a| SubmodelElementCollections only with Elements of type MultiLanguageProperty, SubmodelElementCollection, SubmodelElementList, File or Property: they can be directly mapped
  
 |RelatedResource 			| `\https://admin-shell.io/aas/3/2/File` 
 
