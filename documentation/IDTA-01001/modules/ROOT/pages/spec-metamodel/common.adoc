@@ -64,7 +64,7 @@ e) xref:spec-metamodel/common.adoc#templateId[templateId]
 
 
 ====
-Note: per specification the xref:spec-metamodel/common.adoc#Identifiable[IDs] of these two Submodels are not identical.
+Note: Per specification the xref:spec-metamodel/common.adoc#Identifiable[IDs] of any two submodels in an Asset Administration Shell can never be identical.
 ====
 
 With a) both submodels shall have version information. 
