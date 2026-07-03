@@ -42,7 +42,7 @@ xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformat
 Data specifications are defined in IDTA-01003 sub-series.
 
 If an AAS contains two different Submodels with the same semanticId 
-(xref:spec-metamodel/common.adoc#semanticId[Submodel/semanticId]) they shall differ in their ((xref:spec-metamodel/common.adoc#version[Submodel/administration]))
+(xref:spec-metamodel/common.adoc#semanticId[Submodel/semanticId]) they shall differ in their (xref:spec-metamodel/common.adoc#version[Submodel/administration])
 
 a) xref:spec-metamodel/common.adoc#version[version]   (xref:spec-metamodel/common.adoc#revision[revision] is ignored) 
 
