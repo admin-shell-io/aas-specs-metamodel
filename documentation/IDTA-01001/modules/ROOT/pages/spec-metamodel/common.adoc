@@ -632,10 +632,9 @@ h|Class: 3+e|[[Referable]]Referable \<<abstract>>
 h|Explanation: 3+a|
 Element that is referable by its idShort.
 
-====
-Note 1: this ID is not globally unique.
+This ID is not globally unique.
 This ID is unique within the name space of the element.
-====
+
 
 
 ====
