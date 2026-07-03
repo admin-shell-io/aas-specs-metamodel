@@ -294,7 +294,7 @@ a|
 
 |===
 
-== Enumeration for Submodel Element Value Types
+== Enumeration for SubmodelElement Value Types
 
 Enumerations are primitive data types.
 Most of the enumerations are defined in the context of their class.

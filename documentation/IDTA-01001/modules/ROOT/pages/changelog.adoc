@@ -42,19 +42,19 @@ They had separate sections and tables documenting the changes.
 
 Major Changes:
 
-* CHANGED: new attributes for creation and update date in AdministrationInformation  (https://github.com/admin-shell-io/aas-specs-metamodel/issues/484[#484])
-* CHANGED: new value to enumeration AssetKind: Batch to support Digital Product Passports (https://github.com/admin-shell-io/aas-specs-metamodel/issues/483[#483])
-* NEW: new section in the annex on metamodel and payload mapping for implementing the digital product passport (DPP) based on EN 18223
+* CHANGED: attributes for creation and update date in AdministrationInformation  (https://github.com/admin-shell-io/aas-specs-metamodel/issues/484[#484])
+* CHANGED: value to enumeration AssetKind: Batch to support Digital Product Passports (https://github.com/admin-shell-io/aas-specs-metamodel/issues/483[#483])
+* NEW: section in the annex on metamodel and payload mapping for implementing the digital product passport (DPP) based on EN 18223
 * NEW: explanatory section added for Value-Only for Operations (https://github.com/admin-shell-io/aas-specs-metamodel/issues/652[#652])
 * CHANGED: Value-Only JSON Schema - add referredSemanticId to data type Reference (https://github.com/admin-shell-io/aas-specs-metamodel/issues/651[#651]) 
 * CHANGED: SubmodelElement "Range" - remove conditions "If the min value is missing, the value is assumed to be negative infinite." and "If the max value is missing, the value is assumed to be positive infinite." 
   (https://github.com/admin-shell-io/aas-specs-metamodel/issues/639[#639])
-* NEW: new Constraint AASd-137 for References (https://github.com/admin-shell-io/aas-specs-metamodel/issues/592[#592])
-* NEW: new Constraint AASd-138 for SubmodelElementList for OperationVariable (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
+* NEW: Constraint AASd-137 for References (https://github.com/admin-shell-io/aas-specs-metamodel/issues/592[#592])
+* NEW: Constraint AASd-138 for SubmodelElementList for OperationVariable (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
 * CHANGED: Constraint AASd-129, add exception if the SubmodelElement is part of an OperationVariable (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
 * CHANGED: changed description of Constraint AASd-116, made more generic to avoid frequent updates (https://github.com/admin-shell-io/aas-specs-metamodel/issues/674[#674])
-* ADDED: A minimum recursion depth of 32 for Container-Elements should be supported. Note: This means for certification a maximum of 32 recursion test cases should be tested. (https://github.com/admin-shell-io/aas-specs-metamodel/issues/333[#333])
-
+* ADDED: a minimum recursion depth of 32 for Container-Elements should be supported. Note: This means for certification a maximum of 32 recursion test cases should be tested. (https://github.com/admin-shell-io/aas-specs-metamodel/issues/333[#333])
+* ADDED: explanatory text for handling of versions and dates in xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation]
 
 
 Minor Changes:
@@ -72,6 +72,9 @@ Minor Changes:
 * ADDED: Handling of operations in Submodel with kind=Instance are handled identical to operation in Submodel Templates (Submodel with kind=Template) (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
 * CHANGED: update bibliography
 * CHANGED: editorial changes (including https://github.com/admin-shell-io/aas-specs-metamodel/issues/600[#600], https://github.com/admin-shell-io/aas-specs-metamodel/issues/636[#636], https://github.com/admin-shell-io/aas-specs-metamodel/issues/637[#637], https://github.com/admin-shell-io/aas-specs-metamodel/issues/638[#638] )
+* NEW: add to xref:index.adoc#spec-versioning[Versioning] that bugfix releases are not no necessarily backward compatible
+* REMOVED: AdministrativeInformation: remove former Note 2
+* ADDED: Note that AdministrativeInformation/templateId only applicable for Submodels so far
 
 
 Minor Bugfixes:
@@ -88,9 +91,9 @@ Minor Bugfixes:
 |===
 h|Nc h|V3.2 Change w.r.t. V3.1.1 h|Comment
 
-| {empty} | xref:spec-metamodel/core.adoc#AssetKind[AssetKind] a| Add new value "Batch" to enumeration AssetKind
+| {empty} | xref:spec-metamodel/core.adoc#AssetKind[AssetKind] a| add new value "Batch" to enumeration AssetKind to support DPP applications
 
-| x |Range a| remove conditions "If the min value is missing, the value is assumed to be negative infinite." and "If the max value is missing, the value is assumed to be positive infinite." 
+| x |xref:spec-metamodel/submodel-elements.adoc#Range[Range] a| remove conditions "If the min value is missing, the value is assumed to be negative infinite." and "If the max value is missing, the value is assumed to be positive infinite." 
    
    Note 1: some data types like float do have infinite in its value range per definition and should be used if infinite is needed. 
    
@@ -104,9 +107,9 @@ h|Nc h|V3.2 Change w.r.t. V3.1.1 h|Comment
 [cols="5%,42%,48%",options="header",]
 |===
 h|Nc h|New Elements V3.2 vs V3.1 h|Comment
-|{empty} | AdministrativeInformation/createdAt  a| 
-|{empty} | AdministrativeInformation/updatedAt  a| 
-|{empty} | xref:spec-metamodel/core.adoc#AssetKind[AssetKind/Batch] a| Add new value "Batch" to enumeration AssetKind
+|{empty} | xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation/createdAt]  a| add createdAt date attribute to enable performant querying of new objects
+|{empty} | xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation/updatedAt]  a| add updatedAt date attribute to enable DPP methods
+|{empty} | xref:spec-metamodel/core.adoc#AssetKind[AssetKind/Batch] a| add new value "Batch" to enumeration AssetKind
 |===
 
 
@@ -262,8 +265,6 @@ https://github.com/admin-shell-io/aas-specs-metamodel/issues/471[#471],
 ** ADDED: add clause for Submodel Example (with properties from SMT Technical Data, not Families any longer)
 * CHANGED: update Schema for JSON-Value Serialization (https://github.com/admin-shell-io/aas-specs-metamodel/issues/389[#389])
 * REMOVED: remove recommendation to use external references for semanticId (https://github.com/admin-shell-io/aas-specs-metamodel/issues/376[#376]) and related attributes like valueId, semanticIdListElement and isCaseOf (https://github.com/admin-shell-io/aas-specs-metamodel/issues/396[#396], https://github.com/admin-shell-io/aas-specs-metamodel/issues/396[#396])
-* ADDED: add note: A maximum recursion depth of 32 for Container-Elements should be supported.
-This means for certification a maximum of 32 recursion test cases should be tested. (https://github.com/admin-shell-io/aas-specs-metamodel/issues/333[#333]) 
 * REMOVED: remove clauses on OPC UA and AutomationML mappings (https://github.com/admin-shell-io/aas-specs-metamodel/issues/373[#373], https://github.com/admin-shell-io/aas-specs-metamodel/issues/397[#397])
 * CHANGED: update explanatory text and notes in the context of AdministrativeInformation (https://github.com/admin-shell-io/aas-specs-metamodel/issues/331[#331])
 * CHANGED: move chapter "General" to Annex
@@ -287,7 +288,6 @@ Minor Changes:
 
 
 * CHANGED: add new data type "DateTimeUtc" and use it for attribute _lastUpdate_ of _BasicEventElement_ and attribute _timeStamp_ of _EventPayload_ (https://github.com/admin-shell-io/aas-specs-metamodel/issues/498[#498])
-* CHANGED: change recommendation for recursion: from "[..] maximum recursion depth of 32 [..]" to "A recursion depth of 32 should not be exceeded. The recommendation is to have not more than 8 recursions in a submodel. Test engines should test at least 16 recursions."
 * add Annex with overview of constraints (https://github.com/admin-shell-io/aas-specs-metamodel/issues/509[#509])
 * CHANGED: update Constraint AASd-116 (https://github.com/admin-shell-io/aas-specs-metamodel/issues/298[#298])
 * REMOVED: remove information on OPC UA mapping (https://github.com/admin-shell-io/aas-specs-metamodel/issues/373[#373])

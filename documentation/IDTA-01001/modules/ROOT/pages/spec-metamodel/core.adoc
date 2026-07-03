@@ -260,8 +260,8 @@ include::partial$diagrams/26-submodel.puml[]
 
 Adding a _semanticId_ for a Submodel is recommended (see xref:annex/general.adoc#table-elements-with-allowed-identifying-values[Table "Elements with Allowed Identifying Values"]).
 
-If the Submodel is of _kind=Template_ (modelling kind as inherited by _HasKind_), the Submodel elements within the Submodel are presenting SubmodelElement templates.
-If the Submodel is of _kind=Instance_, its Submodel elements represent SubmodelElement instances.
+If the Submodel is of _kind=Template_ (modelling kind as inherited by _HasKind_), the SubmodelElements within the Submodel are presenting SubmodelElement templates.
+If the Submodel is of _kind=Instance_, its SubmodelElements represent SubmodelElement instances.
 
 ====
 Note: validators shall handle a Submodel like _SubmodelElementCollection/submodelElements_ and not like a _SubmodelElementList/value_.
@@ -287,24 +287,24 @@ h|ID: 3+| `\https://admin-shell.io/aas/3/2/Submodel`
 h|Explanation h|Type h|Card.
 
 .2+e|submodelElement 3+| `\https://admin-shell.io/aas/3/2/Submodel/submodelElement`
-a|A Submodel consists of zero or more Submodel elements. |xref:SubmodelElement[SubmodelElement] |0..*
+a|SubmodelElement contained in the Submodel |xref:SubmodelElement[SubmodelElement] |0..*
 |===
 
 [#submodel-element-attributes]
-== Submodel Element Attributes
+== SubmodelElement Attributes
 
-.Metamodel of Submodel Element
+.Metamodel of SubmodelElement
 [plantuml, 27-submodel-element, svg]
 ....
 include::partial$diagrams/27-submodel-element.puml[]
 ....
 
 
-Submodel elements are qualifiable elements, i.e. one or more qualifiers may be defined for each of them.
+SubmodelElements are qualifiable elements, i.e. one or more qualifiers may be defined for each of them.
 
 It is recommended to add a xref:spec-metamodel/common.adoc#HasSemantics[HasSemantics/semanticId] to a _SubmodelElement_.
 
-Submodel elements may also have defined data specification templates.
+SubmodelElements may also have defined data specification templates.
 A template might be defined to mirror some of the attributes like _preferredName_ and _unit_ of a property concept definition if there is no corresponding concept description available.
 Otherwise, there is only the property definition referenced by xref:spec-metamodel/common.adoc#HasSemantics[HasSemantics/semanticId] available for the property; the attributes must be looked up online in a different way and are not available offline.
 

@@ -265,19 +265,19 @@ a|Submodel
 
 .2+e|SubmodelElement | `\https://admin-shell.io/aas/3/2/KeyTypes/SubmodelElement`
 a|
-Submodel element
+SubmodelElement
 
 
 ====
-Note: Submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
+Note: SubmodelElements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
 ====
 
 
 .2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/2/KeyTypes/SubmodelElementCollection`
-a|Struct of Submodel elements
+a|Struct of SubmodelElements
 
 .2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/2/KeyTypes/SubmodelElementList`
-a|List of Submodel elements
+a|List of SubmodelElements
 |===
 
 
@@ -371,19 +371,19 @@ a|Relationship
 
 .2+e|SubmodelElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/SubmodelElement`
 a|
-Submodel element
+SubmodelElement
 
 
 ====
-Note: Submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
+Note: SubmodelElements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
 ====
 
 
 .2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/2/FragmentKeys/SubmodelElementCollection`
-a|Struct of Submodel elements
+a|Struct of SubmodelElements
 
 .2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/2/FragmentKeys/SubmodelElementList`
-a|List of Submodel elements
+a|List of SubmodelElements
 |===
 
 {empty} +
@@ -485,19 +485,19 @@ a|Relationship
 
 .2+e|SubmodelElement | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/SubmodelElement`
 a|
-Submodel element
+SubmodelElement
 
 
 ====
-Note: Submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
+Note: SubmodelElements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
 ====
 
 
 .2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/SubmodelElementCollection`
-a|Struct of Submodel elements
+a|Struct of SubmodelElements
 
 .2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/SubmodelElementList`
-a|List of Submodel elements
+a|List of SubmodelElements
 |===
 
 
@@ -613,10 +613,10 @@ a|Entity
 
 
 .2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/2/AasContainerSubmodelElements/SubmodelElementCollection`
-a|Struct of Submodel elements
+a|Struct of SubmodelElements
 
 .2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/2/AasContainerSubmodelElements/SubmodelElementList`
-a|List of Submodel elements
+a|List of SubmodelElements
 |===
 
 
@@ -733,19 +733,19 @@ Submodel
 
 .2+e|SubmodelElement | `\https://admin-shell.io/aas/3/2/AasReferables/SubmodelElement`
 a|
-Submodel element
+SubmodelElement
 
 
 ====
-Note: Submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
+Note: SubmodelElements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
 ====
 
 
 .2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/2/AasReferables/SubmodelElementCollection`
-a|Struct of Submodel elements
+a|Struct of SubmodelElements
 
 .2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/2/AasReferables/SubmodelElementList`
-a|List of Submodel elements
+a|List of SubmodelElements
 |===
 
 ===  Logical Enumeration GenericFragmentKeys
@@ -1120,7 +1120,7 @@ Key "Property" is no generic fragment key and therefore fragment key "FragmentRe
 (Submodel)https://example.com/aas/1/1/1234859590, (EventElement)Event, (FragmentReference)Comment
 ....
 
-This model reference is invalid because fragment references so far are only defined for "File" and "Blob" Submodel elements (see xref:spec-metamodel/referencing.adoc#constraint-AASd-127[Constraint AASd-127]).
+This model reference is invalid because fragment references so far are only defined for "File" and "Blob" SubmodelElements (see xref:spec-metamodel/referencing.adoc#constraint-AASd-127[Constraint AASd-127]).
 
 
 [example]
