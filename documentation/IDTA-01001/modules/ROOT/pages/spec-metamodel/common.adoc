@@ -48,15 +48,15 @@ a) xref:spec-metamodel/common.adoc#version[version]   (xref:spec-metamodel/commo
 
 or in their
 
-b) their xref:spec-metamodel/common.adoc#createdAt[createdAt] or xref:spec-metamodel/common.adoc#updatedAt[updatedAt] date
+b)  xref:spec-metamodel/common.adoc#createdAt[createdAt] or xref:spec-metamodel/common.adoc#updatedAt[updatedAt] date
 
 or in their
 
-c) their xref:spec-metamodel/common.adoc#creator[creator]  
+c) xref:spec-metamodel/common.adoc#creator[creator]  
 
 or in their
 
-d) their xref:spec-metamodel/common.adoc#supplementalSemanticId[supplementalSemanticId]
+d)  xref:spec-metamodel/common.adoc#supplementalSemanticId[supplementalSemanticId]
 
 or in their
 
