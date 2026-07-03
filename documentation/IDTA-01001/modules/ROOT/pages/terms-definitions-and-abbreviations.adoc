@@ -268,7 +268,7 @@ _[SOURCE: according to ISO/IEC Guide 77-2] as well as [SOURCE: according to Glos
 [[term-qualifier]]
 *qualifier*::
 
-well-defined element associated with a <<term-property,property>>  instance or xref:terms-definitions-and-abbreviations.adoc#term-submodel-element[submodel element], restricting the value statement to a certain period of time or use case
+well-defined element associated with a <<term-property,property>>  instance or xref:terms-definitions-and-abbreviations.adoc#term-submodel-element[SubmodelElement], restricting the value statement to a certain period of time or use case
 
 ====
 Note 1 to entry: qualifiers can have associated values.

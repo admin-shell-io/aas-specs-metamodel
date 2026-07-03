@@ -227,7 +227,7 @@ include::partial$diagrams/DPP_Data.puml[]
 
 https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1.2/mappings/mappings.html#value-only-serialization-in-json
 
-.Mapping EN 18223 data elements to AAS submodel elements
+.Mapping EN 18223 data elements to AAS SubmodelElements
 [.table-with-appendix-table]
 [cols="25%,30%,45%"]
 |===
