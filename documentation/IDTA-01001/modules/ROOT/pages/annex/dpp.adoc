@@ -124,14 +124,14 @@ Therefore, in the absence of a definitive specification, this document puts fort
 [source,json,linenums]
 ----
 {
-   "digitalProductPassportId":"https://www.example.org/dpp/1234545",
-   "uniqueProductIdentifier":"https://www.example.org/1234545",
-   "granularity":"Item",
-   "dppSchemaVersion":"ENXXX:v1.0",
-   "dppStatus":"Active",
-   "lastUpdate":"2025-08-22T03:12:00Z",
-   "economicOperatorId":"gxx:ppp456789",
-   "facilityId":"gxx:xxx987654",
+   "digitalProductPassportId": "https://www.example.org/dpp/1234545",
+   "uniqueProductIdentifier": "https://www.example.org/1234545",
+   "granularity": "Item",
+   "dppSchemaVersion": "ENXXX:v1.0",
+   "dppStatus": "Active",
+   "lastUpdate": "2025-08-22T03:12:00Z",
+   "economicOperatorId": "gxx:ppp456789",
+   "facilityId": "gxx:xxx987654",
    "contentSpecificationIds":[
       "https://admin-shell-io/idta/digitalpassport/Nameplate/1",
       "https://admin-shell-io/idta/digitalpassport/TechnicalData/1",
@@ -298,14 +298,14 @@ It is the starting point for the corresponding Submodel data.
 [source,json,linenums]
 ----
 {
-   "digitalProductPassportId":"https://www.example.org/dpp/1234545",
-   "uniqueProductIdentifier":"https://www.example.org/1234545",
-   "granularity":"Item",
-   "dppSchemaVersion":"ENXXX:v1.0",
-   "dppStatus":"Active",
-   "lastUpdate":"2025-08-22T03:12:00Z",
-   "economicOperatorId":"gxx:ppp456789",
-   "facilityId":"gxx:xxx987654",
+   "digitalProductPassportId": "https://www.example.org/dpp/1234545",
+   "uniqueProductIdentifier": "https://www.example.org/1234545",
+   "granularity": "Item",
+   "dppSchemaVersion": "ENXXX:v1.0",
+   "dppStatus": "Active",
+   "lastUpdate": "2025-08-22T03:12:00Z",
+   "economicOperatorId": "gxx:ppp456789",
+   "facilityId": "gxx:xxx987654",
    "contentSpecificationIds":[
       "https://admin-shell-io/idta/digitalpassport/Nameplate/1",
       "https://admin-shell-io/idta/digitalpassport/TechnicalData/1",
@@ -352,14 +352,14 @@ generated from the Aspect Model conformant to IDTA-01023, is the schema that can
       {
          "QuantityOfMeasureForCalculation":5.0,
          "PcfCo2eq":17.2,
-         "ReferenceImpactUnitForCalculation":"g",
+         "ReferenceImpactUnitForCalculation": "g",
          "WebLinkToPublicCarbonFootprintStudy":[
             "eOMtThyhVNLWUZNRcBaQK"
          ],
          "PcfCalculationMethods":[
             "ISO 14067"
          ],
-         "PerformanceClass":"eOMtThyhVNLWUZNRcBaQKxI",
+         "PerformanceClass": "eOMtThyhVNLWUZNRcBaQKxI",
          "LifeCyclePhases":[
             "C4 - landfill"
          ]
@@ -381,14 +381,14 @@ For details on "contentSpecificationIds" see Submodel Template Specification IDT
 [source,json,linenums]
 ----
 {
-   "digitalProductPassportId":"https://www.example.org/batterypassport/1234545",
-   "uniqueProductIdentifier":"https://www.example.org/1234545",
-   "granularity":"Item",
-   "dppSchemaVersion":"ENXXX:v1.0",
-   "dppStatus":"Active",
-   "lastUpdate":"2025-08-22T03:12:00Z",
-   "economicOperatorId":"gxx:ppp456789",
-   "facilityId":"gxx:xxx987654",
+   "digitalProductPassportId": "https://www.example.org/batterypassport/1234545",
+   "uniqueProductIdentifier": "https://www.example.org/1234545",
+   "granularity": "Item",
+   "dppSchemaVersion": "ENXXX:v1.0",
+   "dppStatus": "Active",
+   "lastUpdate": "2025-08-22T03:12:00Z",
+   "economicOperatorId": "gxx:ppp456789",
+   "facilityId": "gxx:xxx987654",
    "contentSpecificationIds":[
       "https://admin-shell.io/idta/CarbonFootprint/CarbonFootprint/1/0"
    ],
@@ -397,14 +397,14 @@ For details on "contentSpecificationIds" see Submodel Template Specification IDT
          {
             "QuantityOfMeasureForCalculation":5.0,
             "PcfCo2eq":17.2,
-            "ReferenceImpactUnitForCalculation":"g",
+            "ReferenceImpactUnitForCalculation": "g",
             "WebLinkToPublicCarbonFootprintStudy":[
                "eOMtThyhVNLWUZNRcBaQK"
             ],
             "PcfCalculationMethods":[
                "ISO 14067"
             ],
-            "PerformanceClass":"eOMtThyhVNLWUZNRcBaQKxI",
+            "PerformanceClass": "eOMtThyhVNLWUZNRcBaQKxI",
             "LifeCyclePhases":[
                "C4 - landfill"
             ]
@@ -421,28 +421,28 @@ In <<code-batterypass-normal-json>> an example is shown how a payload similar to
 [source,json,linenums]
 ----
 {
-   "digitalProductPassportId":"https://www.example.org/batterypassport/1234545",
-   "uniqueProductIdentifier":"https://www.example.org/1234545",
-   "granularity":"Item",
-   "dppSchemaVersion":"ENXXX:v1.0",
-   "dppStatus":"Active",
-   "lastUpdate":"2025-08-22T03:12:00Z",
-   "economicOperatorId":"gxx:ppp456789",
-   "facilityId":"gxx:xxx987654",
+   "digitalProductPassportId": "https://www.example.org/batterypassport/1234545",
+   "uniqueProductIdentifier": "https://www.example.org/1234545",
+   "granularity": "Item",
+   "dppSchemaVersion": "ENXXX:v1.0",
+   "dppStatus": "Active",
+   "lastUpdate": "2025-08-22T03:12:00Z",
+   "economicOperatorId": "gxx:ppp456789",
+   "facilityId": "gxx:xxx987654",
    "contentSpecificationIds":[
       "https://admin-shell.io/idta/CarbonFootprint/CarbonFootprint/1/0"
    ],
    "elements":[
       {
-         "elementId":"https://admin-shell.io/idta/CarbonFootprint/CarbonFootprint/1/0",
-         "objectType":"DataElementCollection",
-         "dictionaryReference":"https://admin-shell.io/idta/CarbonFootprint/CarbonFootprint/1/0",
+         "elementId": "https://admin-shell.io/idta/CarbonFootprint/CarbonFootprint/1/0",
+         "objectType": "DataElementCollection",
+         "dictionaryReference": "https://admin-shell.io/idta/CarbonFootprint/CarbonFootprint/1/0",
          "elements":[
             {
-               "elementId":"QuantityOfMeasureForCalculation",
-               "objectType":"SingleValuedDataElement",
-               "dictionaryReference":"https:/dictionary1.eu/QuantityOfMeasureForCalculation",
-               "valueDataType":"xsd:float",
+               "elementId": "QuantityOfMeasureForCalculation",
+               "objectType": "SingleValuedDataElement",
+               "dictionaryReference": "https:/dictionary1.eu/QuantityOfMeasureForCalculation",
+               "valueDataType": "xsd:float",
                "value":5.0
             }
          ]
@@ -489,10 +489,10 @@ In EN 18223 the entries within the list are realized like a predefined SubmodelE
 ----
 "title":[
    {
-      "en":"user manual"
+      "en": "user manual"
    },
    {
-      "de":"Kundendokumentation"
+      "de": "Kundendokumentation"
    }
 ]
 ----
@@ -503,12 +503,12 @@ In EN 18223 the entries within the list are realized like a predefined SubmodelE
 ----
 "title":[
    {
-      "value":"user manual",
-      "language":"en-IE"
+      "value": "user manual",
+      "language": "en-IE"
    },
    {
-      "value":"Kundendokumentation",
-      "language":"de"
+      "value": "Kundendokumentation",
+      "language": "de"
    }
 ]
 ----
@@ -524,10 +524,10 @@ This is realized in more depth with all needed meta information of a document in
 [source,json,linenums]
 ----
 {
-   "resourceTitle":"User Manual for the Smart Thermostat Pro",
-   "contentType":"application/pdf",
-   "url":"https://data.example.com/manuals/thermostat-pro_v2.1.pdf",
-   "language":"en-GB"
+   "resourceTitle": "User Manual for the Smart Thermostat Pro",
+   "contentType": "application/pdf",
+   "url": "https://data.example.com/manuals/thermostat-pro_v2.1.pdf",
+   "language": "en-GB"
 }
 ----
 
@@ -536,8 +536,8 @@ This is realized in more depth with all needed meta information of a document in
 [source,json,linenums]
 ----
 {
-   "contentType":"application/pdf",
-   "value":"https://data.example.com/manuals/thermostat-pro_v2.1.pdf"
+   "contentType": "application/pdf",
+   "value": "https://data.example.com/manuals/thermostat-pro_v2.1.pdf"
 }
 ----
 
@@ -554,54 +554,54 @@ but adapted for the example in this document)
       {
          "DocumentIds":[
             {
-               "DocumentIdentifier":"XF90-884",
+               "DocumentIdentifier": "XF90-884",
                "DocumentIsPrimary":true,
-               "DocumentDomainId":"1213455566"
+               "DocumentDomainId": "1213455566"
             }
          ],
          "DocumentVersions":[
             {
                "DigitalFiles":[
                   {
-                     "value":"https://data.example.com/manuals/thermostat-pro_v2.1.pdf",
-                     "contentType":"application/pdf"
+                     "value": "https://data.example.com/manuals/thermostat-pro_v2.1.pdf",
+                     "contentType": "application/pdf"
                   }
                ],
                "Title":[
                   {
-                     "en":"User Manual for the Smart Thermostat Pro"
+                     "en": "User Manual for the Smart Thermostat Pro"
                   },
                   {
-                     "de":"Benutzer-Handbuch Smart Thermostat Pro"
+                     "de": "Benutzer-Handbuch Smart Thermostat Pro"
                   }
                ],
                "Description":[
                   {
-                     "en-GB":"This is the user manual for the Smart Thermostat Pro."
+                     "en-GB": "This is the user manual for the Smart Thermostat Pro."
                   },
                   {
-                     "de":"Das ist das Benutzer-Handbuch für den Smart Thermostat Pro."
+                     "de": "Das ist das Benutzer-Handbuch für den Smart Thermostat Pro."
                   }
                ],
                "Language":[
                   "en-GB",
                   "de"
                ],
-               "Version":"V1.2"
+               "Version": "V1.2"
             }
          ],
          "DocumentClassifications":[
             {
                "ClassName":[
                   {
-                     "en":"Operation"
+                     "en": "Operation"
                   },
                   {
-                     "de":"Bedienung"
+                     "de": "Bedienung"
                   }
                ],
-               "ClassId":"03-02",
-               "ClassificationSystem":"VDI2770 Blatt 1:2020"
+               "ClassId": "03-02",
+               "ClassificationSystem": "VDI2770 Blatt 1:2020"
             }
          ]
       }
@@ -653,17 +653,17 @@ The "objectType" in JSON serialization of AAS is mapped to "objectType" in EN 18
 {
    "elements":[
       {
-         "elementId":"maxPressure",
-         "objectType":"SingleValuedDataElement",
-         "dictionaryReference":"https:/dictionary1/maximumPressure",
-         "valueDataType":"xsd:float",
+         "elementId": "maxPressure",
+         "objectType": "SingleValuedDataElement",
+         "dictionaryReference": "https:/dictionary1/maximumPressure",
+         "valueDataType": "xsd:float",
          "value":2.5
       },
       {
-         "elementId":"recycledContentPercentage",
-         "objectType":"SingleValuedDataElement",
-         "dictionaryReference":"https:/dictionary1/recycledContentPercentage",
-         "valueDataType":"xsd:float",
+         "elementId": "recycledContentPercentage",
+         "objectType": "SingleValuedDataElement",
+         "dictionaryReference": "https:/dictionary1/recycledContentPercentage",
+         "valueDataType": "xsd:float",
          "value":25.5
       }
    ]
@@ -678,34 +678,34 @@ The "objectType" in JSON serialization of AAS is mapped to "objectType" in EN 18
 {
    "elements":[
       {
-         "idShort":"maxPressure",
-         "modelType":"Property",
+         "idShort": "maxPressure",
+         "modelType": "Property",
          "semanticId":{
             "keys":[
                {
-                  "type":"GlobalReference",
-                  "value":"https:/dictionary1/maximumPressure"
+                  "type": "GlobalReference",
+                  "value": "https:/dictionary1/maximumPressure"
                }
             ],
-            "type":"ExternalReference"
+            "type": "ExternalReference"
          },
-         "valueType":"xs:float",
-         "value":"2.5"
+         "valueType": "xs:float",
+         "value": "2.5"
       },
       {
-         "idShort":"recycledContentPercentage",
-         "modelType":"Property",
+         "idShort": "recycledContentPercentage",
+         "modelType": "Property",
          "semanticId":{
             "keys":[
                {
-                  "type":"GlobalReference",
-                  "value":"https:/dictionary1/recycledContentPercentage"
+                  "type": "GlobalReference",
+                  "value": "https:/dictionary1/recycledContentPercentage"
                }
             ],
-            "type":"ExternalReference"
+            "type": "ExternalReference"
          },
-         "valueType":"xs:float",
-         "value":"25.5"
+         "valueType": "xs:float",
+         "value": "25.5"
       }
    ]
 }
