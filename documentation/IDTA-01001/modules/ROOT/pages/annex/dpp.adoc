@@ -267,9 +267,7 @@ BasicEventElement a| Events are not supported in EN 18223 but could be realized 
 |--| `\https://admin-shell.io/aas/3/2/Capability` 
 
  Capability a| not supported in EN 18223
-|--| `\https://admin-shell.io/aas/3/2/DataElement` 
 
- DataElement (abstract) a| EN 18223 MultiLanguageDataElement and SingleValuedDataElement and RelatedResource correspond to AAS DataElements
 |--| `\https://admin-shell.io/aas/3/2/Entity` 
 
 Entity a| can be realized with a EN 18223 DataElementCollection
