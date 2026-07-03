@@ -46,25 +46,25 @@ If an AAS contains two different Submodels with the same semanticId
 
 a) xref:spec-metamodel/common.adoc#version[version]   (xref:spec-metamodel/common.adoc#revision[revision] is ignored) 
 
-or in their
+or 
 
 b) their xref:spec-metamodel/common.adoc#createdAt[createdAt] or xref:spec-metamodel/common.adoc#updatedAt[updatedAt] date
 
-or in their
+or 
 
 c) their xref:spec-metamodel/common.adoc#creator[creator]  
 
-or in their
+or 
 
 d) their xref:spec-metamodel/common.adoc#supplementalSemanticId[supplementalSemanticId]
 
-or in their
+or 
 
 e) xref:spec-metamodel/common.adoc#templateId[templateId] 
 
 
 ====
-Note: per specification the xref:spec-metamodel/common.adoc#Identifiable[IDs] of these two Submodels are not identical.
+Note: Per specification the xref:spec-metamodel/common.adoc#Identifiable[IDs] of any two submodels in an Asset Administration Shell can never be identical.
 ====
 
 With a) both submodels shall have version information. 
