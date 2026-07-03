@@ -287,7 +287,7 @@ h|ID: 3+| `\https://admin-shell.io/aas/3/1/Submodel`
 h|Explanation h|Type h|Card.
 
 .2+e|submodelElement 3+| `\https://admin-shell.io/aas/3/1/Submodel/submodelElement`
-a|A Submodel consists of zero or more Submodel elements. |xref:SubmodelElement[SubmodelElement] |0..*
+a|Submodel element contained in the collection |xref:SubmodelElement[SubmodelElement] |0..*
 |===
 
 [#submodel-element-attributes]
