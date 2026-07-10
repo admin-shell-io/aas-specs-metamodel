@@ -61,18 +61,18 @@ A concept description may be derived from another property definition of an exte
 
 ====
 Note: in this case, most of the attributes are redundant because they are defined in the external standard.
-Attributes for information like _preferredName_, _unit_ etc. are added to increase usability.
+Attributes for information like _preferredName_, _unit_ etc. are added to increase usability. For details see IDTA-01003-a.
 Consistency w.r.t. the referenced SubmodelElement definitions should be ensured by corresponding tooling.
 ====
 
-If a concept description is not just a copy or refinement of an external standard, the provider of the Asset Administration Shell using this concept description shall be aware that an interoperability with other Asset Administration Shells cannot be ensured.
+If a concept description is not just a copy or refinement of an external standard, the provider of the Asset Administration Shell using this concept description shall be aware that interoperability with other Asset Administration Shells cannot be ensured.
 
 Data specification templates (xref:data-specifications.adoc#data-specification-template-attributes[DataSpecification]) can be used to define a named set of additional attributes (besides those predefined by the metamodel) for an element.
 The data specification template following IEC 61360 is typically used for the concept description of properties, providing e.g. an attribute "preferredName".
 The _\<<template>>_ dependency is used to denote recommended data specification templates.
 See  xref:data-specifications.adoc[] for details.
 
-Data specification templates like the template for IEC 61360 property definitions (Part 3a) are explicitly predefined and recommended to be used by IDTA.
+Data specification templates like the template for IEC 61360 property definitions (Part 3a, IDTA-01003-a) are explicitly predefined and recommended to be used by IDTA.
 See  xref:data-specifications.adoc[] for details.
 If proprietary templates are used, interoperability with other Asset Administration Shells cannot be ensured.
 

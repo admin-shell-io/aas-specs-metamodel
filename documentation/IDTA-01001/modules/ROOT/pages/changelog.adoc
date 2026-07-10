@@ -75,6 +75,9 @@ Minor Changes:
 * NEW: add to xref:index.adoc#spec-versioning[Versioning] that bugfix releases are not no necessarily backward compatible
 * REMOVED: AdministrativeInformation: remove former Note 2
 * ADDED: Note that AdministrativeInformation/templateId only applicable for Submodels so far
+* REMOVED: Note for _Property/valueId_ that it is recommended to use externa references (was removed already in last release for most similar cases)
+* REMOVED: Annex UML - since packages not used any longer remove explanation for UML packages
+* CHANGES: editorial
 
 
 Minor Bugfixes:
@@ -97,7 +100,7 @@ h|Nc h|V3.2 Change w.r.t. V3.1.1 h|Comment
    
    Note 1: some data types like float do have infinite in its value range per definition and should be used if infinite is needed. 
    
-   Note 2: Range is an SubmodelElement in state "experimental", therefore non-backward-compatible changes are possible
+   Note 2: Range is a SubmodelElement in state "experimental", therefore non-backward-compatible changes are possible
 
 
 

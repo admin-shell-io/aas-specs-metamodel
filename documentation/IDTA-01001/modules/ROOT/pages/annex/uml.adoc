@@ -100,7 +100,7 @@ include::partial$diagrams/uml-basics/67-2-association.puml[]
 In this association, only the endpoint is navigable, meaning it is possible to navigate from an instance of __Class1__ to an instance of __Class2__, but not the other way around.
 An instance of __Class1__ can be in a 'relation' with an instance of __Class2__, and the association is labeled 'Reference'.
 
-.Association
+.Unidirectional Association
 [[image-67-3-labeled-association]]
 [plantuml, 67-3-labeled-association, svg]
 ....
@@ -189,27 +189,7 @@ include::partial$diagrams/uml-basics/73-abstract-class.puml[]
 ....
 
 
-<<image-74-package>> shows a package named "Package2".
-A package is a namespace for its members.
-In this example, the member belonging to _Package2_ is class _Class2_.
 
-.Package
-[[image-74-package]]
-[plantuml, 74-package, svg]
-....
-include::partial$diagrams/uml-basics/74-package.puml[]
-....
-
-
-<<image-75-imported-package>> shows that all elements in _Package2_ are imported into the namespace defined by _Package1_.
-This is a special dependency relationship between the two packages with stereotype \<<import>>.
-
-.Imported Package
-[[image-75-imported-package]]
-[plantuml, 75-imported-package, svg]
-....
-include::partial$diagrams/uml-basics/75-imported-package.puml[]
-....
 
 
 <<image-76-enumeration>> shows an enumeration with the name "Enumeration1".
