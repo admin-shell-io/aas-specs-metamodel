@@ -227,7 +227,7 @@ urn:GMA:7.20:contractnegotiation:1:1#001
 |ID of type or Concept Description of a Property etc. a|
 urn:PROFIBUS:PROFIBUS-PA:V3-02:Parameter:1:1:MaxTemp
 
-\https://www.zvei.de/SG2/aas/1/1/demo11232322/maxtemp
+https://admin-shell.io/idta/cds/manufacturerName/1
 
 |Property, etc. +
 
