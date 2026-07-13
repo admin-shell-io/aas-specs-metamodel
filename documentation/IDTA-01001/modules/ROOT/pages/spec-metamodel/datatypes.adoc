@@ -248,7 +248,7 @@ FTP://unicode.org
 a|_NameType_ a|
 "ExpressionSemantic" (as specified in DIN DKE SPEC 92000:2019-09, see xref:bibliography.adoc#bib16[[16\]])
 
-"life cycle qual" (as specified in IEC 61360-7 - IEC/SC 3D - Common Data Dictionary (link:https://cdd.iec.ch/cdd/common/iec61360-7.nsf/SearchFrameset?OpenFrameSet[CDD - V2.0015.0004])
+"life cycle qual" (as specified in IEC 61360-7 - IEC/SC 3D - Common Data Dictionary
 
 
 
@@ -343,7 +343,7 @@ The data types are defined according to the W3C XML Schema (https://www.w3.org/T
 "Value Range" further explains the possible range of data values for this data type.
 The right column shows related examples for values of the corresponding data type.
 
-.Data Types with Examples footnote:[See list of RDF-compatible XSD types with short description https://www.w3.org/TR/rdf11-concepts/#xsd-datatypes. Examples from https://openmanufacturingplatform.github.io/sds-bamm-aspect-meta-model/bamm-specification/v1.0.0/datatypes.html]
+.Data Types with Examples footnote:[See list of RDF-compatible XSD types with short description https://www.w3.org/TR/rdf11-concepts/#xsd-datatypes. Examples from https://eclipse-esmf.github.io/samm-specification/2.0.0/datatypes.html]
 [[table-data-types-with-examples]]
 [cols="15%,22%,24%,39%",options="header",]
 |===

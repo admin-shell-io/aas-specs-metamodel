@@ -50,10 +50,10 @@ The attribute "derivedFrom" in the metamodel is used to explicitly state a relat
 Other relationships are not explicitly supported by the metamodel of the Asset Administration Shell, but they can be modelled via the xref:spec-metamodel/submodel-elements.adoc#relationship-element-attributes["RelationshipElement"] SubmodelElement type.
 ====
 
-===
+====
 Note 2: Besides asset types and asset instances there als other kinds of assets (see xref:spec-metamodel/core.adoc#AssetKind[enumeration AssetKind]). 
 However, in the following examples we do not consider them. 
-===
+====
 
 <<table-life-cycle-phases-and-roles-of-type-and-instance-assets>> gives an overview of the different life cycle phases and the role of type assets and instance assets as well as their relationship in these phases.
 
@@ -313,7 +313,9 @@ mandatory
 
 Typically, URLs will be used.
 
-| |idShort |string |optionalfootnote:[Note: in version V1.0 of this specification, idShort was optional for identifiables. This changed in V2.0: idShort was set to mandatory for all referables. With V3.0, idShort was again made optional.]
+| |idShort |string |optionalfootnote:[Note: in version V1.0 of this specification, idShort was optional for identifiables. 
+This changed in V2.0: idShort was set to mandatory for all referables. 
+With V3.0, idShort was again made optional.]
 | |displayName |multi language string |optional
 |xref:spec-metamodel/core.adoc#AssetInformation[AssetInformation] |globalAssetId |IRI a|
 recommended
@@ -371,7 +373,7 @@ Typically, the semanticId is an external reference to an external standard defin
 
 | |xref:ROOT:spec-metamodel/common.adoc#HasSemantics[supplementalSemanticId] |IRDI, IRI (URI) |optional
 |xref:spec-metamodel/core.adoc#SubmodelElement[SubmodelElement] |idShort |string a|
-mandatory
+mandatory with one exception: SubmodelElements within a xref:spec-metamodel/core.adoc#SubmodelElement[SubmodelElementListList] do not need to have an _idShort_ but it is recommended that they do
 
 Typically, the English short name of the concept definition that is referenced via semanticId.
 

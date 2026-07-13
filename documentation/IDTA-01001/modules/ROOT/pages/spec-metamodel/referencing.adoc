@@ -281,112 +281,7 @@ a|List of SubmodelElements
 |===
 
 
-=== Fragment Keys Enumeration 
 
-[.table-with-appendix-table]
-[cols="30%h,70%"]
-|===
-h|Enumeration: e|[[FragmentKeys]]FragmentKeys
-h|Explanation: a|
-Enumeration of different fragment key value types within a key
-
-
-====
-Note: not used as type but in constraints.
-====
-
-
-h|Set of: |xref:AasReferableNonIdentifiables[AasReferableNonIdentifiables], xref:GenericFragmentKeys[GenericFragmentKeys]
-h|ID: | `\https://admin-shell.io/aas/3/2/FragmentKeys`
-
-
-.2+h|Literal h| ID
-h|Explanation
-
-
-.2+e|AnnotatedRelationshipElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/AnnotatedRelationshipElement`
-a|Annotated relationship element
-
-
-.2+e|BasicEventElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/BasicEventElement`
-a|Basic event element
-
-.2+e|Blob | `\https://admin-shell.io/aas/3/2/FragmentKeys/Blob`
-a|Blob
-
-.2+e|Capability | `\https://admin-shell.io/aas/3/2/FragmentKeys/Capability`
-a|Capability
-
-
-
-.2+e|DataElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/DataElement`
-a|
-Data Element
-
-
-====
-Note: data elements are abstract, i.e. if a key uses "DataElement", the reference may be a property, file, etc.
-====
-
-
-.2+e|Entity | `\https://admin-shell.io/aas/3/2/FragmentKeys/Entity`
-a|Entity
-
-.2+e|EventElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/EventElement`
-a|
-Event
-
-
-====
-Note: event element is abstract.
-====
-
-
-.2+e|File | `\https://admin-shell.io/aas/3/2/FragmentKeys/File`
-a|File
-
-.2+e|FragmentReference | `\https://admin-shell.io/aas/3/2/FragmentKeys/FragmentReference`
-a|Bookmark or a similar local identifier of a subordinate part of a primary resource
-
-
-.2+e|MultiLanguageProperty | `\https://admin-shell.io/aas/3/2/FragmentKeys/MultiLanguageProperty`
-a|Property with a value that can be provided in multiple languages
-
-.2+e|Operation| `\https://admin-shell.io/aas/3/2/FragmentKeys/Operation`
-a|Operation
-
-.2+e|Property | `\https://admin-shell.io/aas/3/2/FragmentKeys/Property`
-a|Property
-
-.2+e|Range | `\https://admin-shell.io/aas/3/2/FragmentKeys/Range`
-a|Range with min and max
-
-
-.2+e|ReferenceElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/ReferenceElement`
-a|Reference
-
-.2+e|RelationshipElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/RelationshipElement`
-a|Relationship
-
-
-.2+e|SubmodelElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/SubmodelElement`
-a|
-SubmodelElement
-
-
-====
-Note: SubmodelElements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
-====
-
-
-.2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/2/FragmentKeys/SubmodelElementCollection`
-a|Struct of SubmodelElements
-
-.2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/2/FragmentKeys/SubmodelElementList`
-a|List of SubmodelElements
-|===
-
-{empty} +
 
 == Logical Enumerations 
 
@@ -747,6 +642,113 @@ a|Struct of SubmodelElements
 .2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/2/AasReferables/SubmodelElementList`
 a|List of SubmodelElements
 |===
+
+=== Fragment Keys Enumeration 
+
+[.table-with-appendix-table]
+[cols="30%h,70%"]
+|===
+h|Enumeration: e|[[FragmentKeys]]FragmentKeys
+h|Explanation: a|
+Enumeration of different fragment key value types within a key
+
+
+====
+Note: not used as type but in constraints.
+====
+
+
+h|Set of: |xref:AasReferableNonIdentifiables[AasReferableNonIdentifiables], xref:GenericFragmentKeys[GenericFragmentKeys]
+h|ID: | `\https://admin-shell.io/aas/3/2/FragmentKeys`
+
+
+.2+h|Literal h| ID
+h|Explanation
+
+
+.2+e|AnnotatedRelationshipElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/AnnotatedRelationshipElement`
+a|Annotated relationship element
+
+
+.2+e|BasicEventElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/BasicEventElement`
+a|Basic event element
+
+.2+e|Blob | `\https://admin-shell.io/aas/3/2/FragmentKeys/Blob`
+a|Blob
+
+.2+e|Capability | `\https://admin-shell.io/aas/3/2/FragmentKeys/Capability`
+a|Capability
+
+
+
+.2+e|DataElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/DataElement`
+a|
+Data Element
+
+
+====
+Note: data elements are abstract, i.e. if a key uses "DataElement", the reference may be a property, file, etc.
+====
+
+
+.2+e|Entity | `\https://admin-shell.io/aas/3/2/FragmentKeys/Entity`
+a|Entity
+
+.2+e|EventElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/EventElement`
+a|
+Event
+
+
+====
+Note: event element is abstract.
+====
+
+
+.2+e|File | `\https://admin-shell.io/aas/3/2/FragmentKeys/File`
+a|File
+
+.2+e|FragmentReference | `\https://admin-shell.io/aas/3/2/FragmentKeys/FragmentReference`
+a|Bookmark or a similar local identifier of a subordinate part of a primary resource
+
+
+.2+e|MultiLanguageProperty | `\https://admin-shell.io/aas/3/2/FragmentKeys/MultiLanguageProperty`
+a|Property with a value that can be provided in multiple languages
+
+.2+e|Operation| `\https://admin-shell.io/aas/3/2/FragmentKeys/Operation`
+a|Operation
+
+.2+e|Property | `\https://admin-shell.io/aas/3/2/FragmentKeys/Property`
+a|Property
+
+.2+e|Range | `\https://admin-shell.io/aas/3/2/FragmentKeys/Range`
+a|Range with min and max
+
+
+.2+e|ReferenceElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/ReferenceElement`
+a|Reference
+
+.2+e|RelationshipElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/RelationshipElement`
+a|Relationship
+
+
+.2+e|SubmodelElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/SubmodelElement`
+a|
+SubmodelElement
+
+
+====
+Note: SubmodelElements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
+====
+
+
+.2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/2/FragmentKeys/SubmodelElementCollection`
+a|Struct of SubmodelElements
+
+.2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/2/FragmentKeys/SubmodelElementList`
+a|List of SubmodelElements
+|===
+
+{empty} +
 
 ===  Logical Enumeration GenericFragmentKeys
 

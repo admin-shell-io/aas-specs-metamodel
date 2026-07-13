@@ -70,7 +70,7 @@ h|Class: 3+e|[[AssetInformation]]AssetInformation
 h|Explanation: 3+a|
 In _AssetInformation_, identifying metadata of the asset that is represented by an xref:AssetAdministrationShell[Asset Administration Shell] is defined.
 
-The asset may either represent a type asset or an instance asset.
+Several asset kinds are distinguished like for example type assets and instance assets.
 
 The asset has a globally unique identifier, plus – if needed – additional domain-specific (proprietary) identifiers.
 However, to support the corner case of very first phase of life cycle where a stabilized/constant global asset identifier does not already exist, the corresponding attribute "globalAssetId" is optional.
@@ -157,7 +157,7 @@ The path can be absolute or relative.
 a|
 Content type of the content of the file
 
-The content type states which file extensions the file can have.
+A single content type (MIME type) can have multiple file extensions associated with it.
 
 |xref:spec-metamodel/datatypes.adoc#ContentType[ContentType] |0..1
 |===
@@ -191,7 +191,7 @@ a|batch asset
 a|Role asset
 
 .2+e|NotApplicable | `\https://admin-shell.io/aas/3/2/AssetKind/NotApplicable`
-a|Neither a type asset nor an instance asset nor a role asset
+a|None of the other asset kinds
 
 |===
 
