@@ -1,8 +1,8 @@
 name: IDTA-01001
 title: 'Part 1: Metamodel'
 version: 'v3.2'
-display_version: 'in progress'
-prerelease: true
+display_version: 'v3.2'
+prerelease: false
 start_page: ROOT:index.adoc
 nav:
   - modules/ROOT/nav.adoc
