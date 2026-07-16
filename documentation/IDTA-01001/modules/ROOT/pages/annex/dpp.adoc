@@ -144,35 +144,7 @@ Therefore, in the absence of a definitive specification, this document puts fort
 }
 ----
 
-In <<code-dppmetadata-two-regulations-json>> an example payload is given that covers two vertical regulations, in the example battery passport and vehicle passport.
-As long as the unique product identifier remains the same a single instance of the DPP covers both regulations.
 
-.Example DPPMetadata JSON Payload for two vertical regulations
-[[code-dppmetadata-two-regulations-json]]
-[source,json,linenums]
-----
-{
-   "digitalProductPassportId": "https://www.example.org/dpp/1234545",
-   "uniqueProductIdentifier": "https://www.example.org/1234545",
-   "granularity": "Item",
-   "dppSchemaVersion": "EN18223:2026",
-   "dppStatus": "Active",
-   "lastUpdate": "2025-08-22T03:12:00Z",
-   "economicOperatorId": "gxx:ppp456789",
-   "facilityId": "gxx:xxx987654",
-   "contentSpecificationIds":[
-      "https://admin-shell-io/idta/batterypassport/Nameplate/1",
-      "https://admin-shell-io/idta/batterypassport/TechnicalData/1",
-      "https://admin-shell-io/idta/batterypassport/HandoverDocumentation/2",
-	  "https://admin-shell-io/idta/batterypassport/CarbonFootprint/1",
-      "https://admin-shell-io/idta/batterypassport/ProductCondition/1",
-      "https://admin-shell-io/idta/batterypassport/MaterialComposition/1",
-      "https://admin-shell-io/idta/batterypassport/Circularity/1"
-	  "https://admin-shell-io/idta/vehiclepassport/1",
-
-   ]
-}
-----
 
 Although some attributes (see <<code-dpp-json>>) of this Submodel specification can be mapped to attributes in the Asset Administration Shell (AAS) metamodel, 
 the formal recommendation is to instead use this predefined Submodel Template IDTA-02099 for this metadata. 
