@@ -1,4 +1,4 @@
-<environment xmlns="https://admin-shell.io/aas/3/1">
+<environment xmlns="https://admin-shell.io/aas/3/2">
 	<submodels>
 		<submodel>
 			<extensions>
@@ -61,19 +61,15 @@
 						</keys>
 					</dataSpecification>
 					<dataSpecificationContent>
-						<dataSpecificationIec61360>
+						<dataSpecificationUom>
 							<preferredName>
-								<langStringPreferredNameTypeIec61360>
+								<langStringUom>
 									<language>zh-cmn-Hans-CN</language>
 									<text>something_be8bb8c1</text>
-								</langStringPreferredNameTypeIec61360>
-								<langStringPreferredNameTypeIec61360>
-									<language>en-GB</language>
-									<text>Something random in English fbebdf98</text>
-								</langStringPreferredNameTypeIec61360>
+								</langStringUom>
 							</preferredName>
-							<value>something_db2f0b6e</value>
-						</dataSpecificationIec61360>
+							<symbol>something_88e36fdb</symbol>
+						</dataSpecificationUom>
 					</dataSpecificationContent>
 				</embeddedDataSpecification>
 			</embeddedDataSpecifications>

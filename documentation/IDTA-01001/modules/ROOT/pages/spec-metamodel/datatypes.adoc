@@ -76,7 +76,7 @@ Note: see  xref:spec-metamodel/constraints.adoc#constraints-for-types[Constraint
 .2+h|Primitive 2+h| ID
 h|Definition h|Value Examples
 
-.2+e|[[BlobType]]BlobType 2+| `\https://admin-shell.io/aas/3/1/BlobType`
+.2+e|[[BlobType]]BlobType 2+| `\https://admin-shell.io/aas/3/2/BlobType`
 a|
 _base64binary_
 
@@ -90,44 +90,51 @@ SGVsbG8sIFdvcmxkIQ==
 
 for "Hello, World!"
 
-.2+e|[[ContentType]]ContentType 2+| `admin-shell.io/aas/3/1/ContentType`
+.2+e|[[ContentType]]ContentType 2+| `admin-shell.io/aas/3/2/ContentType`
 a|
 _string_ with max 128 and min 1 characters
 
+Any content type as specified in link:https://datatracker.ietf.org/doc/html/rfc2046[RFC2046].
 
-====
-Note: string conformant to RFC2046.
-====
+The content type should be registered by the Internet Assigned Numbers Authority (link:https://www.iana.org/assignments/media-types/media-types.xhtml[IANA]) as specified in link:https://datatracker.ietf.org/doc/html/rfc2048[RFC2048].
 
-====
-A media type (also MIME type and content type) […] is a two-part identifier for file formats and format contents transmitted on the Internet.
-The link:https://www.iana.org/assignments/media-types/media-types.xhtml[Internet Assigned Numbers Authority (IANA)] is the official authority for the standardization and publication of these classifications.
-Media types were originally defined in Request for Comments 2045 in November 1996 as a part of MIME specification, for denoting type of email message content and attachments.footnote:[Wikipedia.org, date: 2018-04-09]
-====
+
 
 a|
 application/pdf
 
 image/jpeg
 
-.2+e|[[DateTimeUtc]]DateTimeUtc 2+| `\https://admin-shell.io/aas/3/1/DateTimeUtc`
+.2+e|[[DateTimeUtc]]DateTimeUtc 2+| `\https://admin-shell.io/aas/3/2/DateTimeUtc`
 | _dateTime_ for UTC a|
 
     1997-07-16T19:20+01:00
 
 	2025-02-24T12:31:14Z
 
-.2+e|[[Identifier]]Identifier 2+| `\https://admin-shell.io/aas/3/1/Identifier`
-|_string_ with max 2048 and min 1 characters a|
+.2+e|[[Identifier]]Identifier 2+| `\https://admin-shell.io/aas/3/2/Identifier`
+a|_string_ with max 2048 and min 1 characters 
+
+====
+Note: For Identifier it is recommended to use existing standards, 
+for example ID-Link (IEC 61406) may be used for the 
+xref:spec-metamodel/core.adoc#AssetInformation[globalAssetId].  
+
+Typically, identifier strings do not contain blanks, emoticons or carriage returns 
+because they are not representable in existing systems.
+====
+
+
+a|
 \https://cust/123456
 
 0173-1#02-BAA120#008
 
-.2+e|[[LabelType]]LabelType 2+| `\https://admin-shell.io/aas/3/1/LabelType`
+.2+e|[[LabelType]]LabelType 2+| `\https://admin-shell.io/aas/3/2/LabelType`
 a|_string_ with max 64 and min 1 characters a|"ABC1234"
 
 
-.2+e|[[LangStringSet]]LangStringSet 2+| `\https://admin-shell.io/aas/3/1/LangStringSet`
+.2+e|[[LangStringSet]]LangStringSet 2+| `\https://admin-shell.io/aas/3/2/LangStringSet`
 a|
 _Array of elements of type langString_
 
@@ -165,10 +172,10 @@ In xml:
 In rdf:
 [source,rdf]
 ----
-[] <https://admin-shell.io/aas/3/1/Referable/description> [
+[] <https://admin-shell.io/aas/3/2/Referable/description> [
   rdf:type aas:LangStringTextType ;
-  <https://admin-shell.io/aas/3/1/AbstractLangString/language> "en"^^xs:string ;
-  <https://admin-shell.io/aas/3/1/AbstractLangString/text> "This is a multi-language value in English"^^xs:string ;
+  <https://admin-shell.io/aas/3/2/AbstractLangString/language> "en"^^xs:string ;
+  <https://admin-shell.io/aas/3/2/AbstractLangString/text> "This is a multi-language value in English"^^xs:string ;
 ] ;
 .
 ----
@@ -188,29 +195,29 @@ In JSON :
    }
 ]
 ----
-.2+e|[[MessageTopicType]]MessageTopicType 2+| `\https://admin-shell.io/aas/3/1/MessageTopicType`
+.2+e|[[MessageTopicType]]MessageTopicType 2+| `\https://admin-shell.io/aas/3/2/MessageTopicType`
 a|_string_ with max 255 and min 1 characters |
 
-.2+e|[[MultiLanguageNameType]]MultiLanguageNameType 2+| `\https://admin-shell.io/aas/3/1/MultiLanguageNameType`
+.2+e|[[MultiLanguageNameType]]MultiLanguageNameType 2+| `\https://admin-shell.io/aas/3/2/MultiLanguageNameType`
 a| xref:LangStringSet[LangStringSet]
 
 Each langString within the array of strings has a max 128 of and a min of 1 characters (as for NameType).
 
 | See xref:LangStringSet[LangStringSet]
 
-.2+e|[[MultiLanguageTextType]]MultiLanguageTextType 2+| `\https://admin-shell.io/3/1/MultiLanguageTextType`
+.2+e|[[MultiLanguageTextType]]MultiLanguageTextType 2+| `\https://admin-shell.io/3/2/MultiLanguageTextType`
 a| xref:LangStringSet[LangStringSet]
 
 Each string within langString has a max of 1,023 and min of 1 characters.
 
 |See xref:LangStringSet[LangStringSet]
 
-.2+e|[[NameType]]NameType 2+| `\https://admin-shell.io/aas/3/1/NameType`
+.2+e|[[NameType]]NameType 2+| `\https://admin-shell.io/aas/3/2/NameType`
 a|_string_ with max 128 and min 1 characters |"ManufacturerPartId"
 
 
 
-.2+e|[[PathType]]PathType 2+| `\https://admin-shell.io/aas/3/1/PathType`
+.2+e|[[PathType]]PathType 2+| `\https://admin-shell.io/aas/3/2/PathType`
 a|
 
 _string_
@@ -237,15 +244,15 @@ file:c:/local/Specification.pdf
 FTP://unicode.org
 
 
-.2+e|[[QualifierType]]QualifierType 2+| `\https://admin-shell.io/aas/3/1/QualifierType`
+.2+e|[[QualifierType]]QualifierType 2+| `\https://admin-shell.io/aas/3/2/QualifierType`
 a|_NameType_ a|
 "ExpressionSemantic" (as specified in DIN DKE SPEC 92000:2019-09, see xref:bibliography.adoc#bib16[[16\]])
 
-"life cycle qual" (as specified in IEC 61360-7 - IEC/SC 3D - Common Data Dictionary (link:https://cdd.iec.ch/cdd/common/iec61360-7.nsf/SearchFrameset?OpenFrameSet[CDD - V2.0015.0004])
+"life cycle qual" (as specified in IEC 61360-7 - IEC/SC 3D - Common Data Dictionary
 
 
 
-.2+e|[[RevisionType]]RevisionType 2+| `\https://admin-shell.io/aas/3/1/RevisionType`
+.2+e|[[RevisionType]]RevisionType 2+| `\https://admin-shell.io/aas/3/2/RevisionType`
 a|
 _string_ with max 4 and min 1 characters
 following the following regular expression:
@@ -259,7 +266,7 @@ a|
 
 "567"
 
-.2+e|[[ValueDataType]]ValueDataType 2+| `\https://admin-shell.io/aas/3/1/ValueDataType`
+.2+e|[[ValueDataType]]ValueDataType 2+| `\https://admin-shell.io/aas/3/2/ValueDataType`
 a|_any xsd atomic type as specified via xref:DataTypeDefXsd[DataTypeDefXsd]_ a|
 "This is a string value"
 
@@ -272,7 +279,7 @@ a|_any xsd atomic type as specified via xref:DataTypeDefXsd[DataTypeDefXsd]_ a|
 True
 
 
-.2+e|[[VersionType]]VersionType 2+| `\https://admin-shell.io/aas/3/1/VersionType`
+.2+e|[[VersionType]]VersionType 2+| `\https://admin-shell.io/aas/3/2/VersionType`
 a|
 _string_ with max 4 and min 1 characters
 
@@ -287,11 +294,11 @@ a|
 
 |===
 
-== Enumeration for Submodel Element Value Types
+== Enumeration for SubmodelElement Value Types
 
 Enumerations are primitive data types.
 Most of the enumerations are defined in the context of their class.
-This clause defines enumerations for submodel element value typesfootnote:[E.g. Property/valueType].
+This clause defines enumerations for SubmodelElement value typesfootnote:[E.g. Property/valueType].
 
 The predefined types used to define the type of values of properties and other values use the names and the semantics of XML Schema Definition (XSD)footnote:[see https://www.w3.org/XML/Schema, https://www.w3.org/TR/xmlschema-2/#built-in-primitive-datatypes].
 Additionally, the type "langString" with the semantics as defined in the Resource Description Framework (RDF)footnote:[see: https://www.w3.org/TR/rdf11-concepts/] is used. "langString" is a string value tagged with a language code.
@@ -308,6 +315,10 @@ That is why they are excluded from the allowed data types in xref:DataTypeDefXsd
 
 ====
 Note 2: additionally, the following RDF types are not supported in xref:DataTypeDefXsd[DataTypeDefXsd]: HTML and XMLLiteral.
+====
+
+====
+Note 3: Numeric data types in XML Schema are based on the definitions of IEEE 754 with slight adoptions. For instance, float and double types use different exponent ranges. In any case, solely the XML Schema data type definitions are applicable for AAS values.
 ====
 
 .DefTypeDefRdf Enumeration
@@ -327,12 +338,12 @@ include::partial$diagrams/54-data-type-def-xsd.puml[]
 
 <<table-data-types-with-examples>> depicts example values and the value range of the different data types.
 
-The left column "Data Type" shows the data types which can be used for submodel element values.
+The left column "Data Type" shows the data types which can be used for SubmodelElement values.
 The data types are defined according to the W3C XML Schema (https://www.w3.org/TR/xmlschema-2/#built-in-datatypes and https://www.w3.org/TR/xmlschema-2/#built-in-derived).
 "Value Range" further explains the possible range of data values for this data type.
 The right column shows related examples for values of the corresponding data type.
 
-.Data Types with Examples footnote:[See list of RDF-compatible XSD types with short description https://www.w3.org/TR/rdf11-concepts/#xsd-datatypes. Examples from https://openmanufacturingplatform.github.io/sds-bamm-aspect-meta-model/bamm-specification/v1.0.0/datatypes.html]
+.Data Types with Examples footnote:[See list of RDF-compatible XSD types with short description https://www.w3.org/TR/rdf11-concepts/#xsd-datatypes. Examples from https://eclipse-esmf.github.io/samm-specification/2.0.0/datatypes.html]
 [[table-data-types-with-examples]]
 [cols="15%,22%,24%,39%",options="header",]
 |===
@@ -545,7 +556,7 @@ Enumeration listing selected xsd anySimpleTypes of XML Schema 1.0
 For more details see https://www.w3.org/TR/xmlschema-2/#built-in-primitive-datatypes
 
 |Set of: |--
-h|ID: | `\https://admin-shell.io/aas/3/1/DataTypeDefXsd`
+h|ID: | `\https://admin-shell.io/aas/3/2/DataTypeDefXsd`
 
 h|Literal h|Explanation
 e|xs:anyURI |see: https://www.w3.org/TR/xmlschema-2/#anyURI
@@ -586,7 +597,7 @@ e|xs:unsignedShort |see: https://www.w3.org/TR/xmlschema-2/#unsignedShort
 h|Enumeration: |[[DataTypeDefRdf]]DataTypeDefRdf
 h|Explanation: |Enumeration listing all RDF types
 |Set of: |--
-h|ID: | `\https://admin-shell.io/aas/3/1/DataTypeDefRdf`
+h|ID: | `\https://admin-shell.io/aas/3/2/DataTypeDefRdf`
 
 h|Literal h|Explanation
 e|rdf:langString |String with a language tag

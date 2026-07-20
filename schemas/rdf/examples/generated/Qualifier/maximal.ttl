@@ -1,43 +1,43 @@
-@prefix aas: <https://admin-shell.io/aas/3/1/> .
+@prefix aas: <https://admin-shell.io/aas/3/2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
 <something_48c66017> rdf:type aas:Submodel ;
-    <https://admin-shell.io/aas/3/1/Identifiable/id> "something_48c66017"^^xs:string ;
-    <https://admin-shell.io/aas/3/1/HasKind/kind> <https://admin-shell.io/aas/3/1/ModellingKind/Template> ;
-    <https://admin-shell.io/aas/3/1/Qualifiable/qualifiers> [
+    <https://admin-shell.io/aas/3/2/Identifiable/id> "something_48c66017"^^xs:string ;
+    <https://admin-shell.io/aas/3/2/HasKind/kind> <https://admin-shell.io/aas/3/2/ModellingKind/Template> ;
+    <https://admin-shell.io/aas/3/2/Qualifiable/qualifiers> [
         rdf:type aas:Qualifier ;
-        <https://admin-shell.io/aas/3/1/HasSemantics/semanticId> [
+        <https://admin-shell.io/aas/3/2/HasSemantics/semanticId> [
             rdf:type aas:Reference ;
-            <https://admin-shell.io/aas/3/1/Reference/type> <https://admin-shell.io/aas/3/1/ReferenceTypes/ModelReference> ;
-            <https://admin-shell.io/aas/3/1/Reference/keys> [
+            <https://admin-shell.io/aas/3/2/Reference/type> <https://admin-shell.io/aas/3/2/ReferenceTypes/ModelReference> ;
+            <https://admin-shell.io/aas/3/2/Reference/keys> [
                 rdf:type aas:Key ;
-                <https://admin-shell.io/aas/3/1/Key/type> <https://admin-shell.io/aas/3/1/KeyTypes/Submodel> ;
-                <https://admin-shell.io/aas/3/1/Key/value> "urn:example07:14a4e86f"^^xs:string ;
+                <https://admin-shell.io/aas/3/2/Key/type> <https://admin-shell.io/aas/3/2/KeyTypes/Submodel> ;
+                <https://admin-shell.io/aas/3/2/Key/value> "urn:example07:14a4e86f"^^xs:string ;
             ] ;
         ] ;
-        <https://admin-shell.io/aas/3/1/HasSemantics/supplementalSemanticIds> [
+        <https://admin-shell.io/aas/3/2/HasSemantics/supplementalSemanticIds> [
             rdf:type aas:Reference ;
-            <https://admin-shell.io/aas/3/1/Reference/type> <https://admin-shell.io/aas/3/1/ReferenceTypes/ExternalReference> ;
-            <https://admin-shell.io/aas/3/1/Reference/keys> [
+            <https://admin-shell.io/aas/3/2/Reference/type> <https://admin-shell.io/aas/3/2/ReferenceTypes/ExternalReference> ;
+            <https://admin-shell.io/aas/3/2/Reference/keys> [
                 rdf:type aas:Key ;
-                <https://admin-shell.io/aas/3/1/Key/type> <https://admin-shell.io/aas/3/1/KeyTypes/GlobalReference> ;
-                <https://admin-shell.io/aas/3/1/Key/value> "urn:an-example17:1456e435"^^xs:string ;
+                <https://admin-shell.io/aas/3/2/Key/type> <https://admin-shell.io/aas/3/2/KeyTypes/GlobalReference> ;
+                <https://admin-shell.io/aas/3/2/Key/value> "urn:an-example17:1456e435"^^xs:string ;
             ] ;
         ] ;
-        <https://admin-shell.io/aas/3/1/Qualifier/kind> <https://admin-shell.io/aas/3/1/QualifierKind/TemplateQualifier> ;
-        <https://admin-shell.io/aas/3/1/Qualifier/type> "something_5964ab43"^^xs:string ;
-        <https://admin-shell.io/aas/3/1/Qualifier/valueType> <https://admin-shell.io/aas/3/1/DataTypeDefXsd/Integer> ;
-        <https://admin-shell.io/aas/3/1/Qualifier/value> "001"^^xs:string ;
-        <https://admin-shell.io/aas/3/1/Qualifier/valueId> [
+        <https://admin-shell.io/aas/3/2/Qualifier/kind> <https://admin-shell.io/aas/3/2/QualifierKind/TemplateQualifier> ;
+        <https://admin-shell.io/aas/3/2/Qualifier/type> "something_5964ab43"^^xs:string ;
+        <https://admin-shell.io/aas/3/2/Qualifier/valueType> <https://admin-shell.io/aas/3/2/DataTypeDefXsd/Integer> ;
+        <https://admin-shell.io/aas/3/2/Qualifier/value> "001"^^xs:string ;
+        <https://admin-shell.io/aas/3/2/Qualifier/valueId> [
             rdf:type aas:Reference ;
-            <https://admin-shell.io/aas/3/1/Reference/type> <https://admin-shell.io/aas/3/1/ReferenceTypes/ModelReference> ;
-            <https://admin-shell.io/aas/3/1/Reference/keys> [
+            <https://admin-shell.io/aas/3/2/Reference/type> <https://admin-shell.io/aas/3/2/ReferenceTypes/ModelReference> ;
+            <https://admin-shell.io/aas/3/2/Reference/keys> [
                 rdf:type aas:Key ;
-                <https://admin-shell.io/aas/3/1/Key/type> <https://admin-shell.io/aas/3/1/KeyTypes/Submodel> ;
-                <https://admin-shell.io/aas/3/1/Key/value> "urn:yet-another-company17:9dd54b75"^^xs:string ;
+                <https://admin-shell.io/aas/3/2/Key/type> <https://admin-shell.io/aas/3/2/KeyTypes/Submodel> ;
+                <https://admin-shell.io/aas/3/2/Key/value> "urn:yet-another-company17:9dd54b75"^^xs:string ;
             ] ;
         ] ;
     ] ;

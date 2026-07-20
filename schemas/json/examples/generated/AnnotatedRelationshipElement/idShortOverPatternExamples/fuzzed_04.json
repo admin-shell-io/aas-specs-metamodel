@@ -36,18 +36,14 @@
                 "type": "ModelReference"
               },
               "dataSpecificationContent": {
-                "modelType": "DataSpecificationIec61360",
+                "modelType": "DataSpecificationUom",
                 "preferredName": [
                   {
                     "language": "sl-rozaj-biske",
                     "text": "something_7e795ee2"
-                  },
-                  {
-                    "language": "en-GB",
-                    "text": "Something random in English c8512bdf"
                   }
                 ],
-                "value": "something_4e9c19b7"
+                "symbol": "something_fdb7ccfc"
               }
             }
           ],

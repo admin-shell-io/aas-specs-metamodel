@@ -1,0 +1,14 @@
+<environment xmlns="https://admin-shell.io/aas/3/2">
+	<submodels>
+		<submodel>
+			<id>something_48c66017</id>
+			<submodelElements>
+				<property>
+					<idShort>something3fdd3eb4</idShort>
+					<valueType>xs:anyURI</valueType>
+					<value>mailto:John.Doe@example.org</value>
+				</property>
+			</submodelElements>
+		</submodel>
+	</submodels>
+</environment>

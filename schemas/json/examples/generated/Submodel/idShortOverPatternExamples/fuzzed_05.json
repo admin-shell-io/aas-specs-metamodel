@@ -27,18 +27,14 @@
             "type": "ExternalReference"
           },
           "dataSpecificationContent": {
-            "modelType": "DataSpecificationIec61360",
+            "modelType": "DataSpecificationUom",
             "preferredName": [
               {
                 "language": "zh-cmn-Hans-CN",
                 "text": "something_be8bb8c1"
-              },
-              {
-                "language": "en-GB",
-                "text": "Something random in English fbebdf98"
               }
             ],
-            "value": "something_db2f0b6e"
+            "symbol": "something_88e36fdb"
           }
         }
       ],

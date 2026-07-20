@@ -1,9 +1,9 @@
-<environment xmlns="https://admin-shell.io/aas/3/1">
+<environment xmlns="https://admin-shell.io/aas/3/2">
 	<assetAdministrationShells>
 		<assetAdministrationShell>
 			<id>something_142922d6</id>
 			<assetInformation>
-				<assetKind>Role</assetKind>
+				<assetKind>Batch</assetKind>
 				<globalAssetId>something_c71f0c8f</globalAssetId>
 				<assetType>something_9f4c5692</assetType>
 				<defaultThumbnail>

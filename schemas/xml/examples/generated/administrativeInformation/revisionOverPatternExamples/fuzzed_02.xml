@@ -1,4 +1,4 @@
-<environment xmlns="https://admin-shell.io/aas/3/1">
+<environment xmlns="https://admin-shell.io/aas/3/2">
 	<assetAdministrationShells>
 		<assetAdministrationShell>
 			<administration>
@@ -14,19 +14,15 @@
 							</keys>
 						</dataSpecification>
 						<dataSpecificationContent>
-							<dataSpecificationIec61360>
+							<dataSpecificationUom>
 								<preferredName>
-									<langStringPreferredNameTypeIec61360>
+									<langStringUom>
 										<language>sr-Latn</language>
 										<text>something_7282cc23</text>
-									</langStringPreferredNameTypeIec61360>
-									<langStringPreferredNameTypeIec61360>
-										<language>en-GB</language>
-										<text>Something random in English 0843a1d1</text>
-									</langStringPreferredNameTypeIec61360>
+									</langStringUom>
 								</preferredName>
-								<value>something_bebf64f0</value>
-							</dataSpecificationIec61360>
+								<symbol>something_b4f12294</symbol>
+							</dataSpecificationUom>
 						</dataSpecificationContent>
 					</embeddedDataSpecification>
 				</embeddedDataSpecifications>
@@ -41,6 +37,8 @@
 						</key>
 					</keys>
 				</creator>
+				<createdAt>2022-04-01T01:02:03Z</createdAt>
+				<updatedAt>0013-10-11T24:00:00.000000Z</updatedAt>
 				<templateId>something_cb08d136</templateId>
 			</administration>
 			<id>something_142922d6</id>

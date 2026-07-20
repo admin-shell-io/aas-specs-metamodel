@@ -1,0 +1,15 @@
+<environment xmlns="https://admin-shell.io/aas/3/2">
+	<submodels>
+		<submodel>
+			<id>something_48c66017</id>
+			<submodelElements>
+				<range>
+					<idShort>something3fdd3eb4</idShort>
+					<valueType>xs:anyURI</valueType>
+					<min>ftp://ftp.is.co.za/rfc/rfc1808.txt</min>
+					<max>ftp://ftp.is.co.za/rfc/rfc1808.txt</max>
+				</range>
+			</submodelElements>
+		</submodel>
+	</submodels>
+</environment>

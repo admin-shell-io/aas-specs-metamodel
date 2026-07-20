@@ -5,15 +5,15 @@ skinparam packageStyle rectangle
 note "Global reference to id\nof DataSpecification" as Note
 
 package "Data Specification Templates - Part 1" as templates  {
-    !include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/master/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/has-data-specification.puml
-    !include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/master/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/data-specification-template.puml
-    !include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/master/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/data-specification-content.puml
+    !include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/has-data-specification.puml
+    !include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/data-specification-template.puml
+    !include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/data-specification-content.puml
 
     HasDataSpecification ..> DataSpecification: <<external global reference>>
     DataSpecification ..> DataSpecificationContent
 }
 
-!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/master/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/concept-description.puml
+!include https://raw.githubusercontent.com/admin-shell-io/aas-specs-metamodel/IDTA-01001-3-2_Working/documentation/IDTA-01001/modules/ROOT/partials/diagrams/classes/concept-description.puml
 
 
 package "Data Specification Handling - Serialization" as handling {

@@ -1,0 +1,43 @@
+@startuml
+
+participant DPPClient as "DPP Client"
+
+box DPP Service
+participant Client as "DPP Application"
+end box
+
+
+box Discovery Service
+  participant AASDiscovery as "AAS Discovery Interface"
+end box
+
+box Registry Service
+   participant AASRegistry as "AAS Registry Interface"
+end box
+
+box AAS or Submodel (Repository) Service
+  participant iSM as "Submodel Interface"
+end box
+
+DPPClient -> Client:  ReadDPPByProductId
+
+Client -> AASDiscovery: SearchAllAssetAdministrationShellsByAssetLink
+Client <-- AASDiscovery: ID of AAS 
+
+Client -> AASRegistry:  GetAssetAdministrationShellDescriptorById
+Client <-- AASRegistry:  AAS Descriptor with Submodel Endpoints
+Client -> Client:  extract relevant Submodel Endpoints including DPP Metadata Submodel
+
+loop for all relevant submodels
+Client -> iSM:  GetSubmodel(ById) 
+Client <-- iSM:  Submodel 
+end
+
+
+
+
+Client -> Client:  merge submodels and DPP metadata
+Client -> Client:  fix payload to be compliant to JTC24
+DPPClient <-- Client:  return DPP
+
+@enduml

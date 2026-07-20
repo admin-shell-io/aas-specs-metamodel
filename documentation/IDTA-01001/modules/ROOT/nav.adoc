@@ -71,6 +71,8 @@ SPDX-License-Identifier: CC-BY-4.0
 
 ** xref:./annex/valueonly-serialization-example.adoc[Value Only Serialization Example]
 
+** xref:annex/dpp.adoc[Digital Product Passport]
+
 ** xref:./annex/backus-naur-form.adoc[Backus Naur Form]
 
 ** xref:./annex/uml-templates.adoc[UML Templates]

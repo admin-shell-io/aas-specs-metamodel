@@ -1,3 +1,4 @@
+[[format-normal-json]]
 == Format "Normal" in JSON
 include::../links.adoc[]
 

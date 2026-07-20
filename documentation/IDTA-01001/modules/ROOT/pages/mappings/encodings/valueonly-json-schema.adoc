@@ -13,18 +13,22 @@ SPDX-License-Identifier: CC-BY-4.0
 === JSON-Schema for the Value-Only Serialization
 
 
-The following JSON-Schema represents the validation schema for the ValueOnly-Serialization of submodel elements. 
-This holds true for all submodel elements mentioned in the previous clause except for xref:spec-metamodel/submodel-elements.adoc#SubmodelElementCollection[SubmodelElementCollections]. 
-Since _SubmodelElementCollections_ are treated as objects containing submodel elements of any kind, the integration 
+The following JSON-Schema represents the validation schema for the ValueOnly-Serialization of SubmodelElements. 
+This holds true for all SubmodelElements mentioned in the previous clause except for xref:spec-metamodel/submodel-elements.adoc#SubmodelElementCollection[SubmodelElementCollections]. 
+Since _SubmodelElementCollections_ are treated as objects containing SubmodelElements of any kind, the integration 
 into the same validation schema would result in a circular reference or ambiguous results ignoring the actual 
-validation of submodel elements other than _SubmodelElementCollections_. 
-Hence, the same validation schema must be applied for each _SubmodelElementCollection_ within a submodel element hierarchy. 
+validation of SubmodelElements other than _SubmodelElementCollections_. 
+Hence, the same validation schema must be applied for each _SubmodelElementCollection_ within a SubmodelElement hierarchy. 
 In this case, it may be necessary to create a specific JSON-Schema for the individual use case. 
 The _SubmodelElementCollection_ is added to the following schema for completeness and clarity. 
 It is, however, not referenced from the _SubmodelElementValue_-oneOf-Enumeration due to the reasons mentioned above. 
 
 See xref:annex/valueonly-serialization-example.adoc#value-only-serialization-example[Annex ValueOnly-Serialization Example] 
-for an example that validates against this schema
+for an example that validates against this schema.
+
+====
+Note: OpenAPI 3.0 does not support patternProperties and propertyNames, OpenAPI 3.1 probably will. This is why this schema is not yet used in the openAPI specifications of the API. 
+====
 
 [source,json,linenums]
 ----
@@ -229,6 +233,9 @@ for an example that validates against this schema
     "ReferenceValue": {
       "type": "object",
       "properties": {
+	  	"referredSemanticId": {
+          "$ref": "#/definitions/ReferenceValue"
+        },
         "type": {
           "type": "string",
           "enum": ["ModelReference", "ExternalReference"]          

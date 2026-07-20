@@ -49,12 +49,12 @@ An external reference is a reference to an external entity.
 
 
 h|Inherits from: 3+|--
-h|ID: 3+| `\https://admin-shell.io/aas/3/1/Reference`
+h|ID: 3+| `\https://admin-shell.io/aas/3/2/Reference`
 
 .2+h|Attribute 3+h| ID
 h|Explanation h|Type h|Card.
 
-.2+e|type 3+| `\https://admin-shell.io/aas/3/1/Reference/type`
+.2+e|type 3+| `\https://admin-shell.io/aas/3/2/Reference/type`
 a|
 Type of the reference
 
@@ -62,7 +62,7 @@ Denotes whether the reference is an external reference or a model reference
 
 |xref:ReferenceTypes[ReferenceTypes]|1
 
-.2+e|referredSemanticId 3+| `\https://admin-shell.io/aas/3/1/Reference/referredSemanticId`
+.2+e|referredSemanticId 3+| `\https://admin-shell.io/aas/3/2/Reference/referredSemanticId`
 a|
 Expected semantic ID of the referenced model element (_Reference/type=ModelReference_); there typically is no semantic ID for the referenced object of external references _(Reference/type=ExternalReference)_.
 
@@ -79,7 +79,7 @@ If this is not the case, a validator should raise a warning.
 
 |xref:Reference[Reference] |0..1
 
-.2+e|key \<<ordered>> 3+| `\https://admin-shell.io/aas/3/1/Reference/key`
+.2+e|key \<<ordered>> 3+| `\https://admin-shell.io/aas/3/2/Reference/key`
 a|Unique reference in its name space |xref:Key[Key] |1..*
 |===
 
@@ -93,15 +93,15 @@ a|Unique reference in its name space |xref:Key[Key] |1..*
 |Enumeration: e|[[ReferenceTypes]]ReferenceTypes
 h|Explanation: |Enumeration for denoting whether an element is an external or model reference
 |Set of: |--
-h|ID: | `\https://admin-shell.io/aas/3/1/ReferenceTypes`
+h|ID: | `\https://admin-shell.io/aas/3/2/ReferenceTypes`
 
 .2+h|Literal h| ID
 h|Explanation
 
-.2+e|ExternalReference | `\https://admin-shell.io/aas/3/1/ReferenceTypes/ExternalReference`
+.2+e|ExternalReference | `\https://admin-shell.io/aas/3/2/ReferenceTypes/ExternalReference`
 a|External reference
 
-.2+e|ModelReference | `\https://admin-shell.io/aas/3/1/ReferenceTypes/ModelReference`
+.2+e|ModelReference | `\https://admin-shell.io/aas/3/2/ReferenceTypes/ModelReference`
 a|Model reference
 |===
 
@@ -128,12 +128,12 @@ Keys are used to define references (xref:spec-metamodel/referencing.adoc#Referen
 h|Class: 3+e|[[Key]]Key
 h|Explanation: 3+a|A key is a reference to an element by its ID
 h|Inherits from: 3+|--
-h|ID: 3+| `\https://admin-shell.io/aas/3/1/Key`
+h|ID: 3+| `\https://admin-shell.io/aas/3/2/Key`
 
 .2+h|Attribute 3+h| ID
 h|Explanation h|Type h|Card.
 
-.2+e|type 3+| `\https://admin-shell.io/aas/3/1/Key/type`
+.2+e|type 3+| `\https://admin-shell.io/aas/3/2/Key/type`
 a|
 Denotes which kind of entity is referenced
 
@@ -146,7 +146,7 @@ The name of the model element is explicitly listed.
 
 |xref:KeyTypes[KeyTypes]|1
 
-.2+e|value 3+| `\https://admin-shell.io/aas/3/1/Key/value`
+.2+e|value 3+| `\https://admin-shell.io/aas/3/2/Key/value`
 a|The key value, for example an IRDI or a URI or the xref:spec-metamodel/common.adoc#Referable[idShort] or any other fragment value |xref:spec-metamodel/datatypes.adoc#Identifier[Identifier] |1
 |===
 
@@ -169,32 +169,32 @@ include::partial$diagrams/51-key-types.puml[]
 |Enumeration: e|[[KeyTypes]]KeyTypes
 h|Explanation: a|Enumeration of different key value types within a key
 |Set of: |xref:FragmentKeys[FragmentKeys], xref:AasReferables[AasReferables], xref:spec-metamodel/referencing.adoc#GloballyIdentifiables[GloballyIdentifiables]
-h|ID: | `\https://admin-shell.io/aas/3/1/KeyTypes`
+h|ID: | `\https://admin-shell.io/aas/3/2/KeyTypes`
 
 .2+h|Literal h| ID
 h|Explanation
 
 
-.2+e|AnnotatedRelationshipElement | `\https://admin-shell.io/aas/3/1/KeyTypes/AnnotatedRelationshipElement`
+.2+e|AnnotatedRelationshipElement | `\https://admin-shell.io/aas/3/2/KeyTypes/AnnotatedRelationshipElement`
 a|Annotated relationship element
 
-.2+e|AssetAdministrationShell | `\https://admin-shell.io/aas/3/1/KeyTypes/AssetAdministrationShell`
+.2+e|AssetAdministrationShell | `\https://admin-shell.io/aas/3/2/KeyTypes/AssetAdministrationShell`
 a|Asset Administration Shell
 
-.2+e|BasicEventElement | `\https://admin-shell.io/aas/3/1/KeyTypes/BasicEventElement`
+.2+e|BasicEventElement | `\https://admin-shell.io/aas/3/2/KeyTypes/BasicEventElement`
 a|Basic event element
 
-.2+e|Blob | `\https://admin-shell.io/aas/3/1/KeyTypes/Blob`
+.2+e|Blob | `\https://admin-shell.io/aas/3/2/KeyTypes/Blob`
 a|Blob
 
-.2+e|Capability | `\https://admin-shell.io/aas/3/1/KeyTypes/Capability`
+.2+e|Capability | `\https://admin-shell.io/aas/3/2/KeyTypes/Capability`
 a|Capability
 
-.2+e|ConceptDescription | `\https://admin-shell.io/aas/3/1/KeyTypes/ConceptDescription`
+.2+e|ConceptDescription | `\https://admin-shell.io/aas/3/2/KeyTypes/ConceptDescription`
 a|Concept Description
 
 
-.2+e|DataElement | `\https://admin-shell.io/aas/3/1/KeyTypes/DataElement`
+.2+e|DataElement | `\https://admin-shell.io/aas/3/2/KeyTypes/DataElement`
 a|
 Data Element
 
@@ -204,10 +204,10 @@ Note: data elements are abstract, i.e. if a key uses "DataElement", the referenc
 ====
 
 
-.2+e|Entity | `\https://admin-shell.io/aas/3/1/KeyTypes/Entity`
+.2+e|Entity | `\https://admin-shell.io/aas/3/2/KeyTypes/Entity`
 a|Entity
 
-.2+e|EventElement | `\https://admin-shell.io/aas/3/1/KeyTypes/EventElement`
+.2+e|EventElement | `\https://admin-shell.io/aas/3/2/KeyTypes/EventElement`
 a|
 Event
 
@@ -217,176 +217,71 @@ Note: event element is abstract.
 ====
 
 
-.2+e|File | `\https://admin-shell.io/aas/3/1/KeyTypes/File`
+.2+e|File | `\https://admin-shell.io/aas/3/2/KeyTypes/File`
 a|File
 
-.2+e|FragmentReference | `\https://admin-shell.io/aas/3/1/KeyTypes/FragmentReference`
+.2+e|FragmentReference | `\https://admin-shell.io/aas/3/2/KeyTypes/FragmentReference`
 a|Bookmark or a similar local identifier of a subordinate part of a primary resource
 
-.2+e|GlobalReference | `\https://admin-shell.io/aas/3/1/KeyTypes/GlobalReference`
+.2+e|GlobalReference | `\https://admin-shell.io/aas/3/2/KeyTypes/GlobalReference`
 a|Global reference
 
-.2+e|Identifiable | `\https://admin-shell.io/aas/3/1/KeyTypes/Identifiable`
+.2+e|Identifiable | `\https://admin-shell.io/aas/3/2/KeyTypes/Identifiable`
 a|
 Identifiable
 
 
 ====
-Note: identifiable is abstract, i.e. if a key uses "Identifiable" the reference may be an Asset Administration Shell, a submodel or a concept description.
+Note: identifiable is abstract, i.e. if a key uses "Identifiable" the reference may be an Asset Administration Shell, a Submodel or a concept description.
 ====
 
 
-.2+e|MultiLanguageProperty | `\https://admin-shell.io/aas/3/1/KeyTypes/MultiLanguageProperty`
+.2+e|MultiLanguageProperty | `\https://admin-shell.io/aas/3/2/KeyTypes/MultiLanguageProperty`
 a|Property with a value that can be provided in multiple languages
 
-.2+e|Operation| `\https://admin-shell.io/aas/3/1/KeyTypes/Operation`
+.2+e|Operation| `\https://admin-shell.io/aas/3/2/KeyTypes/Operation`
 a|Operation
 
-.2+e|Property | `\https://admin-shell.io/aas/3/1/KeyTypes/Property`
+.2+e|Property | `\https://admin-shell.io/aas/3/2/KeyTypes/Property`
 a|Property
 
-.2+e|Range | `\https://admin-shell.io/aas/3/1/KeyTypes/Range`
+.2+e|Range | `\https://admin-shell.io/aas/3/2/KeyTypes/Range`
 a|Range with min and max
 
-.2+e|Referable | `\https://admin-shell.io/aas/3/1/KeyTypes/Referable`
+.2+e|Referable | `\https://admin-shell.io/aas/3/2/KeyTypes/Referable`
 a|
 ====
 Note: referables are abstract, i.e. if a key uses "Referable", the reference may be an Asset Administration Shell, a property, etc.
 ====
 
-.2+e|ReferenceElement | `\https://admin-shell.io/aas/3/1/KeyTypes/ReferenceElement`
+.2+e|ReferenceElement | `\https://admin-shell.io/aas/3/2/KeyTypes/ReferenceElement`
 a|Reference
 
-.2+e|RelationshipElement | `\https://admin-shell.io/aas/3/1/KeyTypes/RelationshipElement`
+.2+e|RelationshipElement | `\https://admin-shell.io/aas/3/2/KeyTypes/RelationshipElement`
 a|Relationship
 
-.2+e|Submodel | `\https://admin-shell.io/aas/3/1/KeyTypes/Submodel`
+.2+e|Submodel | `\https://admin-shell.io/aas/3/2/KeyTypes/Submodel`
 a|Submodel
 
-.2+e|SubmodelElement | `\https://admin-shell.io/aas/3/1/KeyTypes/SubmodelElement`
+.2+e|SubmodelElement | `\https://admin-shell.io/aas/3/2/KeyTypes/SubmodelElement`
 a|
-Submodel element
+SubmodelElement
 
 
 ====
-Note: submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a submodel element list, an operation, etc.
+Note: SubmodelElements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
 ====
 
 
-.2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/1/KeyTypes/SubmodelElementCollection`
-a|Struct of submodel elements
+.2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/2/KeyTypes/SubmodelElementCollection`
+a|Struct of SubmodelElements
 
-.2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/1/KeyTypes/SubmodelElementList`
-a|List of submodel elements
+.2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/2/KeyTypes/SubmodelElementList`
+a|List of SubmodelElements
 |===
 
 
-=== Fragment Keys Enumeration 
 
-[.table-with-appendix-table]
-[cols="30%h,70%"]
-|===
-h|Enumeration: e|[[FragmentKeys]]FragmentKeys
-h|Explanation: a|
-Enumeration of different fragment key value types within a key
-
-
-====
-Note: not used as type but in constraints.
-====
-
-
-h|Set of: |xref:AasReferableNonIdentifiables[AasReferableNonIdentifiables], xref:GenericFragmentKeys[GenericFragmentKeys]
-h|ID: | `\https://admin-shell.io/aas/3/1/FragmentKeys`
-
-
-.2+h|Literal h| ID
-h|Explanation
-
-
-.2+e|AnnotatedRelationshipElement | `\https://admin-shell.io/aas/3/1/FragmentKeys/AnnotatedRelationshipElement`
-a|Annotated relationship element
-
-
-.2+e|BasicEventElement | `\https://admin-shell.io/aas/3/1/FragmentKeys/BasicEventElement`
-a|Basic event element
-
-.2+e|Blob | `\https://admin-shell.io/aas/3/1/FragmentKeys/Blob`
-a|Blob
-
-.2+e|Capability | `\https://admin-shell.io/aas/3/1/FragmentKeys/Capability`
-a|Capability
-
-
-
-.2+e|DataElement | `\https://admin-shell.io/aas/3/1/FragmentKeys/DataElement`
-a|
-Data Element
-
-
-====
-Note: data elements are abstract, i.e. if a key uses "DataElement", the reference may be a property, file, etc.
-====
-
-
-.2+e|Entity | `\https://admin-shell.io/aas/3/1/FragmentKeys/Entity`
-a|Entity
-
-.2+e|EventElement | `\https://admin-shell.io/aas/3/1/FragmentKeys/EventElement`
-a|
-Event
-
-
-====
-Note: event element is abstract.
-====
-
-
-.2+e|File | `\https://admin-shell.io/aas/3/1/FragmentKeys/File`
-a|File
-
-.2+e|FragmentReference | `\https://admin-shell.io/aas/3/1/FragmentKeys/FragmentReference`
-a|Bookmark or a similar local identifier of a subordinate part of a primary resource
-
-
-.2+e|MultiLanguageProperty | `\https://admin-shell.io/aas/3/1/FragmentKeys/MultiLanguageProperty`
-a|Property with a value that can be provided in multiple languages
-
-.2+e|Operation| `\https://admin-shell.io/aas/3/1/FragmentKeys/Operation`
-a|Operation
-
-.2+e|Property | `\https://admin-shell.io/aas/3/1/FragmentKeys/Property`
-a|Property
-
-.2+e|Range | `\https://admin-shell.io/aas/3/1/FragmentKeys/Range`
-a|Range with min and max
-
-
-.2+e|ReferenceElement | `\https://admin-shell.io/aas/3/1/FragmentKeys/ReferenceElement`
-a|Reference
-
-.2+e|RelationshipElement | `\https://admin-shell.io/aas/3/1/FragmentKeys/RelationshipElement`
-a|Relationship
-
-
-.2+e|SubmodelElement | `\https://admin-shell.io/aas/3/1/FragmentKeys/SubmodelElement`
-a|
-Submodel element
-
-
-====
-Note: submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a submodel element list, an operation, etc.
-====
-
-
-.2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/1/FragmentKeys/SubmodelElementCollection`
-a|Struct of submodel elements
-
-.2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/1/FragmentKeys/SubmodelElementList`
-a|List of submodel elements
-|===
-
-{empty} +
 
 == Logical Enumerations 
 
@@ -416,27 +311,27 @@ Note: not used as type but in constraints.
 
 
 h|Set of: |xref:AasSubmodelElements[AasSubmodelElements]
-h|ID: | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables`
+h|ID: | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables`
 
 .2+h|Literal h| ID
 h|Explanation
 
 
-.2+e|AnnotatedRelationshipElement | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/AnnotatedRelationshipElement`
+.2+e|AnnotatedRelationshipElement | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/AnnotatedRelationshipElement`
 a|Annotated relationship element
 
 
-.2+e|BasicEventElement | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/BasicEventElement`
+.2+e|BasicEventElement | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/BasicEventElement`
 a|Basic event element
 
-.2+e|Blob | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/Blob`
+.2+e|Blob | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/Blob`
 a|Blob
 
-.2+e|Capability | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/Capability`
+.2+e|Capability | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/Capability`
 a|Capability
 
 
-.2+e|DataElement | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/DataElement`
+.2+e|DataElement | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/DataElement`
 a|
 Data Element
 
@@ -446,10 +341,10 @@ Note: data elements are abstract, i.e. if a key uses "DataElement", the referenc
 ====
 
 
-.2+e|Entity | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/Entity`
+.2+e|Entity | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/Entity`
 a|Entity
 
-.2+e|EventElement | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/EventElement`
+.2+e|EventElement | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/EventElement`
 a|
 Event
 
@@ -459,45 +354,45 @@ Note: event element is abstract.
 ====
 
 
-.2+e|File | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/File`
+.2+e|File | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/File`
 a|File
 
 
-.2+e|MultiLanguageProperty | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/MultiLanguageProperty`
+.2+e|MultiLanguageProperty | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/MultiLanguageProperty`
 a|Property with a value that can be provided in multiple languages
 
-.2+e|Operation| `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/Operation`
+.2+e|Operation| `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/Operation`
 a|Operation
 
-.2+e|Property | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/Property`
+.2+e|Property | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/Property`
 a|Property
 
-.2+e|Range | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/Range`
+.2+e|Range | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/Range`
 a|Range with min and max
 
 
-.2+e|ReferenceElement | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/ReferenceElement`
+.2+e|ReferenceElement | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/ReferenceElement`
 a|Reference
 
-.2+e|RelationshipElement | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/RelationshipElement`
+.2+e|RelationshipElement | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/RelationshipElement`
 a|Relationship
 
 
-.2+e|SubmodelElement | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/SubmodelElement`
+.2+e|SubmodelElement | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/SubmodelElement`
 a|
-Submodel element
+SubmodelElement
 
 
 ====
-Note: submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a submodel element list, an operation, etc.
+Note: SubmodelElements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
 ====
 
 
-.2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/SubmodelElementCollection`
-a|Struct of submodel elements
+.2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/SubmodelElementCollection`
+a|Struct of SubmodelElements
 
-.2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/1/AasReferableNonIdentifiables/SubmodelElementList`
-a|List of submodel elements
+.2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/SubmodelElementList`
+a|List of SubmodelElements
 |===
 
 
@@ -511,31 +406,31 @@ a|List of submodel elements
 [cols="30%h,70%"]
 |===
 h|Enumeration: e|[[AasNonContainerSubmodelElements]]AasNonContainerSubmodelElements
-h|Explanation: a|Enumeration of non-container submodel element types including abstract submodel element types
+h|Explanation: a|Enumeration of non-container SubmodelElement types including abstract SubmodelElement types
 
 ====
 Note: not used as type but may be used in constraints.
 ====
 
 h|Set of: | --
-h|ID: | `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements`
+h|ID: | `\https://admin-shell.io/aas/3/2/AasNonContainerSubmodelElements`
 
 .2+h|Literal h| ID
 h|Explanation
 
 
 
-.2+e|BasicEventElement | `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/BasicEventElement`
+.2+e|BasicEventElement | `\https://admin-shell.io/aas/3/2/AasNonContainerSubmodelElements/BasicEventElement`
 a|Basic event element
 
-.2+e|Blob | `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/Blob`
+.2+e|Blob | `\https://admin-shell.io/aas/3/2/AasNonContainerSubmodelElements/Blob`
 a|Blob
 
-.2+e|Capability | `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/Capability`
+.2+e|Capability | `\https://admin-shell.io/aas/3/2/AasNonContainerSubmodelElements/Capability`
 a|Capability
 
 
-.2+e|DataElement | `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/DataElement`
+.2+e|DataElement | `\https://admin-shell.io/aas/3/2/AasNonContainerSubmodelElements/DataElement`
 a|
 Data element
 
@@ -545,7 +440,7 @@ Note: data elements are abstract, i.e. if a key uses "DataElement", the referenc
 ====
 
 
-.2+e|EventElement | `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/EventElement`
+.2+e|EventElement | `\https://admin-shell.io/aas/3/2/AasNonContainerSubmodelElements/EventElement`
 a|
 Event
 
@@ -555,28 +450,28 @@ Note: event element is abstract.
 ====
 
 
-.2+e|File | `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/File`
+.2+e|File | `\https://admin-shell.io/aas/3/2/AasNonContainerSubmodelElements/File`
 a|File
 
 
-.2+e|MultiLanguageProperty | `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/MultiLanguageProperty`
+.2+e|MultiLanguageProperty | `\https://admin-shell.io/aas/3/2/AasNonContainerSubmodelElements/MultiLanguageProperty`
 a|Property with a value that can be provided in multiple languages
 
-.2+e|Operation| `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/Operation`
+.2+e|Operation| `\https://admin-shell.io/aas/3/2/AasNonContainerSubmodelElements/Operation`
 a|Operation
 
-.2+e|Property | `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/Property`
+.2+e|Property | `\https://admin-shell.io/aas/3/2/AasNonContainerSubmodelElements/Property`
 a|Property
 
-.2+e|Range | `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/Range`
+.2+e|Range | `\https://admin-shell.io/aas/3/2/AasNonContainerSubmodelElements/Range`
 a|Range with min and max
 
 
 
-.2+e|ReferenceElement | `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/ReferenceElement`
+.2+e|ReferenceElement | `\https://admin-shell.io/aas/3/2/AasNonContainerSubmodelElements/ReferenceElement`
 a|Reference
 
-.2+e|RelationshipElement | `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/RelationshipElement`
+.2+e|RelationshipElement | `\https://admin-shell.io/aas/3/2/AasNonContainerSubmodelElements/RelationshipElement`
 a|Relationship
 
 
@@ -591,33 +486,40 @@ a|Relationship
 [cols="30%h,70%"]
 |===
 h|Enumeration: e|[[AasContainerSubmodelElements]]AasContainerSubmodelElements
-h|Explanation: a|Enumeration of conainer submodel element types including abstract container submodel element types
+h|Explanation: a|Enumeration of conainer SubmodelElement types including abstract container SubmodelElement types
 
 ====
 Note: not used as type but may be used in constraints.
 ====
 
 h|Set of: | --
-h|ID: | `\https://admin-shell.io/aas/3/1/AasContainerSubmodelElements`
+h|ID: | `\https://admin-shell.io/aas/3/2/AasContainerSubmodelElements`
 
 .2+h|Literal h| ID
 h|Explanation
 
 
-.2+e|AnnotatedRelationshipElement | `\https://admin-shell.io/aas/3/1/AasContainerSubmodelElements/AnnotatedRelationshipElement`
+.2+e|AnnotatedRelationshipElement | `\https://admin-shell.io/aas/3/2/AasContainerSubmodelElements/AnnotatedRelationshipElement`
 a|Annotated relationship element
 
 
-.2+e|Entity | `\https://admin-shell.io/aas/3/1/AasContainerSubmodelElements/Entity`
+.2+e|Entity | `\https://admin-shell.io/aas/3/2/AasContainerSubmodelElements/Entity`
 a|Entity
 
 
-.2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/1/AasContainerSubmodelElements/SubmodelElementCollection`
-a|Struct of submodel elements
+.2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/2/AasContainerSubmodelElements/SubmodelElementCollection`
+a|Struct of SubmodelElements
 
-.2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/1/AasContainerSubmodelElements/SubmodelElementList`
-a|List of submodel elements
+.2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/2/AasContainerSubmodelElements/SubmodelElementList`
+a|List of SubmodelElements
 |===
+
+
+A minimum recursion depth of 32 for Container-Elements should be supported.
+
+====
+Note: This means for certification a maximum of 32 recursion test cases should be tested.
+====
 
 ===  Logical Enumeration AasReferables
 
@@ -636,33 +538,33 @@ Note: not used as type but in constraints.
 
 
 h|Set of: |xref:AasReferableNonIdentifiables[AasReferableNonIdentifiables], xref:AasIdentifiables[AasIdentifiables]
-h|ID: | `\https://admin-shell.io/aas/3/1/AasReferables`
+h|ID: | `\https://admin-shell.io/aas/3/2/AasReferables`
 
 .2+h|Literal h| ID
 h|Explanation
 
 
-.2+e|AnnotatedRelationshipElement | `\https://admin-shell.io/aas/3/1/AasReferables/AnnotatedRelationshipElement`
+.2+e|AnnotatedRelationshipElement | `\https://admin-shell.io/aas/3/2/AasReferables/AnnotatedRelationshipElement`
 a|Annotated relationship element
 
-.2+e|AssetAdministrationShell | `\https://admin-shell.io/aas/3/1/AasReferables/AssetAdministrationShell`
+.2+e|AssetAdministrationShell | `\https://admin-shell.io/aas/3/2/AasReferables/AssetAdministrationShell`
 a|Asset Administration Shell
 
-.2+e|BasicEventElement | `\https://admin-shell.io/aas/3/1/AasReferables/BasicEventElement`
+.2+e|BasicEventElement | `\https://admin-shell.io/aas/3/2/AasReferables/BasicEventElement`
 a|Basic event element
 
-.2+e|Blob | `\https://admin-shell.io/aas/3/1/AasReferables/Blob`
+.2+e|Blob | `\https://admin-shell.io/aas/3/2/AasReferables/Blob`
 a|Blob
 
-.2+e|Capability | `\https://admin-shell.io/aas/3/1/AasReferables/Capability`
+.2+e|Capability | `\https://admin-shell.io/aas/3/2/AasReferables/Capability`
 a|Capability
 
-.2+e|ConceptDescription | `\https://admin-shell.io/aas/3/1/AasReferables/ConceptDescription`
+.2+e|ConceptDescription | `\https://admin-shell.io/aas/3/2/AasReferables/ConceptDescription`
 a|
 Concept description
 
 
-.2+e|DataElement | `\https://admin-shell.io/aas/3/1/AasReferables/DataElement`
+.2+e|DataElement | `\https://admin-shell.io/aas/3/2/AasReferables/DataElement`
 a|
 Data element
 
@@ -672,10 +574,10 @@ Note: data elements are abstract, i.e. if a key uses "DataElement", the referenc
 ====
 
 
-.2+e|Entity | `\https://admin-shell.io/aas/3/1/AasReferables/Entity`
+.2+e|Entity | `\https://admin-shell.io/aas/3/2/AasReferables/Entity`
 a|Entity
 
-.2+e|EventElement | `\https://admin-shell.io/aas/3/1/AasReferables/EventElement`
+.2+e|EventElement | `\https://admin-shell.io/aas/3/2/AasReferables/EventElement`
 a|
 Event
 
@@ -685,61 +587,168 @@ Note: event element is abstract.
 ====
 
 
-.2+e|File | `\https://admin-shell.io/aas/3/1/AasReferables/File`
+.2+e|File | `\https://admin-shell.io/aas/3/2/AasReferables/File`
 a|File
 
 
-.2+e|Identifiable | `\https://admin-shell.io/aas/3/1/AasReferables/Identifiable`
+.2+e|Identifiable | `\https://admin-shell.io/aas/3/2/AasReferables/Identifiable`
 a|
 Identifiable
 ====
 Note: identifiables are abstract, i.e. if a key uses "Identifiable", the reference may be an Asset Administration Shell, a concept description, etc.
 ====
 
-.2+e|MultiLanguageProperty | `\https://admin-shell.io/aas/3/1/AasReferables/MultiLanguageProperty`
+.2+e|MultiLanguageProperty | `\https://admin-shell.io/aas/3/2/AasReferables/MultiLanguageProperty`
 a|Property with a value that can be provided in multiple languages
 
-.2+e|Operation| `\https://admin-shell.io/aas/3/1/AasReferables/Operation`
+.2+e|Operation| `\https://admin-shell.io/aas/3/2/AasReferables/Operation`
 a|Operation
 
-.2+e|Property | `\https://admin-shell.io/aas/3/1/AasReferables/Property`
+.2+e|Property | `\https://admin-shell.io/aas/3/2/AasReferables/Property`
 a|Property
 
-.2+e|Range | `\https://admin-shell.io/aas/3/1/AasReferables/Range`
+.2+e|Range | `\https://admin-shell.io/aas/3/2/AasReferables/Range`
 a|Range with min and max
 
-.2+e|Referable | `\https://admin-shell.io/aas/3/1/AasReferables/Referable`
+.2+e|Referable | `\https://admin-shell.io/aas/3/2/AasReferables/Referable`
 a|
 ====
 Note: referables are abstract, i.e. if a key uses "Referable", the reference may be an Asset Administration Shell, a property, etc.
 ====
 
-.2+e|ReferenceElement | `\https://admin-shell.io/aas/3/1/AasReferables/ReferenceElement`
+.2+e|ReferenceElement | `\https://admin-shell.io/aas/3/2/AasReferables/ReferenceElement`
 a|Reference
 
-.2+e|RelationshipElement | `\https://admin-shell.io/aas/3/1/AasReferables/RelationshipElement`
+.2+e|RelationshipElement | `\https://admin-shell.io/aas/3/2/AasReferables/RelationshipElement`
 a|Relationship
 
-.2+e|Submodel | `\https://admin-shell.io/aas/3/1/AasReferables/Submodel`
+.2+e|Submodel | `\https://admin-shell.io/aas/3/2/AasReferables/Submodel`
 a|
 Submodel
 
-.2+e|SubmodelElement | `\https://admin-shell.io/aas/3/1/AasReferables/SubmodelElement`
+.2+e|SubmodelElement | `\https://admin-shell.io/aas/3/2/AasReferables/SubmodelElement`
 a|
-Submodel element
+SubmodelElement
 
 
 ====
-Note: submodel elements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a submodel element list, an operation, etc.
+Note: SubmodelElements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
 ====
 
 
-.2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/1/AasReferables/SubmodelElementCollection`
-a|Struct of submodel elements
+.2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/2/AasReferables/SubmodelElementCollection`
+a|Struct of SubmodelElements
 
-.2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/1/AasReferables/SubmodelElementList`
-a|List of submodel elements
+.2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/2/AasReferables/SubmodelElementList`
+a|List of SubmodelElements
 |===
+
+=== Fragment Keys Enumeration 
+
+[.table-with-appendix-table]
+[cols="30%h,70%"]
+|===
+h|Enumeration: e|[[FragmentKeys]]FragmentKeys
+h|Explanation: a|
+Enumeration of different fragment key value types within a key
+
+
+====
+Note: not used as type but in constraints.
+====
+
+
+h|Set of: |xref:AasReferableNonIdentifiables[AasReferableNonIdentifiables], xref:GenericFragmentKeys[GenericFragmentKeys]
+h|ID: | `\https://admin-shell.io/aas/3/2/FragmentKeys`
+
+
+.2+h|Literal h| ID
+h|Explanation
+
+
+.2+e|AnnotatedRelationshipElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/AnnotatedRelationshipElement`
+a|Annotated relationship element
+
+
+.2+e|BasicEventElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/BasicEventElement`
+a|Basic event element
+
+.2+e|Blob | `\https://admin-shell.io/aas/3/2/FragmentKeys/Blob`
+a|Blob
+
+.2+e|Capability | `\https://admin-shell.io/aas/3/2/FragmentKeys/Capability`
+a|Capability
+
+
+
+.2+e|DataElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/DataElement`
+a|
+Data Element
+
+
+====
+Note: data elements are abstract, i.e. if a key uses "DataElement", the reference may be a property, file, etc.
+====
+
+
+.2+e|Entity | `\https://admin-shell.io/aas/3/2/FragmentKeys/Entity`
+a|Entity
+
+.2+e|EventElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/EventElement`
+a|
+Event
+
+
+====
+Note: event element is abstract.
+====
+
+
+.2+e|File | `\https://admin-shell.io/aas/3/2/FragmentKeys/File`
+a|File
+
+.2+e|FragmentReference | `\https://admin-shell.io/aas/3/2/FragmentKeys/FragmentReference`
+a|Bookmark or a similar local identifier of a subordinate part of a primary resource
+
+
+.2+e|MultiLanguageProperty | `\https://admin-shell.io/aas/3/2/FragmentKeys/MultiLanguageProperty`
+a|Property with a value that can be provided in multiple languages
+
+.2+e|Operation| `\https://admin-shell.io/aas/3/2/FragmentKeys/Operation`
+a|Operation
+
+.2+e|Property | `\https://admin-shell.io/aas/3/2/FragmentKeys/Property`
+a|Property
+
+.2+e|Range | `\https://admin-shell.io/aas/3/2/FragmentKeys/Range`
+a|Range with min and max
+
+
+.2+e|ReferenceElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/ReferenceElement`
+a|Reference
+
+.2+e|RelationshipElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/RelationshipElement`
+a|Relationship
+
+
+.2+e|SubmodelElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/SubmodelElement`
+a|
+SubmodelElement
+
+
+====
+Note: SubmodelElements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
+====
+
+
+.2+e|SubmodelElementCollection | `\https://admin-shell.io/aas/3/2/FragmentKeys/SubmodelElementCollection`
+a|Struct of SubmodelElements
+
+.2+e|SubmodelElementList | `\https://admin-shell.io/aas/3/2/FragmentKeys/SubmodelElementList`
+a|List of SubmodelElements
+|===
+
+{empty} +
 
 ===  Logical Enumeration GenericFragmentKeys
 
@@ -760,12 +769,12 @@ Note: not used as type but in constraints.
 
 
 |Set of: |--
-h|ID: | `\https://admin-shell.io/aas/3/1/GenericFragmentKeys`
+h|ID: | `\https://admin-shell.io/aas/3/2/GenericFragmentKeys`
 
 .2+h|Literal h| ID
 h|Explanation
 
-.2+e|FragmentReference | `\https://admin-shell.io/aas/3/1/GenericFragmentKeys/FragmentReference`
+.2+e|FragmentReference | `\https://admin-shell.io/aas/3/2/GenericFragmentKeys/FragmentReference`
 a|Bookmark or a similar local identifier of a subordinate part of a primary resource
 
 |===
@@ -786,18 +795,18 @@ Note: not used as type but in constraints.
 
 
 h|Set of: |--
-h|ID: | `\https://admin-shell.io/aas/3/1/AasIdentifiables`
+h|ID: | `\https://admin-shell.io/aas/3/2/AasIdentifiables`
 
 .2+h|Literal h| ID
 h|Explanation
 
-.2+e|AssetAdministrationShell | `\https://admin-shell.io/aas/3/1/AasIdentifiables/AssetAdministrationShell`
+.2+e|AssetAdministrationShell | `\https://admin-shell.io/aas/3/2/AasIdentifiables/AssetAdministrationShell`
 a|Asset Administration Shell
 
-.2+e|ConceptDescription | `\https://admin-shell.io/aas/3/1/AasIdentifiables/ConceptDescription`
+.2+e|ConceptDescription | `\https://admin-shell.io/aas/3/2/AasIdentifiables/ConceptDescription`
 a|Concept description
 
-.2+e|Identifiable | `\https://admin-shell.io/aas/3/1/AasIdentifiables/Identifiable`
+.2+e|Identifiable | `\https://admin-shell.io/aas/3/2/AasIdentifiables/Identifiable`
 a|
 Identifiable
 
@@ -807,7 +816,7 @@ Note: Identifiables are abstract, i.e. if a key uses "Identifiable", the referen
 ====
 
 
-.2+e|Submodel | `\https://admin-shell.io/aas/3/1/AasIdentifiables/Submodel`
+.2+e|Submodel | `\https://admin-shell.io/aas/3/2/AasIdentifiables/Submodel`
 a|Submodel
 
 |===
@@ -821,12 +830,12 @@ a|Submodel
 h|Enumeration: e|[[GenericGloballyIdentifiables]]GenericGloballyIdentifiables
 h|Explanation: a|Enumeration of different key value types within a key
 h|Set of: |--
-h|ID: | `\https://admin-shell.io/aas/3/1/GenericGloballyIdentifiables`
+h|ID: | `\https://admin-shell.io/aas/3/2/GenericGloballyIdentifiables`
 
 .2+h|Literal h| ID
 h|Explanation
 
-.2+e|GlobalReference | `\https://admin-shell.io/aas/3/1/GenericGloballyIdentifiables/GlobalReference`
+.2+e|GlobalReference | `\https://admin-shell.io/aas/3/2/GenericGloballyIdentifiables/GlobalReference`
 a|Global reference
 
 |===
@@ -839,24 +848,24 @@ a|Global reference
 |===
 h|Enumeration: e|[[GloballyIdentifiables]]GloballyIdentifiables
 h|Explanation: a|Enumeration of globally identifiable elements
-h|Set of: |`\https://admin-shell.io/aas/3/1/GenericGloballyIdentifiables`, `\https://admin-shell.io/aas/3/1/AasIdentifiables`
-h|ID: | `\https://admin-shell.io/aas/3/1/GloballyIdentifiables`
+h|Set of: |`\https://admin-shell.io/aas/3/2/GenericGloballyIdentifiables`, `\https://admin-shell.io/aas/3/2/AasIdentifiables`
+h|ID: | `\https://admin-shell.io/aas/3/2/GloballyIdentifiables`
 
 .2+h|Literal h| ID
 h|Explanation
 
 
 
-.2+e|AssetAdministrationShell | `\https://admin-shell.io/aas/3/1/GloballyIdentifiables/AssetAdministrationShell`
+.2+e|AssetAdministrationShell | `\https://admin-shell.io/aas/3/2/GloballyIdentifiables/AssetAdministrationShell`
 a|Asset Administration Shell
 
-.2+e|ConceptDescription | `\https://admin-shell.io/aas/3/1/GloballyIdentifiables/ConceptDescription`
+.2+e|ConceptDescription | `\https://admin-shell.io/aas/3/2/GloballyIdentifiables/ConceptDescription`
 a|Concept description
 
-.2+e|GlobalReference | `\https://admin-shell.io/aas/3/1/GloballyIdentifiables/GlobalReference`
+.2+e|GlobalReference | `\https://admin-shell.io/aas/3/2/GloballyIdentifiables/GlobalReference`
 a|Global reference
 
-.2+e|Identifiable | `\https://admin-shell.io/aas/3/1/GloballyIdentifiables/Identifiable`
+.2+e|Identifiable | `\https://admin-shell.io/aas/3/2/GloballyIdentifiables/Identifiable`
 a|
 Identifiable
 
@@ -866,7 +875,7 @@ Note: Identifiables are abstract, i.e. if a key uses "Identifiable", the referen
 ====
 
 
-.2+e|Submodel | `\https://admin-shell.io/aas/3/1/GloballyIdentifiables/Submodel`
+.2+e|Submodel | `\https://admin-shell.io/aas/3/2/GloballyIdentifiables/Submodel`
 a|Submodel
 
 |===
@@ -909,6 +918,9 @@ Note: which kind of fragments are supported depends on the content type and the 
 [[constraint-AASd-128]]
 {aasd128}
 
+[[constraint-AASd-137]]
+{aasd137}
+
 [#examples-for-references]
 === Examples
 
@@ -950,6 +962,9 @@ Key type "Submodel" is not a globally identifiable (see xref:spec-metamodel/refe
 Key type "Submodel" is no generic globally identifiable (see xref:spec-metamodel/referencing.adoc#constraint-AASd-122[Constraint AASd-122]).
 
 
+
+
+
 [example]
 ....
 [ModelRef](GlobalReference)https://example.com/aas/1/1/1234859590
@@ -959,7 +974,12 @@ Key type "GlobalReference" is no AAS identifiable (see xref:spec-metamodel/refer
 The last key type "GlobalReference" is neither a generic globally identifiable nor a generic fragment key (see xref:spec-metamodel/referencing.adoc#constraint-AASd-124[Constraint AASd-124]).
 
 
+[example]
+....
+[ExternalRef](GlobalReference)https://example.com/aas/1/1/1234859590 (SubmodelElementCollection)Document (File)file (FragmentReference)tag
+....
 
+This example violates xref:spec-metamodel/referencing.adoc#constraint-AASd-135[Constraint AASd-135].
 
 
 [.underline]#Examples for valid external references:#
@@ -1034,8 +1054,8 @@ from
 (Submodel)https://example.com/aas/1/1/1234859590, (SubmodelElementCollection)Manual, (MultiLanguageProperty)Title
 ....
 semantically and content-wise.
-The difference is that more than one document is allowed in the first submodel and thus a submodel element list is defined:
-elements in a list are numbered. In the second submodel several documents may be added as collections but the number is typically fixed.
+The difference is that more than one document is allowed in the first Submodel and thus a SubmodelElement list is defined:
+elements in a list are numbered. In the second Submodel several documents may be added as collections but the number is typically fixed.
 
 ====
 
@@ -1085,7 +1105,7 @@ This is an external reference but no model reference.
 ....
 
 This reference does not start with the ID of an Identifiable, i.e. key type "Property" is no AAS identifiable (see xref:spec-metamodel/referencing.adoc#constraint-AASd-123[Constraint AASd-123]).
-Additionally, the value is not a valid xref:spec-metamodel/common.adoc#Referable[idShort] for a Property submodel element since it contains special characters like "#" (see xref:annex/overview-constraints.adoc#constraint-AASd-002[Constraint AASd-002]).
+Additionally, the value is not a valid xref:spec-metamodel/common.adoc#Referable[idShort] for a Property SubmodelElement since it contains special characters like "#" (see xref:annex/overview-constraints.adoc#constraint-AASd-002[Constraint AASd-002]).
 
 
 [example]
@@ -1102,7 +1122,7 @@ Key "Property" is no generic fragment key and therefore fragment key "FragmentRe
 (Submodel)https://example.com/aas/1/1/1234859590, (EventElement)Event, (FragmentReference)Comment
 ....
 
-This model reference is invalid because fragment references so far are only defined for "File" and "Blob" submodel elements (see xref:spec-metamodel/referencing.adoc#constraint-AASd-127[Constraint AASd-127]).
+This model reference is invalid because fragment references so far are only defined for "File" and "Blob" SubmodelElements (see xref:spec-metamodel/referencing.adoc#constraint-AASd-127[Constraint AASd-127]).
 
 
 [example]

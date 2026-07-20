@@ -19,6 +19,8 @@ Non-backward compatible changes (nc) are marked as such.
 
 * nc="x" means not backward compatible, if no value is added in the table, the change is backward compatible.
 
+
+
 * nc="(x)" means that the change made was implicitly contained or stated in the document before and is now being formalized.
 Therefore, the change is considered to be backward compatible.
 
@@ -34,6 +36,128 @@ If there are no changes the corresponding tables are omitted.
 Note: before V3.0, the security metamodel (now IDTA-01004) and the predefined data specifications (now IDTA-01003 series) were also part of this document. 
 They had separate sections and tables documenting the changes.
 ====
+
+
+== Changes V3.2 vs. V3.1.2
+
+Major Changes:
+
+* CHANGED: attributes for creation and update date in AdministrationInformation  (https://github.com/admin-shell-io/aas-specs-metamodel/issues/484[#484])
+* CHANGED: value to enumeration AssetKind: Batch to support Digital Product Passports (https://github.com/admin-shell-io/aas-specs-metamodel/issues/483[#483])
+* NEW: section in the annex on metamodel and payload mapping for implementing the digital product passport (DPP) based on EN 18223
+* NEW: explanatory section added for Value-Only for Operations (https://github.com/admin-shell-io/aas-specs-metamodel/issues/652[#652])
+* CHANGED: Value-Only JSON Schema - add referredSemanticId to data type Reference (https://github.com/admin-shell-io/aas-specs-metamodel/issues/651[#651]) 
+* CHANGED: SubmodelElement "Range" - remove conditions "If the min value is missing, the value is assumed to be negative infinite." and "If the max value is missing, the value is assumed to be positive infinite." 
+  (https://github.com/admin-shell-io/aas-specs-metamodel/issues/639[#639])
+* NEW: Constraint AASd-137 for References (https://github.com/admin-shell-io/aas-specs-metamodel/issues/592[#592])
+* NEW: Constraint AASd-138 for SubmodelElementList for OperationVariable (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
+* CHANGED: Constraint AASd-129, add exception if the SubmodelElement is part of an OperationVariable (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
+* CHANGED: changed description of Constraint AASd-116, made more generic to avoid frequent updates (https://github.com/admin-shell-io/aas-specs-metamodel/issues/674[#674])
+* ADDED: a minimum recursion depth of 32 for Container-Elements should be supported. Note: This means for certification a maximum of 32 recursion test cases should be tested. (https://github.com/admin-shell-io/aas-specs-metamodel/issues/333[#333])
+* ADDED: explanatory text for handling of versions and dates in xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation]
+
+
+Minor Changes:
+
+
+* CHANGED: description of AASd-002, mention that idShort consists of at least two characters (as specified in regEx) (https://github.com/admin-shell-io/aas-specs-metamodel/issues/641[#641])
+* CHANGED: description of data type ContentType changed, some explanations with respect to mime types were removed (https://github.com/admin-shell-io/aas-specs-metamodel/issues/604[#604])
+* CHANGED: rename submodel to Submodel and submodel element to SubmodelElement to be conformant to IEC 63278-1 and terms and definitions, this also leads to reformulation of some constraints
+* ADDED: Annex UML - add information how to graphically depict attributes of type "Reference" (https://github.com/admin-shell-io/aas-specs-metamodel/issues/601[#601])
+* CHANGED: definition of term "capability" (https://github.com/admin-shell-io/aas-specs-metamodel/issues/649[#649])
+* ADDED: Note to data type "Identifier" to use existing standards (https://github.com/admin-shell-io/aas-specs-metamodel/issues/658[#658])
+* ADDED: Example and Note for Value-Only for SubmodelElementLists in SubmodelElementList: empty lists included (https://github.com/admin-shell-io/aas-specs-metamodel/issues/644[#644])
+* NEW: add new note for XML Schema data types compared to IEEE 754 definitions (https://github.com/admin-shell-io/aas-specs-metamodel/issues/620[#620])
+* REMOVED: Note 3 to _Operation_ since not possible due to Constraint AASd-134: even if the SubmodelElement as the value of an input and an output variable have the same idShort, this does not mean that they are identical or mapped to the same variable since OperationVariables are no referables. The same applies to two input variables or an input variable and an inoutputVariable a.s.o. (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
+* ADDED: Handling of operations in Submodel with kind=Instance are handled identical to operation in Submodel Templates (Submodel with kind=Template) (https://github.com/admin-shell-io/aas-specs-metamodel/issues/462[#462])
+* CHANGED: update bibliography
+* CHANGED: editorial changes (including https://github.com/admin-shell-io/aas-specs-metamodel/issues/600[#600], https://github.com/admin-shell-io/aas-specs-metamodel/issues/636[#636], https://github.com/admin-shell-io/aas-specs-metamodel/issues/637[#637], https://github.com/admin-shell-io/aas-specs-metamodel/issues/638[#638] )
+* NEW: add to xref:index.adoc#spec-versioning[Versioning] that bugfix releases are not no necessarily backward compatible
+* REMOVED: AdministrativeInformation: remove former Note 2
+* ADDED: Note that AdministrativeInformation/templateId only applicable for Submodels so far
+* REMOVED: Note for _Property/valueId_ that it is recommended to use externa references (was removed already in last release for most similar cases)
+* REMOVED: Annex UML - since packages not used any longer remove explanation for UML packages
+* CHANGES: editorial
+
+
+Minor Bugfixes:
+
+* correct ID for AasNonContainerSubmodelElements/Blob
+* correct ID for Extension/name
+* correct ID for HasSemantics/supplementalSemanticId
+
+
+
+
+.Changes in Metamodel
+[cols="5%,42%,48%",options="header",]
+|===
+h|Nc h|V3.2 Change w.r.t. V3.1.1 h|Comment
+
+| {empty} | xref:spec-metamodel/core.adoc#AssetKind[AssetKind] a| add new value "Batch" to enumeration AssetKind to support DPP applications
+
+| x |xref:spec-metamodel/submodel-elements.adoc#Range[Range] a| remove conditions "If the min value is missing, the value is assumed to be negative infinite." and "If the max value is missing, the value is assumed to be positive infinite." 
+   
+   Note 1: some data types like float do have infinite in its value range per definition and should be used if infinite is needed. 
+   
+   Note 2: Range is a SubmodelElement in state "experimental", therefore non-backward-compatible changes are possible
+
+
+
+|===
+
+.New Elements in Metamodel
+[cols="5%,42%,48%",options="header",]
+|===
+h|Nc h|New Elements V3.2 vs V3.1 h|Comment
+|{empty} | xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation/createdAt]  a| add createdAt date attribute to enable performant querying of new objects
+|{empty} | xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation/updatedAt]  a| add updatedAt date attribute to enable DPP methods
+|{empty} | xref:spec-metamodel/core.adoc#AssetKind[AssetKind/Batch] a| add new value "Batch" to enumeration AssetKind
+|===
+
+
+
+.New, Changed or Removed Constraints
+[cols="5%,10%,15%,69%",options="header",]
+|===
+h|Nc h|V3.1 vs. V3.0 h|New, Update, Removed, Reformulated h|Comment
+
+|{empty}  |AASd-002 |Update a|
+add "[idShort] shall consist of at least two characters"
+
+Constraint AASd-002: _idShort_ of __Referable__s shall consist of at least two characters and shall only feature letters, digits, hyphen ("-") and  underscore ("_"); starting mandatory with a letter, and not ending with a hyphen, i.e. ^[a-zA-Z][a-zA-Z0-9_-]*[a-zA-Z0-9_]+$.].
+
+|{empty}  |AASd-108 |Update a|
+use "SubmodelElement" instead of "submodel element"
+
+|{empty}  |AASd-116 |Update a|
+use \https://admin-shell.io/aas/3/x/AssetInformation/globalAssetId instead of \https://admin-shell.io/aas/3/1/AssetInformation/globalAssetId
+
+Constraint AASd-116:
+"globalAssetId" (case-insensitive) is a reserved key for SpecificAssetId/name with the semantics as defined in \https://admin-shell.io/aas/3/x/AssetInformation/globalAssetId, x being the minor version of the used specification.
+
+|{empty}  |AASd-128 |Update a|
+use "SubmodelElement" instead of "submodel element" 
+
+|{empty}  |AASd-129 |Update a|
+* add "Exception: the SubmodelElement is part of an OperationVariable." 
+* use "SubmodelElement" instead of "submodel element" and "Submodel" instead of "submodel"
+
+Constraint AASd-129: If any Qualifier/kind value of a SubmodelElement/qualifier (attribute qualifier inherited via Qualifiable) is equal to TemplateQualifier, the SubmodelElement shall be part of a Submodel template, 
+i.e. a Submodel with Submodel/kind (attribute kind inherited via HasKind) value equal to Template. 
+Exception: the SubmodelElement is part of an OperationVariable.
+
+|(x)  |AASd-137 |New a|
+
+Constraint AASd-137: 
+For external references, i.e. xref:ROOT:spec-metamodel/referencing.adoc#Reference[Reference] the value of any xref:ROOT:spec-metamodel/referencing.adoc#Key[Key/type] contained in the Reference shall not be one of xref:ROOT:spec-metamodel/referencing.adoc#AasReferables[AasReferables].
+
+|(x)  |AASd-138 |New a|
+
+Constraint AASd-138: 
+A SubmodelElementList within a Submodel of kind=Template or as part of an OperationVariable shall have exactly one element.
+|===
+
 
 == Changes V3.1.2 vs. V3.1.1
 
@@ -59,7 +183,7 @@ Bugfixes:
 .Changes in Metamodel
 [cols="5%,42%,48%",options="header",]
 |===
-|*Nc* |*V3.1 Change w.r.t. V3.0.2* |*Comment*
+h| Nc h| V3.1 Change w.r.t. V3.0.2 h| Comment
 
 | {empty} | AasNonContainerSubmodelElements/Blob a| fix semantic metamodel ID `\https://admin-shell.io/aas/3/1/AasSubmodelElements/Blob` for `Blob` within  `AasNonContainerSubmodelElements` to `\https://admin-shell.io/aas/3/1/AasNonContainerSubmodelElements/Blob`
 
@@ -76,7 +200,7 @@ Bugfixes:
 .New, Changed or Removed Constraints
 [cols="5%,10%,15%,69%",options="header",]
 |===
-|*Nc* |*V3.1 vs. V3.0* |*New, Update, Removed, Reformulated* |*Comment*
+h|Nc h| V3.1 vs. V3.0 h| New, Update, Removed, Reformulated h| Comment
 
 
 |{empty}  | AASd-021| Correct a|
@@ -144,8 +268,6 @@ https://github.com/admin-shell-io/aas-specs-metamodel/issues/471[#471],
 ** ADDED: add clause for Submodel Example (with properties from SMT Technical Data, not Families any longer)
 * CHANGED: update Schema for JSON-Value Serialization (https://github.com/admin-shell-io/aas-specs-metamodel/issues/389[#389])
 * REMOVED: remove recommendation to use external references for semanticId (https://github.com/admin-shell-io/aas-specs-metamodel/issues/376[#376]) and related attributes like valueId, semanticIdListElement and isCaseOf (https://github.com/admin-shell-io/aas-specs-metamodel/issues/396[#396], https://github.com/admin-shell-io/aas-specs-metamodel/issues/396[#396])
-* ADDED: add note: A maximum recursion depth of 32 for Container-Elements should be supported.
-This means for certification a maximum of 32 recursion test cases should be tested. (https://github.com/admin-shell-io/aas-specs-metamodel/issues/333[#333]) 
 * REMOVED: remove clauses on OPC UA and AutomationML mappings (https://github.com/admin-shell-io/aas-specs-metamodel/issues/373[#373], https://github.com/admin-shell-io/aas-specs-metamodel/issues/397[#397])
 * CHANGED: update explanatory text and notes in the context of AdministrativeInformation (https://github.com/admin-shell-io/aas-specs-metamodel/issues/331[#331])
 * CHANGED: move chapter "General" to Annex
@@ -169,7 +291,6 @@ Minor Changes:
 
 
 * CHANGED: add new data type "DateTimeUtc" and use it for attribute _lastUpdate_ of _BasicEventElement_ and attribute _timeStamp_ of _EventPayload_ (https://github.com/admin-shell-io/aas-specs-metamodel/issues/498[#498])
-* CHANGED: change recommendation for recursion: from "[..] maximum recursion depth of 32 [..]" to "A recursion depth of 32 should not be exceeded. The recommendation is to have not more than 8 recursions in a submodel. Test engines should test at least 16 recursions."
 * add Annex with overview of constraints (https://github.com/admin-shell-io/aas-specs-metamodel/issues/509[#509])
 * CHANGED: update Constraint AASd-116 (https://github.com/admin-shell-io/aas-specs-metamodel/issues/298[#298])
 * REMOVED: remove information on OPC UA mapping (https://github.com/admin-shell-io/aas-specs-metamodel/issues/373[#373])
@@ -193,7 +314,7 @@ https://github.com/admin-shell-io/aas-specs-metamodel/issues/385[#385])
 .Changes in Metamodel
 [cols="5%,42%,48%",options="header",]
 |===
-|*Nc* |*V3.1 Change w.r.t. V3.0.2* |*Comment*
+h| Nc h| V3.1 Change w.r.t. V3.0.2 h| Comment
 
 | {empty} | xref:spec-metamodel/core.adoc#AssetKind[AssetKind] a| Add new value "Role" to enumeration AssetKind
 | {empty} | xref:spec-metamodel/submodel-elements.adoc#BasicEventElement[BasicEventElement/lastUpdate] a| change data type from _dateTime_ to _DateTimeUtc_
@@ -213,7 +334,7 @@ https://github.com/admin-shell-io/aas-specs-metamodel/issues/385[#385])
 .New Elements in Metamodel
 [cols="5%,41%,51%",options="header",]
 |===
-|{empty} |*New Elements V3.1 vs V3.0.2* |*Comment*
+h|Nc h|New Elements V3.1 vs V3.0.2 h|Comment
 
 |{empty} | xref:spec-metamodel/referencing.adoc#AasContainerSubmodelElements[AasContainerSubmodelElements] | New enumeration for container submodel elements
 |{empty} | xref:spec-metamodel/referencing.adoc#AasNonContainerSubmodelElements[AasNonContainerSubmodelElements] | New enumeration for non-container submodel elements
@@ -224,7 +345,7 @@ https://github.com/admin-shell-io/aas-specs-metamodel/issues/385[#385])
 .New, Changed or Removed Constraints
 [cols="5%,10%,15%,69%",options="header",]
 |===
-|*Nc* |*V3.1 vs. V3.0* |*New, Update, Removed, Reformulated* |*Comment*
+h|Nc h|V3.1 vs. V3.0 h|New, Update, Removed, Reformulated h|Comment
 |{empty}  |AASd-002 |Update a|
 now also allows hyphens to be included in name
 
@@ -314,7 +435,7 @@ Other Bugfixes:
 .Changes in Metamodel
 [cols="5%,42%,48%",options="header",]
 |===
-|*Nc* |*V3.0.2 Change w.r.t. V3.0.1* |*Comment*
+h|Nc h| V3.0.2 Change w.r.t. V3.0.1 h| Comment
 
 
 | (x) | xref:spec-metamodel/environment.adoc#Environment[Environment] a| does not inherit from "Reference"
@@ -325,7 +446,7 @@ Other Bugfixes:
 .New, Changed or Removed Constraints
 [cols="5%,10%,15%,69%",options="header",]
 |===
-|*Nc* |*V3.0.2 vs. V3.0.1* |*New, Update, Removed, Reformulated* |*Comment*
+h|Nc h| V3.0.2 vs. V3.0.1 h| New, Update, Removed, Reformulated h| Comment
 |{empty}  | AASd-119 | Update a|
 correct class name from "hasKind" to "HasKind"
 
@@ -376,7 +497,7 @@ Other Bugfixes:
 .Changes in Metamodel
 [cols="5%,42%,48%",options="header",]
 |===
-|*Nc* |*V3.1 Change w.r.t. V3.0* |*Comment*
+h| Nc h| V3.1 Change w.r.t. V3.0 h| Comment
 |(x)| xref:spec-metamodel/submodel-elements.adoc#BasicEventElement[BasicEventElement/Direction] a| (bugfix in Text only) attribute starts with small letter
 |(x) | xref:spec-metamodel/submodel-elements.adoc#BasicEventElement[BasicEventElement/State] a|  (bugfix in Text only) attribute starts with small letter
 |x| xref:spec-metamodel/datatypes.adoc#DataTypeDefXsd[DataTypeDefXsd] a| BUGFIX: Remove xs:yearMonthDuration from enumeration
@@ -395,7 +516,7 @@ extend data type to support complete URI scheme for files RFC2396
 .New, Changed or Removed Constraints
 [cols="5%,10%,15%,69%",options="header",]
 |===
-|*Nc* |*V3.0 vs. V2.0.1* |*New, Update, Removed, Reformulated* |*Comment*
+h| Nc h| V3.0 vs. V2.0.1 h| New, Update, Removed, Reformulated h| Comment
 
 | x |AASd-116  |Update  a|
 Constraint AASd-116: "globalAssetId" (case-insensitive) is a reserved key.
@@ -496,7 +617,7 @@ Smaller changes:
 .Changes
 [cols="5%,42%,48%",options="header",]
 |===
-|*Nc* |*V3.0 Change w.r.t. V2.0.1* |*Comment*
+h| Nc h| V3.0 Change w.r.t. V2.0.1 h| Comment
 | {empty} |anySimpleTypeDef |Type removed, was no longer used in any class definition, was mentioned in text only.
 |x |Asset |Removed, asset referenced via AssetInformation/globalAssetId only
 |x |AssetAdministrationShell/asset |Removed, substituted by AssetAdministrationShell/assetInformation (but no reference any longer, instead now aggregation)
@@ -608,7 +729,7 @@ Now part of AasSubmodelElements
 .New Elements in Metamodel
 [cols="5%,41%,51%",options="header",]
 |===
-| |*New Elements V3.0 vs V2.0.1* |*Comment*
+h|Nc  h|New Elements V3.0 vs V2.0.1 h|Comment
 |{empty} |xref:spec-metamodel/referencing.adoc#AasIdentifiables[AasIdentifiables] |New enumeration used for References, includes abstract Identifiable +
 +
 Before: Identifiables
@@ -717,7 +838,7 @@ New submodel element SubmodelElementList added, renamed submodel elements Event 
 .New, Changed or Removed Constraints
 [cols="5%,10%,15%,69%",options="header",]
 |===
-|*Nc* |*V3.0 vs. V2.0.1* |*New, Update, Removed, Reformulated* |*Comment*
+h| Nc h| V3.0 vs. V2.0.1 h| New, Update, Removed, Reformulated h| Comment
 | |AASd-001 |Removed a|
 Constraint AASd-001: In case a referable element is not an identifiable element, this ID is mandatory and used for referring to the element in its name space.
 
@@ -862,7 +983,7 @@ Smaller changes:
 .Changes
 [cols="5%,32%,61%",options="header",]
 |===
-|*nc* |*V3.0 Change w.r.t. V3.0RC02* |*Comment*
+h| Nc h| V3.0 Change w.r.t. V3.0RC02 h| Comment
 | |xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation] a|Stereotype \<<dataType>> removed
 | |AssetInformation/externalSubjectId a|Not mandatory any longer; now optional
 |x |AssetInformation/globalAssetId a|Type changed from Reference to Identifier
@@ -925,7 +1046,7 @@ Text how to select a suitable display name removed; now explained in Table 2
 .New Elements in Metamodel
 [cols="5%,43%,49%",options="header",]
 |===
-|*nc* |*V3.0 vs. V3.0RC02 New Elements* |*Comment*
+h|Nc h|V3.0 vs. V3.0RC02 New Elements h|Comment
 | |AdministrativeInformation/creator |New optional attribute
 | |AdministrativeInformation/templateId |New optional attribute
 | |AssetInformation/assetType |New optional attribute
@@ -945,7 +1066,7 @@ Text how to select a suitable display name removed; now explained in Table 2
 .New, Changed or Removed Constraints
 [cols="5%,12%,15%,66%",options="header",]
 |===
-|*Nc* |*V3.0 vs. V3.0RC02* |*New, Update, Removed, Reformulated* |*Comment*
+h| Nc h| V3.0 vs. V3.0RC02 h| New, Update, Removed, Reformulated h| Comment
 | | |EDITORIAL a|
 The following constraints were also updated with minor editorial changes:
 
@@ -1075,7 +1196,7 @@ Note: ReferableElements was substituted by AasSubmodelElements and Aas Identifia
 .Changes w/o Security
 [cols="5%,43%,50%",options="header",]
 |===
-|*nc* |*V3.0RC02 Change w.r.t. V2.0.1* |*Comment*
+h| Nc h| V3.0RC02 Change w.r.t. V2.0.1 h| Comment
 
 | |xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation] |Bugfix: Stereotype "DataType" added
 
@@ -1176,7 +1297,7 @@ Now part of AasSubmodelElements
 .New Elements in Metamodel w/o Security
 [cols="5%,59%,36%",options="header",]
 |===
-|*nc* |*V3.0RC02 vs. V2.0.1 New Elements* |*Comment*
+h|Nc h|V3.0RC02 vs. V2.0.1 New Elements h|Comment
 | |AasSubmodelElements a|
 New enumeration used for References
 
@@ -1277,7 +1398,7 @@ See Attribute Based Access Control (ABAC) for subject concept
 .New, Changed or Removed Constraints w/o Security
 [cols="5%,11%,14%,69%",options="header",]
 |===
-|*Nc* |*V3.0RC02 vs. V2.0.1* |*New, Update, Removed, Reformulated* |*Comment*
+h| Nc h| V3.0RC02 vs. V2.0.1 h| New, Update, Removed, Reformulated h| Comment
 | |AASd-001 |Removed a|
 Constraint AASd-001: In case of a referable element not being an identifiable element this ID is mandatory and used for referring to the element in its name space.
 
@@ -1357,7 +1478,7 @@ Constraint AASD-120: idShort of submodel elements within a SubmodelElementList s
 .Changes w.r.t. Data Specification IEC61360
 [cols="5%,46%,43%",options="header",]
 |===
-|*nc* |*V3.0RC02 Change w.r.t. V2.0.1* |*Comment*
+h| Nc h| V3.0RC02 Change w.r.t. V2.0.1 h| Comment
 | |xref:data-specifications.adoc#DataSpecification[DataSpecification] a|
 Stereotype \<<Template>> added + does not inherit from Identifiable any longer because Data Specification are handled in a different way
 
@@ -1380,7 +1501,7 @@ See separate entries for individual changes.
 .New Elements in Metamodel DataSpecification IEC61360
 [cols="5%,44%,45%",options="header",]
 |===
-|*nc* |*V3.0RC02 vs. V2.0.1* |*Comment*
+h| Nc h| V3.0RC02 vs. V2.0.1 h| Comment
 | |DataSpecification/administration |Was inherited before by Identifiable
 | |DataSpecification/id |Was inherited before by Identifiable
 | |DataSpecification/description |Was inherited before by Identifiable
@@ -1394,7 +1515,7 @@ See separate entries for individual changes.
 .New, Changed or Removed Constraints Data Specification IEC61360
 [cols="5%,14%,14%,63%",options="header",]
 |===
-|*nc* |*V3.0RC02 vs. V2.0.1* |*New, Update, Removed, Reformulated* |*Comment*
+h| Nc h| V3.0RC02 vs. V2.0.1 h| New, Update, Removed, Reformulated h| Comment
 | |AASc-002 |New a|
 Updated version of AASd-076, renamed to AASc-002 because applicable to data specification IEC61360
 
@@ -1420,7 +1541,7 @@ Changes:
 .Changes w.r.t. Security
 [cols="5%,46%,43%",options="header",]
 |===
-|*nc* |*V3.0RC02 Change w.r.t. V2.0.1* |*Comment*
+h| Nc h| V3.0RC02 Change w.r.t. V2.0.1 h| Comment
 |x |AccessControlPolicyPoints/policyAdministrationPoint |Type changed from PolicyAdministrationPoint to AccessControl
 |x |AccessControlPolicyPoints/policyDecisionPoint |Removed
 |x |AccessControlPolicyPoints/policyEnforcementPoint |Removed
@@ -1445,14 +1566,14 @@ No longer inherits from Qualifiable
 .New Elements in Metamodel Security
 [cols="5%,44%,45%",options="header",]
 |===
-|*nc* |*V3.0RC02 vs. V2.0.1* |*Comment*
+h| Nc h| V3.0RC02 vs. V2.0.1 h| Comment
 | |AccessPermissionRule/constraint |Substitute for inherited attributes from Qualifiable
 |===
 
 .New, Changed or Removed Constraints Security
 [cols="5%,14%,14%,63%",options="header",]
 |===
-|*nc* |*V3.0RC02 vs. V2.0.1* |*New, Update, Removed, Reformulated* |*Comment*
+h| Nc h| V3.0RC02 vs. V2.0.1 h| New, Update, Removed, Reformulated h| Comment
 | |AASd-015 |Removed |Renamed to AASs-015 (see NEW)
 | |AASs-009 |Removed a|
 Removed since class PolicyAdministrationPoint was removed
@@ -1517,7 +1638,7 @@ Bugfixes:
 .Changes w/o Security
 [cols="5%,45%,51%",options="header",]
 |===
-|*nc* |*V3.0RC02 Change w.r.t. V3.0RC01* |*Comment*
+h| Nc h| V3.0RC02 Change w.r.t. V3.0RC01 h| Comment
 | |xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation] |Bugfix: Stereotype "DataType" added
 | |AnnotatedRelationship/annotation |Type changed from ModelReference<xref:spec-metamodel/submodel-elements.adoc#DataElement[DataElement]> to DataElement
 |x |Asset |Removed, asset referenced via globalAssetId only
@@ -1614,7 +1735,7 @@ Now part of AasSubmodelElements
 .New Elements in Metamodel w/o Security
 [cols="5%,45%,51%",options="header",]
 |===
-|*nc* |*V3.0RC02 vs. V2.0RC01 New Elements* |*Comment*
+h|Nc h|V3.0RC02 vs. V2.0RC01 New Elements h|Comment
 | |AasSubmodelElements a|
 New enumeration used for References
 
@@ -1690,7 +1811,7 @@ New submodel element SubmodelElementList added, renamed submodel elements Event 
 .New, Changed or Removed Constraints w/o Security
 [cols="5%,12%,15%,65%",options="header",]
 |===
-|*Nc* |*V3.0RC02 vs. V3.0RC01* |*New, Update, Removed, Reformulated* |*Comment*
+h| Nc h| V3.0RC02 vs. V3.0RC01 h| New, Update, Removed, Reformulated h| Comment
 |footnote:[Every model valid for V3.0RC02 is still valid in V3.0RC01, however there might be implementations that need to be changed if they assumed that the user can type case-insensitive names and get all elements that match the name in a case-insensitive way.] |AASd-003 |Update a|
 idShort is case-sensitive and not case-insensitive
 
@@ -1890,7 +2011,7 @@ Constraint AASD-120: idShort of submodel elements within a SubmodelElementList s
 .Changes w.r.t. Data Specification IEC61360
 [cols="5%,46%,43%",options="header",]
 |===
-|*nc* |*V3.0RC02 Change w.r.t. V3.0RC01* |*Comment*
+h| Nc h| V3.0RC02 Change w.r.t. V3.0RC01 h| Comment
 | |xref:data-specifications.adoc#DataSpecification[DataSpecification] a|
 Stereotype \<<Template>> added + does not inherit from Identifiable any longer because Data Specification are handled differently
 
@@ -1916,7 +2037,7 @@ See separate entries for individual changes
 .New Elements in Metamodel DataSpecification IEC61360
 [cols="5%,44%,45%",options="header",]
 |===
-|*nc* |*V3.0RC02* |*Comment*
+h| Nc h| V3.0RC02 h| Comment
 |x |ValueReferencePair/valueId |Type changed from Reference to GlobalReference
 | |DataSpecification/administration |Was inherited before by Identifiable
 | |DataSpecification/id |Was inherited before by Identifiable
@@ -1931,7 +2052,7 @@ See separate entries for individual changes
 .New, Changed or Removed Constraints Data Specification IEC61360
 [cols="5%,14%,14%,63%",options="header",]
 |===
-|*nc* |*V3.0RC02* |*New, Update, Removed, Reformulated* |*Comment*
+h| Nc h| V3.0RC02 h| New, Update, Removed, Reformulated h| Comment
 | |AASc-002 |New a|
 Updated version of AASd-076, renamed to AASC-002 because applicable to data specification IEC61360
 
@@ -1957,7 +2078,7 @@ Changes:
 .Changes w.r.t. Security
 [cols="5%,46%,43%",options="header",]
 |===
-|*nc* |*V3.0RC02 Change w.r.t. V3.0RC01* |*Comment*
+h|Nc h|V3.0RC02 Change w.r.t. V3.0RC01 h|Comment
 |x |AccessControlPolicyPoints/policyAdministrationPoint |Type changed from PolicyAdministrationPoint to AccessControl
 |x |AccessControlPolicyPoints/policyDecisionPoint |Removed
 |x |AccessControlPolicyPoints/policyEnforcementPoint |Removed
@@ -1982,14 +2103,14 @@ No longer inherits from qualifiable
 .New Elements in Metamodel Security
 [cols="5%,44%,45%",options="header",]
 |===
-|*nc* |*V3.0RC02 vs. V3.0RC01* |*Comment*
+h| Nc h| V3.0RC02 vs. V3.0RC01 h| Comment
 | |AccessPermissionRule/constraint |Substitute for inherited attributes from Qualifiable
 |===
 
 .New, Changed or Removed Constraints Security
 [cols="5%,14%,14%,63%",options="header",]
 |===
-|*nc* |*V3.0RC02 vs. V3.0RC01* |*New, Update, Removed, Reformulated* |*Comment*
+h| Nc h| V3.0RC02 vs. V3.0RC01 h| New, Update, Removed, Reformulated h| Comment
 | |AASs-009 |Removed a|
 Removed since class PolicyAdministrationPoint was removed
 
@@ -2019,7 +2140,7 @@ Major changes:
 .Changes w.r.t. V2.0 w/o Security
 [cols="5%,41%,48%",options="header",]
 |===
-|*nc* |*V3.0RC01 Change w.r.t. V2.0.1* |*Comment*
+h| Nc h| V3.0RC01 Change w.r.t. V2.0.1 h| Comment
 | |anySimpleTypeDef |Type removed, was not used in any class definition any longer, was mentioned in text only
 |x |AssetAdministrationShell/asset |Removed, substituted by AssetAdministrationShell/assetInformation (no reference any longer, instead now aggregation)
 |x |Asset/assetKind |Attribute "assetKind" moved to AssetAdministrationShell/AssetInformation
@@ -2036,7 +2157,7 @@ Major changes:
 .New Elements in Metamodel V3.0RC01 w/o Security
 [cols="5%,46%,43%",options="header",]
 |===
-|*nc* |*V3.0RC01 vs. V2.0.1* |*Comment*
+h| Nc h| V3.0RC01 vs. V2.0.1 h| Comment
 |x |AssetAdministrationShell/assetInformation |Substitute for AssetAdministrationShell/asset (no reference any longer, instead aggregation)
 | |xref:spec-metamodel/core.adoc#AssetInformation[AssetInformation] |with attributes/functionality from former class Asset because not specific to Asset but AAS
 | |AssetInformation/thumbnail |Optional Attribute of new class AssetInformation that was not available in Asset class before
@@ -2051,7 +2172,7 @@ Major changes:
 .New, Changed or Removed Constraints w/o Security
 [cols="5%,13%,14%,64%",options="header",]
 |===
-|*nc* |*V3.0RC01* |*New, Update, Removed, Reformulated* |*Comment*
+h| Nc h| V3.0RC01 h| New, Update, Removed, Reformulated h| Comment
 | |AASd-001 |Removed a|
 Constraint AASd-001: In case of a referable element not being an identifiable element this id is mandatory and used for referring to the element in its name space.
 
@@ -2129,7 +2250,7 @@ Major changes:
 .New, Changed or Removed Constraints Security
 [cols="5%,17%,23%,51%",options="header",]
 |===
-|*nc* |*V3.0RC01* |*New, Update, Removed, Reformulated* |*Comment*
+h| Nc h| V3.0RC01 h| New, Update, Removed, Reformulated h| Comment
 | |AASd-010 |Removed |Renamed to AASs-010 (see NEW)
 | |AASs-010 |NEW a|
 Reformulation of AASd-010
@@ -2157,7 +2278,7 @@ Major changes:
 .Changes w.r.t. V2.0.1 w/o Security
 [cols="5%,44%,45%",options="header",]
 |===
-|*nc* |*V2.0.1 Change w.r.t. V2.0* |*Comment*
+h| Nc h| V2.0.1 Change w.r.t. V2.0 h| Comment
 | |DataTypeIEC61360/INTEGER_COUNT |Bugfix, was missing
 | |DataTypeIEC61360/INTEGER_MEASURE |Bugfix, was missing
 | |DataTypeIEC61360/INTEGER_CURRENCY |Bugfix, was missing
@@ -2169,7 +2290,7 @@ Major changes:
 .New, Changed or Removed Constraints w/o Security
 [cols="5%,11%,23%,57%",options="header",]
 |===
-|*nc* |*V2.0.1* |*New, Update, Removed* |*Comment*
+h| Nc h| V2.0.1 h| New, Update, Removed h| Comment
 | |AASd-001 |update a|
 idShort now mandatory
 
@@ -2198,7 +2319,7 @@ Major changes:
 .Changes w.r.t. V1.0 w/o Security
 [cols="5%,44%,45%",options="header",]
 |===
-|*nc* |*V2.0 Change w.r.t. V1.0* |*Comment*
+h| Nc h| V2.0 Change w.r.t. V1.0 h| Comment
 |(x) footnote:[There was an implicit constraint restricting the values to the values in the enumeration. This is now formalized.] |anySimpleTypeDef a|
 Type now starts with capital letter: AnySimpleTypeDef
 
@@ -2244,7 +2365,7 @@ Type changed from AnySimpleTypeDef to ValueDataType
 .New Elements in Metamodel V1.0 w/o Security
 [cols="43%,57%",options="header",]
 |===
-|*V2.0* |*Comment*
+|*V2.0 h| Comment
 |xref:spec-metamodel/submodel-elements.adoc#AnnotatedRelationshipElement[AnnotatedRelationshipElement] |New submodel element, inheriting from RelationshipElement
 |Asset/billOfMaterial |New attribute
 |xref:spec-metamodel/core.adoc#AssetKind[AssetKind] |New enumeration type
@@ -2281,7 +2402,7 @@ Type changed from AnySimpleTypeDef to ValueDataType
 .New, Changed or Removed Constraints w/o Security
 [cols="5%,14%,23%,54%",options="header",]
 |===
-|*nc* |*V2.0* |*New, Update, Removed* |*Comment*
+h| Nc h| V2.0 h| New, Update, Removed h| Comment
 | |AASd-007 |update a|
 Reformulated
 
@@ -2304,7 +2425,7 @@ Constraint AASd-025: The data element shall be part of the submodel that is refe
 .Changes Metamodel w.r.t. V1.0 Security
 [cols="5%,42%,53%",options="header",]
 |===
-|*nc* |*V2.0 Change w.r.t. V1.0* |*Comment*
+h| Nc h| V2.0 Change w.r.t. V1.0 h| Comment
 |x |AccessControl/selectableEnvironmentAttributes |Type changed from Submodel to Submodel*
 | |AccessPermissionRule/permissionsPerObject |Cardinality now consistent for figure and table: 0..*
 |x |AccessPermissionRule/targetSubjectAttributes |Cardinality changed from 1..* to 1
@@ -2326,7 +2447,7 @@ externalInformationPoint renamed to externalInformationPoints
 .New Elements in Metamodel w.r.t. Security
 [cols="52%,48%",options="header",]
 |===
-|*V2.0* |*Comment*
+|*V2.0 h| Comment
 |BlobCertificate |New class inheriting from Certificate
 |Certificate |Abstract class: was foreseen in V1.0 but not yet modelled
 |Security/requiredCertificateExtension |New attribute

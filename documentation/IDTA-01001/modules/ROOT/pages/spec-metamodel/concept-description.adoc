@@ -29,12 +29,12 @@ The description of the concept should follow a standardized schema (realized as 
 
 
 h|Inherits from: 3+|xref:spec-metamodel/common.adoc#Identifiable[Identifiable]; xref:spec-metamodel/common.adoc#HasDataSpecification[HasDataSpecification]
-h|ID: 3+| `\https://admin-shell.io/aas/3/1/ConceptDescription`
+h|ID: 3+| `\https://admin-shell.io/aas/3/2/ConceptDescription`
 
 .2+h|Attribute 3+h| ID
 h|Explanation h|Type h|Card.
 
-.2+e|isCaseOf 3+| `\https://admin-shell.io/aas/3/1/ConceptDescription/isCaseOf`
+.2+e|isCaseOf 3+| `\https://admin-shell.io/aas/3/2/ConceptDescription/isCaseOf`
 a|
 Reference to an external definition the concept is compatible to or was derived from
 
@@ -48,7 +48,7 @@ Note: compare with is-case-of relationship in ISO 13584-32 (xref:bibliography.ad
 |xref:spec-metamodel/referencing.adoc#Reference[Reference] |0..*
 |===
 
-Different types of submodel elements require different attributes to describe their semantics.
+Different types of SubmodelElements require different attributes to describe their semantics.
 This is why a concept description has at least one data specification template associated with it.
 This template defines the attributes needed to describe the semantics.
 

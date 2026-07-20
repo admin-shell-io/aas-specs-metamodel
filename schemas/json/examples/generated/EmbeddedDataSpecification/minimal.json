@@ -17,18 +17,14 @@
             "type": "ExternalReference"
           },
           "dataSpecificationContent": {
-            "modelType": "DataSpecificationIec61360",
+            "modelType": "DataSpecificationUom",
             "preferredName": [
               {
                 "language": "i-enochian",
                 "text": "something_84b0b440"
-              },
-              {
-                "language": "en-GB",
-                "text": "Something random in English 5b15c20d"
               }
             ],
-            "value": "something_13759f45"
+            "symbol": "something_c13116d7"
           }
         }
       ],

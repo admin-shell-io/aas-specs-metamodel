@@ -2,6 +2,7 @@
   "assetAdministrationShells": [
     {
       "administration": {
+        "createdAt": "2022-04-01T01:02:03Z",
         "creator": {
           "keys": [
             {
@@ -23,23 +24,20 @@
               "type": "ExternalReference"
             },
             "dataSpecificationContent": {
-              "modelType": "DataSpecificationIec61360",
+              "modelType": "DataSpecificationUom",
               "preferredName": [
                 {
                   "language": "sr-Latn",
                   "text": "something_7282cc23"
-                },
-                {
-                  "language": "en-GB",
-                  "text": "Something random in English 0843a1d1"
                 }
               ],
-              "value": "something_bebf64f0"
+              "symbol": "something_b4f12294"
             }
           }
         ],
         "revision": "0",
         "templateId": "something_cb08d136",
+        "updatedAt": "0013-10-11T24:00:00.000000Z",
         "version": "1"
       },
       "assetInformation": {

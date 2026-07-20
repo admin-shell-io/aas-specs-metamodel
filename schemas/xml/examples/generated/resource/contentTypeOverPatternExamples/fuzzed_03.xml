@@ -1,4 +1,4 @@
-<environment xmlns="https://admin-shell.io/aas/3/1">
+<environment xmlns="https://admin-shell.io/aas/3/2">
 	<assetAdministrationShells>
 		<assetAdministrationShell>
 			<id>something_142922d6</id>
@@ -7,7 +7,7 @@
 				<globalAssetId>something_eea66fa1</globalAssetId>
 				<defaultThumbnail>
 					<path>mailto:John.Doe@example.org</path>
-					<contentType>'VbrwFrYTU/fO7NnLxq   	; 	MX.`10dB732`X5yRy=I56Ov9Us	 ;		 pRb~~hdw_C%2Zf=&quot;&quot;			    			 	 		 	  ; h=1t</contentType>
+					<contentType>'VbrwFrYTU/fO7NnLxq   	; 	MX.`10dB732`X5yRy=I56Ov9Us	 ;		 pRb~~hdw_C%2Zf=""			    			 	 		 	  ; h=1t</contentType>
 				</defaultThumbnail>
 			</assetInformation>
 		</assetAdministrationShell>

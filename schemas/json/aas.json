@@ -1,13 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "title": "IDTA-01001-3-1 AAS JSON Schema",
+  "title": "IDTA-01001-3-2 AAS JSON Schema",
   "type": "object",
   "allOf": [
     {
       "$ref": "#/definitions/Environment"
     }
   ],
-  "$id": "https://admin-shell.io/aas/3/1",
+  "$id": "https://admin-shell.io/aas/3/2",
   "definitions": {
     "AasSubmodelElements": {
       "type": "string",
@@ -88,6 +88,14 @@
             },
             "creator": {
               "$ref": "#/definitions/Reference"
+            },
+            "createdAt": {
+              "type": "string",
+              "pattern": "^-?(([1-9][0-9][0-9][0-9]+)|(0[0-9][0-9][0-9]))-((0[1-9])|(1[0-2]))-((0[1-9])|([12][0-9])|(3[01]))T(((([01][0-9])|(2[0-3])):[0-5][0-9]:([0-5][0-9])(\\.[0-9]+)?)|24:00:00(\\.0+)?)(Z|\\+00:00|-00:00)$"
+            },
+            "updatedAt": {
+              "type": "string",
+              "pattern": "^-?(([1-9][0-9][0-9][0-9]+)|(0[0-9][0-9][0-9]))-((0[1-9])|(1[0-2]))-((0[1-9])|([12][0-9])|(3[01]))T(((([01][0-9])|(2[0-3])):[0-5][0-9]:([0-5][0-9])(\\.[0-9]+)?)|24:00:00(\\.0+)?)(Z|\\+00:00|-00:00)$"
             },
             "templateId": {
               "type": "string",
@@ -189,6 +197,7 @@
     "AssetKind": {
       "type": "string",
       "enum": [
+        "Batch",
         "Instance",
         "NotApplicable",
         "Role",
@@ -355,6 +364,9 @@
       "oneOf": [
         {
           "$ref": "#/definitions/DataSpecificationIec61360"
+        },
+        {
+          "$ref": "#/definitions/DataSpecificationUom"
         }
       ]
     },
@@ -430,6 +442,75 @@
           },
           "required": [
             "preferredName"
+          ]
+        }
+      ]
+    },
+    "DataSpecificationUom": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/DataSpecificationContent"
+        },
+        {
+          "properties": {
+            "preferredName": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/LangStringUom"
+              },
+              "minItems": 1
+            },
+            "symbol": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^([\\x09\\x0a\\x0d\\x20-\\ud7ff\\ue000-\\ufffd]|\\ud800[\\udc00-\\udfff]|[\\ud801-\\udbfe][\\udc00-\\udfff]|\\udbff[\\udc00-\\udfff])*$"
+            },
+            "specificUnitId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^([\\x09\\x0a\\x0d\\x20-\\ud7ff\\ue000-\\ufffd]|\\ud800[\\udc00-\\udfff]|[\\ud801-\\udbfe][\\udc00-\\udfff]|\\udbff[\\udc00-\\udfff])*$"
+            },
+            "definition": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/LangStringDefinitionTypeUom"
+              },
+              "minItems": 1
+            },
+            "preferredNameQuantity": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/LangStringUom"
+              },
+              "minItems": 1
+            },
+            "quantityId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2048,
+              "pattern": "^([\\x09\\x0a\\x0d\\x20-\\ud7ff\\ue000-\\ufffd]|\\ud800[\\udc00-\\udfff]|[\\ud801-\\udbfe][\\udc00-\\udfff]|\\udbff[\\udc00-\\udfff])*$"
+            },
+            "classificationSystem": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^([\\x09\\x0a\\x0d\\x20-\\ud7ff\\ue000-\\ufffd]|\\ud800[\\udc00-\\udfff]|[\\ud801-\\udbfe][\\udc00-\\udfff]|\\udbff[\\udc00-\\udfff])*$"
+            },
+            "classificationSystemVersion": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^([\\x09\\x0a\\x0d\\x20-\\ud7ff\\ue000-\\ufffd]|\\ud800[\\udc00-\\udfff]|[\\ud801-\\udbfe][\\udc00-\\udfff]|\\udbff[\\udc00-\\udfff])*$"
+            },
+            "modelType": {
+              "const": "DataSpecificationUom"
+            }
+          },
+          "required": [
+            "preferredName",
+            "symbol"
           ]
         }
       ]
@@ -836,6 +917,20 @@
         }
       ]
     },
+    "LangStringDefinitionTypeUom": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/AbstractLangString"
+        },
+        {
+          "properties": {
+            "text": {
+              "maxLength": 2048
+            }
+          }
+        }
+      ]
+    },
     "LangStringNameType": {
       "allOf": [
         {
@@ -892,6 +987,20 @@
         }
       ]
     },
+    "LangStringUom": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/AbstractLangString"
+        },
+        {
+          "properties": {
+            "text": {
+              "maxLength": 256
+            }
+          }
+        }
+      ]
+    },
     "LevelType": {
       "type": "object",
       "properties": {
@@ -925,6 +1034,7 @@
         "Capability",
         "ConceptDescription",
         "DataSpecificationIec61360",
+        "DataSpecificationUom",
         "Entity",
         "File",
         "MultiLanguageProperty",
