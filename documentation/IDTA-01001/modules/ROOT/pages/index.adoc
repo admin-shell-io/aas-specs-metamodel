@@ -16,7 +16,6 @@ This specification is part of the https://industrialdigitaltwin.org/en/content-h
 
 == Version
 
-IN PROGRESS
 This is version 3.2 of the specification IDTA-01001.
 
 Previous version: 3.1.2
@@ -87,7 +86,7 @@ https://creativecommons.org/licenses/by/4.0/[Creative Commons Attribution 4.0 In
 
 SPDX-License-Identifier: CC-BY-4.0
 
-June 2026
+July 2026
 
 == How to Get in Contact
 
