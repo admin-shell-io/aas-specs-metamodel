@@ -16,9 +16,9 @@ This specification is part of the https://industrialdigitaltwin.org/en/content-h
 
 == Version
 
-This is version 3.2 of the specification IDTA-01001.
+This is version 3.3 of the specification IDTA-01001.
 
-Previous version: 3.1.2
+Previous version: 3.2.0
 
 
 
@@ -77,16 +77,16 @@ Copyright: Industrial Digital Twin Association e.V. (IDTA)
 
 IDTA Number: IDTA-01001
 
-Version: 3.2
+Version: 3.3
 
-DOI: https://doi.org/10.62628/IDTA.01001-3-2
+DOI: ** TO BE ADDED **
 
 This work is licensed under a
 https://creativecommons.org/licenses/by/4.0/[Creative Commons Attribution 4.0 International License].
 
 SPDX-License-Identifier: CC-BY-4.0
 
-July 2026
+** Publication Date: to be addedd **
 
 == How to Get in Contact
 
