@@ -20,6 +20,9 @@ SPDX-License-Identifier: CC-BY-4.0
 As described in  xref:annex/general.adoc#life-cycle-with-type-assets-and-instance-assets[Life Cycle with Type Assets and Instance Assets], there is a class of relationships between assets of different hierarchy levels.
 In this class of relationships, automation equipment is explained as a complex, interrelated graph of automation devices and products, performing intelligent production and self-learning/optimization tasks.
 
+For better readability the abbreviation "I4.0" is consistently used for "Industrie 4.0" in compound terms. 
+The term "Industrie 4.0" continues to be used when standing on its own.
+
 Details and examples for composite I4.0 Components can be found in xref:bibliography.adoc#bib13[[13\]].
 
 The following modelling elements in the Asset Administration Shell metamodel can be used to realize such composite I4.0 Components:

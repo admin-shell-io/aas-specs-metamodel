@@ -55,7 +55,7 @@ a|
 * metamodel and data specification template are integrated into the same schema and thus have a strong dependency
 
 | |  IDTA-01004 Part 4: Security
-| v3.1
+| v3.2
 a| 
 
 * defines classes and attributes that can be used in access control rules
@@ -104,7 +104,7 @@ Feedback:
 
 === History
 
-This document (version 3.2) was produced by the Work Stream "Specification of the Asset Administration Shell" of the Working Group "Open Technology" of the https://industrialdigitaltwin.org/[Industrial Digital Twin Association (IDTA)].
+Version 3.2 was produced by the Work Stream "Specification of the Asset Administration Shell" of the Working Group "Open Technology" of the https://industrialdigitaltwin.org/[Industrial Digital Twin Association (IDTA)], published in July 2026.
 
 Version 3.1 was produced by the Work Stream "Specification of the Asset Administration Shell" of the Working Group "Open Technology" of the https://industrialdigitaltwin.org/[Industrial Digital Twin Association (IDTA)], published in May 2025.
 It is the first version published as html document and maintained completely open source.
@@ -126,8 +126,6 @@ Version 2.0.l was published in May 2020.
 The first version of this document was produced September 2017 to July 2018 by a joint working group with members from ZVEI SG "Models and Standards" and the Plattform Industrie 4.0 working group "Reference Architectures, Standards and Norms ".
 The document was subsequently validated by the platform’s working group "Reference Architectures, Standards and Norms".
 
-For better readability the abbreviation "I4.0" is consistently used for "Industrie 4.0" in compound terms.
-The term "Industrie 4.0" continues to be used when standing on its own.
 
 include::./shared/versioning.adoc[]
 
