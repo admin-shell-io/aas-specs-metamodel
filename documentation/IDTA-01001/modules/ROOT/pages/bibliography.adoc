@@ -11,78 +11,12 @@ SPDX-License-Identifier: CC-BY-4.0
 [bibliography]
 = Bibliography
 
-[#bib1]
-[1] "Recommendations for implementing the strategic initiative INDUSTRIE 4.0", acatech, April 2013. 
-Accessed: 2025-03-24. [Online].
-Available: https://en.acatech.de/publication/recommendations-for-implementing-the-strategic-initiative-industrie-4-0-final-report-of-the-industrie-4-0-working-group/
-
-[#bib2]
-[2] "Implementation Strategy Industrie 4.0: Report on the results of the Industrie 4.0 Platform"; BITKOM e.V. / VDMA e.V., /ZVEI e.V., April 2015. Accessed: 2025-03-24. [Online].
-Available: https://www.bitkom.org/Bitkom/Publikationen/Implementation-Strategy-Industrie-40-Report-on-the-results-of-the-Industrie-40-Platform.html
-
-[#bib3]
-[3] DIN SPEC 91345:2016-04 "Referenzarchitekturmodell Industrie 4.0 (RAMI4.0) / Reference Architecture Model Industrie 4.0 (RAMI4.0) / Modèle de reference de l’architecture de l’industrie 4.0 (RAMI4.0)", ICS 03.100.01; 25.040.01; 35.240.50, April 2016. 
-Accessed: 2025-03-24. [Online].
-Available: https://www.beuth.de/en/technical-rule/din-spec-91345-en/250940128
-
-[#bib4]
-[4] "Structure of the Administration Shell, continuation of the development of the reference model for the Industrie 4.0 component", Plattform Industrie 4.0, Working Paper, April 2016. [Online].
-Available: https://www.plattform-i40.de/PI40/Redaktion/EN/Downloads/Publikation/structure-of-the-administration-shell.html
-
-[#bib5]
-[5] "Which criteria do Industrie 4.0 products need to fulfil?
-Guideline 2020", Federal Ministry for Economic Affairs and Energy (BMWi), July 2020. 
-Accessed: 2025-03-24. [Online].
-Available: https://www.plattform-i40.de/PI40/Redaktion/EN/Downloads/Publikation/criteria-industrie-40-products_2020.html
-
-[#bib6]
-[6] (German) "Beispiele zur Verwaltungsschale der Industrie 4.0-Komponente – Basisteil"; ZVEI e.V., Whitepaper, November 2016. 
-Accessed: 2025-03-24. [Online].
-Available: https://www.zvei.org/presse-medien/publikationen/beispiele-zur-verwaltungsschale-der-industrie-40-komponente-basisteil/
-
-[#bib7]
-[7] "Aspects of the research roadmap in application scenarios", Plattform Industrie 4.0, working paper, April 2016. 
-Accessed: 2025-03-24. [Online].
-Available: http://www.plattform-i40.de/I40/Redaktion/EN/Downloads/Publikation/aspects-of-the-research-roadmap.html
-
-[#bib8]
-[8] (German) "Fortschreibung der Anwendungsszenarien der Plattform Industrie 4.0"; Plattform Industrie 4.0, Ergebnispapier, October 2016. 
-Accessed: 2025-03-24. [Online].
-Available: https://www.plattform-i40.de/I40/Redaktion/DE/Downloads/Publikation/fortschreibung-anwendungsszenarien.html
-
-[#bib9]
-[9] "Security in RAMI4.0", Plattform Industrie 4.0, Berlin, technical overview, April 2016. 
-Accessed: 2025-03-24. [Online].
-Available: http://www.plattform-i40.de/I40/Redaktion/EN/Downloads/Publikation/security-rami40-en.html
-
-[#bib10]
-[10] "Die Deutsche Normungs-Roadmap Industrie 4.0 / The German standardization roadmap Industrie 4.0", DKE Deutsche Kommission Elektrotechnik, Elektronik Informationstechnik im DIN und VDE, Version 2.0, 2015. 
-Accessed: 2025-03-24. [Online].
-Available: https://www.din.de/de/forschung-und-innovation/themen/industrie4-0/roadmap-industrie40-62178
-
-[#bib11]
-[11] "Weiterentwicklung des Interaktionsmodells für Industrie 4.0-Komponenten", Plattform Industrie 4.0, discussion paper, November 2016. 
-Accessed: 2025-03-24. [Online].
-Available: https://www.plattform-i40.de/I40/Redaktion/DE/Downloads/Publikation/interaktionsmodell-i40-komponenten-it-gipfel.html
 
 [#bib12]
 [12] "Definition of terms relating to Industrie 4.0", VDI/VDE-GMA Fachausschuss 7.21. 
-Accessed: 2025-03-24. [Online].
+Accessed: 2026-08-19. [Online].
 Available: https://www.eks-intec.de/i40-begriffe/FA7.21%20Begriffe%20-%20Industrie%204.0
 
-[#bib13]
-[13] "Relationships between I4.0 Components – Composite Components and Smart Production", Plattform Industrie 4.0, Berlin, working paper, June 2017. Accessed: 2025-03-24. [Online].
-Available: https://www.plattform-i40.de/I40/Redaktion/EN/Downloads/Publikation/hm-2018-relationship.html
-
-[#bib14]
-[14] "Industrie 4.0 Plug-and-Produce for Adaptable Factories"; Plattform Industrie 4.0, Berlin, working paper, June 2017. 
-Accessed: 2025-03-24. [Online].
-Available: https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/Industrie-40-20Plug-and-Produce.html
-
-[#bib15]
-[15] "Security der Verwaltungsschale / Security of the Administration Shell", Plattform Industrie 4.0, Berlin, working paper, April 2017. 
-Accessed: 2025-03-24. [Online].
-Available: http://www.plattform-i40.de/I40/Redaktion/DE/Downloads/Publikation/security-der-verwaltungsschale.html
 
 [#bib16]
 [16] DIN SPEC 92000:2019-09 "Data Exchange on the Base of Property Value Statements (PVSX)", 2019 September. 
@@ -91,37 +25,11 @@ Accessed: 2025-03-24. [Online].
 Available: https://www.dinmedia.de/en/technical-rule/din-spec-92000/320981982
 
 
-[#bib17]
-[17] "(German) Verwaltungsschale in der Praxis.
-Wie definiere ich Teilmodelle, beispielhafte Teilmodelle und Interaktion zwischen Verwaltungsschalen", Version 1.0, April 2019, Plattform Industrie 4.0 in Kooperation mit VDI/VDE-GMA Fachausschuss 7.20, Federal Ministry for Economic Affairs and Energy (BMWi).
-Accessed: 2025-03-24. [Online]. 
-Available: https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/2019-verwaltungsschale-in-der-praxis.html
-
 [#bib18]
 [18] (German) "I4.0-Sprache.
 Vokabular, Nachrichtenstruktur und semantische Interaktionsprotokolle der I4.0-Sprache", Plattform Industrie 4.0 in Kooperation mit VDI/VDE-GMA Fachausschuss 7.20, April 2018. 
 Accessed: 2025-03-24. [Online]. 
 Available: https://www.plattform-i40.de/I40/Redaktion/DE/Downloads/Publikation/hm-2018-sprache.html
-
-[#bib19]
-[19] "The Structure of the Administration Shell: TRILATERAL PERSPECTIVES from France, Italy and Germany", March 2018, 
-Accessed: 2025-03-24. [Online]. 
-Available: https://www.plattform-i40.de/I40/Redaktion/EN/Downloads/Publikation/hm-2018-trilaterale-coop.html
-
-[#bib20]
-[20] "Industrial automation systems and integration — Exchange of characteristic data — Part 10: Characteristic data exchange format", Technical Specification ISO/TS 29002-10:2009-12(E), 2009.
-Accessed: 2025-03-24. [Online]. 
-Available: https://www.dinmedia.de/de/vornorm/iso-ts-29002-10/125041143
-
-[#bib21]
-[21] "Smart Manufacturing - Reference Architecture Model Industry 4.0 (RAMI4.0)", IEC PAS 63088:2017, International Electrotechnical Commission (IEC), 2017. Withdrawn.
-Accessed: 2025-03-24. [Online]. 
-Available: https://webstore.iec.ch/en/publication/30082
-
-[#bib22]
-[22] "System.IO.Packaging Namespace", MSDN.
-Accessed: 2025-03-24. [Online]. 
-Available: https://msdn.microsoft.com/en-us/library/system.io.packaging(v=vs.110).aspx
 
 
 [#bib24]
@@ -140,22 +48,11 @@ Nov. 2020. Plattform Industrie 4.0.
 Accessed: 2025-03-24. [Online]. 
 Available: https://www.plattform-i40.de/PI40/Redaktion/EN/Downloads/Publikation/Capabilities_Industrie40_Components.html
 
-////
-[#bib28]
-[28] AutomationML consortium: "Application Recommendation: AAS Representation (AR 004E)", Document Identifier: AR AAS, V1.0.0. November 2019. 
-Accessed: 2025-10-19. [Online].
-Available: https://www.automationml.org/wp-content/uploads/2022/04/Asset-Administration-Shell-Representation-V1_0_0.zip
-////
 
 [#bib29]
 [29] H. Knublauch, D. Knotokostas "Shapes Constraint Language (SHACL)" W3C Recommendation, 2017. 
 Accessed: 2025-03-24. [Online]. 
 Available: https://www.w3.org/TR/shacl/
-
-////
-[#bib30]
-[30] "I4AAS – Industrie 4.09 Asset Administration Shell". June 2021. 
-////
 
 
 
@@ -213,22 +110,6 @@ Version 2.0, Oct. 2022,
 Industrial Digital Twin Association 
 See xref:bibliography.adoc#bib45[[45\]].
 
-////
-[#bib41]
-[41] OPC 30270: OPC UA for Asset Administration Shell (AAS). 2021-06-04. [Online]. Available: https://reference.opcfoundation.org/v104/I4AAS/v100/docs/
-////
-////
-[#bib41]
-[41] Joint Working Group of the link:https://opcfoundation.org/[OPC Foundation] and https://industrialdigitaltwin.org/[IDTA] link:https://profiles.opcfoundation.org/workinggroup/40[Industry 4.0 Asset Administration Shell - AAS (I4AAS)] 
-////
-////
-[#bib42]
-[42] OPC Unified Architecture Specification. Part 5 Information Model. [Online]. Available: https://opcfoundation.org/developer-tools/specifications-unified-architecture
-////
-////
-[#bib43]
-[43] OPC UA Information Models. [Online]. Available: https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models
-////
 
 [#bib43]
 [43] IEC 63278-2 "Asset Administration Shell for industrial applications – Part 2: Metamodel".
@@ -261,16 +142,6 @@ Guideline.
 Accessed: 2025-10-19. [Online]. 
 Available: https://industrialdigitaltwin.org/wp-content/uploads/2025/06/IDTA_How-to-write-a-SMT-v1.1.pdf
 
-December 2022. Industrial Digital Twin Association.
-Accessed: 2025-03-24. [Online]. 
-Available: https://industrialdigitaltwin.org/wp-content/uploads/2022/12/I40-IDTA-WS-Process-How-to-write-a-SMT-FINAL-.pdf
-
-
-[#bib49]
-[49] Vincent Hu, David Ferraiolo, Rick Kuhn, Adam Schnitzer, Kenneth Sandlin, Robert Miller and Karen Scarfone, "Guide to Attribute Based Access Control (ABAC) Definition and Considerations", NIST Special Publication 800-162, Jan. 2014. 
-Accessed: 2025-03-24. [Online]. 
-Available: http://dx.doi.org/10.6028/NIST.SP.800-162
-
 
 [#bib50]
 [50] "Secure Download Service", Discussion Paper.
@@ -284,4 +155,4 @@ Industrial Digital Twin Association.
 Accessed: 2025-03-24. [Online]. 
 Available: https://github.com/admin-shell-io
 
-// bib52 see [41]
+
