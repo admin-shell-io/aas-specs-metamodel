@@ -119,7 +119,7 @@ Note: While standard EN 18223 provides an illustrative example for the contentSp
 To date, no formal standards for vertical-specific digital product passports have been specified. 
 Therefore, in the absence of a definitive specification, this document puts forth a recommendation to ensure a harmonized approach.
 
-.Example DPPMetadata JSON Payload
+.Example DPPMetadata JSON Payloadfootnote:[The semantic IDs used for the content specification IDs are illustrative only. Corresponding Submodel Template Specifications are available but may have different semantic IDs.]
 [[code-dppmetadata-json]]
 [source,json,linenums]
 ----
@@ -127,21 +127,24 @@ Therefore, in the absence of a definitive specification, this document puts fort
    "digitalProductPassportId": "https://www.example.org/dpp/1234545",
    "uniqueProductIdentifier": "https://www.example.org/1234545",
    "granularity": "Item",
-   "dppSchemaVersion": "ENXXX:v1.0",
+   "dppSchemaVersion": "EN18223:2026",
    "dppStatus": "Active",
    "lastUpdate": "2025-08-22T03:12:00Z",
    "economicOperatorId": "gxx:ppp456789",
    "facilityId": "gxx:xxx987654",
    "contentSpecificationIds":[
-      "https://admin-shell-io/idta/digitalpassport/Nameplate/1",
-      "https://admin-shell-io/idta/digitalpassport/TechnicalData/1",
-      "https://admin-shell-io/idta/digitalpassport/HandoverDocumentation/2",
-      "https://admin-shell-io/idta/digitalpassport/ProductCondition/1",
-      "https://admin-shell-io/idta/digitalpassport/MaterialComposition/1",
+      "https://admin-shell-io/idta/digitalproductpassport/Nameplate/1",
+      "https://admin-shell-io/idta/digitalproductpassport/TechnicalData/1",
+      "https://admin-shell-io/idta/digitalproductpassport/HandoverDocumentation/2",
+	  "https://admin-shell-io/idta/digitalproductpassport/CarbonFootprint/1",
+      "https://admin-shell-io/idta/digitalproductpassport/ProductCondition/1",
+      "https://admin-shell-io/idta/digitalproductpassport/MaterialComposition/1",
       "https://admin-shell-io/idta/digitalproductpassport/Circularity/1"
    ]
 }
 ----
+
+
 
 Although some attributes (see <<code-dpp-json>>) of this Submodel specification can be mapped to attributes in the Asset Administration Shell (AAS) metamodel, 
 the formal recommendation is to instead use this predefined Submodel Template IDTA-02099 for this metadata. 
@@ -172,7 +175,7 @@ AssetInformation/globalAssetId | URIOfTheProduct  a| Identifier types allowed ar
 | granularity  | `\https://admin-shell.io/aas/3/2/AssetInformation/assetKind` 
 
 assetKind	| --  a| for mapping of enumeration values see <<mapping-granularity>>
-| dppSchemaVersion | -- 	| a| In EN 1822:2026 no Schema is defined and thus there is also no schema version.
+| dppSchemaVersion | -- 	| a| In EN 18223:2026 no Schema is defined and thus there is also no defined schema version. However, the schema may be easily derived from the given JSON and XML examples.
 | dppStatus | -- 			| --  a| In EN 1822:2026 no enumeration is specified for the Status, only example values are given like "Active".
 The AAS does not support administrative information on its status.
 However, status of the AAS does not need to be identical to the status of the DPP.
@@ -309,11 +312,12 @@ It is the starting point for the corresponding Submodel data.
    "economicOperatorId": "gxx:ppp456789",
    "facilityId": "gxx:xxx987654",
    "contentSpecificationIds":[
-      "https://admin-shell-io/idta/digitalpassport/Nameplate/1",
-      "https://admin-shell-io/idta/digitalpassport/TechnicalData/1",
-      "https://admin-shell-io/idta/digitalpassport/HandoverDocumentation/2",
-      "https://admin-shell-io/idta/digitalpassport/ProductCondition/1",
-      "https://admin-shell-io/idta/digitalpassport/MaterialComposition/1",
+      "https://admin-shell-io/idta/digitalproductpassport/Nameplate/1",
+      "https://admin-shell-io/idta/digitalproductpassport/TechnicalData/1",
+      "https://admin-shell-io/idta/digitalproductpassport/HandoverDocumentation/2",
+	  "https://admin-shell-io/idta/digitalproductpassport/CarbonFootprint/1",
+      "https://admin-shell-io/idta/digitalproductpassport/ProductCondition/1",
+      "https://admin-shell-io/idta/digitalproductpassport/MaterialComposition/1",
       "https://admin-shell-io/idta/digitalproductpassport/Circularity/1"
    ],
    "https://admin-shell-io/idta/alpassport/Nameplate/1":{
@@ -323,6 +327,9 @@ It is the starting point for the corresponding Submodel data.
       <Data>
    },
    "https://admin-shell-io/idta/digitalproductpassport/HandoverDocumentation/2":{
+      <Data>
+   },
+   "https://admin-shell-io/idta/digitalproductpassport/CarbonFootprint/1":{
       <Data>
    },
    "https://admin-shell-io/idta/digitalproductpassport/ProductCondition/1":{

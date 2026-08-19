@@ -64,7 +64,7 @@ The following release contains the latest version of the AAS schemas
  (see also the [releases](https://github.com/admin-shell-io/aas-specs-metamodel/releases) 
 section of this repository):
 
-* IN PROGRESS [3.2](https://github.com/admin-shell-io/aas-specs-metamodel/releases/tag/v3.2)
+* [3.2](https://github.com/admin-shell-io/aas-specs-metamodel/releases/tag/v3.2.0)
 is the latest release for the `V3.2` version of the AAS metamodel, 
 containing the normative specification as well as the schemas in xml, JSON and rdf
 *Use this release if you want to work with the latest specified AAS version.*
