@@ -41,7 +41,7 @@ They had separate sections and tables documenting the changes.
 
 Major Changes:
 
-* remove Annex "General Topics", "Usage Metamodel" and "AAS Concepts" (https://github.com/admin-shell-io/aas-specs-metamodel/issues/596)[#596], these parts are now part of a separate guide
+* remove Annex "General Topics", "Usage Metamodel" and "AAS Concepts" (https://github.com/admin-shell-io/aas-specs-metamodel/issues/596)[#596], these parts are now part of a link:https://industrialdigitaltwin.io/aas-guides-antora/AAS_Concepts/1.0/imprint.html[separate guide]
 
 == Changes V3.2 vs. V3.1.2
 
