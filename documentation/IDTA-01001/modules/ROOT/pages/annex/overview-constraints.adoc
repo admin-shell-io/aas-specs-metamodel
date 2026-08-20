@@ -57,6 +57,11 @@ For handling of constraints see xref:annex/handling-constraints.adoc[].
 
 {aasd119}
 
+[Note]
+====
+xref:spec-metamodel/common.adoc#QualifierKind[QualifierKind] was experimental, is invalidated
+====
+
 {aasd121}
 
 {aasd122}
@@ -74,6 +79,11 @@ For handling of constraints see xref:annex/handling-constraints.adoc[].
 {aasd128}
 
 {aasd129}
+
+[Note]
+====
+xref:spec-metamodel/common.adoc#QualifierKind[QualifierKind] was experimental, is invalidated
+====
 
 {aasd130}
 
