@@ -49,7 +49,7 @@ Major Changes:
 
 Minor Changes:
 
-* Annex xref:annex/uml-template.adoc[UML Template]: add new stereotype \<<Invalidated>>:
+* Annex xref:annex/uml-templates.adoc[UML Template]: add new stereotype \<<Invalidated>>:
 
 .Changes in Metamodel
 [cols="5%,42%,48%",options="header",]
