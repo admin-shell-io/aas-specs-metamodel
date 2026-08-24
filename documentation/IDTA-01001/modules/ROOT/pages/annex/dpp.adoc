@@ -79,7 +79,7 @@ With an AAS, you can create a hierarchy of information, where the AAS for a sing
 This same principle allows for standardized Submodels, like contact information, to be reused across entirely different domains.
 
 
-While the AAS approach is modular, it is designed to produce the single, monolithic JSON document that JTC24 expects. 
+While the AAS approach is modular, it is designed to produce the single, monolithic JSON document that EN 18223 expects. 
 The key is understanding that even this single document must adhere to a set of different schemas. 
 For a DPP to be compliant, it must be validated against at least two types:
 
@@ -158,35 +158,48 @@ For DPP Metadata there is exactly one correct serialization since it is part of 
 
 
 In <<comparison-dpp-metadata>> the data points of IDTA-02099-1, the DPP Metadata, is mapped to the corresponding elements in IDTA-01001 and IDTA-02006.
+In general the mapping is not bi-directional but in some cases a bi-directional mapping can be realized, in these cases "(no)" is used.
 
-.Mapping JTC24 Meta Data to AAS
+.Mapping EN 18223 Meta Data to AAS
 [[comparison-dpp-metadata]]
-.Mapping JTC24 Meta Data to AAS
 [.table-with-appendix-table]
-[cols="22%,28%,23%,27%"]
+[cols="6%,22%,22%,22%,28%"]
 |===
-h| EN 18223 h| IDTA-01001 V3.2 h| IDTA-02006 V3.0 h| comment
-| digitalProductPassportId | `\https://admin-shell.io/aas/3/2/Identifiable/id`  
+h| bifootnote[for bi-directional] h| EN 18223 and +
+IDTA 02099-1 h| IDTA-01001 V3.3 h| IDTA-02006 V3.0 h| comment
+| no | digitalProductPassportId | `\https://admin-shell.io/aas/3/2/Identifiable/id`  
 
-AssetAdministrationShell/id| -- a| Although the ID of the AAS is very similar to the DPP ID they are not necessarily the same because the DPP is a monolithic output whereas the ID of an AAS does not imply a specific set of data in a specific point in time because the Submodels are identifiable
-| uniqueProductIdentifier | `\https://admin-shell.io/aas/3/2/AssetInformation/globalAssetId` 
+AssetAdministrationShell/id| -- a| The identifiers for an Asset Administration Shell (AAS) and a Digital Product Passport (DPP) are not necessarily congruent. 
+A DPP ID corresponds to a monolithic data snapshot, whereas an AAS ID references a composite asset representation whose data is not fixed in time due to its structure of independently identifiable Submodels.
+|(no) | uniqueProductIdentifier | `\https://admin-shell.io/aas/3/2/AssetInformation/globalAssetId` 
 
-AssetInformation/globalAssetId | URIOfTheProduct  a| Identifier types allowed are specified in EN 18219
-| granularity  | `\https://admin-shell.io/aas/3/2/AssetInformation/assetKind` 
+AssetInformation/globalAssetId | URIOfTheProduct  a| Identifier types allowed for DPP are specified in EN 18219
+
+AAS allows more identifier types than DPP.
+|(no)  | granularity  | `\https://admin-shell.io/aas/3/2/AssetInformation/assetKind` 
 
 assetKind	| --  a| for mapping of enumeration values see <<mapping-granularity>>
-| dppSchemaVersion | -- 	| a| In EN 18223:2026 no Schema is defined and thus there is also no defined schema version. However, the schema may be easily derived from the given JSON and XML examples.
-| dppStatus | -- 			| --  a| In EN 1822:2026 no enumeration is specified for the Status, only example values are given like "Active".
+
+AAS allows more asset kinds than DPP, for these additional kinds no DPP are required.
+
+Be aware: Even if regulation requires DPPs on item level some of the information is on type level.
+So there are two ways in AAS: 
+
+* reuse Submodels from type level on instance level or 
+* access two different AAS, one for the type asset, and one for instance asset.
+|no  | dppSchemaVersion | -- 	| -- a| In EN 18223:2026 no Schema is defined and thus there is also no defined schema version. 
+However, the schema may be easily derived from the given JSON and XML examples.
+|yes  | dppStatus | -- 			| --  a| In EN 1822:2026 no enumeration is specified for the Status, only example values are given like "Active".
 The AAS does not support administrative information on its status.
 However, status of the AAS does not need to be identical to the status of the DPP.
 
 
-| lastUpdate | `\https://admin-shell.io/aas/3/1/AdministrativeInformation/updatedAt` 
+|(no)  | lastUpdate | `\https://admin-shell.io/aas/3/1/AdministrativeInformation/updatedAt` 
 
 AdministrativeInformation/updatedAt | --  a| EN 18223 does not support explicit versioning (like the AAS does), versioning is supported via the "lastUpdate" attribute in DPPs
-| economicOperatorId | -- | -- a| Identifier types allowed are specified in EN 18219
-| facilityId | -- | UniqueFacilityIdentifier a| Identifier types allowed are specified in EN 18219
-| contentSpecificationIds | -- | a| This attribute reminds of AssetAdministrationShell/submodels because it lists the data sets relevant for the different DPP(s). 
+|no  | economicOperatorId | -- | -- a| Identifier types allowed are specified in EN 18219
+|yes | facilityId | -- | UniqueFacilityIdentifier a| Identifier types allowed are specified in EN 18219
+|no  | contentSpecificationIds | -- | -- a| This attribute reminds of AssetAdministrationShell/submodels because it lists the data sets relevant for the different DPP(s). 
 
 ====
 A DPP may contain data from several delegated acts, i.e. from different regulations.
@@ -248,9 +261,7 @@ MultiLanguageProperty 			a| see <<section-mlp>> for topics on serialization
 
 Property 
 
-`\https://admin-shell.io/aas/3/2/Blob` 
-
-Blob		a| A Blob can be realized with a EN 18223 SingleValuedDataElement with valueDataType "xsd:base64Binary" 
+		a| 
 
 |MultiValuedDataElement		| `\https://admin-shell.io/aas/3/2/SubmodelElementList` 
 
@@ -265,29 +276,39 @@ SubmodelElementCollection a| SubmodelElementCollections only with Elements of ty
  File	a|see <<section-file>> for topics on serialization
 |--| `\https://admin-shell.io/aas/3/2/AnnotatedRelationshipElement` 
 
-AnnotatedRelationshipElement a| can be realized with a EN 18223 DataElementCollection
+AnnotatedRelationshipElement a| can be realized with an EN 18223 DataElementCollection
 |--| `\https://admin-shell.io/aas/3/2/BasicEventElement` 
 
-BasicEventElement a| Events are not supported in EN 18223 but could be realized with a EN 18223 DataElementCollection
+BasicEventElement a| Events are not supported in EN 18223 but could be realized with an EN 18223 DataElementCollection
+
+|--| `\https://admin-shell.io/aas/3/2/Blob` 
+
+Blob a| not explititly supported in EN 18223, can be realized with an EN 18223 DataElementCollection
 |--| `\https://admin-shell.io/aas/3/2/Capability` 
 
  Capability a| not supported in EN 18223
 
 |--| `\https://admin-shell.io/aas/3/2/Entity` 
 
-Entity a| can be realized with a EN 18223 DataElementCollection
+Entity a| can be realized with an EN 18223 DataElementCollection
 |--| `\https://admin-shell.io/aas/3/2/Event` 
 
 Event (abstract) a| Events are not supported in EN 18223
 |--| `\https://admin-shell.io/aas/3/2/Range`
 
-Range a| can be realized with a EN 18223 DataElementCollection
+Range a| can be realized with an EN 18223 DataElementCollection
+
+[Note]
+====
+xref:spec-metamodel/submodel-elements.adoc#Range[Range] was experimental, is invalidated
+====
+
 |--| `\https://admin-shell.io/aas/3/2/ReferenceElement` 
 
-ReferenceElement a| could be realized with a EN 18223 DataElementCollection and MultiValuedDataElement, however, it is not foreseen in EN 18223 that elements are referenced
+ReferenceElement a| could be realized with an EN 18223 DataElementCollection and MultiValuedDataElement, however, it is not foreseen in EN 18223 that elements are referenced
 |--| `\https://admin-shell.io/aas/3/2/RelationshipElement` 
 
-RelationshipElement a| can be realized with a EN 18223 DataElementCollection
+RelationshipElement a| can be realized with an EN 18223 DataElementCollection
 |===
 
 == Creating of DPP with several Submodels
@@ -425,7 +446,7 @@ For details on "contentSpecificationIds" see Submodel Template Specification IDT
 
 In <<code-batterypass-normal-json>> an example is shown how a payload similar to the link:https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.2/mappings/mappings.html#_format_normal_in_json[AAS "Normal"-Format] could look like. 
 
-.Example JTC24 expanded full serialization JSON Paylaod for Battery Passport, PCF data (with fewer elements)
+.Example DPP expanded full serialization JSON Paylaod for Battery Passport, PCF data (with fewer elements)
 [[code-batterypass-normal-json]]
 [source,json,linenums]
 ----
@@ -513,7 +534,7 @@ In EN 18223 the entries within the list are realized like a predefined SubmodelE
 "title":[
    {
       "value": "user manual",
-      "language": "en-IE"
+      "language": "en"
    },
    {
       "value": "Kundendokumentation",
@@ -523,7 +544,7 @@ In EN 18223 the entries within the list are realized like a predefined SubmodelE
 ----
 [[section-file]]
 === RelatedResource vs. File
-The RelatedResource requires or at least enables to provide more information than is required by the SME File: contentType and url hat identical but the optional language and resourceTitle is not supported by AAS SME File.
+The RelatedResource requires or at least enables to provide more information than is required by the SME File: "contentType" and "url" can be directly mapped but the optional "language" and "resourceTitle" is not supported by AAS SME File.
 
 The EN 18223 in a way models a Document in a very simplified way.
 This is realized in more depth with all needed meta information of a document in Submodel Template Specification IDTA-02004 Handover Documentation.
@@ -578,7 +599,7 @@ but adapted for the example in this document)
                ],
                "Title":[
                   {
-                     "en": "User Manual for the Smart Thermostat Pro"
+                     "en-GB": "User Manual for the Smart Thermostat Pro"
                   },
                   {
                      "de": "Benutzer-Handbuch Smart Thermostat Pro"
@@ -624,10 +645,14 @@ but adapted for the example in this document)
 |===
 h| EN 18223 RelatedResource h| AAS SME File h| IDTA-02004 Handover Documentation h| comment
 
-|contentType 		| `\https://admin-shell.io/aas/3/2/File/contentType` +	 contentType			|	*DigitalFile* realized with SME File	a| 
-|url				| `\https://admin-shell.io/aas/3/2/File/value` +	value					|	*DigitalFile* realized with SME File	a|
-|resourceTitle		| -- 					|    title	a|
-|language			| --					| 		    a| localized, i.e. add language. If not existing add a substitute language (if allowed)
+|contentType 		| `\https://admin-shell.io/aas/3/2/File/contentType` 
+
+	 contentType			|	*DigitalFile* realized with SME File	a| 
+|url				| `\https://admin-shell.io/aas/3/2/File/value` 
+
+	value					|	*DigitalFile* realized with SME File	a|
+|resourceTitle		| -- 					|    *Title* realized with SME MultiLanguageProperty	a| In EN 18223 the title is localized, i.e. the language required is selected and displayed
+|language			| --					| 		    a| localized, i.e. add language required. If not existing add a substitute language (if allowed)
 |===
 
 
@@ -643,12 +668,24 @@ However, since the UML model differ also the serialization differs.
 |===
 h| EN 18223 h| AAS   h| comment
 
-|	DataElement/elementId			| `\https://admin-shell.io/aas/3/2/Referable/idShort` +		Referable/idShort	a|		In AAS there are more restrictions on how to choose the idShort, in EN 18223 the elementId is just a String.
-|	DataElement/dictionaryReference	| 	`\https://admin-shell.io/aas/3/2/HasSemantics/semanticId` + HasSemantics/semanticId		a|	In EN 18223 the dictionaryReference is just a String, in AAS it is a Reference.	
-|	SingleValuedDataElement/valueDataType		|  `\https://admin-shell.io/aas/3/2/Property/valueType` + Property/valueType						a| 	The allowed values are identical in both, the AAS and EN 18223 specification with only one difference: in AAS the prefix "xs:" is used, in EN 18223 the prefix is "xsd".
-|	MultiValuedDataElement/valueDataType		| 	`\https://admin-shell.io/aas/3/1/SubmodelElementList/valueTypeListElement`  + 	SubmodelElementList/valueTypeListElement			a| 
-|	MultiLanguageDataElement		| 	`\https://admin-shell.io/aas/3/1/MultiLanguageProperty` + 	MultiLanguageProperty			a|  see <<section-mlp>>, compressed and expanded in EN 18223 are identical in this case
-|	RelatedResource		| `\https://admin-shell.io/aas/3/1/File` + 		File			a| 		see <<section-file>>, compressed and expanded in EN 18223 are identical in this case
+|	DataElement/elementId			| `\https://admin-shell.io/aas/3/2/Referable/idShort` 
+
+	Referable/idShort	a|		In AAS there are more restrictions on how to choose the idShort, in EN 18223 the elementId is just a String.
+|	DataElement/dictionaryReference	| 	`\https://admin-shell.io/aas/3/2/HasSemantics/semanticId` 
+
+ HasSemantics/semanticId		a|	In EN 18223 the dictionaryReference is just a String, in AAS it is a Reference.	
+|	SingleValuedDataElement/valueDataType		|  `\https://admin-shell.io/aas/3/2/Property/valueType` 
+
+ Property/valueType						a| 	The allowed values are identical in both, the AAS and EN 18223 specification with only one difference: in AAS the prefix "xs:" is used, in EN 18223 the prefix is "xsd".
+|	MultiValuedDataElement/valueDataType		| 	`\https://admin-shell.io/aas/3/1/SubmodelElementList/valueTypeListElement`  
+
+ 	SubmodelElementList/valueTypeListElement			a| 
+|	MultiLanguageDataElement		| 	`\https://admin-shell.io/aas/3/1/MultiLanguageProperty` 
+
+	MultiLanguageProperty			a|  see <<section-mlp>>, compressed and expanded in EN 18223 are identical in this case
+|	RelatedResource		| `\https://admin-shell.io/aas/3/1/File` 
+
+ 		File			a| 		see <<section-file>>, compressed and expanded in EN 18223 are identical in this case
 |===
 
 
