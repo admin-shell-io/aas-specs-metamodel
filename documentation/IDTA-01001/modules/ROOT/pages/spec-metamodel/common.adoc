@@ -534,7 +534,7 @@ h|ID: 3+| `\https://admin-shell.io/aas/3/2/Qualifier`
 .2+h|Attribute 3+h| ID
 h|Explanation h|Type h|Card.
 
-.2+e|kind \<<Experimental>> 3+| `\https://admin-shell.io/aas/3/2/Qualifier/kind`
+.2+e|kind \<<Invalidated>> 3+| `\https://admin-shell.io/aas/3/2/Qualifier/kind`
 a|
 The qualifier kind describes the kind of qualifier that is applied to the element.
 
@@ -569,7 +569,7 @@ It is recommended to add a _semanticId_ for the concept of the _Qualifier_. _Qua
 [.table-with-appendix-table]
 [cols="30%h,70%"]
 |===
-|Enumeration: e|[[QualifierKind]]QualifierKind
+|Enumeration: e|[[QualifierKind]]QualifierKind  \<<Invalidated>>
 h|Explanation: a|Enumeration for kinds of qualifiers
 |Set of: |--
 h|ID: | `\https://admin-shell.io/aas/3/2/QualifierKind`
