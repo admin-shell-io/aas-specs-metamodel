@@ -44,8 +44,13 @@ They had separate sections and tables documenting the changes.
 Major Changes:
 
 * NEW: add fingerprint to SubmodelElement File  (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/668[#668])
+* INVALIDATED: experimental SubmodelElement Range will not be supported in future, in alignment with IEC 63278-2 (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/450[#450])
 * INVALIDATED: experimental xref:spec-metamodel/common.adoc#Qualifier[Qualifier/kind] will not be supported in future (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/451[#451])
 * DELETED: Annex "General Topics", "Usage Metamodel" and "AAS Concepts" (https://github.com/admin-shell-io/aas-specs-metamodel/issues/596)[#596]), these parts are now part of a link:https://industrialdigitaltwin.io/aas-guides-antora/AAS_Concepts/1.0/imprint.html[separate guide]
+
+Minor Changes:
+
+* Annex xref:annex/uml-templates.adoc[UML Template]: add new stereotype \<<Invalidated>>:
 
 .Changes in Metamodel
 [cols="5%,42%,48%",options="header",]
@@ -53,8 +58,10 @@ Major Changes:
 h|Nc h|V3.3 Change w.r.t. V3.2 h|Comment
 
 | {empty} | xref:spec-metamodel/submodel-elements.adoc#File[File] a| add new attribute fingerprint to SubmodelElement "File"
+| {empty} | xref:spec-metamodel/submodel-elements.adoc#Range[Range] a| Range was experimental, will not be supported in future (invalidated)
 | {empty} | xref:spec-metamodel/common.adoc#Qualifier[Qualifier] a| attribute "kind" was experimental, will not be supported in future (invalidated)
 | {empty} | xref:spec-metamodel/common.adoc#QualifierKind[QualifierKind] a| data type invalidated since xref:spec-metamodel/common.adoc#Qualifier[Qualifier/kind] invalidated 
+
 |===
 
 .New Elements in Metamodel

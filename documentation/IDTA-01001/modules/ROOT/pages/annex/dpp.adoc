@@ -282,6 +282,12 @@ Event (abstract) a| Events are not supported in EN 18223
 |--| `\https://admin-shell.io/aas/3/2/Range`
 
 Range a| can be realized with a EN 18223 DataElementCollection
+
+[Note]
+====
+xref:spec-metamodel/submodel-elements.adoc#Range[Range] was experimental, is invalidated
+====
+
 |--| `\https://admin-shell.io/aas/3/2/ReferenceElement` 
 
 ReferenceElement a| could be realized with a EN 18223 DataElementCollection and MultiValuedDataElement, however, it is not foreseen in EN 18223 that elements are referenced
