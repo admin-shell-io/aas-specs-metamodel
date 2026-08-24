@@ -62,6 +62,11 @@ The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.
 
 {aasd119}
 
+[Note]
+====
+xref:spec-metamodel/common.adoc#QualifierKind[QualifierKind] was experimental, is invalidated
+====
+
 {aasd121}
 
 {aasd122}
@@ -79,6 +84,11 @@ The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.
 {aasd128}
 
 {aasd129}
+
+[Note]
+====
+xref:spec-metamodel/common.adoc#QualifierKind[QualifierKind] was experimental, is invalidated
+====
 
 {aasd130}
 

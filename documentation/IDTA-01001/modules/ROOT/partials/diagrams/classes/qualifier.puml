@@ -1,6 +1,6 @@
 @startuml
 class Qualifier<HasSemantics> {
-  +kind: QualifierKind[0..1] <<Experimental>>
+  +kind: QualifierKind[0..1] <<Invalidated>>
   +type: QualifierType
   +valueType: DataTypeDefXsd
   +value: ValueDataType[0..1]
