@@ -165,7 +165,7 @@ In general the mapping is not bi-directional but in some cases a bi-directional 
 [.table-with-appendix-table]
 [cols="6%,22%,22%,22%,28%"]
 |===
-h| bifootnote[for bi-directional] h| EN 18223 and +
+h| bifootnote:[for bi-directional] h| EN 18223 and +
 IDTA 02099-1 h| IDTA-01001 V3.3 h| IDTA-02006 V3.0 h| comment
 | no | digitalProductPassportId | `\https://admin-shell.io/aas/3/2/Identifiable/id`  
 
@@ -283,7 +283,7 @@ BasicEventElement a| Events are not supported in EN 18223 but could be realized 
 
 |--| `\https://admin-shell.io/aas/3/2/Blob` 
 
-Blob a| not explititly supported in EN 18223, can be realized with an EN 18223 DataElementCollection
+Blob a| not explicitly supported in EN 18223, can be realized with an EN 18223 DataElementCollection
 |--| `\https://admin-shell.io/aas/3/2/Capability` 
 
  Capability a| not supported in EN 18223
