@@ -44,6 +44,8 @@ They had separate sections and tables documenting the changes.
 Major Changes:
 
 * NEW: add fingerprint to SubmodelElement File  (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/668[#668])
+* NEW: add patch to AdministrativeInformation (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/684[#684])
+* CHANGED AASd-005 to include AdministrativeInformation/patch
 * INVALIDATED: experimental SubmodelElement Range will not be supported in future, in alignment with IEC 63278-2 (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/450[#450])
 * INVALIDATED: experimental xref:spec-metamodel/common.adoc#Qualifier[Qualifier/kind] will not be supported in future (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/451[#451])
 * DELETED: Annex "General Topics", "Usage Metamodel" and "AAS Concepts" (https://github.com/admin-shell-io/aas-specs-metamodel/issues/596)[#596]), these parts are now part of a link:https://industrialdigitaltwin.io/aas-guides-antora/AAS_Concepts/1.0/imprint.html[separate guide]
@@ -51,6 +53,7 @@ Major Changes:
 Minor Changes:
 
 * Annex xref:annex/uml-templates.adoc[UML Template]: add new stereotype \<<Invalidated>>:
+
 
 .Changes in Metamodel
 [cols="5%,42%,48%",options="header",]
@@ -61,6 +64,7 @@ h|Nc h|V3.3 Change w.r.t. V3.2 h|Comment
 | {empty} | xref:spec-metamodel/submodel-elements.adoc#Range[Range] a| Range was experimental, will not be supported in future (invalidated)
 | {empty} | xref:spec-metamodel/common.adoc#Qualifier[Qualifier] a| attribute "kind" was experimental, will not be supported in future (invalidated)
 | {empty} | xref:spec-metamodel/common.adoc#QualifierKind[QualifierKind] a| data type invalidated since xref:spec-metamodel/common.adoc#Qualifier[Qualifier/kind] invalidated 
+| {empty} | xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation] a| add new attribute patch to AdministrativeInformation 
 
 |===
 
@@ -70,6 +74,9 @@ h|Nc h|V3.3 Change w.r.t. V3.2 h|Comment
 h|Nc h|New Elements V3.3 vs V3.2 h|Comment
 |{empty} | xref:spec-metamodel/submodel-elements.adoc#File[File/fingerprint]  a| new attribute with cardinality 0..*
 |{empty} | xref:spec-metamodel/datatypes.adoc#FingerprintType[FingerprintType]  a| new datatype for xref:spec-metamodel/submodel-elements.adoc#File[File/fingerprint]
+|{empty} | xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation/patch]  a| new attribute with cardinality 0..*
+|{empty} | xref:spec-metamodel/datatypes.adoc#PatchType[PatchType]  a| new datatype for xref:spec-metamodel/common.adoc#AdministrativeInformation[AdministrativeInformation/patch]
+
 
 |===
 

@@ -234,7 +234,16 @@ Each string within langString has a max of 1,023 and min of 1 characters.
 .2+e|[[NameType]]NameType 2+| `\https://admin-shell.io/aas/3/2/NameType`
 a|_string_ with max 128 and min 1 characters |"ManufacturerPartId"
 
+.2+e|[[PatchType]]PatchType 2+| `\https://admin-shell.io/aas/3/2/PatchType`
+a|_string_ with max 4 and min 1 characters
+following the following regular expression:
 
+`^([0-9]\|[1-9][0-9]*)$`
+
+a|
+"0"
+
+"12"
 
 .2+e|[[PathType]]PathType 2+| `\https://admin-shell.io/aas/3/2/PathType`
 a|
