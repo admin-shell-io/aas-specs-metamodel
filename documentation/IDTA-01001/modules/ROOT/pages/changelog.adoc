@@ -45,7 +45,7 @@ Major Changes:
 
 * NEW: add fingerprint to SubmodelElement File  (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/668[#668])
 * NEW: add patch to AdministrativeInformation (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/684[#684])
-* CHANGED AASd-005 to include AdministraiveInformation/patch
+* CHANGED AASd-005 to include AdministrativeInformation/patch
 * INVALIDATED: experimental SubmodelElement Range will not be supported in future, in alignment with IEC 63278-2 (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/450[#450])
 * INVALIDATED: experimental xref:spec-metamodel/common.adoc#Qualifier[Qualifier/kind] will not be supported in future (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/451[#451])
 * DELETED: Annex "General Topics", "Usage Metamodel" and "AAS Concepts" (https://github.com/admin-shell-io/aas-specs-metamodel/issues/596)[#596]), these parts are now part of a link:https://industrialdigitaltwin.io/aas-guides-antora/AAS_Concepts/1.0/imprint.html[separate guide]
