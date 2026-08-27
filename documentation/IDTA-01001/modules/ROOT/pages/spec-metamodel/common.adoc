@@ -31,7 +31,7 @@ Every identifiable may contain administrative information.
 
 In principle, a version corresponds to the _version_identifier_ according to IEC 62832.
 However, it is not used for concept identifiers only (IEC TS 62832-1), but for all identifiable elements.
-Together, <<version>> and <<revision>> correspond to the version number according to IEC 62832.
+Together, <<version>>, <<revision>> and <<patch>> correspond to the version number according to IEC 62832.
 
 Other attributes of the administrative information like <<creator>> refer to ISO 15836-1:2017, the Dublin Core metadata element set.
 
@@ -44,7 +44,7 @@ Data specifications are defined in IDTA-01003 sub-series.
 If an AAS contains two different Submodels with the same semanticId 
 (xref:spec-metamodel/common.adoc#semanticId[Submodel/semanticId]) they shall differ in their (xref:spec-metamodel/common.adoc#version[Submodel/administration])
 
-a) xref:spec-metamodel/common.adoc#version[version]   (xref:spec-metamodel/common.adoc#revision[revision] is ignored) 
+a) xref:spec-metamodel/common.adoc#version[version]   (xref:spec-metamodel/common.adoc#revision[revision] and xref:spec-metamodel/common.adoc#patch[patch] are ignored) 
 
 or in their
 
@@ -95,29 +95,29 @@ Note 3: if a template ID (xref:spec-metamodel/common.adoc#templateId[Submodel/ad
 Note 4: Up to now xref:spec-metamodel/common.adoc#templateId[AdministrativeInformation/templateId]  is only applicable for Submodels since Template Specifications are standardized for Submodels only.
 ====
 
-To ensure reliable sorting and enable logical comparisons, the <<version>> and <<revision>> attributes are stored as numerical integer types rather than as text strings. 
-This design prevents common sorting errors (e.g., a text-based sort incorrectly placing "V1.10" before "V1.2") and allows the system to mathematically determine which release is newer.
+To ensure reliable sorting and enable logical comparisons, the <<version>>, <<revision>> and <<patch>> attributes are stored as numerical integer types rather than as text strings. 
+This design prevents common sorting errors (e.g., a text-based sort incorrectly placing "V1.10.0" before "V1.2.0") and allows the system to mathematically determine which release is newer.
 
 For display purposes, these numbers are typically concatenated into a human-readable string, such as V<version>.<revision>.
 
 This numerical system creates a clear and logical order of precedence, where a higher version or revision number always indicates a later release:
 
-V1.0 < V1.1 < V2.0
+V1.0.0 < V1.1.1 < V2.0.0
 
 The date attribute <<createdAt>> is bound to the identity of the object itself, not to its individual version states. 
-This means that while an object's <<version>> or <<revision>> will increment over time, its _createdAt_ timestamp remains fixed to the moment the object was first created.
+This means that while an object's <<version>>, <<revision>> and <<patch>> will increment over time, its _createdAt_ timestamp remains fixed to the moment the object was first created.
 
 The date attribute <<updatedAt>>, however, tracks when relevant modifications occur. 
 Because the version and revision increment if there are relevant updates to the object over time, 
 a higher version number mathematically implies a later _updatedAt_ timestamp than that of its previous version states. 
-For example, the _updatedAt_ timestamp of V2.0 will be later than the _updatedAt_ timestamp of V1.1.
+For example, the _updatedAt_ timestamp of V2.0.0 will be later than the _updatedAt_ timestamp of V1.1.0.
 
 Finally, for any given state of the object, a fundamental rule applies to these timestamps: the <<updatedAt>> timestamp is always greater than or equal to the <<createdAt>> timestamp, 
 meaning an update can never occur before the initial creation of the object.
 
 ====
-Note 5: It is important to clarify that not every change to an object's data will necessarily trigger a new release (update of <<version>> or <<revision>> attributes) or an update to the <<updatedAt>> timestamp. 
-The <<version>>, <<revision>>, <<createdAt>>, and <<updatedAt>> attributes should be treated as business values, not technical system values. 
+Note 5: It is important to clarify that not every change to an object's data will necessarily trigger a new release (update of <<version>>, <<revision>> or <<patch>> attributes) or an update to the <<updatedAt>> timestamp. 
+The <<version>>, <<revision>>, <<patch>>, <<createdAt>>, and <<updatedAt>> attributes should be treated as business values, not technical system values. 
 Their purpose is to mark significant, business-relevant milestones in an object's lifecycle.
 For more dynamic or transient data—such as real-time calculations or temporary status flags—incrementing the version for every fluctuation would be impractical and would not make sense from a business logic perspective.
 ====
@@ -144,6 +144,9 @@ h|Explanation h|Type h|Card.
 
 .2+e|[[revision]]revision 3+| `\https://admin-shell.io/aas/3/2/AdministrativeInformation/revision`
 |Revision of the element |xref:spec-metamodel/datatypes.adoc#RevisionType[RevisionType] |0..1
+
+.2+e|[[patch]]patch 3+| `\https://admin-shell.io/aas/3/2/AdministrativeInformation/patch`
+|Patch of the element |xref:spec-metamodel/datatypes.adoc#PatchType[PatchType] |0..1
 
 .2+e|[[creator]]creator 3+| `\https://admin-shell.io/aas/3/2/AdministrativeInformation/creator`
 a|The subject ID of the subject responsible for making the element |xref:spec-metamodel/referencing.adoc#Reference[Reference] |0..1
