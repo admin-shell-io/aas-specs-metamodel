@@ -46,12 +46,16 @@ Major Changes:
 * NEW: add fingerprint to SubmodelElement File  (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/668[#668])
 * INVALIDATED: experimental SubmodelElement Range will not be supported in future, in alignment with IEC 63278-2 (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/450[#450])
 * INVALIDATED: experimental xref:spec-metamodel/common.adoc#Qualifier[Qualifier/kind] will not be supported in future (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/451[#451])
-* DELETED: Annex "General Topics", "Usage Metamodel" and "AAS Concepts" (https://github.com/admin-shell-io/aas-specs-metamodel/issues/596)[#596]), these parts are now part of a link:https://industrialdigitaltwin.io/aas-guides-antora/AAS_Concepts/1.0/imprint.html[separate guide]
-* CHANGED: Annex "DPP", mapping from SingleValuesDataElement to Blob as a possible mapping removed
+* DELETED: Annex "General Topics", "Usage Metamodel" and "AAS Concepts" (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/596[#596]), these parts are now part of a link:https://industrialdigitaltwin.io/aas-guides-antora/AAS_Concepts/1.0/imprint.html[separate guide]
+* CHANGED: xref:annex/dpp.adoc[Annex APP]: mapping from SingleValuesDataElement to Blob as a possible mapping removed
+* BUGFIX: xref:mappings/encodings/idshortpath.adoc[idShortPath]: correct idShortPath example (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/718[#718])
 
 Minor Changes:
 
-* Annex xref:annex/uml-templates.adoc[UML Template]: add new stereotype \<<Invalidated>>
+* UPDATE: xref:spec-metamodel/constraints.adoc[Constraints]: reformulate note explaining AASd-117 (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/720[#720])
+* UPDATE: xref:mappings/valueonly.adoc[Value-Only Serialization]: add more examples for Value-Only SML with empty elements (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/706[#706])
+* UPDATE: xref:annex/uml-templates.adoc[Annex UML Template]: add new stereotype \<<Invalidated>>
+* UPDATE: xref:annex/dpp.adoc[Annex APP]: explain round-trip restrictions w.r.t. language tag in AAS and DPP for MultiLanguageProperty (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/716[#716])
 * Annex DPP: improved documentation and consistency of examples
 
 Minor Changes:
