@@ -1,158 +1,34 @@
 ////
 Copyright (c) 2023 Industrial Digital Twin Association
 
-This work is licensed under a [Creative Commons Attribution 4.0 International License](
-https://creativecommons.org/licenses/by/4.0/).
+This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
 SPDX-License-Identifier: CC-BY-4.0
-
 ////
 
-[bibliography]
-= Bibliography
+[#bibliography]
+== Annex D. Bibliography
 
+[#bib1]
+[1] “Recommendations for implementing the strategic initiative INDUSTRIE 4.0”, acatech, April 2013. [Online]. Available: link:https://en.acatech.de/publication/recommendations-for-implementing-the-strategic-initiative-industrie-4-0-final-report-of-the-industrie-4-0-working-group/[https://en.acatech.de/publication/recommendations-for-implementing-the-strategic-initiative-industrie-4-0-final-report-of-the-industrie-4-0-working-group/]
 
-[#bib12]
-[12] "Definition of terms relating to Industrie 4.0", VDI/VDE-GMA Fachausschuss 7.21. 
-Accessed: 2026-08-19. [Online].
-Available: https://www.eks-intec.de/i40-begriffe/FA7.21%20Begriffe%20-%20Industrie%204.0
+[#bib2]
+[2] “Implementation Strategy Industrie 4.0: Report on the results of the Industrie 4.0 Platform”; BITKOM e.V. / VDMA e.V., /ZVEI e.V., April 2015. [Online]. Available: link:https://www.bitkom.org/sites/main/files/file/import/2016-01-Implementation-Strategy-Industrie40.pdf[https://www.bitkom.org/sites/main/files/file/import/2016-01-Implementation-Strategy-Industrie40.pdf]
 
+[#bib3]
+[3] “The Structure of the Administration Shell: TRILATERAL PERSPECTIVES from France, Italy and Germany”, March 2018, [Online]. Available: link:https://www.plattform-i40.de/I40/Redaktion/EN/Downloads/Publikation/hm-2018-trilaterale-coop.html[https://www.plattform-i40.de/I40/Redaktion/EN/Downloads/Publikation/hm-2018-trilaterale-coop.html]
 
-[#bib16]
-[16] DIN SPEC 92000:2019-09 "Data Exchange on the Base of Property Value Statements (PVSX)", 2019 September. 
-Withdrawn. This document has been replaced by: DIN SPEC 92000:2020-08.
-Accessed: 2025-03-24. [Online]. 
-Available: https://www.dinmedia.de/en/technical-rule/din-spec-92000/320981982
+[#bib4]
+[4] “Beispiele zur Verwaltungsschale der Industrie 4.0-Komponente – Basisteil (German)”; ZVEI e.V., Whitepaper, November 2016. [Online]. Available: link:https://www.zvei.org/fileadmin/user_upload/Presse_und_Medien/Publikationen/2016/November/Beispiele_zur_Verwaltungsschale_der_Industrie_4.0-Komponente_-_Basisteil/Beispiele-Verwaltungsschale-Industrie-40-Komponente-White-Paper-Final.pdf[https://www.zvei.org/fileadmin/user_upload/Presse_und_Medien/Publikationen/2016/November/Beispiele_zur_Verwaltungsschale_der_Industrie_4.0-Komponente_-_Basisteil/Beispiele-Verwaltungsschale-Industrie-40-Komponente-White-Paper-Final.pdf]
 
+[#bib5]
+[5] “Verwaltungsschale in der Praxis. Wie definiere ich Teilmodelle, beispielhafte Teilmodelle und Interaktion zwischen Verwaltungsschalen (in German)”, Version 1.0, April 2019, Plattform Industrie 4.0 in Kooperation mit VDE GMA Fachausschuss 7.20, Federal Ministry for Economic Affairs and Energy (BMWi), Available: link:https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/2019-verwaltungsschale-in-der-praxis.html[https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/2019-verwaltungsschale-in-der-praxis.html]
 
-[#bib18]
-[18] (German) "I4.0-Sprache.
-Vokabular, Nachrichtenstruktur und semantische Interaktionsprotokolle der I4.0-Sprache", Plattform Industrie 4.0 in Kooperation mit VDI/VDE-GMA Fachausschuss 7.20, April 2018. 
-Accessed: 2025-03-24. [Online]. 
-Available: https://www.plattform-i40.de/I40/Redaktion/DE/Downloads/Publikation/hm-2018-sprache.html
+[#bib6]
+[6] IDTA-01001-3-0 “Specification of the Asset Administration Shell. Part 1: Metamodel”, V3.0, April 2023, [Online]. Available: link:https://industrialdigitaltwin.org/en/content-hub/aasspecifications[https://industrialdigitaltwin.org/en/content-hub/aasspecifications]
 
+[#bib7]
+[7] “IEC 63278-1 ED1: Asset Administration Shell for industrial applications – Part 1: Asset Administration Shell structure”
 
-[#bib24]
-[24] ISO 13584-42 "Standard data element types with associated classification scheme – Part 1: Definitions – Principles and methods" Edition 4.0, 2017-07.
-
-[#bib25]
-[25] IEC 61360-1 "Standard data element types with associated classification scheme – Part 1: Definitions – Principles and methods", Edition 4.0, 2017-07. DIN EN 61360-1:2018-07.
-
-
-[#bib26]
-[26] ISO/TS 29002-10:2009(E) "Industrial automation systems and integration — Exchange of characteristic data — Part 10: Characteristic data exchange format", First edition 2009-12-01.
-
-[#bib27]
-[27] A. Bayha, J. Bock, B. Boss, C. Diedrich, S. Malakuti "Describing Capabilities of Industrie 4.0 Components".
-Nov. 2020. Plattform Industrie 4.0. 
-Accessed: 2025-03-24. [Online]. 
-Available: https://www.plattform-i40.de/PI40/Redaktion/EN/Downloads/Publikation/Capabilities_Industrie40_Components.html
-
-
-[#bib29]
-[29] H. Knublauch, D. Knotokostas "Shapes Constraint Language (SHACL)" W3C Recommendation, 2017. 
-Accessed: 2025-03-24. [Online]. 
-Available: https://www.w3.org/TR/shacl/
-
-
-
-[#bib32]
-[32] F. Manola, E. Miller "RDF 1.1 Primer" W3C Recommendation, 2014, 
-Accessed: 2025-03-24. [Online]. 
-Available: https://www.w3.org/TR/rdf11-primer/
-
-[#bib33]
-[33] T. R. Gruber "A translation approach to portable ontology specifications." Knowledge acquisition 5.2 (1993): 199-220. 
-Accessed: 2025-03-24. [Online].
-Available: https://tomgruber.org/writing/ontolingua-kaj-1993.htm
-
-[#bib34]
-[34] "The Industrial Internet of Things Vocabulary".
-Technical Report.
-Version 2.3. October 10, 2020. Industrial Internet Consortium.
-IIC:IIVOC:V2.3:20201025 
-Accessed: 2025-10-19. [Online].
-Available: https://www.iiconsortium.org/vocab/
-
-[#bib35]
-[35] "OMG Unified Modelling Language (OMG UML)".
-Formal/2017-12-05. Version 2.5.1. December 2018. 
-Accessed: 2025-10-19. [Online]
-Available: https://www.omg.org/spec/UML/
-
-[#bib36]
-[36] T. Preston-Werner "Semantic Versioning".
-Version 2.0.0. 
-Accessed: 2025-10-19. [Online]
-Available: https://semver.org/spec/v2.0.0.html
-
-[#bib37]
-[37] IDTA-01002 "Specification of the Asset Administration Shell Part 2 – Application Programming Interfaces".
-See xref:bibliography.adoc#bib46[[46\]].
-
-[#bib38]
-[38] "Asset Administration Shell. 
-Reading Guide".
-Industrial Digital Twin Association.
-November 2022. 
-Accessed: 2025-03-24. [Online]. 
-Available: https://industrialdigitaltwin.org/en/wp-content/uploads/sites/2/2022/12/2022-12-07_IDTA_AAS-Reading-Guide.pdf
-
-[#bib39]
-[39] IDTA-02003 "Submodel Template of the Asset Administration Shell - Generic Frame for Technical Data for Industrial Equipment in Manufacturing", 
-Version 1.2, Aug. 2022, 
-Industrial Digital Twin Association 
-See xref:bibliography.adoc#bib45[[45\]].
-
-[#bib40]
-[40] IDTA-02006 "Submodel Template of the Asset Administration Shell - Digital Nameplate for Industrial Equipment", 
-Version 2.0, Oct. 2022, 
-Industrial Digital Twin Association 
-See xref:bibliography.adoc#bib45[[45\]].
-
-
-[#bib43]
-[43] IEC 63278-2 "Asset Administration Shell for industrial applications – Part 2: Metamodel".
-
-[#bib44]
-[44] IEC 63278-1:2023 "Asset Administration Shell for industrial applications – Part 1: Asset Administration Shell structure".
-
-[#bib45]
-[45] "Registered AAS Submodel Templates".
-Industrial Digital Twin Association.
-Accessed: 2025-03-24. [Online]. 
-Available: https://industrialdigitaltwin.org/en/content-hub/submodels
-
-[#bib46]
-[46] "AAS Specifications". 
-Accessed: 2025-03-24. [Online]. 
-Available: https://industrialdigitaltwin.org/en/content-hub/aasspecifications
-
-[#bib47]
-[47] (German) "I4.0-Sprache.
-Vokabular, Nachrichtenstruktur und semantische Interaktionsprotokolle der I4.0-Sprache", Discussion Paper.
-Plattform Industrie 4.0 
-Accessed: 2025-03-24. [Online]. 
-Available: https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/hm-2018-sprache.html
-
-[#bib48]
-[48] "How to create a Submodel template specification".
-V1.1. June 2025. Industrial Digital Twin Association.
-Guideline.
-Accessed: 2025-10-19. [Online]. 
-Available: https://industrialdigitaltwin.org/wp-content/uploads/2025/06/IDTA_How-to-write-a-SMT-v1.1.pdf
-
-
-[#bib50]
-[50] "Secure Download Service", Discussion Paper.
-Oct. 2020, Plattform Industrie 4.0 
-Accessed: 2025-03-24. [Online]. 
-Available: https://www.plattform-i40.de/PI40/Redaktion/EN/Downloads/Publikation/secure_downloadservice.html
-
-[#bib51]
-[51] "Repository of the Industrial Digital Twin Association (IDTA)".
-Industrial Digital Twin Association. 
-Accessed: 2025-03-24. [Online]. 
-Available: https://github.com/admin-shell-io
-
-
+[#bib8]
+[8] “IDTA 02006-2-0 Digital Nameplate for industrial equipment", Version 2.0, 20. October 2022, Available: link:https://github.com/admin-shell-io/submodel-templates/tree/main/published/Digital%20nameplate/2/0[https://github.com/admin-shell-io/submodel-templates/tree/main/published/Digital%20nameplate/2/0]
