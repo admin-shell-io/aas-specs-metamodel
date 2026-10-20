@@ -519,10 +519,10 @@ In EN 18223 the entries within the list are realized like a predefined SubmodelE
 ----
 "title":[
    {
-      "en": "user manual"
+      "en-US": "user manual"
    },
    {
-      "de": "Kundendokumentation"
+      "de-DE": "Kundendokumentation"
    }
 ]
 ----
@@ -534,14 +534,32 @@ In EN 18223 the entries within the list are realized like a predefined SubmodelE
 "title":[
    {
       "value": "user manual",
-      "language": "en"
+      "language": "en-US"
    },
    {
       "value": "Kundendokumentation",
-      "language": "de"
+      "language": "de-DE"
    }
 ]
 ----
+
+[Note]
+====
+Note: 
+EN 18223 strictly requires language tags to include both a primary language subtag and a country code (e.g., en-US).
+
+Conversely, the Asset Administration Shell (AAS) allows any valid link:https://www.w3.org/TR/rdf11-concepts/#dfn-language-tagged-string[BCP 47 language tag]. 
+Under AAS, country codes are optional, and additional script or variant codes may be included (e.g., zh-Hant-HK).
+
+Consequently, a seamless, lossless round-trip between the Digital Product Passport (DPP) and AAS is not possible in all cases:
+
+* AAS to DPP (Too Generic): An AAS tag containing only a primary language (e.g., en) cannot be directly mapped to DPP because EN 18223 mandates a country code.
+
+* AAS to DPP (Too Specific): Granular AAS tags utilizing script or variant codes (e.g., zh-Hant-HK) will lose metadata when forced into the simpler EN 18223 format.
+====
+
+
+
 [[section-file]]
 === RelatedResource vs. File
 The RelatedResource requires or at least enables to provide more information than is required by the SME File: "contentType" and "url" can be directly mapped but the optional "language" and "resourceTitle" is not supported by AAS SME File.

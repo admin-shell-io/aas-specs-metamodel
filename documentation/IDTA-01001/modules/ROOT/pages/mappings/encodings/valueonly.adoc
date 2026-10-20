@@ -382,6 +382,7 @@ For a _SubmodelElementCollection_ named "ProductClassification" or being part of
 }
 ----
 
+
 ===== SubmodelElementList
 
 For a _SubmodelElementList_ named "Authors" with string Properties as its value, the Value-Only payload is minimized to the following (idShort of values within a SubmodelElementList are ignored):footnote:[The Value-Only serialization of the product classification example can be seen above]:
@@ -395,7 +396,7 @@ For a _SubmodelElementList_ named "Authors" with string Properties as its value,
 ]
 ----
 
-For a _SubmodelElementList_ named "ListOfLists" with string SubmodelElementList as its value, the Value-Only payload is minimized to the following (empty lists are included):
+For a _SubmodelElementList_ named "ListOfLists" with three SubmodelElementLists with xs:string values as its value, the Value-Only payload is minimized to the following (empty lists are included):
 
 
 [source,json,linenums]
@@ -407,6 +408,29 @@ For a _SubmodelElementList_ named "ListOfLists" with string SubmodelElementList 
 ]
 ----
 
+
+For a _SubmodelElementList_ named "ListOfSMC" with three SubmodelElementCollections as its value (their properties "A" and "B" are both optional), the Value-Only payload is minimized to the following (empty collections are included):
+
+
+[source,json,linenums]
+----
+[
+  { "A": 1 },
+  {},
+  { "A": 5, "B": "new" }
+]
+----
+
+For a _SubmodelElementList_ named "ListOfProp" "empty" properties are included as "null".
+
+[source,json,linenums]
+----
+[
+  1,
+  null,
+  5
+]
+----
 
 ===== MultiLanguageProperty
 
