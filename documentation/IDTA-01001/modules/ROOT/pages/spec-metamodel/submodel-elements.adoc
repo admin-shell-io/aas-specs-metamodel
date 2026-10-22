@@ -521,7 +521,16 @@ The path can be absolute or relative.
 |xref:spec-metamodel/datatypes.adoc#PathType[PathType] |0..1
 
 .2+e|contentType 3+| `\https://admin-shell.io/aas/3/2/File/contentType`
-a|Content type of the content of the file |xref:spec-metamodel/datatypes.adoc#ContentType[ContentType] |0..1
+a|Content type of the content of the file 
+
+|xref:spec-metamodel/datatypes.adoc#ContentType[ContentType] |0..1
+
+.2+e|fingerprint 3+| `\https://admin-shell.io/aas/3/3/File/fingerprint`
+a| 
+Fingerprint calculated over the content of the linked file
+
+|xref:spec-metamodel/datatypes.adoc#FingerprintType[FingerprintType] |0..*
+
 |===
 
 == Multi Language Property Attributes
@@ -687,7 +696,7 @@ include::partial$diagrams/41-range.puml[]
 [.table-with-appendix-table]
 [cols="25%,40%,25%,10%"]
 |===
-h|Class: 3+e|[[Range]]Range \<<Experimental>>
+h|Class: 3+e|[[Range]]Range \<<Invalidated>>
 h|Explanation: 3+a|A range data element is a data element that defines a range with min and max.
 h|Inherits from: 3+|xref:DataElement[DataElement]
 h|ID: 3+| `\https://admin-shell.io/aas/3/2/Range`
@@ -864,6 +873,11 @@ The numbering starts with Zero (0).
 {aasd108}
 
 {aasd109}
+
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
 
 {aasd138}
 

@@ -27,7 +27,10 @@ See  xref:spec-metamodel/constraints.adoc#constraints-for-types[Constraints for 
 |===
 |Source |Basic Data Type |Value Range |Sample Values
 
-|xsd |https://www.w3.org/TR/xmlschema-2/#string[string] a|Character string (but not all Unicode character strings) |"Hello world", "Καλημέρα κόσμε", +
+|xsd |https://www.w3.org/TR/xmlschema-2/#string[string] a|Character string (but not all Unicode character strings) |"Hello world", 
+
+"Καλημέρα κόσμε", 
+
 "ハローワールド""
 
 |xsd |https://www.w3.org/TR/xmlschema-2/#base64Binary[base64Binary] |base64-encoded binary data a|
@@ -106,11 +109,27 @@ application/pdf
 image/jpeg
 
 .2+e|[[DateTimeUtc]]DateTimeUtc 2+| `\https://admin-shell.io/aas/3/2/DateTimeUtc`
-| _dateTime_ for UTC a|
+a| _dateTime_ for UTC a|
 
     1997-07-16T19:20+01:00
 
 	2025-02-24T12:31:14Z
+
+.2+e|[[FingerprintType]]FingerprintType 2+| `\https://admin-shell.io/aas/3/3/FingerprintType`
+a| _string_ with max 128 and min 1 characters 
+
+The content of the attribute shall start with an identifier for the used fingerprint followed by the fingerprint in Base64 encoding seperated by a `colon` :.
+ 
+Supported fingerprint identifiers are `sha256`, `sha3-256`, and `sha3-51`.
+
+a| 
+[listing]
+....
+sha256:uU0nuZNNPgilLlLX2n2r+sSE7+N6U4DukIj3rOLvzek=  
+....
+
+
+
 
 .2+e|[[Identifier]]Identifier 2+| `\https://admin-shell.io/aas/3/2/Identifier`
 a|_string_ with max 2048 and min 1 characters 
