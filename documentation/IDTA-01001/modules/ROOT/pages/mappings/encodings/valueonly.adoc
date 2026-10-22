@@ -710,7 +710,7 @@ with idShort "add" in Format "Normal" with input arguments "arg1" and "arg2" of 
 		 }
 ----
 
-The operation result would look like this:
+The simplified operation result (for the complete payload see IDTA-01002) would look like this:
 
 [source,json,linenums]
 ----

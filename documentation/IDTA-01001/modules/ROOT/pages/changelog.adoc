@@ -53,6 +53,7 @@ Major Changes:
 * DELETED: Annex "General Topics", "Usage Metamodel" and "AAS Concepts" (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/596[#596]), these parts are now part of a link:https://industrialdigitaltwin.io/aas-guides-antora/AAS_Concepts/1.0/imprint.html[separate guide]
 * CHANGED: xref:annex/dpp.adoc[Annex APP]: mapping from SingleValuesDataElement to Blob as a possible mapping removed
 * BUGFIX: xref:mappings/encodings/idshortpath.adoc[idShortPath]: correct idShortPath example (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/718[#718])
+* UPDATE: xref:mappings/mappings.adoc[Value-Only JSON-Schema]: OperationResultValueOnly was removed from schema and not added that complete serialization done in IDTA-01002, Part 2 API
 
 Minor Changes:
 
