@@ -115,20 +115,6 @@ a| _dateTime_ for UTC a|
 
 	2025-02-24T12:31:14Z
 
-.2+e|[[FingerprintType]]FingerprintType 2+| `\https://admin-shell.io/aas/3/3/FingerprintType`
-a| _string_ with max 128 and min 1 characters 
-
-The content of the attribute shall start with an identifier for the used fingerprint followed by the fingerprint in Base64 encoding seperated by a `colon` :.
- 
-Supported fingerprint identifiers are `sha256`, `sha3-256`, and `sha3-51`.
-
-a| 
-[listing]
-....
-sha256:uU0nuZNNPgilLlLX2n2r+sSE7+N6U4DukIj3rOLvzek=  
-....
-
-
 
 
 .2+e|[[Identifier]]Identifier 2+| `\https://admin-shell.io/aas/3/2/Identifier`
