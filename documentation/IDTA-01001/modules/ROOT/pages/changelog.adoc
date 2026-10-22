@@ -41,6 +41,11 @@ They had separate sections and tables documenting the changes.
 
 == Changes V3.3 vs. V3.2
 
+[Note]
+====
+This version does not contain any metamodel changes that affect schemas or API.
+====
+
 Major Changes:
 
 * INVALIDATED: experimental SubmodelElement Range will not be supported in future, in alignment with IEC 63278-2 (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/450[#450])
@@ -55,7 +60,7 @@ Minor Changes:
 * UPDATE: xref:mappings/encodings/valueonly.adoc[Value-Only Serialization]: add more examples for Value-Only SML with empty elements (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/706[#706])
 * UPDATE: xref:annex/uml-templates.adoc[Annex UML Template]: add new stereotype \<<Invalidated>>
 * UPDATE: xref:annex/dpp.adoc[Annex APP]: explain round-trip restrictions w.r.t. language tag in AAS and DPP for MultiLanguageProperty (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/716[#716])
-* Annex DPP: improved documentation and consistency of examples
+* xref:annex/dpp.adoc[Annex APP]: improved documentation and consistency of examples
 
 Minor Changes:
 
