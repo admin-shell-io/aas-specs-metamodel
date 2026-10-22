@@ -525,11 +525,6 @@ a|Content type of the content of the file
 
 |xref:spec-metamodel/datatypes.adoc#ContentType[ContentType] |0..1
 
-.2+e|fingerprint 3+| `\https://admin-shell.io/aas/3/3/File/fingerprint`
-a| 
-Fingerprint calculated over the content of the linked file
-
-|xref:spec-metamodel/datatypes.adoc#FingerprintType[FingerprintType] |0..*
 
 |===
 
