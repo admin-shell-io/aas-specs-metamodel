@@ -66,6 +66,11 @@ The first is named "min".
 The second is named "max".
 Their corresponding values are ${Range/min} and ${Range/max}.
 
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
+
 ** xref:spec-metamodel/submodel-elements.adoc#File[File]  and xref:spec-metamodel/submodel-elements.adoc#Blob[Blob]  are serialized as named JSON objects with ${File/idShort} or ${Blob/idShort} as the name of the containing JSON property.
 The JSON object contains two JSON properties.
 The first refers to the content type named ${File/contentType} resp.
@@ -120,6 +125,11 @@ The following rules shall be adhered to when serializing a single SubmodelElemen
 ** _Property_ is serialized as ${Property/value} where ${Property/value} is serialized as described above.
 ** _MultiLanguageProperty_ is serialized as JSON object. The JSON object is serialized as described above.
 ** _Range_ is serialized as JSON object. The JSON object is serialized as described above.
+
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
 ** _File_ and _Blob_ are serialized as JSON objects. The JSON object is serialized as described above.
 ** _ReferenceElement_ is serialized as ${ReferenceElement/value} where ${ReferenceElement/value} is is serialized as described above.
 ** _RelationshipElement_ is serialized as JSON object. The JSON object is serialized as described above.
@@ -411,6 +421,11 @@ For a _MultiLanguageProperty_ the Value-Only payload is minimized to the followi
 
 ----
 ===== Range
+
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
 
 For a _Range_ named "TorqueRange", the Value-Only payload is minimized to the following:
 

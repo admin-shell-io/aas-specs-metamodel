@@ -41,7 +41,17 @@ Note: AASd-022 also means that __idShort__s of referables shall be matched sensi
 
 {aasd119}
 
+[Note]
+====
+xref:spec-metamodel/common.adoc#QualifierKind[QualifierKind] was experimental, is invalidated
+====
+
 {aasd129}
+
+[Note]
+====
+xref:spec-metamodel/common.adoc#QualifierKind[QualifierKind] was experimental, is invalidated
+====
 
 [#constraints-for-extensions]
 == Constraints for Extensions

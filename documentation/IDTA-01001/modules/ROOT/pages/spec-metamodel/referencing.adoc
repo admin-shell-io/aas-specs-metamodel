@@ -248,6 +248,11 @@ a|Property
 .2+e|Range | `\https://admin-shell.io/aas/3/2/KeyTypes/Range`
 a|Range with min and max
 
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
+
 .2+e|Referable | `\https://admin-shell.io/aas/3/2/KeyTypes/Referable`
 a|
 ====
@@ -370,6 +375,10 @@ a|Property
 .2+e|Range | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/Range`
 a|Range with min and max
 
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
 
 .2+e|ReferenceElement | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/ReferenceElement`
 a|Reference
@@ -466,7 +475,10 @@ a|Property
 .2+e|Range | `\https://admin-shell.io/aas/3/2/AasNonContainerSubmodelElements/Range`
 a|Range with min and max
 
-
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
 
 .2+e|ReferenceElement | `\https://admin-shell.io/aas/3/2/AasNonContainerSubmodelElements/ReferenceElement`
 a|Reference
@@ -610,6 +622,11 @@ a|Property
 .2+e|Range | `\https://admin-shell.io/aas/3/2/AasReferables/Range`
 a|Range with min and max
 
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
+
 .2+e|Referable | `\https://admin-shell.io/aas/3/2/AasReferables/Referable`
 a|
 ====
@@ -723,6 +740,10 @@ a|Property
 .2+e|Range | `\https://admin-shell.io/aas/3/2/FragmentKeys/Range`
 a|Range with min and max
 
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
 
 .2+e|ReferenceElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/ReferenceElement`
 a|Reference
