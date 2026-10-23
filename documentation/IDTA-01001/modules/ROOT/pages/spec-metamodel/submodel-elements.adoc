@@ -24,6 +24,7 @@ SubmodelElements include data properties as well as operations, events and other
 
 All SubmodelElements including abstract classes like data elements are specified in alphabetical order.
 
+[Note]
 ====
 Note: value-related attributes typically are optional to enable definition of Submodel Templates as well, i.e. xref:spec-metamodel/core.adoc#Submodel[Submodels]  with value of xref:spec-metamodel/common.adoc#HasKind[Submodel/kind] equal to xref:spec-metamodel/common.adoc#ModellingKind[Template].
 ====
@@ -104,7 +105,7 @@ a|Information for the outer message infrastructure to schedule the event for the
 a|
 Information about which outer message infrastructure shall handle messages for the _EventElement_; refers to a xref:spec-metamodel/core.adoc#Submodel[Submodel], xref:spec-metamodel/submodel-elements.adoc#SubmodelElementList[SubmodelElementList], xref:spec-metamodel/submodel-elements.adoc#SubmodelElementCollection[SubmodelElementCollection]  or xref:spec-metamodel/submodel-elements.adoc#entity-attributes[Entity], which contains xref:spec-metamodel/submodel-elements.adoc#DataElement[DataElements] describing the proprietary specification for the message broker
 
-
+[Note]
 ====
 Note: this proprietary specification could be standardized by using respective submodels for different message infrastructure, e.g. OPC UA, MQTT or AMQP.
 ====
@@ -187,6 +188,7 @@ Exception: events exchanged in the course of an Industry 4.0 interaction pattern
 
 The payload of such an event is specified below.
 
+[Note]
 ====
 Note: the payload is not part of the information model as exchanged via the AASX package format but used in re-active Asset Administration Shells.
 ====
@@ -216,7 +218,7 @@ a|Reference to the source event element |ModelReference<xref:EventElement[EventE
 a|
 semanticId of the source event element, if available
 
-
+[Note]
 ====
 Note: it is recommended to use an external reference.
 ====
@@ -231,7 +233,7 @@ a|Reference to the referable, which defines the scope of the event. |ModelRefere
 a|
 semanticId of the referable, which defines the scope of the event, if available.
 
-
+[Note]
 ====
 Note: it is recommended to use an external reference.
 ====
@@ -246,7 +248,7 @@ a|Information for the outer message infrastructure to schedule the event for the
 a|
 Subject, who/which initiated the creation
 
-
+[Note]
 ====
 Note: this is an external reference.
 ====
@@ -290,7 +292,7 @@ h|Explanation h|Type h|Card.
 a|
 The value of the blob instance of a blob data element
 
-
+[Note]
 ====
 Note: in contrast to the file property, the file content is stored directly as value in the Blob data element.
 ====
@@ -319,7 +321,7 @@ The allowed values are defined as in RFC2046.
 include::partial$diagrams/33-capability.puml[]
 ....
 
-
+[Note]
 ====
 Note: the _semanticId_ of a capability is typically an ontology, which enables reasoning on capabilities.
 For information and examples on how to apply the concept of capability and how to map it to one or more skills implementing the capability, please refer to xref:bibliography.adoc#bib27[[27\]].
@@ -374,7 +376,7 @@ The type of value differs for different subtypes of data elements.
 
 {aasd090}
 
-
+[Note]
 ====
 Note: categories are deprecated and should no longer be used.
 ====
@@ -493,6 +495,7 @@ include::partial$diagrams/37-file.puml[]
 A media type (also MIME type and content type) is a two-part identifier for file formats and format contents transmitted via the Internet.
 The Internet Assigned Numbers Authority (IANA) is the official authority for the standardization and publication of these classifications.
 
+[Note]
 ====
 Note: for information on handling supplementary external files in exchanging Asset Administration Shells in AASX package format see also Part 5 of the series link:https://industrialdigitaltwin.org/en/content-hub/aasspecifications["Specification of the Asset Administration Shell"].
 An absolute path is used in case the file exists independently of the Asset Administration Shell.
@@ -600,7 +603,7 @@ a|Output parameter of the operation |xref:OperationVariable[OperationVariable] |
 a|Parameter that is input and output of the operation |xref:OperationVariable[OperationVariable] |0..*
 |===
 
-
+[Note]
 ====
 Note: 
 In embedded systems _inoutputVariables_ are variables that can be read but that are also written by the system. 
@@ -786,6 +789,7 @@ SubmodelElement Collections are used for complex elements with a typically fixed
 This set of properties is typically predefined by the semantic definition (referenced via xref:spec-metamodel/common.adoc#HasSemantics[semanticId]) of the SubmodelElement collection.
 Each property within the collection itself should have clearly defined semantics.
 
+[Note]
 ====
 Note: the different elements of a SubmodelElement collection do not have to have different xref:spec-metamodel/common.adoc#HasSemantics[semanticIds].
 However, in these cases the usage of a xref:spec-metamodel/submodel-elements.adoc#SubmodelElementList[SubmodelElementList] should be considered.
@@ -798,6 +802,7 @@ An asset usually has many different documents available like operating instructi
 The set of all documents is represented by a xref:spec-metamodel/submodel-elements.adoc#submodel-element-list-attributes[SubmodelElementList].
 In this case, we have a xref:spec-metamodel/submodel-elements.adoc#submodel-element-list-attributes[SubmodelElementList] of xref:spec-metamodel/submodel-elements.adoc#submodel-element-collection-attributes[SubmodelElementCollection]s.
 
+[Note]
 ====
 Note: the elements within a SubmodelElement collection are not ordered.
 Every element has a unique ID (its "idShort").
@@ -851,7 +856,7 @@ h|Class: 3+e|[[SubmodelElementList]]SubmodelElementList
 h|Explanation: 3+a|
 A SubmodelElement list is an ordered list of SubmodelElements.
 
-
+[Note]
 ====
 Note: the list is ordered although the ordering might not be relevant (see attribute "orderRelevant".)
 ====
@@ -948,7 +953,7 @@ a|Capability
 a|
 Data Element
 
-
+[Note]
 ====
 Note: data elements are abstract, i.e. if a key uses "DataElement", the reference may be a property, file, etc.
 ====
@@ -961,7 +966,7 @@ a|Entity
 a|
 Event
 
-
+[Note]
 ====
 Note: event element is abstract.
 ====
@@ -996,7 +1001,7 @@ a|Relationship
 a|
 SubmodelElement
 
-
+[Note]
 ====
 Note: SubmodelElements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
 ====

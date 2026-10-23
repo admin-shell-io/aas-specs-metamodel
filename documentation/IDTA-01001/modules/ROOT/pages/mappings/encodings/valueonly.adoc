@@ -142,6 +142,7 @@ SubmodelElements defined in the Submodel other than the ones mentioned above are
 
 Optional elements (like for example globalAssetId for an Entity SubmodelElement) with no value shall be omitted in the serialization.
 
+[Note]
 ====
 Note: Elements within a SubmodelElementList are neither optional or mandatory per se. 
 So in Value-Only all elements within a SubmodelElementList shall be displayed even if they are empty (handled as if they are mandatory). 
@@ -202,7 +203,7 @@ SGVsbG8sIFdvcmxkIQ==
 | |rdf:langString |string |Strings with language tags a|
 "'Hello'@en", "'Hallo'@de"
 
-
+[Note]
 ====
 Note: the examples are written in RDF/Turtle syntax, and only "Hello" and "Hallo" are the actual values.
 ====
@@ -352,6 +353,7 @@ in Format "Value".
 Since Capability and Operation are not part of Value-Only serialization they are omitted. 
 Also a List containing elements that are omitted is omitted. This is even the case if the SubmodelElementList is mandatory.
 
+[Note]
 ====
 Note: Similar handling is required in case there are access rules disallowing access to specific SubmodelElements:
 The protected elements shall not be serialized.
@@ -640,7 +642,7 @@ For a BasicEventElement named "MyBasicEvent", the Value-Only-payload is minimize
 
 Although Operations are omitted in Value-Only there is one exception: invoking of operations.
 
-
+[Note]
 ====
 Note: 
 xref:spec-metamodel/submodel-elements.adoc#Operation[Operation/inputVariables] is renamed to "inputArguments" etc. in the JSON Value-Only Schema.
