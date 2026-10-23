@@ -38,6 +38,44 @@ They had separate sections and tables documenting the changes.
 ====
 
 
+
+== Changes V3.3 vs. V3.2
+
+[Note]
+====
+This version does not contain any metamodel changes that affect schemas or API.
+====
+
+Major Changes:
+
+* INVALIDATED: experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] will not be supported in future, in alignment with IEC 63278-2 (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/450[#450])
+* INVALIDATED: experimental xref:spec-metamodel/common.adoc#Qualifier[Qualifier/kind] will not be supported in future (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/451[#451])
+* DELETED: Annex "General Topics", "Usage Metamodel" and "AAS Concepts" (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/596[#596]), these parts are now part of a link:https://industrialdigitaltwin.io/aas-guides-antora/AAS_Concepts/1.0/imprint.html[separate guide]
+* CHANGED: xref:annex/dpp.adoc[Annex APP] - mapping from SingleValuesDataElement to Blob as a possible mapping removed (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/708[#708])
+* BUGFIX: xref:mappings/encodings/idshortpath.adoc[idShortPath] - correct idShortPath example (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/718[#718])
+* UPDATE: xref:mappings/mappings.adoc[Value-Only JSON-Schema] - OperationResultValueOnly was removed from schema and note added that complete serialization is done in IDTA-01002, Part 2 API
+
+Minor Changes:
+
+* UPDATE: xref:spec-metamodel/constraints.adoc[Constraints]: -eformulate note explaining AASd-117 (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/720[#720])
+* UPDATE: xref:mappings/encodings/valueonly.adoc[Value-Only Serialization]- add more examples for Value-Only SML with empty elements (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/706[#706])
+* UPDATE: xref:annex/uml-templates.adoc[Annex UML Template] - add new stereotype \<<Invalidated>>
+* UPDATE: xref:annex/dpp.adoc[Annex APP] - explain round-trip restrictions w.r.t. language tag in AAS and DPP for MultiLanguageProperty (link:https://github.com/admin-shell-io/aas-specs-metamodel/issues/716[#716])
+* UPDTAE: xref:annex/dpp.adoc[Annex APP] - improved documentation and consistency of examples
+
+
+.Changes in Metamodel
+[cols="5%,42%,48%",options="header",]
+|===
+h|Nc h|V3.3 Change w.r.t. V3.2 h|Comment
+
+| {empty} | xref:spec-metamodel/submodel-elements.adoc#Range[Range] a| Range was experimental, will not be supported in future (invalidated)
+| {empty} | xref:spec-metamodel/common.adoc#Qualifier[Qualifier] a| attribute "kind" was experimental, will not be supported in future (invalidated)
+| {empty} | xref:spec-metamodel/common.adoc#QualifierKind[QualifierKind] a| data type invalidated since xref:spec-metamodel/common.adoc#Qualifier[Qualifier/kind] invalidated 
+|===
+
+
+
 == Changes V3.2 vs. V3.1.2
 
 Major Changes:
