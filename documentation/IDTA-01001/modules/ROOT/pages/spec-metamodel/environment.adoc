@@ -16,7 +16,7 @@ include::../includes/constraints.adoc[]
 include::partial$diagrams/12-environment.puml[]
 ....
 
-
+[Note]
 ====
 Note: _Environment_ is not an identifiable or referable element.
 It is introduced to enable file transfer as well as serialization.

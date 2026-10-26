@@ -19,6 +19,7 @@ Model references are also used for metamodel inherent relationships like submode
 An external reference is a unique identifier.
 The identifier can be a concatenation of different identifiers, representing e.g. an IRDI-Path.
 
+[Note]
 ====
 Note: references should not be mixed up with locators.
 Even URLs can be used as identifiers and do not necessarily describe a resource that can be accessed.
@@ -66,7 +67,7 @@ Denotes whether the reference is an external reference or a model reference
 a|
 Expected semantic ID of the referenced model element (_Reference/type=ModelReference_); there typically is no semantic ID for the referenced object of external references _(Reference/type=ExternalReference)_.
 
-
+[Note]
 ====
 Note: if Reference/referredSemanticId is defined, the semanticId of the model element referenced should have a matching semantic ID.
 If this is not the case, a validator should raise a warning.
@@ -198,7 +199,7 @@ a|Concept Description
 a|
 Data Element
 
-
+[Note]
 ====
 Note: data elements are abstract, i.e. if a key uses "DataElement", the reference may be a property, file, etc.
 ====
@@ -211,7 +212,7 @@ a|Entity
 a|
 Event
 
-
+[Note]
 ====
 Note: event element is abstract.
 ====
@@ -230,7 +231,7 @@ a|Global reference
 a|
 Identifiable
 
-
+[Note]
 ====
 Note: identifiable is abstract, i.e. if a key uses "Identifiable" the reference may be an Asset Administration Shell, a Submodel or a concept description.
 ====
@@ -248,8 +249,14 @@ a|Property
 .2+e|Range | `\https://admin-shell.io/aas/3/2/KeyTypes/Range`
 a|Range with min and max
 
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
+
 .2+e|Referable | `\https://admin-shell.io/aas/3/2/KeyTypes/Referable`
 a|
+[Note]
 ====
 Note: referables are abstract, i.e. if a key uses "Referable", the reference may be an Asset Administration Shell, a property, etc.
 ====
@@ -267,7 +274,7 @@ a|Submodel
 a|
 SubmodelElement
 
-
+[Note]
 ====
 Note: SubmodelElements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
 ====
@@ -304,7 +311,7 @@ h|Enumeration: e|[[AasReferableNonIdentifiables]]AasReferableNonIdentifiables
 h|Explanation: a|
 Enumeration of different fragment key value types within a key
 
-
+[Note]
 ====
 Note: not used as type but in constraints.
 ====
@@ -335,7 +342,7 @@ a|Capability
 a|
 Data Element
 
-
+[Note]
 ====
 Note: data elements are abstract, i.e. if a key uses "DataElement", the reference may be a property, file, etc.
 ====
@@ -348,7 +355,7 @@ a|Entity
 a|
 Event
 
-
+[Note]
 ====
 Note: event element is abstract.
 ====
@@ -370,6 +377,10 @@ a|Property
 .2+e|Range | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/Range`
 a|Range with min and max
 
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
 
 .2+e|ReferenceElement | `\https://admin-shell.io/aas/3/2/AasReferableNonIdentifiables/ReferenceElement`
 a|Reference
@@ -382,7 +393,7 @@ a|Relationship
 a|
 SubmodelElement
 
-
+[Note]
 ====
 Note: SubmodelElements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
 ====
@@ -408,6 +419,7 @@ a|List of SubmodelElements
 h|Enumeration: e|[[AasNonContainerSubmodelElements]]AasNonContainerSubmodelElements
 h|Explanation: a|Enumeration of non-container SubmodelElement types including abstract SubmodelElement types
 
+[Note]
 ====
 Note: not used as type but may be used in constraints.
 ====
@@ -434,7 +446,7 @@ a|Capability
 a|
 Data element
 
-
+[Note]
 ====
 Note: data elements are abstract, i.e. if a key uses "DataElement", the reference may be a property, file, etc.
 ====
@@ -444,7 +456,8 @@ Note: data elements are abstract, i.e. if a key uses "DataElement", the referenc
 a|
 Event
 
-
+[Note]
+[Note]
 ====
 Note: event element is abstract.
 ====
@@ -466,7 +479,10 @@ a|Property
 .2+e|Range | `\https://admin-shell.io/aas/3/2/AasNonContainerSubmodelElements/Range`
 a|Range with min and max
 
-
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
 
 .2+e|ReferenceElement | `\https://admin-shell.io/aas/3/2/AasNonContainerSubmodelElements/ReferenceElement`
 a|Reference
@@ -488,6 +504,7 @@ a|Relationship
 h|Enumeration: e|[[AasContainerSubmodelElements]]AasContainerSubmodelElements
 h|Explanation: a|Enumeration of conainer SubmodelElement types including abstract container SubmodelElement types
 
+[Note]
 ====
 Note: not used as type but may be used in constraints.
 ====
@@ -517,6 +534,7 @@ a|List of SubmodelElements
 
 A minimum recursion depth of 32 for Container-Elements should be supported.
 
+[Note]
 ====
 Note: This means for certification a maximum of 32 recursion test cases should be tested.
 ====
@@ -531,7 +549,7 @@ h|Enumeration: e|[[AasReferables]]AasReferables
 h|Explanation: a|
 Enumeration of referables
 
-
+[Note]
 ====
 Note: not used as type but in constraints.
 ====
@@ -568,7 +586,7 @@ Concept description
 a|
 Data element
 
-
+[Note]
 ====
 Note: data elements are abstract, i.e. if a key uses "DataElement", the reference may be a property, file, etc.
 ====
@@ -581,7 +599,7 @@ a|Entity
 a|
 Event
 
-
+[Note]
 ====
 Note: event element is abstract.
 ====
@@ -594,6 +612,7 @@ a|File
 .2+e|Identifiable | `\https://admin-shell.io/aas/3/2/AasReferables/Identifiable`
 a|
 Identifiable
+[Note]
 ====
 Note: identifiables are abstract, i.e. if a key uses "Identifiable", the reference may be an Asset Administration Shell, a concept description, etc.
 ====
@@ -610,8 +629,14 @@ a|Property
 .2+e|Range | `\https://admin-shell.io/aas/3/2/AasReferables/Range`
 a|Range with min and max
 
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
+
 .2+e|Referable | `\https://admin-shell.io/aas/3/2/AasReferables/Referable`
 a|
+[Note]
 ====
 Note: referables are abstract, i.e. if a key uses "Referable", the reference may be an Asset Administration Shell, a property, etc.
 ====
@@ -630,7 +655,7 @@ Submodel
 a|
 SubmodelElement
 
-
+[Note]
 ====
 Note: SubmodelElements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
 ====
@@ -652,7 +677,7 @@ h|Enumeration: e|[[FragmentKeys]]FragmentKeys
 h|Explanation: a|
 Enumeration of different fragment key value types within a key
 
-
+[Note]
 ====
 Note: not used as type but in constraints.
 ====
@@ -685,7 +710,7 @@ a|Capability
 a|
 Data Element
 
-
+[Note]
 ====
 Note: data elements are abstract, i.e. if a key uses "DataElement", the reference may be a property, file, etc.
 ====
@@ -698,7 +723,7 @@ a|Entity
 a|
 Event
 
-
+[Note]
 ====
 Note: event element is abstract.
 ====
@@ -723,6 +748,10 @@ a|Property
 .2+e|Range | `\https://admin-shell.io/aas/3/2/FragmentKeys/Range`
 a|Range with min and max
 
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
 
 .2+e|ReferenceElement | `\https://admin-shell.io/aas/3/2/FragmentKeys/ReferenceElement`
 a|Reference
@@ -735,7 +764,7 @@ a|Relationship
 a|
 SubmodelElement
 
-
+[Note]
 ====
 Note: SubmodelElements are abstract, i.e. if a key uses "SubmodelElement", the reference may be a property, a SubmodelElement list, an operation, etc.
 ====
@@ -762,7 +791,7 @@ a|List of SubmodelElements
 |Explanation: a|
 Enumeration of generic fragment key value types within a key
 
-
+[Note]
 ====
 Note: not used as type but in constraints.
 ====
@@ -788,7 +817,7 @@ h|Enumeration: e|[[AasIdentifiables]]AasIdentifiables
 h|Explanation: a|
 Enumeration of all metamodel element types that represent identifiables
 
-
+[Note]
 ====
 Note: not used as type but in constraints.
 ====
@@ -810,7 +839,7 @@ a|Concept description
 a|
 Identifiable
 
-
+[Note]
 ====
 Note: Identifiables are abstract, i.e. if a key uses "Identifiable", the reference may be an Asset Administration Shell, a submodel, or a concept description.
 ====
@@ -869,7 +898,7 @@ a|Global reference
 a|
 Identifiable
 
-
+[Note]
 ====
 Note: Identifiables are abstract, i.e. if a key uses "Identifiable", the reference may be an Asset Administration Shell, a submodel, or a concept description.
 ====

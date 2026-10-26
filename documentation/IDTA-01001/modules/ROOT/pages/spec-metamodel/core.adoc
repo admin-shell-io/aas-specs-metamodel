@@ -77,7 +77,7 @@ However, to support the corner case of very first phase of life cycle where a st
 
 {aasd131}
 
-
+[Note]
 ====
 Note: see  xref:spec-metamodel/constraints.adoc#constraints-for-asset-related-information[Constraints for Asset-Related Information] for constraints related to asset information.
 ====
@@ -110,7 +110,7 @@ a|Additional domain-specific, typically proprietary identifier for the asset lik
 a|
 In case _AssetInformation/assetKind_ is not xref:AssetKind[NotApplicable] the _AssetInformation/assetType_ is the asset ID of the type asset of the asset under consideration as identified by _AssetInformation/globalAssetId_.
 
-
+[Note]
 ====
 Note: in case _AssetInformation/assetKind_ is xref:AssetKind[Instance]  then the AssetInformation/assetType denotes which xref:AssetKind[Type] the asset is of.
 But it is also possible to have an _AssetInformation/assetType_ of an asset of xref:AssetKind[kind] xref:AssetKind[Type].
@@ -123,6 +123,7 @@ But it is also possible to have an _AssetInformation/assetType_ of an asset of x
 a|Thumbnail of the asset represented by the Asset Administration Shell; used as default. |xref:Resource[Resource] |0..1
 |===
 
+[Note]
 ====
 Note: besides this asset information, there still might be an identification Submodel with further information.
 Specific asset IDs mainly serve the purpose of supporting discovery of Asset Administration Shells for an asset.
@@ -227,7 +228,7 @@ a|The value of the specific asset identifier with the corresponding name |xref:s
 a|
 The unique ID of the (external) subject the specific asset ID _value_ belongs to or has meaning to
 
-
+[Note]
 ====
 Note: this is an external reference.
 ====
@@ -236,10 +237,12 @@ Note: this is an external reference.
 |xref:spec-metamodel/referencing.adoc#Reference[Reference] |0..1
 |===
 
+[Note]
 ====
 Note 1: names for specificAssetIds do not need to be unique.
 ====
 
+[Note]
 ====
 Note 2: semanticIds for the single specificAssetIds do not need to be unique.
 ====
@@ -263,6 +266,7 @@ Adding a _semanticId_ for a Submodel is recommended (see xref:annex/general.adoc
 If the Submodel is of _kind=Template_ (modelling kind as inherited by _HasKind_), the SubmodelElements within the Submodel are presenting SubmodelElement templates.
 If the Submodel is of _kind=Instance_, its SubmodelElements represent SubmodelElement instances.
 
+[Note]
 ====
 Note: validators shall handle a Submodel like _SubmodelElementCollection/submodelElements_ and not like a _SubmodelElementList/value_.
 The difference is that a Submodel is identifiable and a predefined unit of information within the Asset Administration Shell.
