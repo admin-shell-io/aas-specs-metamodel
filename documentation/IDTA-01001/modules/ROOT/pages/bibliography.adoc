@@ -10,25 +10,30 @@ SPDX-License-Identifier: CC-BY-4.0
 == Annex D. Bibliography
 
 [#bib1]
-[1] “Recommendations for implementing the strategic initiative INDUSTRIE 4.0”, acatech, April 2013. [Online]. Available: link:https://en.acatech.de/publication/recommendations-for-implementing-the-strategic-initiative-industrie-4-0-final-report-of-the-industrie-4-0-working-group/[https://en.acatech.de/publication/recommendations-for-implementing-the-strategic-initiative-industrie-4-0-final-report-of-the-industrie-4-0-working-group/]
+[1] "Recommendations for implementing the strategic initiative INDUSTRIE 4.0", acatech, April 2013. 
+Online. 
+Available: link:https://en.acatech.de/publication/recommendations-for-implementing-the-strategic-initiative-industrie-4-0-final-report-of-the-industrie-4-0-working-group/[https://en.acatech.de/publication/recommendations-for-implementing-the-strategic-initiative-industrie-4-0-final-report-of-the-industrie-4-0-working-group/]
 
 [#bib2]
-[2] “Implementation Strategy Industrie 4.0: Report on the results of the Industrie 4.0 Platform”; BITKOM e.V. / VDMA e.V., /ZVEI e.V., April 2015. [Online]. Available: link:https://www.bitkom.org/sites/main/files/file/import/2016-01-Implementation-Strategy-Industrie40.pdf[https://www.bitkom.org/sites/main/files/file/import/2016-01-Implementation-Strategy-Industrie40.pdf]
+[2] "Implementation Strategy Industrie 4.0: Report on the results of the Industrie 4.0 Platform"; 
+BITKOM e.V. / VDMA e.V., /ZVEI e.V., April 2015. Online. Available: link:https://www.bitkom.org/sites/main/files/file/import/2016-01-Implementation-Strategy-Industrie40.pdf[https://www.bitkom.org/sites/main/files/file/import/2016-01-Implementation-Strategy-Industrie40.pdf]
 
 [#bib3]
-[3] “The Structure of the Administration Shell: TRILATERAL PERSPECTIVES from France, Italy and Germany”, March 2018, [Online]. Available: link:https://www.plattform-i40.de/I40/Redaktion/EN/Downloads/Publikation/hm-2018-trilaterale-coop.html[https://www.plattform-i40.de/I40/Redaktion/EN/Downloads/Publikation/hm-2018-trilaterale-coop.html]
+[3] "The Structure of the Administration Shell: TRILATERAL PERSPECTIVES from France, Italy and Germany", 
+March 2018, Online. 
+Available: link:https://industrialdigitaltwin.org/wp-content/uploads/2021/09/01b_structure_of_the_administration_shell_en_trilat_2018.pdf[https://industrialdigitaltwin.org/wp-content/uploads/2021/09/01b_structure_of_the_administration_shell_en_trilat_2018.pdf]
 
 [#bib4]
-[4] “Beispiele zur Verwaltungsschale der Industrie 4.0-Komponente – Basisteil (German)”; ZVEI e.V., Whitepaper, November 2016. [Online]. Available: link:https://www.zvei.org/fileadmin/user_upload/Presse_und_Medien/Publikationen/2016/November/Beispiele_zur_Verwaltungsschale_der_Industrie_4.0-Komponente_-_Basisteil/Beispiele-Verwaltungsschale-Industrie-40-Komponente-White-Paper-Final.pdf[https://www.zvei.org/fileadmin/user_upload/Presse_und_Medien/Publikationen/2016/November/Beispiele_zur_Verwaltungsschale_der_Industrie_4.0-Komponente_-_Basisteil/Beispiele-Verwaltungsschale-Industrie-40-Komponente-White-Paper-Final.pdf]
+[4] "Beispiele zur Verwaltungsschale der Industrie 4.0-Komponente – Basisteil (German)"; 
+ZVEI e.V., Whitepaper, November 2016. Online. 
+Available: link:https://www.zvei.org/presse-medien/publikationen/beispiele-zur-verwaltungsschale-der-industrie-40-komponente-basisteil[https://www.zvei.org/presse-medien/publikationen/beispiele-zur-verwaltungsschale-der-industrie-40-komponente-basisteil]
 
 [#bib5]
-[5] “Verwaltungsschale in der Praxis. Wie definiere ich Teilmodelle, beispielhafte Teilmodelle und Interaktion zwischen Verwaltungsschalen (in German)”, Version 1.0, April 2019, Plattform Industrie 4.0 in Kooperation mit VDE GMA Fachausschuss 7.20, Federal Ministry for Economic Affairs and Energy (BMWi), Available: link:https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/2019-verwaltungsschale-in-der-praxis.html[https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/2019-verwaltungsschale-in-der-praxis.html]
+[5] "Verwaltungsschale in der Praxis. Wie definiere ich Teilmodelle, beispielhafte Teilmodelle und Interaktion zwischen Verwaltungsschalen (in German)", Version 1.0, April 2019, Plattform Industrie 4.0 in Kooperation mit VDE GMA Fachausschuss 7.20, Federal Ministry for Economic Affairs and Energy (BMWi), Available: link:https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/2019-verwaltungsschale-in-der-praxis.html[https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/2019-verwaltungsschale-in-der-praxis.html]
 
 [#bib6]
-[6] IDTA-01001-3-0 “Specification of the Asset Administration Shell. Part 1: Metamodel”, V3.0, April 2023, [Online]. Available: link:https://industrialdigitaltwin.org/en/content-hub/aasspecifications[https://industrialdigitaltwin.org/en/content-hub/aasspecifications]
+[6] "IEC 63278-1: Asset Administration Shell for industrial applications – Part 1: Asset Administration Shell structure", Edition 1.0. 2023-12.
 
 [#bib7]
-[7] “IEC 63278-1 ED1: Asset Administration Shell for industrial applications – Part 1: Asset Administration Shell structure”
-
-[#bib8]
-[8] “IDTA 02006-2-0 Digital Nameplate for industrial equipment", Version 2.0, 20. October 2022, Available: link:https://github.com/admin-shell-io/submodel-templates/tree/main/published/Digital%20nameplate/2/0[https://github.com/admin-shell-io/submodel-templates/tree/main/published/Digital%20nameplate/2/0]
+[7] "IDTA 02006 Digital Nameplate for industrial equipment", Version 3.0, 20. November 2024. 
+Available: link:https://industrialdigitaltwin.io/idta-submodel-templates/IDTA-02006/3.0/index.html[https://industrialdigitaltwin.io/idta-submodel-templates/IDTA-02006/3.0/index.html]
