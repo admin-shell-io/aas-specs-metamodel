@@ -23,15 +23,19 @@ They are documented as part of the class specification.
 
 {aasd117}
 
+[Note]
 ====
-Note: in other words (AASd-117), __idShort__ is mandatory for all __Referable__s except for referables being direct childs of __SubmodelElementList__s and for all __Identifiable__s.
+Note: in other words AASd-117 implied that xref:spec-metamodel/common.adoc#idShort[idShort] is mandatory for all 
+xref:spec-metamodel/common.adoc#Referable[Referables] except for referables being direct childs of 
+xref:spec-metamodel/submodel-elements.adoc#SubmodelElementList[SubmodelElementLists] and for all xref:spec-metamodel/common.adoc#Identifiable[Identifiables].
 ====
 
 
 {aasd022}
 
+[Note]
 ====
-Note: AASd-022 also means that __idShort__s of referables shall be matched sensitive to the case.
+Note: AASd-022 also means that xref:spec-metamodel/common.adoc#idShort[idShort] of referables shall be matched sensitive to the case.
 ====
 
 [#constraints-for-qualifiers]
@@ -41,7 +45,17 @@ Note: AASd-022 also means that __idShort__s of referables shall be matched sensi
 
 {aasd119}
 
+[Note]
+====
+xref:spec-metamodel/common.adoc#QualifierKind[QualifierKind] was experimental, is invalidated
+====
+
 {aasd129}
+
+[Note]
+====
+xref:spec-metamodel/common.adoc#QualifierKind[QualifierKind] was experimental, is invalidated
+====
 
 [#constraints-for-extensions]
 == Constraints for Extensions
@@ -53,6 +67,7 @@ Note: AASd-022 also means that __idShort__s of referables shall be matched sensi
 
 {aasd116}
 
+[Note]
 ====
 Note: AASd-116 is important to enable a generic search across global and specific asset IDs (e.g. in IDTA-01002-3-0 discovery operations like GetAllAssetLinksById).
 In the future the constraint might become more strict in stating that the name "globalAssetId" shall not be used as SpecificAssetId/name.

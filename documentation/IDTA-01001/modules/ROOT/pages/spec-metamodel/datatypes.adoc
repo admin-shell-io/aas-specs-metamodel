@@ -27,7 +27,10 @@ See  xref:spec-metamodel/constraints.adoc#constraints-for-types[Constraints for 
 |===
 |Source |Basic Data Type |Value Range |Sample Values
 
-|xsd |https://www.w3.org/TR/xmlschema-2/#string[string] a|Character string (but not all Unicode character strings) |"Hello world", "Καλημέρα κόσμε", +
+|xsd |https://www.w3.org/TR/xmlschema-2/#string[string] a|Character string (but not all Unicode character strings) |"Hello world", 
+
+"Καλημέρα κόσμε", 
+
 "ハローワールド""
 
 |xsd |https://www.w3.org/TR/xmlschema-2/#base64Binary[base64Binary] |base64-encoded binary data a|
@@ -49,7 +52,7 @@ SGVsbG8sIFdvcmxkIQ==
 "Hello"@en, +
 "Hallo"@de
 
-
+[Note]
 ====
 Note: this is written in RDF/Turtle syntax, only "Hello" and "Hallo" are the actual values.
 ====
@@ -64,6 +67,7 @@ Note: this is written in RDF/Turtle syntax, only "Hello" and "Hallo" are the act
 <<table-primitive-data-types>> lists the Primitives used in the metamodel.
 Primitive data types start with a capital letter.
 
+[Note]
 ====
 Note: see  xref:spec-metamodel/constraints.adoc#constraints-for-types[Constraints for Types] for constraints on types.
 ====
@@ -106,15 +110,18 @@ application/pdf
 image/jpeg
 
 .2+e|[[DateTimeUtc]]DateTimeUtc 2+| `\https://admin-shell.io/aas/3/2/DateTimeUtc`
-| _dateTime_ for UTC a|
+a| _dateTime_ for UTC a|
 
     1997-07-16T19:20+01:00
 
 	2025-02-24T12:31:14Z
 
+
+
 .2+e|[[Identifier]]Identifier 2+| `\https://admin-shell.io/aas/3/2/Identifier`
 a|_string_ with max 2048 and min 1 characters 
 
+[Note]
 ====
 Note: For Identifier it is recommended to use existing standards, 
 for example ID-Link (IEC 61406) may be used for the 
@@ -225,6 +232,7 @@ with max 2048 and min 1 characters
 
 conformant to a URI as per https://www.w3.org/TR/xmlschema-2/#RFC2396[RFC 2396]
 
+[Note]
 ====
 Note: Values with this restriction are also conformant to the xsd datatype https://www.w3.org/TR/xmlschema-2/#anyURI[anyURI].
 
@@ -538,7 +546,7 @@ SGVsbG8sIFdvcmxkIQ==
 
 "Hallo"@de
 
-
+[Note]
 ====
 Note: this is written in RDF/Turtle syntax, @en and de are the language tags.
 ====

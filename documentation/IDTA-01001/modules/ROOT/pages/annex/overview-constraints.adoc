@@ -45,6 +45,11 @@ For handling of constraints see xref:annex/handling-constraints.adoc[].
 
 {aasd109}
 
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
+
 {aasd114}
 
 {aasd115}
@@ -56,6 +61,11 @@ For handling of constraints see xref:annex/handling-constraints.adoc[].
 {aasd118}
 
 {aasd119}
+
+[Note]
+====
+xref:spec-metamodel/common.adoc#QualifierKind[QualifierKind] was experimental, is invalidated
+====
 
 {aasd121}
 
@@ -74,6 +84,11 @@ For handling of constraints see xref:annex/handling-constraints.adoc[].
 {aasd128}
 
 {aasd129}
+
+[Note]
+====
+xref:spec-metamodel/common.adoc#QualifierKind[QualifierKind] was experimental, is invalidated
+====
 
 {aasd130}
 

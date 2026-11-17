@@ -75,8 +75,8 @@ idShortPaths for SMC MySubmodelElementCollection within the Submodel above:
   "MySubmodelElementCollection.MySubProperty1",
   "MySubmodelElementCollection.MySubProperty2",
   "MySubmodelElementCollection.MySubmodelElementCollection",
-  "MySubmodelElementCollection.MySubmodelElementCollection.MySubProperty1",
-  "MySubmodelElementCollection.MySubmodelElementCollection.MySubProperty2",
+  "MySubmodelElementCollection.MySubmodelElementCollection.MySubSubProperty1",
+  "MySubmodelElementCollection.MySubmodelElementCollection.MySubSubProperty2",
   "MySubmodelElementCollection.MySubSubmodelElementList1",
   "MySubmodelElementCollection.MySubSubmodelElementList1[0]",
   "MySubmodelElementCollection.MySubSubmodelElementList1[1]",
@@ -91,6 +91,7 @@ idShortPaths for SMC MySubmodelElementCollection within the Submodel above:
 
 "MySubmodelElementCollection.MySubSubmodelElementList1" has exactly 2 values in this example and "MySubmodelElementCollection.MySubSubmodelElementList2" has 1 element in the first row and two in the second row.
 
+[Note]
 ====
 Note: There is no idShortPath for xref:spec-metamodel/common.adoc#Identifiable[Identifiable]s because idShort is optional for Identifiables.
 ====

@@ -25,6 +25,7 @@ Constraints that are no invariants of classes are specified in  xref:spec-metamo
 
 A minimum recursion depth of 32 for xref:spec-metamodel/referencing.adoc#AasContainerSubmodelElements[Container-Elements] should be supported.
 
+[Note]
 ====
 Note: This means for certification a maximum of 32 recursion test cases should be tested.
 ====
