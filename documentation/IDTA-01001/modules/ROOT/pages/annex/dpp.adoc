@@ -35,6 +35,20 @@ In EN 18216 it is specified that JSON shall be used for syntactic interoperabili
 In addition to JSON also XML and JSON-LD may be used based on http content negotiation.
 A JSON-LD representation shall be processable by a regular JSON parser, allowing the possibility of including linked data context for advanced semantic processing.
 
+[Note]
+====
+Note: Interoperability with the EC DPP Registry
+
+In parallel with standardisation activities under CEN and CENELEC upon which this document is based, the European Commission is developing implementation guidelines, APIs and schemas for the DPP Registry.
+
+To support seamless data exchange between Asset Administration Shell (AAS) environments and the emerging European registry infrastructure, an aligned mapping between this specification and the EC artifacts will be incorporated as the EC technical specifications reach final maturity.
+
+Future iterations of this document will ensure continuous synchronization with published EC guidance and schemas.
+
+Reference: link:https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/resources-documentation_en#dpp-registry-technical-guidelines[EC DPP Registry Technical Guidelines]
+====
+
+
 == General
 
 A Digital Product Passport (DPP) is a digital record of product characteristics throughout its life cycle [1]. 
