@@ -62,7 +62,7 @@ or in their
 
 e) xref:spec-metamodel/common.adoc#templateId[templateId] 
 
-
+[Note]
 ====
 Note: Per specification the xref:spec-metamodel/common.adoc#Identifiable[IDs] of any two submodels in an Asset Administration Shell can never be identical.
 ====
@@ -211,7 +211,7 @@ h|Explanation h|Type h|Card.
 a|
 External reference to the data specification template used by the element
 
-
+[Note]
 ====
 Note: this is an external reference.
 ====
@@ -429,7 +429,7 @@ h|Class: 3+e|[[Identifiable]]Identifiable \<<abstract>>
 h|Explanation: 3+a|
 An element that has a globally unique identifier
 
-
+[Note]
 ====
 Note: xref:spec-metamodel/constraints.adoc#constraints-for-referables-and-identifiables[see for constraints related to identifiables].
 ====
@@ -446,7 +446,7 @@ h|Explanation h|Type h|Card.
 a|
 Administrative information of an identifiable element
 
-
+[Note]
 ====
 Note: some of the administrative information like the version number might need to be part of the identification.
 ====
@@ -477,7 +477,7 @@ h|Class: 3+e|[[Qualifiable]]Qualifiable \<<abstract>>
 h|Explanation: 3+a|
 A qualifiable element may be further qualified by one or more qualifiers.
 
-
+[Note]
 ====
 Note: see  xref:spec-metamodel/constraints.adoc#constraints-for-qualifiers[Constraints for Qualifiers] for constraints related to qualifiables.
 ====
@@ -534,7 +534,7 @@ h|ID: 3+| `\https://admin-shell.io/aas/3/2/Qualifier`
 .2+h|Attribute 3+h| ID
 h|Explanation h|Type h|Card.
 
-.2+e|kind \<<Experimental>> 3+| `\https://admin-shell.io/aas/3/2/Qualifier/kind`
+.2+e|kind \<<Invalidated>> 3+| `\https://admin-shell.io/aas/3/2/Qualifier/kind`
 a|
 The qualifier kind describes the kind of qualifier that is applied to the element.
 
@@ -569,7 +569,7 @@ It is recommended to add a _semanticId_ for the concept of the _Qualifier_. _Qua
 [.table-with-appendix-table]
 [cols="30%h,70%"]
 |===
-|Enumeration: e|[[QualifierKind]]QualifierKind
+|Enumeration: e|[[QualifierKind]]QualifierKind  \<<Invalidated>>
 h|Explanation: a|Enumeration for kinds of qualifiers
 |Set of: |--
 h|ID: | `\https://admin-shell.io/aas/3/2/QualifierKind`
@@ -590,7 +590,7 @@ a|Qualifies the semantic definition (_HasSemantics/semanticId_) the element is r
 a|
 Qualifies the elements within a specific Submodel on concept level; the corresponding qualifier value is static.
 
-
+[Note]
 ====
 Note: template qualifiers are only applicable to elements with kind="Template".
 See constraint AASd-129.
@@ -675,7 +675,7 @@ a|
 The category is a value that gives further meta information w.r.t. the class of the element.
 It affects the expected existence of attributes and the applicability of constraints.
 
-
+[Note]
 ====
 Note: The category is not identical to the semantic definition (_HasSemantics_) of an element.
 The category could e.g. denote that the element is a measurement value, whereas the semantic definition of the element would denote that it is the measured temperature.
@@ -689,7 +689,7 @@ a|
 In case of identifiables, this attribute is a short name of the element.
 In case of a referable, this ID is an identifying string of the element within its name space.
 
-
+[Note]
 ====
 Note: if the element is a property and the property has a semantic definition (_HasSemantics/semanticId_) conformant to IEC61360, the _idShort_ is typically identical to the short name in English, if available.
 ====
@@ -715,6 +715,7 @@ Additional information can be provided, e.g. if the element is qualified and whi
 
 Predefined categories are described in <<table-categories>>.
 
+[Note]
 ====
 Note: categories are deprecated and should no longer be used.
 ====

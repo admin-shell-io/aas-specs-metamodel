@@ -56,9 +56,6 @@ For this purpose additional formats are defined as well as needed text serializa
 
 xref:summary-and-outlook.adoc[] summarizes the content and gives an outlook on future work.
 
-Annex xref:annex/concepts-aas.adoc[] contains additional background information on Asset Administration Shell.
-Annex xref:annex/general.adoc[] summarizes relevant, existing content from the standardization of Industry 4.0; i.e. it provides an overview and explains the motives, but is not absolutely necessary for an understanding of the specification.
-
 Annex xref:annex/valueonly-serialization-example.adoc[] and example of a Value-Only serialization as explained in  xref:mappings/mappings.adoc#value-only-serialization-in-json[Mappings] is given.
 
 Annex xref:annex/backus-naur-form.adoc[] defines the grammar language used in the specification.
@@ -69,7 +66,6 @@ Annex xref:annex/grammar-semantic-ids-metamodel.adoc[] explains how semantic ide
 xref:annex/handling-constraints.adoc[] explains the numbering of constraints used in the specification. 
 An overview of all constraints contained in the specification can be found in xref:annex/overview-constraints.adoc[].
 
-Annex xref:annex/usage-metamodel.adoc[] provides some hints for modelers.
 Annex xref:annex/metamodel-with-inheritance.adoc[] shows selected metamodel diagrams including all inherited attributes for developers.
 
 The xref:changelog.adoc[] describes metamodel changes compared to previous versions.

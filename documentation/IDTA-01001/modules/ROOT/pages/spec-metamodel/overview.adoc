@@ -18,6 +18,7 @@ An Asset Administration Shell represents exactly one asset (xref:spec-metamodel/
 Type assets and instance assets are distinguished by the attribute xref:spec-metamodel/core.adoc#asset-information-attributes[AssetInformation/assetKind].
 See  xref:spec-metamodel/core.adoc[Core Classes] for details.
 
+[Note]
 ====
 Note: the UML modelling uses so-called abstract classes for denoting reused concepts like "HasSemantics", "Qualifiable" etc.
 ====
@@ -59,6 +60,7 @@ See  xref:annex/general.adoc#matching-strategies[Matching Strategies] for matchi
 
 A concept description may be derived from another property definition of an external standard or another concept description (xref:spec-metamodel/concept-description.adoc[ConceptDescription/isCaseOf]). 
 
+[Note]
 ====
 Note: in this case, most of the attributes are redundant because they are defined in the external standard.
 Attributes for information like _preferredName_, _unit_ etc. are added to increase usability. For details see IDTA-01003-a.

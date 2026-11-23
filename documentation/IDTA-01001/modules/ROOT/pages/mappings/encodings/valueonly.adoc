@@ -66,6 +66,11 @@ The first is named "min".
 The second is named "max".
 Their corresponding values are ${Range/min} and ${Range/max}.
 
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
+
 ** xref:spec-metamodel/submodel-elements.adoc#File[File]  and xref:spec-metamodel/submodel-elements.adoc#Blob[Blob]  are serialized as named JSON objects with ${File/idShort} or ${Blob/idShort} as the name of the containing JSON property.
 The JSON object contains two JSON properties.
 The first refers to the content type named ${File/contentType} resp.
@@ -120,6 +125,11 @@ The following rules shall be adhered to when serializing a single SubmodelElemen
 ** _Property_ is serialized as ${Property/value} where ${Property/value} is serialized as described above.
 ** _MultiLanguageProperty_ is serialized as JSON object. The JSON object is serialized as described above.
 ** _Range_ is serialized as JSON object. The JSON object is serialized as described above.
+
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
 ** _File_ and _Blob_ are serialized as JSON objects. The JSON object is serialized as described above.
 ** _ReferenceElement_ is serialized as ${ReferenceElement/value} where ${ReferenceElement/value} is is serialized as described above.
 ** _RelationshipElement_ is serialized as JSON object. The JSON object is serialized as described above.
@@ -132,6 +142,7 @@ SubmodelElements defined in the Submodel other than the ones mentioned above are
 
 Optional elements (like for example globalAssetId for an Entity SubmodelElement) with no value shall be omitted in the serialization.
 
+[Note]
 ====
 Note: Elements within a SubmodelElementList are neither optional or mandatory per se. 
 So in Value-Only all elements within a SubmodelElementList shall be displayed even if they are empty (handled as if they are mandatory). 
@@ -192,7 +203,7 @@ SGVsbG8sIFdvcmxkIQ==
 | |rdf:langString |string |Strings with language tags a|
 "'Hello'@en", "'Hallo'@de"
 
-
+[Note]
 ====
 Note: the examples are written in RDF/Turtle syntax, and only "Hello" and "Hallo" are the actual values.
 ====
@@ -342,6 +353,7 @@ in Format "Value".
 Since Capability and Operation are not part of Value-Only serialization they are omitted. 
 Also a List containing elements that are omitted is omitted. This is even the case if the SubmodelElementList is mandatory.
 
+[Note]
 ====
 Note: Similar handling is required in case there are access rules disallowing access to specific SubmodelElements:
 The protected elements shall not be serialized.
@@ -372,6 +384,7 @@ For a _SubmodelElementCollection_ named "ProductClassification" or being part of
 }
 ----
 
+
 ===== SubmodelElementList
 
 For a _SubmodelElementList_ named "Authors" with string Properties as its value, the Value-Only payload is minimized to the following (idShort of values within a SubmodelElementList are ignored):footnote:[The Value-Only serialization of the product classification example can be seen above]:
@@ -385,7 +398,7 @@ For a _SubmodelElementList_ named "Authors" with string Properties as its value,
 ]
 ----
 
-For a _SubmodelElementList_ named "ListOfLists" with string SubmodelElementList as its value, the Value-Only payload is minimized to the following (empty lists are included):
+For a _SubmodelElementList_ named "ListOfLists" with three SubmodelElementLists with xs:string values as its value, the Value-Only payload is minimized to the following (empty lists are included):
 
 
 [source,json,linenums]
@@ -397,6 +410,29 @@ For a _SubmodelElementList_ named "ListOfLists" with string SubmodelElementList 
 ]
 ----
 
+
+For a _SubmodelElementList_ named "ListOfSMC" with three SubmodelElementCollections as its value (their properties "A" and "B" are both optional), the Value-Only payload is minimized to the following (empty collections are included):
+
+
+[source,json,linenums]
+----
+[
+  { "A": 1 },
+  {},
+  { "A": 5, "B": "new" }
+]
+----
+
+For a _SubmodelElementList_ named "ListOfProp" "empty" properties are included as "null".
+
+[source,json,linenums]
+----
+[
+  1,
+  null,
+  5
+]
+----
 
 ===== MultiLanguageProperty
 
@@ -411,6 +447,11 @@ For a _MultiLanguageProperty_ the Value-Only payload is minimized to the followi
 
 ----
 ===== Range
+
+[Note]
+====
+The formerly experimental SubmodelElement xref:spec-metamodel/submodel-elements.adoc#Range[Range] is invalidated, i.e. will not be supported in future.
+====
 
 For a _Range_ named "TorqueRange", the Value-Only payload is minimized to the following:
 
@@ -601,7 +642,7 @@ For a BasicEventElement named "MyBasicEvent", the Value-Only-payload is minimize
 
 Although Operations are omitted in Value-Only there is one exception: invoking of operations.
 
-
+[Note]
 ====
 Note: 
 xref:spec-metamodel/submodel-elements.adoc#Operation[Operation/inputVariables] is renamed to "inputArguments" etc. in the JSON Value-Only Schema.
@@ -671,7 +712,7 @@ with idShort "add" in Format "Normal" with input arguments "arg1" and "arg2" of 
 		 }
 ----
 
-The operation result would look like this:
+The simplified operation result (for the complete payload see IDTA-01002) would look like this:
 
 [source,json,linenums]
 ----

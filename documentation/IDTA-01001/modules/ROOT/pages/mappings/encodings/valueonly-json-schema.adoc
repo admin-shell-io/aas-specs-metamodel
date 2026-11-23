@@ -14,7 +14,8 @@ SPDX-License-Identifier: CC-BY-4.0
 
 
 The following JSON-Schema represents the validation schema for the ValueOnly-Serialization of SubmodelElements. 
-This holds true for all SubmodelElements mentioned in the previous clause except for xref:spec-metamodel/submodel-elements.adoc#SubmodelElementCollection[SubmodelElementCollections]. 
+This holds true for all SubmodelElements mentioned in the previous clause except for xref:spec-metamodel/submodel-elements.adoc#SubmodelElementCollection[SubmodelElementCollections] 
+and xref:spec-metamodel/submodel-elements.adoc#Operation[the result of an operation call]. 
 Since _SubmodelElementCollections_ are treated as objects containing SubmodelElements of any kind, the integration 
 into the same validation schema would result in a circular reference or ambiguous results ignoring the actual 
 validation of SubmodelElements other than _SubmodelElementCollections_. 
@@ -23,9 +24,12 @@ In this case, it may be necessary to create a specific JSON-Schema for the indiv
 The _SubmodelElementCollection_ is added to the following schema for completeness and clarity. 
 It is, however, not referenced from the _SubmodelElementValue_-oneOf-Enumeration due to the reasons mentioned above. 
 
+The Value-Only serialization for the result of an Operation call is defined in IDTA-01002.
+
 See xref:annex/valueonly-serialization-example.adoc#value-only-serialization-example[Annex ValueOnly-Serialization Example] 
 for an example that validates against this schema.
 
+[Note]
 ====
 Note: OpenAPI 3.0 does not support patternProperties and propertyNames, OpenAPI 3.1 probably will. This is why this schema is not yet used in the openAPI specifications of the API. 
 ====
@@ -172,20 +176,6 @@ Note: OpenAPI 3.0 does not support patternProperties and propertyNames, OpenAPI 
       "timestamp": {
         "type": "string",
         "pattern": "^-?(([1-9][0-9][0-9][0-9]+)|(0[0-9][0-9][0-9]))-((0[1-9])|(1[0-2]))-((0[1-9])|([12][0-9])|(3[01]))T(((([01][0-9])|(2[0-3])):[0-5][0-9]:([0-5][0-9])(\\.[0-9]+)?)|24:00:00(\\.0+)?)(Z|\\+00:00|-00:00)$"
-      },
-      "additionalProperties": false
-    },
-    "OperationResultValueOnly": {
-      "executionState": {
-        "type": "string",
-        "enum": ["Initiated", "Running", "Completed", "Canceled", 
-                 "Failed", "Timeout"]
-      },
-      "inoutputArguments": {
-        "$ref": "#/definitions/ValueOnly"
-      },
-      "outputArguments": {
-        "$ref": "#/definitions/ValueOnly"
       },
       "additionalProperties": false
     },

@@ -1,5 +1,5 @@
 @startuml
-class Range<DataElement> <<Experimental>> {
+class Range<DataElement> <<Invalidated>> {
   +valueType: DataTypeDefXsd
   +min: ValueDataType[0..1]
   +max: ValueDataType[0..1]
